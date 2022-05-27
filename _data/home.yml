@@ -8,16 +8,20 @@ company:
   logo_src: /assets/img/home/loli.jpg
   
 social_links:
-  - icon: fab fa-facebook
+  - label: Facebook
+    icon: fab fa-facebook
     href: http://facebook.com/lolipalooza
 
-  - icon: fab fa-twitter-square
+  - label: Twitter
+    icon: fab fa-twitter-square
     href: https://twitter.com/lolipalooza
 
-  - icon: fab fa-github-square
+  - label: Github
+    icon: fab fa-github-square
     href: https://github.com/lolipalooza
 
-  - icon: fab fa-youtube-square
+  - label: Youtube
+    icon: fab fa-youtube-square
     href: https://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w
   
 navigator:

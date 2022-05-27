@@ -59,7 +59,7 @@
 					<ul class="list-inline line-separated">
 						{% for item in site.data.home.social_links %}
 							<li class="list-inline-item d-none d-md-inline-block">
-								<a href="{{item.href}}" target="_blank">
+								<a href="{{item.href}}" target="_blank" title="{{item.label}}">
 									<i class="{{item.icon}}"></i>
 								</a>
 							</li>
@@ -109,16 +109,19 @@
 
 	<nav class="responsive-nav hidden">
 		<div><a href="#" class="btn-sidebar-close"><i class="fas fa-times"></i></a></div>
+		<hr>
 		<div class="resp-nav-div">
-			{% for item in site.data.home.social_links %}
-				<a href="{{item.href}}" target="_blank">
-					<i class="{{item.icon}}"></i>
-					Social media text
-				</a>
-			{% endfor %}
 			{% for item in site.data.home.navigator %}
 				<a href="{{item.href}}">
 					{{item.title}}
+				</a>
+			{% endfor %}
+		</div>
+		<hr>
+		<div class="resp-nav-div">
+			{% for item in site.data.home.social_links %}
+				<a href="{{item.href}}" target="_blank">
+					<i class="{{item.icon}}"></i> {{item.label}}
 				</a>
 			{% endfor %}
 		</div>
