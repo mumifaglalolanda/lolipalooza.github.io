@@ -29,111 +29,111 @@ categories:
     name: Cultura
     forums:
       - name: Animu & Mango
-        icon: https://i.imgur.com/q9nj246.png
+        icon: animu.png
         description: Caricaturas chinas para pajeros autistas permabirjenes forever aloun que disfrutan de consumir pendejadas insustanciales, harto llenas de clichés inmamables.
 
       - name: Videojuegos
-        icon: https://i.imgur.com/vr3kmjT.png
+        icon: vidya.png
         description: Sección para pajeros autistas forever aloun permabirjenes que disfrutan de desperdiciar sus vidas frente a un TV y con un mando entre las manos.
 
       - name: Comics y Cartoons
-        icon: https://i.imgur.com/SiCUcQy.png
+        icon: comics.png
         description: Caricaturas y revistitas gringas para apendejar a los jovenes de ayer y hoy mientras U.S.A domina el mundo y nos las meten doblada a los incautos hispanoparlantes(?.
 
       - name: Tecnología
-        icon: https://i.imgur.com/ajuDOna.png
+        icon: tech.png
         description: Sección para hablar acerca de las tendencias del mundo tecnológico, compartir conocimientos de interés o para presumir del nuevo aifon que te compraste burgués de mierda.
 
       - name: Televisión y Cine
-        icon: https://i.imgur.com/eYnKyaV.png
+        icon: cine.png
         description: Para compartir y discutir acerca de las obras de la pantalla grande o la pantalla chica ~~que están cada día más pendejas~~.
       
       - name: Música
-        icon: https://i.imgur.com/BRQSrqy.png
+        icon: music.png
         description: Sección dedicada a ese arte que nos cautiva a través de los sonidos y que cada día está más decadente gracias al factor comercialización ggg. Also, la música es pa putos.
 
       - name: Literatura
-        icon: https://i.imgur.com/ppXqwNu.png
+        icon: literat.png
         description: La lectura da alas a tu imaginación y te permite vivir vidas ajenas a la tuya sin necesidad de abandonar tu hogar siquiera. Solo para intelectualoides hipsters pretenciosos y además harto pedantes(?
 
       - name: Amor y Pareja
-        icon: https://i.imgur.com/Zdm8eEb.png
+        icon: love.png
         description: Ven a contarnos tus anécdotas, inquietudes o dudas respecto al tópico de vivir en pareja o invéntatelas porque todos sabemos que nunca tendrás novia(o) ggg.
         moderator: Amélie
 
       - name: Cocina y Gastronomía
-        icon: https://i.imgur.com/Ve39kTS.png
+        icon: gastron.png
         description: Si había una sección en el foro para cuidar tu salud, pues esta es la sección en donde lo mandas todo al caño para compartir recetas de las porquerías más altas en calorías que te mantendrán hundido en tu obesidad y miseria gggg.
 
       - name: Salud y Fitness
-        icon: https://i.imgur.com/oJ5CADc.png
+        icon: health.png
         description: Porque cuidar de nuestra salud no tiene precio para todo lo demás existe mi bergha ggg mastercar. Vengan a compartir consejos sobre cómo vivir una vida sana y libre de vicios.
 
       - name: Política, Economía y Sociedad
-        icon: https://i.imgur.com/OFtk7kn.png
+        icon: society.png
         description: Donde commies, liberales, conservadores, fachos, chairos, progres, y todas esas malas hierbas que podrás encontrar en el internetz se juntan para entrar en bucles infinitos de dicusiones sin sentido (?.
         moderator: Kyle Katarn
 
       - name: Internacional
-        icon: https://i.imgur.com/P5by210.png
+        icon: international.png
         description: Foro donde los usuarios de todas las nacionalidades se unen para charlar sobre sus paises, sus culturas y sus aconteceres. Foro multi-idioma.
 
   - id: 9
     name: Proyectos
     forums:
       - name: Dibujos e Ilustraciones
-        icon: https://i.imgur.com/SkR98WK.png
+        icon: draw.png
         description: Comparte tus talentos con un lápiz entre otras herramientas para crear obras de arte o más bien dibujos mediocres en esta sección donde estaremos ansiosos de burlarnos de tu carrera sin futuro gggg. O compartamos conocimientos relacionados al oficio.
 
       - name: 3DCG
-        icon: https://i.imgur.com/NFpiyGF.png
+        icon: 3dcg.png
         description: Sección dedicada para compartir toda la información relacionada al modelaje en 3D, para exponer tus trabajos, o para compartir modelos de terceros (siempre y cuando sean de distribución libre y solo con propósitos educacionales claro!).
 
       - name: Programación
-        icon: https://i.imgur.com/eIMUhj8.png
+        icon: programming.png
         description: Sección para todos los aficionados al fascinante mundillo de la programación. if($juanes) echo 'jijijijiji';
         moderator: yab220sorgesoureDug
 
       - name: Proyectos Generales
-        icon: https://i.imgur.com/K1xDRH9.png
+        icon: projects.png
         description: Depósito de sueños imposibles. La sociedad de los lolproyectos muertos. Soñar no cuesta nada. Proyectos del tipo creación de juegos con herramientas asistidas. Planificaciones de todo tipo.
 
       - name: SMF Modificaciones
-        icon: https://i.imgur.com/FCwIMux.png
+        icon: smf.png
         description: El taller en donde documentaremos todo lo que podamos respecto a la mano que le estamos metiendo y a los cables que le estamos jalando al SMF.
 
       - name: Imageboards- Modificaciones
-        icon: https://i.imgur.com/sAW3hij.png
+        icon: ibs.png
         description: Otro pequeño taller, dedicado a todos los engines de imageboards, desde Kusaba, Futura, Futaba hasta Vichan, pasando por Tinyboard. Todos los motores de imageboards son bienvenidos.
 
   - id: 13
     name: Comunidad Modding
     forums:
       - name: Grand Theft Auto - III Era - Coding
-        icon: https://i.imgur.com/uUTe0qk.png
+        icon: gtaiii.png
         description: Escribiendo código para todo lo concerniente a los videojuegos GTA III, Vice City y San Andreas. ¿Tienes interés en aprender, o estás estancado en tu intento de arrancar? Entra aquí y consulta lo que desees.
 
       - name: Grand Theft Auto - R.A.G.E Era - Coding
-        icon: https://i.imgur.com/29sPyld.png
+        icon: rage.png
         description: Script mods para la nueva era de videojuegos de GTA (IV, Episodios de Liberty City y V). Entra aquí, consulta nuestros tutoriales y plantea tus dudas al respecto.
 
       - name: GTA 3D Modeling y Conversión
-        icon: https://i.imgur.com/htDM5aH.png
+        icon: gta3d.png
         description: Todo lo relacionado al diseño o conversión de modelos 3D para los videojuegos en general de Grand Theft Auto.
 
       - name: Resident Evil 4, 4-UHD, 5, 6, HD, REV y REV2
-        icon: https://i.imgur.com/OkACiqB.png
+        icon: re.png
         description: Todo lo relacionado a los mods para los videojuegos de la saga de Resident Evil. Mayoritariamente mods relacionados a la conversión de modelos 3D.
 
       - name: Otros Videojuegos
-        icon: https://i.imgur.com/4LVzGhV.png
+        icon: other.png
         description: Sección para compartir mods, herramientas y recursos de cualquier videojuego.
 
   - id: 7
     name: La Taverna
     forums:
       - name: La Sociedad de los Oceosos Muertos
-        icon: https://i.imgur.com/VxDWd7x.png
+        icon: dedsoc.png
         description: Sitio relax para tomarnos un café y hablar sobre lo que deseémos. También hay caguamas.
 
       - name: El viejo Halabalooza
@@ -144,37 +144,37 @@ categories:
     name: Archivos
     forums:
       - name: Las aventuras cósmicas de tiopedro jeje es neta
-        icon: https://i.imgur.com/z7wCiqI.png
+        icon: lolnada.png
         description: Lolnada es una forma de vida. Es ir por la calle diciéndo lolnada sonriente a todos sin importar raza o distinción social. Ser lolnada es como ser emo pero sin mariconerías, o como ser metalero pero sin esos cuentos macabrones ni chingaderas negras. Eso es ser Lolnada. Y tú, ¿eres Lolnada?
         moderator: Hielitos~
 
       - name: Dz Discusiones Frikis
-        icon: https://i.imgur.com/XZvoOQY.png
+        icon: wgf.png
         description: Chaquetas mentales del tipo "Superman vs Kokum", "Rata vs Cucaracha", "Tu GFA vs mi Pija". Respaldo de la vieja data de esas discusiones legendariamente pendejas que hicieron calar a centenares de ñoños Kek.
         moderator: Moon Knight
 
       - name: Política, Economía y Sociedad
-        icon: https://i.imgur.com/oQvOzbJ.png
+        icon: society2.png
         description: Donde commies, liberales, conservadores, fachos, chairos, progres, y todas esas malas hierbas que podrás encontrar en el internetz se juntan para entrar en bucles infinitos de dicusiones sin sentido (?.
 
       - name: RM Debate y Opinión
-        icon: https://i.imgur.com/PsN7c3Y.png
+        icon: RM.png
         description: Respaldo de las viejas discusiones procedientes del Recinto Moxo, el hogar de los ex-dezeteros renegados caladisimos con su majestad el glorioso mastur-bizza (si leyeran esto me matan kek).
         moderator: minerva
 
       - name: Dz Ocio
-        icon: https://i.imgur.com/bUwtJWG.png
+        icon: dz_ocio.png
         description: Respaldo de mi viejo ocio un respaldo innecesario Kek. Mi viejo ocio ya no es lo que era ya no es lo que era ya no es lo que era....
 
   - id: 1
     name: Halabalooza
     forums:
       - name: Presentaciones, Bienvenidas y Despedidas
-        icon: https://i.imgur.com/47Xl7ca.png
+        icon: welcome.png
         description: ¿Eri novatisho? Bueno, ven aquí y desnovatísate jeje. Tranki aki no mordemos :'v solo buleamos a los invesiles ggg. Ven a leer las reglas de la comunidad, a presentarte y a exponer tus inquietudes.
 
       - name: Cumpleaños <3
-        icon: https://i.imgur.com/aR6f2mX.png
+        icon: birthday.png
         description: Sección pensada para dedicarle hilos cagauis a nuestros amiguitos del foro que estén de cumple jijijijiji aduladores
 
       - name: Quejas, Dudas y Sugerencias
@@ -187,9 +187,9 @@ categories:
         moderator: t0dragonquesa
 
       - name: Subforo oculto de pruebas
-        icon: https://i.imgur.com/Zd4CVcC.png
+        icon: tset.png
         description: Sección para hacer >le tset. Sólo disponible para el admin incompetente.
 
       - name: El Basurero de Lollipalooza.net
-        icon: https://i.imgur.com/dDNCkkJ.png
+        icon: trash.png
         description: Todos los temas y posts borrados van a parar aquí.

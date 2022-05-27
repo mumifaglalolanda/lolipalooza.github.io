@@ -2,9 +2,9 @@
 <html>
 <head>
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="http://localhost/halabalooza/Themes/Curve2/css/index.css?rc3" />
-	<script type="text/javascript" src="http://localhost/halabalooza/Themes/default/scripts/script.js?rc3"></script>
-	<script type="text/javascript" src="http://localhost/halabalooza/Themes/Curve2/scripts/theme.js?rc3"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/curve/scripts/index.css" />
+	<script type="text/javascript" src="/assets/smf/curve/scripts/script.js"></script>
+	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<meta name="description" content="{{site.data.forums.title}} - Índice" />
 	<title>{{site.data.forums.title}} - Índice</title>
@@ -19,9 +19,9 @@
 	<div id="header"><div class="frame">
 		<div id="top_section">
 			<h1 class="forumtitle">
-				<a href="http://smf.halabalooza.orgy/index.php">{{site.data.forums.title}}</a>
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
 			</h1>
-			<img id="upshrink" src="http://localhost/halabalooza/Themes/Curve2/images/upshrink.png" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
+			<img id="upshrink" src="/assets/smf/curve/img/upshrink.png" alt="*" title="Encoger o expandir encabezado." />
 			<div id="siteslogan" class="floatright">{{site.data.forums.subtitle}}</div>
 		</div>
 		<br class="clear" />
@@ -86,7 +86,7 @@
 				<tr id="board_23" class="windowbg2">
 					<td class="windowbg icon">
 						<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html" name="b23">
-							<img src="{% if board.icon %}{{board.icon}}{% else %}https://i.imgur.com/Tto2jno.png{% endif %}" alt="{{board.name}}" title="No hay nuevos Mensajes" />
+							<img src="/assets/smf/curve/ImagesOnBoard/{% if board.icon %}{{board.icon}}{% else %}default1.png{% endif %}" alt="{{board.name}}" title="No hay nuevos Mensajes" />
 						</a>
 					</td>
 					<td class="info">
