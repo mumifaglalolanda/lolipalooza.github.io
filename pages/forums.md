@@ -1,0 +1,4 @@
+---
+layout: forums
+permalink: /forums
+---
