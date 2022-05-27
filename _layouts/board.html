@@ -12,8 +12,8 @@
 	<link rel="canonical" href="http://smf.halabalooza.orgy/index.php/board,23.0.html" />
 	<link rel="help" href="http://smf.halabalooza.orgy/index.php?action=help" />
 	<link rel="search" href="http://smf.halabalooza.orgy/index.php?action=search" />
-	<link rel="contents" href="http://smf.halabalooza.orgy/index.php" />
-	<link rel="alternate" type="application/rss+xml" title="Halabalooza - Teh Internetz Flood Festival - RSS" href="http://smf.halabalooza.orgy/index.php?type=rss;action=.xml" />
+	<link rel="contents" href="{{site.data.forums.base_url}}" />
+	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://smf.halabalooza.orgy/index.php?type=rss;action=.xml" />
 	<link rel="index" href="http://smf.halabalooza.orgy/index.php/board,23.0.html" />
 	<script type="text/javascript" src="http://localhost/halabalooza/Themes/default/scripts/ohyoutube.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://localhost/halabalooza/Themes/default/css/oharaEmbed.css" />
@@ -23,10 +23,10 @@
 	<div id="header"><div class="frame">
 		<div id="top_section">
 			<h1 class="forumtitle">
-				<a href="http://smf.halabalooza.orgy/index.php">Halabalooza - Teh Internetz Flood Festival</a>
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
 			</h1>
 			<img id="upshrink" src="http://localhost/halabalooza/Themes/Curve2/images/upshrink.png" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
-			<div id="siteslogan" class="floatright">El Festival del Flood</div>
+			<div id="siteslogan" class="floatright">{{site.data.forums.subtitle}}</div>
 		</div>
 		<div id="upper_section" class="middletext">
 			<div class="news normaltext">
@@ -38,198 +38,16 @@
 			</div>
 		</div>
 		<br class="clear" />
-		<script type="text/javascript"><!-- // --><![CDATA[
-			var oMainHeaderToggle = new smc_Toggle({
-				bToggleEnabled: true,
-				bCurrentlyCollapsed: false,
-				aSwappableContainers: [
-					'upper_section'
-				],
-				aSwapImages: [
-					{
-						sId: 'upshrink',
-						srcExpanded: smf_images_url + '/upshrink.png',
-						altExpanded: 'Encoger o expandir encabezado.',
-						srcCollapsed: smf_images_url + '/upshrink2.png',
-						altCollapsed: 'Encoger o expandir encabezado.'
-					}
-				],
-				oThemeOptions: {
-					bUseThemeSettings: true,
-					sOptionName: 'collapse_header',
-					sSessionVar: 'e2bff33874',
-					sSessionId: '7a879e6e43c43d66dbdea1a223cb7c1e'
-				},
-				oCookieOptions: {
-					bUseCookie: false,
-					sCookieName: 'upshrink'
-				}
-			});
-		// ]]></script>
+		
 		<div id="main_menu">
 			<ul class="dropmenu" id="menu_nav">
-				<li id="button_home">
-					<a class="active firstlevel" href="http://smf.halabalooza.orgy/index.php">
-						<span class="last firstlevel">Inicio</span>
+				{% for item in site.data.forums.navigator %}
+				<li id="{{item.id}}">
+					<a class="{% if item.active %}active{% endif %} firstlevel" href="{{item.href}}">
+						<span class="last firstlevel">{{item.name}}</span>
 					</a>
 				</li>
-				<li id="button_help">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=help">
-						<span class="firstlevel">Ayuda</span>
-					</a>
-				</li>
-				<li id="button_search">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=search">
-						<span class="firstlevel">Buscar</span>
-					</a>
-				</li>
-				<li id="button_pmxblog">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=pmxblog">
-						<span class="firstlevel">Blogs</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pmxblog;sa=list">
-								<span>Show all Blogs</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pmxblog;sa=unread">
-								<span>Unread Blogs</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pmxblog;sa=tracked">
-								<span>Tracked Blogs</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pmxblog;sa=view">
-								<span>Work on your Blog</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pmxblog;sa=admin">
-								<span>PmxBlog Admin</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_arcade">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=arcade">
-						<span class="firstlevel">Arcade</span>
-					</a>
-				</li>
-				<li id="button_admin">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=admin">
-						<span class="firstlevel">Administración</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=admin;area=featuresettings">
-								<span>Características y Opciones </span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=admin;area=packages">
-								<span>Paquetes</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=admin;area=logs;sa=errorlog;desc">
-								<span>Log de Errores</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=admin;area=permissions">
-								<span class="last">Permisos</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://cpanel.hostinger.mx/">
-								<span class="last">cPanel X</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_moderate">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=moderate">
-						<span class="firstlevel">Moderar</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=moderate;area=reports">
-								<span class="last">Mensajes Reportados</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_profile">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=profile">
-						<span class="firstlevel">Editar Perfil</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=profile">
-								<span>Resumen</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=profile;area=account">
-								<span>Configuración de la cuenta</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=profile;area=forumprofile">
-								<span class="last">Perfil del Foro</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_pm">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=pm">
-						<span class="firstlevel">Mis Mensajes</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pm">
-								<span>Leer tus mensajes</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=pm;sa=send">
-								<span class="last">Enviar un mensaje</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_shop">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=shop">
-						<span class="firstlevel">Shop</span>
-					</a>
-				</li>
-				<li id="button_mlist">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=mlist">
-						<span class="firstlevel">Usuarios</span>
-					</a>
-					<ul>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=mlist">
-								<span>Ver la lista de usuarios</span>
-							</a>
-						</li>
-						<li>
-							<a href="http://smf.halabalooza.orgy/index.php?action=mlist;sa=search">
-								<span class="last">Buscar por usuarios</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li id="button_logout">
-					<a class="firstlevel" href="http://smf.halabalooza.orgy/index.php?action=logout;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e">
-						<span class="last firstlevel">Salir</span>
-					</a>
-				</li>
+				{% endfor %}
 			</ul>
 		</div>
 		<br class="clear" />
@@ -239,13 +57,13 @@
 	<div class="navigate_section">
 		<ul>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php"><span>Halabalooza - Teh Internetz Flood Festival</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>La Taverna</span></a> &#187;
+				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>{{page.category}}</span></a> &#187;
 			</li>
 			<li class="last">
-				<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html"><span>La Sociedad de los Oceosos Muertos</span></a>
+				<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html"><span>{{page.board}}</span></a>
 			</li>
 		</ul>
 	</div><script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script><!--Headers--><!--End Headers-->
@@ -705,7 +523,7 @@
 	<div class="navigate_section">
 		<ul>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php"><span>Halabalooza - Teh Internetz Flood Festival</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
 				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>La Taverna</span></a> &#187;

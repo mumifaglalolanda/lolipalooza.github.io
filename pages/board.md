@@ -1,4 +1,0 @@
----
-layout: board
-permalink: /board
----

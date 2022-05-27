@@ -56,4 +56,11 @@ plugins:
 
 collections:
   fposts:
+    title: fposts
+    output: false
+  boards:
+    title: boards
+    output: true
+  threads:
+    title: threads
     output: true

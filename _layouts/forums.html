@@ -11,7 +11,7 @@
 	<link rel="canonical" href="{{site.data.forums.base_url}}" />
 	<link rel="help" href="http://smf.halabalooza.orgy/index.php?action=help" />
 	<link rel="search" href="http://smf.halabalooza.orgy/index.php?action=search" />
-	<link rel="contents" href="http://smf.halabalooza.orgy/index.php" />
+	<link rel="contents" href="{{site.data.forums.base_url}}" />
 	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://smf.halabalooza.orgy/index.php?type=rss;action=.xml" />
 </head>
 <body>
@@ -47,16 +47,6 @@
 			</li>
 		</ul>
 	</div><!--Headers--><!--End Headers-->
-
-	<ul>
-		{% assign filter_posts = site.fposts | where: "forum", "Videojuegos" %}
-		{% for post in filter_posts %}
-		<li>
-			<a href="{{ post.url }}">{{post.title}}</a>
-			<div>{{post.content}}</div>
-		</li>
-		{% endfor %}
-	</ul>
 
 	<div id="boardindex_table">
 		<table class="table_list">
@@ -134,7 +124,7 @@
 		<div class="cat_bar">
 			<h3 class="catbg">
 				<img class="icon" id="upshrink_ic" src="http://localhost/halabalooza/Themes/Curve2/images/collapse.gif" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
-				{{{{site.data.forums.title}}}} - Centro de Información
+				{{site.data.forums.title}} - Centro de Información
 			</h3>
 		</div>
 		<div id="upshrinkHeaderIC">
@@ -147,7 +137,7 @@
 				</h4>
 			</div>
 			<div class="hslice" id="recent_posts_content">
-				<div class="entry-title" style="display: none;">{{{{site.data.forums.title}}}} - Mensajes recientes</div>
+				<div class="entry-title" style="display: none;">{{site.data.forums.title}} - Mensajes recientes</div>
 				<div class="entry-content" style="display: none;">
 					<a rel="feedurl" href="http://smf.halabalooza.orgy/index.php?action=.xml;type=webslice">Suscribir a Webslice</a>
 				</div>
