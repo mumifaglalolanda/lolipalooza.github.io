@@ -4,19 +4,43 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
-		Lolipalooza Studio &#8211; Our business is life itself	</title>
+		{{site.data.home.company.name}} &#8211; {{site.data.home.company.slogan}}
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script type="text/javascript" src="assets/js/script.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+	<script type="text/javascript" src="assets/js/script.js"></script>
 
-    <!-- My Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- My Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
-    <!-- Google Fonts -->
+	<!-- Google Fonts -->
+	{% if site.data.home.use_local_resources %}
+	<style type="text/css">
+	@font-face {
+		font-family: "Karla";
+		src: url("/assets/fonts/Karla-Regular.ttf");
+	}
+	@font-face {
+		font-family: "Pacifico";
+		src: url("/assets/fonts/Pacifico-Regular.ttf");
+	}
+	@font-face {
+		font-family: 'Archivo Narrow';
+		src: url("/assets/fonts/ArchivoNarrow-Regular.ttf");
+	}
+	@font-face {
+		font-family: 'Fjalla One';
+		src: url("/assets/fonts/FjallaOne-Regular.ttf");
+	}
+	</style>
+	{% else %}
+	<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Karla|Pacifico|Merriweather+Sans|Archivo+Narrow')</style>
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Work+Sans%3A800%7CKarla%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
-    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet"> 
+	{% endif %}
 
 
     <!-- CSS -->
@@ -41,31 +65,19 @@
 			<div class="row">
 				<div class="col-sm-12 social-links-col">
 					<ul class="list-inline line-separated">
-													<li class="list-inline-item">
-								<a href="http://facebook.com/lolipalooza" target="_blank">
-									<i class="fab fa-facebook"></i>
+						{% for item in site.data.home.social_links %}
+							<li class="list-inline-item d-none d-md-inline-block">
+								<a href="{{item.href}}" target="_blank">
+									<i class="{{item.icon}}"></i>
 								</a>
 							</li>
-													<li class="list-inline-item">
-								<a href="https://twitter.com/lolipalooza" target="_blank">
-									<i class="fab fa-twitter-square"></i>
-								</a>
-							</li>
-													<li class="list-inline-item">
-								<a href="https://github.com/lolipalooza" target="_blank">
-									<i class="fab fa-github-square"></i>
-								</a>
-							</li>
-													<li class="list-inline-item">
-								<a href="https://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w" target="_blank">
-									<i class="fab fa-youtube-square"></i>
-								</a>
-							</li>
-											</ul>
+						{% endfor %}
+						<li class="d-inline-block d-md-none"><a href="#"><i class="fas fa-bars"></i></a></li>
+					</ul>
 					<div class="company-subtitle">
 						<ul class="list-inline line-separated">
-							<li class="list-inline-item">Lolipalooza Studio</li>
-							<li class="list-inline-item">Experimental Games</li>
+							<li class="list-inline-item">{{site.data.home.company.name}}</li>
+							<li class="list-inline-item">{{site.data.home.company.subtitle}}</li>
 						</ul>
 					</div>
 				</div>
@@ -77,92 +89,84 @@
 	SECTION: MAIN-HEADER
 	====================-->
 	<!-- TO DO: please convertt this webm video to mp4, there is more browser support for this format -->
-	<section class="main-header" style="background: url(assets/img/header-bg2.jpg) no-repeat center fixed;background-size: cover">
+	<section class="main-header" style="background: url({{site.data.home.main_bg}}) no-repeat center fixed;background-size: cover">
 		<div class="company-logo">
-			<img src="assets/img/loli.jpg" alt="Lolipalooza Studio" class="logo" />
+			<img src="{{site.data.home.company.logo_src}}" alt="{{site.data.home.company.name}}" class="logo" />
 			<div>
-				<h1>Lolipalooza Studio</h1>
-				<p>Our business is life itself</p>
+				<h1>{{site.data.home.company.name}}</h1>
+				<p>{{site.data.home.company.slogan}}</p>
 			</div>
 		</div>
-		<ul class="nav-list list-inline line-separated">
-							<li class="list-inline-item">
-					<a href="">
-						Home					</a>
+		<ul class="nav-list list-inline line-separated d-none d-md-block">
+			{% for item in site.data.home.navigator %}
+				<li class="list-inline-item">
+					<a href="{{item.href}}">
+						{{item.title}}
+					</a>
 				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Nosotros					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Proyectos					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Tutoriales					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Noticias					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Comunidad					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Donaciones					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Contáctanos					</a>
-				</li>
-					</ul>
+			{% endfor %}
+		</ul>
 	</section>
+
+	<!--================
+	SECTION: RESPONSIVE NAV
+	====================-->
+	<nav class="responsive-nav">
+		<div><a href="#"><i class="fas fa-times"></i></a></div>
+		<div class="resp-nav-div">
+			{% for item in site.data.home.social_links %}
+				<a href="{{item.href}}" target="_blank">
+					<i class="{{item.icon}}"></i>
+					Social media text
+				</a>
+			{% endfor %}
+			{% for item in site.data.home.navigator %}
+				<a href="{{item.href}}">
+					{{item.title}}
+				</a>
+			{% endfor %}
+		</div>
+	</nav>
 	
 	<!--================
 	SECTION: PROJECTS-CAROUSEL
 	====================-->
 	<section class="projects-carousel section-col">
 		<!--<header class="right-col col">
-			<div>Noticias recientes</div>
-			<a href="" class="light-button">Ver más</a>
+			<div><?= _("Noticias recientes") ?></div>
+			<a href="" class="light-button"><?= _("Ver más") ?></a>
 		</header>-->
-		<div id="projects-carousel" class="carousel slide" data-ride="carousel">
+		<div id="{{site.data.home.projects_carousel.id}}" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-																			<li data-target="#projects-carousel" data-slide-to="0" class="active"></li>
-																									<li data-target="#projects-carousel" data-slide-to="1"></li>
-																									<li data-target="#projects-carousel" data-slide-to="2"></li>
-																	</ol>
+				{% assign i = 0 %}
+				{% for item in site.data.home.projects_carousel.items %}
+					{% if i == 0 %}
+						<li data-target="#{{site.data.home.projects_carousel.id}}" data-slide-to="{{i}}" class="active"></li>
+					{% else %}
+						<li data-target="#{{site.data.home.projects_carousel.id}}" data-slide-to="{{i}}"></li>
+					{% endif %}
+					{% assign i = i | plus:1 %}
+				{% endfor %}
+			</ol>
 			<div class="carousel-inner">
-													<div class="carousel-item active">
-						<img class="d-block w-100" src="assets/img/2hu-gta.jpg" alt="Touhou GTA">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Touhou GTA</h5>
-							<p>Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou.</p>
+				{% assign i = 0 %}
+				{% for item in site.data.home.projects_carousel.items %}
+					<div class="carousel-item {% if i == 0 %}active{% else %}{% endif %}">
+						<img class="d-block w-100" src="{{item.img}}" alt="{{item.alt}}">
+						<div class="carousel-caption">
+							<h1>{{item.title}}</h1>
+							<p>{{item.desc}}</p>
+							<a href="{{item.link}}" class="carousel-button">Ver más</a>
 						</div>
 					</div>
-														<div class="carousel-item">
-						<img class="d-block w-100" src="assets/img/pd-ge-gta.jpg" alt="Perfect Dark for SA">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Perfect Dark for SA</h5>
-							<p>Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA.</p>
-						</div>
-					</div>
-														<div class="carousel-item">
-						<img class="d-block w-100" src="assets/img/sex-machine.jpg" alt="Sex Machine">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Sex Machine</h5>
-							<p>Mod basado en CLEO que pretende emular en el engine de SA un SimDate +18 ero.</p>
-						</div>
-					</div>
-												</div>
-			<a class="carousel-control-prev" href="#projects-carousel" role="button" data-slide="prev">
+					{% assign i = i | plus:1 %}
+				{% endfor %}
+			</div>
+			<a class="carousel-control-prev" href="#{{site.data.home.projects_carousel.id}}" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a class="carousel-control-next" href="#projects-carousel" role="button" data-slide="next">
+			<a class="carousel-control-next" href="#{{site.data.home.projects_carousel.id}}" role="button" data-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
@@ -177,108 +181,63 @@
 			<div>Proyectos destacados</div>
 			<a href="" class="light-button">Ver todos</a>
 		</header>
-		<ul style="height: 1094px">
-						<li class="featured" style="position:absolute;top:8px;left:8px;">
-				<h2><a href="">Touhou GTA</a></h2>
-				<a href=""><img src="assets/img/2hu-gta.png" alt="touhou-gta"></a>
-				<p>Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou <a href="">» Ver proyecto</a></p>
+		<div class="grid-container">
+			{% for project in site.data.home.featured_projects %}
+			<div class="grid-article {{project.class}}">
+				<h2><a href="{{project.href}}">{{project.title}}</a></h2>
+				<a href=""><img src="{{project.src}}" alt="{{project.alt}}"></a>
+				<p>{{project.desc}} <a href="{{project.href}}">» Ver proyecto</a></p>
 				<ul class="list-inline line-separated">
-					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 764</a></li>
+					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 564</a></li>
 					<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> Compartir</a></li>
 					<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> Comentarios</a></li>
 				</ul>
-			</li>
-						<li class="" style="position:absolute;top:8px;right:8px;">
-				<h2><a href="">Perfect Dark for SA</a></h2>
-				<a href=""><img src="assets/img/pd-ge-gta.jpg" alt="pd-ge-sa"></a>
-				<p>Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA <a href="">» Ver proyecto</a></p>
-				<ul class="list-inline line-separated">
-					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 878</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> Compartir</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> Comentarios</a></li>
-				</ul>
-			</li>
-						<li class="" style="position:absolute;top:694px;left:8px;">
-				<h2><a href="">Sex Machine</a></h2>
-				<a href=""><img src="assets/img/sex-machine.jpg" alt="sex-machine"></a>
-				<p>Mod basado en CLEO que pretende emular en el engine de SA un SimDate +18 ero <a href="">» Ver proyecto</a></p>
-				<ul class="list-inline line-separated">
-					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 92</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> Compartir</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> Comentarios</a></li>
-				</ul>
-			</li>
-						<li class="" style="position:absolute;right:8px;top:380px;">
-				<h2><a href="">Touhou GTA</a></h2>
-				<a href=""><img src="assets/img/2hu-gta.png" alt="touhou-gta"></a>
-				<p>Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou <a href="">» Ver proyecto</a></p>
-				<ul class="list-inline line-separated">
-					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 320</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> Compartir</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> Comentarios</a></li>
-				</ul>
-			</li>
-						<li class="" style="position:absolute;top:694px;left:410px;">
-				<h2><a href="">Perfect Dark for SA</a></h2>
-				<a href=""><img src="assets/img/pd-ge-gta.jpg" alt="pd-ge-sa"></a>
-				<p>Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA <a href="">» Ver proyecto</a></p>
-				<ul class="list-inline line-separated">
-					<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 783</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> Compartir</a></li>
-					<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> Comentarios</a></li>
-				</ul>
-			</li>
+				<div class="mobile-flex">
+					<h2><a href="{{project.href}}">{{project.title}}</a></h2>
+					<p>{{project.desc}} <a href="{{project.href}}">» Ver proyecto</a></p>
+					<ul class="list-inline line-separated">
+						<li class="list-inline-item"><a href=""><i class="far fa-thumbs-up"></i> 23</a></li>
+						<li class="list-inline-item"><a href=""><i class="fas fa-share-square"></i> <span>Compartir</span></a></li>
+						<li class="list-inline-item"><a href=""><i class="fas fa-comment-dots"></i> <span>Comentarios</span></a></li>
 					</ul>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 	</section>
 	
 	<!--================
 	SECTION: TEAM
 	====================-->
-	<section class="section-col">
+	<!--<section class="section-col">
 		<header class="right-col col">
 			<div>El Equipo</div>
 			<a href="" class="light-button">Ver más</a>
 		</header>
-	</section>
+	</section>-->
 	
 	<!--================
 	FOOTER
 	====================-->
 	<footer>
 		<ul class="list-inline line-separated">
-							<li class="list-inline-item">
-					<a href="">
-						Home					</a>
+			{% for item in site.data.home.footer_links %}
+				<li class="list-inline-item">
+					<a href="{{item.href}}">
+						{{item.title}}
+					</a>
 				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Contáctanos					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Donaciones					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Privacidad					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Aviso Legal					</a>
-				</li>
-							<li class="list-inline-item">
-					<a href="">
-						Cookies					</a>
-				</li>
-					</ul>
+			{% endfor %}
+		</ul>
 		<div>
-			<img src="assets/img/loli.jpg" alt="Lolipalooza Studio" class="logo">
-			<img src="assets/img/loli.jpg" alt="Lolipalooza Studio" class="logo logo-reflect">
+			<img src="{{site.data.home.company.logo_src}}" alt="{{site.data.home.company.name}}" class="logo">
+			<img src="{{site.data.home.company.logo_src}}" alt="{{site.data.home.company.name}}" class="logo logo-reflect">
 			<div>
-				<h1>Lolipalooza Studio</h1>
-				<p>Our business is life itself</p>
+				<h1>{{site.data.home.company.name}}</h1>
+				<p>{{site.data.home.company.slogan}}</p>
 			</div>
 		</div>
+		<p>Lolipalooza © 2019-2020<br/>Powered by <a href="https://jekyllrb.com/">Jekyll</a> for <a href="https://github.com">GitHub</a></p>
 	</footer>
 </body>
 </html>

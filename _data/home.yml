@@ -1,0 +1,156 @@
+use_local_resources: true
+main_bg: /assets/img/header-bg2.jpg
+
+company:
+  name: Lolipalooza Studio
+  slogan: Our business is life itself
+  subtitle: Experimental Games
+  logo_src: /assets/img/loli.jpg
+  
+social_links:
+  - icon: fab fa-facebook
+    href: http://facebook.com/lolipalooza
+
+  - icon: fab fa-twitter-square
+    href: https://twitter.com/lolipalooza
+
+  - icon: fab fa-github-square
+    href: https://github.com/lolipalooza
+
+  - icon: fab fa-youtube-square
+    href: https://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w
+  
+navigator:
+    - title: Home
+      href: 
+    
+    - title: Nosotros
+      href: 
+    
+    - title: Proyectos
+      href: 
+    
+    - title: Tutoriales
+      href: 
+    
+    - title: Noticias
+      href: 
+    
+    - title: Comunidad
+      href: 
+    
+    - title: Donaciones
+      href: 
+    
+    - title: Contáctanos
+      href: 
+  
+projects_carousel:
+  id: projects-carousel
+  items:
+    - img: assets/img/2hu-gta.jpg
+      alt: Touhou GTA
+      title: Touhou GTA
+      desc: Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou.
+      link:
+    
+    - img: assets/img/pd-ge-gta.jpg
+      alt: Perfect Dark for SA
+      title: Perfect Dark for SA
+      desc: Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA.
+      link:
+    
+    - img: assets/img/sex-machine.jpg
+      alt: Sex Machine
+      title: Sex Machine
+      desc: Mod basado en CLEO que pretende emular en el engine de SA un SimDate +18 ero.
+      link:
+  
+news_carousel:
+  
+
+#  /*
+#   * Featured projects Grid System:
+#   * -------------------------------------------------------------
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |                                     |    .article2        |
+#   * |                                     |                     |
+#   * |             .article1               |                     |
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |                                     |---------------------|
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |                                     |                     |
+#   * |-------------------------------------|                     |
+#   * |                 |                   |                     |
+#   * |                 |                   |     .article3       |
+#   * |    Don't care   |    Don't care     |                     |
+#   * |        X        |         X         |                     |
+#   * |                 |                   |                     |
+#   * |                 |                   |                     |
+#   * -------------------------------------------------------------
+#  */
+featured_projects_height: 1094px
+featured_projects:
+  - title: Touhou GTA
+    href: 
+    src: assets/img/2hu-gta.png
+    alt: touhou-gta
+    desc: Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou
+    class: article1
+    style: top:8px;left:8px
+  
+  - title: Perfect Dark for SA
+    href: 
+    src: assets/img/pd-ge-gta.jpg
+    alt: pd-ge-sa
+    desc: Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA
+    class: article2
+    style: top:8px;right:8px
+  
+  - title: Sex Machine
+    href: 
+    src: assets/img/sex-machine.jpg
+    alt: sex-machine
+    desc: Mod basado en CLEO que pretende emular en el engine de SA un SimDate +18 ero
+    class: 
+    style: top:694px;left:8px
+  
+  - title: Touhou GTA
+    href: 
+    src: assets/img/2hu-gta.png
+    alt: touhou-gta
+    desc: Proyecto que pretende construir un storyline con sidequests de todo tipo en el engine del SA con los personajes de Touhou
+    class: article3
+    style: right:8px;top:380px
+  
+  - title: Perfect Dark for SA
+    href: 
+    src: assets/img/pd-ge-gta.jpg
+    alt: pd-ge-sa
+    desc: Una recreación de los clásicos del Nintendo 64 <i>Goldeneye</i> y <i>Perfect Dark</i> en el engine de SA
+    class: 
+    style: top:694px;left:410px
+    
+footer_links:
+  - title: Home
+    href: 
+    
+  - title: Contáctanos
+    href: 
+    
+  - title: Donaciones
+    href: 
+    
+  - title: Privacidad
+    href: 
+    
+  - title: Aviso Legal
+    href: 
+    
+  - title: Cookies
+    href: 
