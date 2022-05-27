@@ -8,7 +8,6 @@
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
-	<script type="text/javascript" src="assets/js/script.js"></script>
 
 	<!-- My Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
@@ -48,13 +47,6 @@
     <link type="text/css" rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link type="text/css" rel="stylesheet" href="assets/js/owlcarousel/owl.carousel.min.css">
     <link type="text/css" rel="stylesheet" href="assets/js/owlcarousel/owl.theme.default.min.css">
-
-    <!-- JS -->
-    <script type="text/javascript" src="assets/js/jquery/jquery-3.3.1.slim.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/css/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/owlcarousel/owl.carousel.min.js"></script>
 </head>
 <body>
 	<!--================
@@ -72,7 +64,9 @@
 								</a>
 							</li>
 						{% endfor %}
-						<li class="d-inline-block d-md-none"><a href="#"><i class="fas fa-bars"></i></a></li>
+						<li class="d-inline-block d-md-none">
+							<a href="#" class="btn-sidebar"><i class="fas fa-bars"></i></a>
+						</li>
 					</ul>
 					<div class="company-subtitle">
 						<ul class="list-inline line-separated">
@@ -111,8 +105,10 @@
 	<!--================
 	SECTION: RESPONSIVE NAV
 	====================-->
-	<nav class="responsive-nav">
-		<div><a href="#"><i class="fas fa-times"></i></a></div>
+	<div class="nav-overly hidden"></div>
+
+	<nav class="responsive-nav hidden">
+		<div><a href="#" class="btn-sidebar-close"><i class="fas fa-times"></i></a></div>
 		<div class="resp-nav-div">
 			{% for item in site.data.home.social_links %}
 				<a href="{{item.href}}" target="_blank">
@@ -239,5 +235,35 @@
 		</div>
 		<p>Lolipalooza © 2019-2020<br/>Powered by <a href="https://jekyllrb.com/">Jekyll</a> for <a href="https://github.com">GitHub</a></p>
 	</footer>
+
+	<!-- JS -->
+	<script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script
+			  src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+			  integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/owlcarousel/owl.carousel.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
+
+	<script type="text/javascript">
+		// I have the js/script.js to put all my scripts but i'll use this to do it anyways lol...
+		$(document).ready(function () {
+			$('.btn-sidebar').on('click', function () {
+				$('.nav-overly,.responsive-nav').removeClass('hidden')
+			})
+			$('.btn-sidebar-close').on('click', function () {
+				$('.nav-overly,.responsive-nav').addClass('hidden')
+			})
+			$('a[href="#"]').on('click', function (e) {
+				e.preventDefault()
+			})
+		})
+	</script>
 </body>
 </html>
