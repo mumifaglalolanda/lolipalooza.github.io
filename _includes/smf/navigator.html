@@ -1,0 +1,11 @@
+		<div id="main_menu">
+			<ul class="dropmenu" id="menu_nav">
+				{% for item in site.data.forums.navigator %}
+				<li id="{{item.id}}">
+					<a class="{% if item.active %}active{% endif %} firstlevel" href="{{item.href}}">
+						<span class="last firstlevel">{{item.name}}</span>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>

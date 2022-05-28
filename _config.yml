@@ -55,7 +55,7 @@ plugins:
 #   - vendor/ruby/
 
 collections:
-  fposts:
+  messages:
     title: fposts
     output: false
   boards:

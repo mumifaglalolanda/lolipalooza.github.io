@@ -6,17 +6,6 @@
 	<title>Testing la cosa</title>
 </head>
 <body>
-
-	<ul>
-		{% assign filter_posts = site.fposts | where: "forum", "Animu & Mango" %}
-		{% for post in filter_posts %}
-		<li>
-			<a href="{{ post.url }}">{{post.title}}</a>
-			<div>{{post.content}}</div>
-		</li>
-		{% endfor %}
-	</ul>
-
 	<ul>
 		{% for board in site.boards %}
 		<li>
@@ -27,6 +16,12 @@
 				{% assign threads = site.threads | where: "board", board.board %}
 				{% for thread in threads %}
 					<li><a href="{{thread.url}}">{{thread.title}}</a></li>
+					<ul>
+						{% assign messages = site.messages | where: "thread", thread.title %}
+						{% for message in messages %}
+							<li><a href="{{message.url}}">{{message.subject}}</a> <div>{{message.content}}</div></li>
+						{% endfor %}
+					</ul>
 				{% endfor %}
 			</ul>
 		</li>

@@ -1,0 +1,83 @@
+{% assign messages = site.messages | where: "thread", page.title %}
+{% assign par = true %}
+{% assign i = 0 %}
+{% for message in messages %}
+		{% if par %}{% assign par = false %}{% else %}{% assign par = true %}{% endif %}
+		<div class="seperate">
+				<a id="msg3180"></a>
+				<div class="windowbg{% if par %}2{% endif %}">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1" title="Ver perfil de Sloth Sinner">Sloth Sinner</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_3180_extra_info">
+								<li class="stars"><img src="/assets/smf/curve/img/nv15_good.gif" alt="*"></li>
+								<li class="avatar">
+									<a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1">
+										<img class="avatar" src="http://smf.halabalooza.orgy/index.php?action=dlattach;attach=359;type=avatar" alt="">
+									</a>
+								</li>
+								<li class="blurb" style="overflow:hidden">El Prometeus del Internet</li>
+								<li class="profile">
+									<ul>
+										<li><img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino"></li>
+										<li> <img src="/assets/smf/curve/img/flags/ir.png" alt="ir" title="Iran, Islamic Republic of"></li>
+										<li><a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="Ver Perfil" title="Ver Perfil
+Edad: 1992
+Mensajes: 460
+"></a></li>
+										<li><a href="http://smf.halabalooza.orgy/index.php?action=pm;sa=send;u=1" title="Ubicación: En lo más profundo de tu conciencia (?)
+Humor: En estado de Nirvana
+Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt="Mensaje Privado (Desconectado)"></a></li>
+										<li><a href="http://smf.halabalooza.orgy/index.php?action=shop;do=sendmoney;member=Sloth Sinner" alt="" title="☯ 2029 soles peruanos
+Enviar soles peruanos a Sloth Sinner"><img src="/assets/smf/curve/img/currency.png" width="17" height="17"></a></li>
+									</ul>
+								</li>
+								<li class="im_icons">
+									<ul>
+										<li><img src="http://localhost/halabalooza/Themes/default/images/alineacion/Vida.gif" alt="Vida" title="Vida"></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="/assets/smf/curve/img/post/xx.gif" alt="">
+									</div>
+									<h5 id="subject_3180">
+										<a href="http://smf.halabalooza.orgy/index.php/topic,598.msg3180.html#msg3180" rel="nofollow">{{message.subject}}</a>
+									</h5>
+									<div class="smalltext">
+										«
+										<strong>
+											{% if i == 0 %}
+												Original Poster :
+											{% else %}
+												Respuesta #{{i}} :
+											{% endif %}
+										</strong>
+										{{message.date}}
+										»
+									</div>
+									<div id="msg_3180_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_3180">{{message.content}}</div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_3180"></div>
+							<div class="signature" id="msg_3180_signature"><div align="center"><img src="https://i.imgur.com/3Mk4cCg.jpg" alt="" class="bbc_img"></div></div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator">
+		</div>
+	{% assign i = i | plus:1 %}
+{% endfor %}
