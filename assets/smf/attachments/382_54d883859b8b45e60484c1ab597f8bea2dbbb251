@@ -1,0 +1,327 @@
+<?
+	// All the buttons we can possible want and then some, try pulling the final list of buttons from cache first.
+	if (($menu_buttons = cache_get_data('menu_buttons-' . implode('_', $user_info['groups']) . '-' . $user_info['language'], $cacheTime)) === null || time() - $cacheTime <= $modSettings['settings_updated'])
+	{
+		$buttons = array(
+			'home' => array(
+				'title' => $txt['home'],
+				'href' => $scripturl,
+				'show' => true,
+				'sub_buttons' => array(
+					'search' => array(
+						'title' => $txt['search'],
+						'href' => $scripturl . '?action=search',
+						'show' => $context['allow_search'],
+						'sub_buttons' => array(
+						),
+					),
+					'mlist' => array(
+						'title' => $txt['members_title'],
+						'href' => $scripturl . '?action=mlist',
+						'show' => $context['allow_memberlist'],
+						'sub_buttons' => array(
+							'mlist_view' => array(
+								'title' => $txt['mlist_menu_view'],
+								'href' => $scripturl . '?action=mlist',
+								'show' => true,
+							),
+							'mlist_search' => array(
+								'title' => $txt['mlist_search'],
+								'href' => $scripturl . '?action=mlist;sa=search',
+								'show' => true,
+								'is_last' => true,
+							),
+						),
+					),
+					'help' => array(
+						'title' => $txt['help'],
+						'href' => $scripturl . '?action=help',
+						'show' => true,
+						'sub_buttons' => array(
+						),
+					),
+				),
+				'is_last' => $context['right_to_left'],
+			),
+
+			'profile' => array(
+				'title' => $txt['profile'],
+				'href' => $scripturl . '?action=profile',
+				'show' => $context['allow_edit_profile'],
+				'sub_buttons' => array(
+					'summary' => array(
+						'title' => $txt['summary'],
+						'href' => $scripturl . '?action=profile',
+						'show' => true,
+					),
+					'account' => array(
+						'title' => $txt['account'],
+						'href' => $scripturl . '?action=profile;area=account',
+						'show' => allowedTo(array('profile_identity_any', 'profile_identity_own', 'manage_membergroups')),
+					),
+					'profile' => array(
+						'title' => $txt['forumprofile'],
+						'href' => $scripturl . '?action=profile;area=forumprofile',
+						'show' => allowedTo(array('profile_extra_any', 'profile_extra_own')),
+						'is_last' => true,
+					),
+					'pm' => array(
+						'title' => $txt['pm_short'],
+						'href' => $scripturl . '?action=pm',
+						'show' => $context['allow_pm'],
+						'sub_buttons' => array(
+							'pm_read' => array(
+								'title' => $txt['pm_menu_read'],
+								'href' => $scripturl . '?action=pm',
+								'show' => allowedTo('pm_read'),
+							),
+							'pm_send' => array(
+								'title' => $txt['pm_menu_send'],
+								'href' => $scripturl . '?action=pm;sa=send',
+								'show' => allowedTo('pm_send'),
+								'is_last' => true,
+							),
+						),
+					),
+					'calendar' => array(
+						'title' => $txt['calendar'],
+						'href' => $scripturl . '?action=calendar',
+						'show' => $context['allow_calendar'],
+						'sub_buttons' => array(
+							'view' => array(
+								'title' => $txt['calendar_menu'],
+								'href' => $scripturl . '?action=calendar',
+								'show' => allowedTo('calendar_post'),
+							),
+							'post' => array(
+								'title' => $txt['calendar_post_event'],
+								'href' => $scripturl . '?action=calendar;sa=post',
+								'show' => allowedTo('calendar_post'),
+								'is_last' => true,
+							),
+						),
+					),
+				),
+			),
+			
+// --- start PmxBlog
+			'pmxblog' => array(
+				'title' => $txt['PmxBlog_blogbutton'],
+				'href' => $scripturl .'?action=pmxblog',
+				'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('view', $user_info['id']),
+				'sub_buttons' => array(
+					'showall' => array(
+						'title' => $txt['PmxBlog_show_all_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=list',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('view', $user_info['id']),
+					),
+					'showunread' => array(
+						'title' => $txt['PmxBlog_show_unread_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=unread',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('view', $user_info['id']) && !$user_info['is_guest'],
+					),
+					'showtracked' => array(
+						'title' => $txt['PmxBlog_show_tracked_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=tracked',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('view', $user_info['id']) && !$user_info['is_guest'],
+					),
+					'yourblogview' => array(
+						'title' => $txt['PmxBlog_your_blog_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=view',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('manager', $user_info['id']) && !empty($context['PmxBlog']['blogexist']),
+					),
+					'yourblogsettings' => array(
+						'title' => $txt['PmxBlog_set_newblog_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=manager;set',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedToBlog('manager', $user_info['id']) && empty($context['PmxBlog']['blogexist']),
+					),
+					'blogadmin' => array(
+						'title' => $txt['PmxBlog_admin_nav'],
+						'href' => $scripturl . '?action=pmxblog;sa=admin',
+						'show' => !empty($modSettings['pmxblog_enabled']) && AllowedTo('admin_forum'),
+					),
+				),
+			),
+// --- end PmxBlog
+
+			'arcade' => array(
+				'title' => $txt['arcade'],
+				'href' => $scripturl . '?action=arcade',
+				'show' => true,
+				'sub_buttons' => array(
+				),
+			),
+			'test' => array(
+				'title' => 'Test',
+				'href' => 'http://localhost/halabalooza' . '/test2.php',
+				'show' => $context['allow_admin'],
+				//'sub_buttons' => array(),
+			),
+			'admin' => array(
+				'title' => $txt['admin'],
+				'href' => $scripturl . '?action=admin',
+				'show' => $context['allow_admin'],
+				'sub_buttons' => array(
+					'featuresettings' => array(
+						'title' => $txt['modSettings_title'],
+						'href' => $scripturl . '?action=admin;area=featuresettings',
+						'show' => allowedTo('admin_forum'),
+					),
+					'packages' => array(
+						'title' => $txt['package'],
+						'href' => $scripturl . '?action=admin;area=packages',
+						'show' => allowedTo('admin_forum'),
+					),
+					'errorlog' => array(
+						'title' => $txt['errlog'],
+						'href' => $scripturl . '?action=admin;area=logs;sa=errorlog;desc',
+						'show' => allowedTo('admin_forum') && !empty($modSettings['enableErrorLogging']),
+					),
+					'permissions' => array(
+						'title' => $txt['edit_permissions'],
+						'href' => $scripturl . '?action=admin;area=permissions',
+						'show' => allowedTo('manage_permissions'),
+						'is_last' => true,
+					),
+					'cpanel' => array(
+						'title' => 'cPanel X',
+						'href' => 'http://cpanel.0fees.net/',
+						'show' => $context['allow_admin'],
+						'is_last' => true,
+					),
+				),
+			),
+			'moderate' => array(
+				'title' => $txt['moderate'],
+				'href' => $scripturl . '?action=moderate',
+				'show' => $context['allow_moderation_center'],
+				'sub_buttons' => array(
+					'modlog' => array(
+						'title' => $txt['modlog_view'],
+						'href' => $scripturl . '?action=moderate;area=modlog',
+						'show' => !empty($modSettings['modlog_enabled']) && !empty($user_info['mod_cache']) && $user_info['mod_cache']['bq'] != '0=1',
+					),
+					'poststopics' => array(
+						'title' => $txt['mc_unapproved_poststopics'],
+						'href' => $scripturl . '?action=moderate;area=postmod;sa=posts',
+						'show' => $modSettings['postmod_active'] && !empty($user_info['mod_cache']['ap']),
+					),
+					'attachments' => array(
+						'title' => $txt['mc_unapproved_attachments'],
+						'href' => $scripturl . '?action=moderate;area=attachmod;sa=attachments',
+						'show' => $modSettings['postmod_active'] && !empty($user_info['mod_cache']['ap']),
+					),
+					'reports' => array(
+						'title' => $txt['mc_reported_posts'],
+						'href' => $scripturl . '?action=moderate;area=reports',
+						'show' => !empty($user_info['mod_cache']) && $user_info['mod_cache']['bq'] != '0=1',
+						'is_last' => true,
+					),
+				),
+			),
+			// Begin SMFShop code
+			// !!! Add subactions?
+			'shop' => array(
+				'title' => $txt['shop_menu_button'],
+				'href' => $scripturl . '?action=shop',
+				'show' => true,
+			),
+			// End SMFShop code
+
+			'imgboard' => array(
+				'title' => 'Imageboard',
+				'href' => '#',
+				'show' => true,
+				'sub_buttons' => array(
+					'wea' => array(
+						'title' => 'Weachan',
+						'href' => 'http://weachan.zz.mu/recent.html',
+						'show' => true,
+					),
+					'vi' => array(
+						'title' => 'Vichan',
+						'href' => 'http://localhost/vichan',
+						'show' => true,
+					),
+					'ln' => array(
+						'title' => 'Lolnada',
+						'href' => 'http://lolnada.org/b',
+						'show' => true,
+					),
+					'mon' => array(
+						'title' => 'Monstrochan',
+						'href' => 'http://monstrochan.org/l',
+						'show' => true,
+					),
+					've' => array(
+						'title' => 'Penezuelachan',
+						'href' => 'http://hispachan.org/ve',
+						'show' => true,
+					),
+				),
+			),
+			'login' => array(
+				'title' => $txt['login'],
+				'href' => $scripturl . '?action=login',
+				'show' => $user_info['is_guest'],
+				'sub_buttons' => array(
+				),
+			),
+			'register' => array(
+				'title' => $txt['register'],
+				'href' => $scripturl . '?action=register',
+				'show' => $user_info['is_guest'],
+				'sub_buttons' => array(
+				),
+				'is_last' => !$context['right_to_left'],
+			),
+			'logout' => array(
+				'title' => $txt['logout'],
+				'href' => $scripturl . '?action=logout;%1$s=%2$s',
+				'show' => !$user_info['is_guest'],
+				'sub_buttons' => array(
+				),
+				'is_last' => !$context['right_to_left'],
+			),
+		);
+
+		// Now we put the buttons in the context so the theme can use them.
+		$menu_buttons = array();
+		foreach ($buttons as $act => $button)
+			if (!empty($button['show']))
+			{
+				$button['active_button'] = false;
+
+				// Make sure the last button truely is the last button.
+				if (!empty($button['is_last']))
+				{
+					if (isset($last_button))
+						unset($menu_buttons[$last_button]['is_last']);
+					$last_button = $act;
+				}
+
+				// Go through the sub buttons if there are any.
+				if (!empty($button['sub_buttons']))
+					foreach ($button['sub_buttons'] as $key => $subbutton)
+					{
+						if (empty($subbutton['show']))
+							unset($button['sub_buttons'][$key]);
+
+						// 2nd level sub buttons next
+						if(!empty($subbutton['sub_buttons']))
+						{
+							foreach($subbutton['sub_buttons'] as $key2 => $sub_button2)
+							{
+								if(empty($sub_button2['show']))
+									unset($button['sub_buttons'][$key]['sub_buttons'][$key2]);
+							}
+						}
+					}
+
+				$menu_buttons[$act] = $button;
+			}
+
+		if (!empty($modSettings['cache_enable']) && $modSettings['cache_enable'] >= 2)
+			cache_put_data('menu_buttons-' . implode('_', $user_info['groups']) . '-' . $user_info['language'], $menu_buttons, $cacheTime);
+	}
+?>

@@ -1,0 +1,265 @@
+<?
+		// Show a link to the member's profile.
+		echo '
+								', $message['member']['link'];
+
+		// Show online and offline buttons?
+		if (!empty($modSettings['onlineEnable']) && !$message['member']['is_guest'])
+			echo '
+								', $context['can_send_pm'] ? '<a href="' . $message['member']['online']['href'] . '" title="' . $message['member']['online']['label'] . '">' : '', '<img src="', $message['member']['online']['image_href'], '" alt="', $message['member']['online']['text'], '" />', $context['can_send_pm'] ? '</a>' : '';
+
+		echo '
+							</h4>
+							<ul class="reset smalltext" id="msg_', $message['id'], '_extra_info">';
+
+/*		// Show the member's primary group (like 'Administrator') if they have one.
+		if (!empty($message['member']['group']))
+			echo '
+								<li class="membergroup">', $message['member']['group'], '</li>';
+*/
+
+		// Don't show these things for guests.
+		if (!$message['member']['is_guest'])
+		{
+/*			// Show the post group if and only if they have no other group or the option is on, and they are in a post group.
+			if ((empty($settings['hide_post_group']) || $message['member']['group'] == '') && $message['member']['post_group'] != '')
+				echo '
+								<li class="postgroup">', $message['member']['post_group'], '</li>';
+*/			echo '
+								<li class="stars">', $message['member']['group_stars'], '</li>';
+
+			// Show avatars, images, etc.?
+			if (!empty($settings['show_user_images']) && empty($options['show_no_avatars']) && !empty($message['member']['avatar']['image']))
+				echo '
+								<li class="avatar">
+									<a href="', $scripturl, '?action=profile;u=', $message['member']['id'], '">
+										', $message['member']['avatar']['image'], '
+									</a>
+								</li>';
+
+/*			// Show the member's custom title, if they have one.
+			if (!empty($message['member']['title']))
+				echo '
+								<li class="title">', $message['member']['title'], '</li>';
+*/
+
+/*			// Show how many posts they have made.
+			if (!isset($context['disabled_fields']['posts']))
+				echo '
+								<li class="postcount">', $txt['member_postcount'], ': ', $message['member']['posts'], '</li>';	
+*/
+/*			// Begin SMFShop 2.3 (Build 11) code
+			echo '
+								<li>', $modSettings['shopCurrencyPrefix'], $message['member']['money'], $modSettings['shopCurrencySuffix'], '</li>';   //<--- Tienes que remover el último '; en caso de que desees remover los simbolos de comentarios /*
+*/
+/*								<li><a href="', $scripturl, '?action=shop;do=invother2;member=', $message['member']['username'], '">', $txt['shop_display_view_inventory'], '</a></li>
+								<li><a href="', $scripturl, '?action=shop;do=sendmoney;member=', $message['member']['username'], '">', $txt['shop_display_send_money'], ' ', $message['member']['name'], '</a></li>';
+*/			//END SMFShop code
+
+/*							
+			if(!empty($message['member']['age_text']))
+				echo '
+								<li class="postcount">', $txt['user_age'], ': ', $message['member']['age_text'], '</li>';
+
+			if(!empty($message['member']['location']))
+				echo '
+								<li class="postcount">', $txt['location'], ': ', $message['member']['location'], '</li>';
+*/
+			// Is karma display enabled?  Total or +/-?
+			if ($modSettings['karmaMode'] == '1')
+				echo '
+								<li class="karma">', $modSettings['karmaLabel'], ' ', $message['member']['karma']['good'] - $message['member']['karma']['bad'], '</li>';
+			elseif ($modSettings['karmaMode'] == '2')
+				echo '
+								<li class="karma">', $modSettings['karmaLabel'], ' +', $message['member']['karma']['good'], '/-', $message['member']['karma']['bad'], '</li>';
+
+			// Is this user allowed to modify this member's karma?
+			if ($message['member']['karma']['allow'])
+				echo '
+								<li class="karma_allow">
+									<a href="', $scripturl, '?action=modifykarma;sa=applaud;uid=', $message['member']['id'], ';topic=', $context['current_topic'], '.' . $context['start'], ';m=', $message['id'], ';', $context['session_var'], '=', $context['session_id'], '">', $modSettings['karmaApplaudLabel'], '</a>
+									<a href="', $scripturl, '?action=modifykarma;sa=smite;uid=', $message['member']['id'], ';topic=', $context['current_topic'], '.', $context['start'], ';m=', $message['id'], ';', $context['session_var'], '=', $context['session_id'], '">', $modSettings['karmaSmiteLabel'], '</a>
+								</li>';
+
+			// Show their personal text?
+			if (!empty($settings['show_blurb']) && $message['member']['blurb'] != '')
+				echo '
+								<li class="blurb">', $message['member']['blurb'], '</li>';
+
+/*			// This shows the popular messaging icons.
+			if ($message['member']['has_messenger'] && $message['member']['can_view_profile'])
+				echo '
+								<li class="im_icons">
+									<ul>
+										', !empty($message['member']['icq']['link']) ? '<li>' . $message['member']['icq']['link'] . '</li>' : '', '
+										', !empty($message['member']['msn']['link']) ? '<li>' . $message['member']['msn']['link'] . '</li>' : '', '
+										', !empty($message['member']['aim']['link']) ? '<li>' . $message['member']['aim']['link'] . '</li>' : '', '
+										', !empty($message['member']['yim']['link']) ? '<li>' . $message['member']['yim']['link'] . '</li>' : '', '
+									</ul>
+								</li>';
+*/
+			// Show the profile, website, email address, and personal message buttons.
+			if ($settings['show_profile_buttons'])
+			{
+				echo '
+								<li class="profile">
+									<ul>';
+									
+
+				// Show the member's gender icon?
+				if (!empty($settings['show_gender']) && $message['member']['gender']['image'] != '' && !isset($context['disabled_fields']['gender']))
+					echo '
+										<li>', $message['member']['gender']['image'], '</li>';
+
+				// Show the country they hail from!
+				if (isset($message['member']['country_flag']) && !empty($modSettings['country_flag_show']) && !empty($message['member']['country_flag']))
+				{
+					$flags = country_flags();
+					echo '
+										<li>', ' <img src="', $settings['images_url'], '/flags/', $message['member']['country_flag'], '.png" alt="', $message['member']['country_flag'], '" title="', $flags[$message['member']['country_flag']], '" /></li>';
+				}
+				
+				// Don't show the profile button if you're not allowed to view the profile.
+				if ($message['member']['can_view_profile'])
+				{
+					// Fecha de Registro
+
+					// Edad
+					if(!empty($message['member']['age_text']))
+						$mylocal_age = $txt['user_age'] . ': ' . $message['member']['age_text'] . '&#13;';
+					else $mylocal_age = '';
+
+					// Mensajes
+					if (!isset($context['disabled_fields']['posts']))
+						$mylocal_posts = $txt['member_postcount'] . ': ' . $message['member']['posts'] . '&#13;';
+					else $mylocal_posts = '';
+					
+					// Dinero
+					$mylocal_money = $modSettings['shopCurrencyPrefix'] . $message['member']['money'] . $modSettings['shopCurrencySuffix'] . '&#13;';
+
+					// Show the profile icon
+					echo '
+										<li><a href="', $message['member']['href'], '">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/icons/profile_sm.gif" alt="' . $txt['view_profile'] . '" title="' . $txt['view_profile'] . '&#13;' . $mylocal_age . $mylocal_posts . $mylocal_money . '" />' : $txt['view_profile']), '</a></li>';
+				}
+				
+				// Don't show an icon if they haven't specified a website.
+				if ($message['member']['website']['url'] != '' && !isset($context['disabled_fields']['website']))
+					echo '
+										<li><a href="', $message['member']['website']['url'], '" title="' . 'Mi web: ' . $message['member']['website']['title'] . '&#13;' . $message['member']['website']['url'] . '" target="_blank" class="new_win">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/www_sm.gif" alt="' . $message['member']['website']['title'] . '" />' : $txt['www']), '</a></li>';
+
+/*				// Don't show the email address if they want it hidden.
+				if (in_array($message['member']['show_email'], array('yes', 'yes_permission_override', 'no_through_forum')))
+					echo '
+										<li><a href="', $scripturl, '?action=emailuser;sa=email;msg=', $message['id'], '" rel="nofollow">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/email_sm.gif" alt="' . $txt['email'] . '" title="' . $txt['email'] . '" />' : $txt['email']), '</a></li>';
+*/
+				// Since we know this person isn't a guest, you *can* message them.
+				if ($context['can_send_pm'])
+				{
+					// ubicación
+					if(!empty($message['member']['location']))
+						$mylocal_location = $txt['location'] . ': ' . $message['member']['location'] . '&#13;';
+					else $mylocal_location = '';
+
+					// otros campos personalizados tipo texto
+					$mylocal_custom = '';
+					if (!empty($message['member']['custom_fields']))
+					{
+						foreach ($message['member']['custom_fields'] as $custom)
+							if (empty($custom['placement']) || empty($custom['value']))
+								$mylocal_custom .= $custom['title'] . ': ' . $custom['value'] . '&#13;';
+					}
+					
+					// mensajería privada
+					$mylocal_pm = $message['member']['online']['is_online'] ? $txt['pm_online'] : $txt['pm_offline'];
+
+					echo '
+										<li><a href="', $scripturl, '?action=pm;sa=send;u=', $message['member']['id'], '" title="', ($mylocal_location . $mylocal_custom . $mylocal_pm), '">', $settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/im_' . ($message['member']['online']['is_online'] ? 'on' : 'off') . '.gif" alt="' . ($message['member']['online']['is_online'] ? $txt['pm_online'] : $txt['pm_offline']) . '" />' : ($message['member']['online']['is_online'] ? $txt['pm_online'] : $txt['pm_offline']), '</a></li>';
+				}
+
+				// SMF Shop
+				$mylocal_money = $modSettings['shopCurrencyPrefix'] . $message['member']['money'] . $modSettings['shopCurrencySuffix'] . '&#13;';
+				$mylocal_money .= 'Enviar' . $modSettings['shopCurrencySuffix'] . ' a ' . $message['member']['username'];
+				echo '
+										<li><a href="', $scripturl, '?action=shop;do=sendmoney;member=', $message['member']['username'], '" alt="" title="', $mylocal_money, '"><img src="' . $settings['images_url'] . '/currency.png" width="17" height="17"></a></li>';
+
+				echo '
+									</ul>
+								</li>';
+			}
+			
+			// Any custom fields to show as icons?
+			if (!empty($message['member']['custom_fields']))
+			{
+				$shown = false;
+				foreach ($message['member']['custom_fields'] as $custom)
+				{
+					if ($custom['placement'] != 1 || empty($custom['value']))
+						continue;
+					if (empty($shown))
+					{
+						$shown = true;
+						echo '
+								<li class="im_icons">
+									<ul>';
+					}
+					echo '
+										<li>', $custom['value'], '</li>';
+				}
+				if ($shown)
+					echo '
+									</ul>
+								</li>';
+			}
+			
+/*			// Any custom fields for standard placement?
+			if (!empty($message['member']['custom_fields']))
+			{
+				foreach ($message['member']['custom_fields'] as $custom)
+					if (empty($custom['placement']) || empty($custom['value']))
+						echo '
+								<li class="custom">', $custom['title'], ': ', $custom['value'], '</li>';
+			}
+*/
+			// Are we showing the warning status?
+			if ($message['member']['can_see_warning'])
+				echo '
+								<li class="warning">', $context['can_issue_warning'] ? '<a href="' . $scripturl . '?action=profile;area=issuewarning;u=' . $message['member']['id'] . '">' : '', '<img src="', $settings['images_url'], '/warning_', $message['member']['warning_status'], '.gif" alt="', $txt['user_warn_' . $message['member']['warning_status']], '" />', $context['can_issue_warning'] ? '</a>' : '', '<span class="warn_', $message['member']['warning_status'], '">', $txt['warn_' . $message['member']['warning_status']], '</span></li>';
+			// Show their awards?
+			if (!empty($message['member']['awards']) && $modSettings['awards_in_post'] > 0)
+			{
+				echo '
+								<li>
+									<fieldset style="border: 1px solid black; padding: 5px;">
+										<legend>', $txt['awards'], '</legend>';
+
+				// Couldn't limit it in Load.php, so let's do it here.
+				$awards = 0;
+				foreach ($message['member']['awards'] as $award){
+					if($awards < $modSettings['awards_in_post'])
+						echo '
+										<a href="', $scripturl, $award['more'], '"><img src="', dirname($scripturl), $award['img'], '" alt="', $award['description'], '" title="', $award['description'], '" /></a> ';
+					$awards++;
+				}
+
+				echo '
+									</fieldset>
+								</li>';
+			}
+		}
+		// Otherwise, show the guest's email.
+		elseif (!empty($message['member']['email']) && in_array($message['member']['show_email'], array('yes', 'yes_permission_override', 'no_through_forum')))
+			echo '
+								<li class="email"><a href="', $scripturl, '?action=emailuser;sa=email;msg=', $message['id'], '" rel="nofollow">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/email_sm.gif" alt="' . $txt['email'] . '" title="' . $txt['email'] . '" />' : $txt['email']), '</a></li>';
+
+		
+//		arcade_champs_post_profile($message);
+
+// Done with the information about the poster... on to the post itself.
+
+/*		// Mod Hide Post
+		if ($message['post_hidden'] == 1) {
+			if (!allowedTo('modhide_post') && (($message['member']['id'] <> $context['user']['id']) || ($message['member']['is_guest'])))
+				$message['subject'] = '*****';
+		}
+*/
+?>
