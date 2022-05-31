@@ -6,11 +6,48 @@
 	<title>Testing la cosa</title>
 </head>
 <body>
+	<p>
+		{% raw %}
+		Esta es la sintaxis de blade: {{ $asdf }}!
+		{% endraw %}
+	</p>
+	<p>
+		{% raw %}
+		Pero yo quiero que Jekyll si compile **ésto** caracho!
+		(asdasd)
+		{% endraw %}
+	</p>
+
+	{% assign threads = "" | split: "," %}
+	{% assign boards = site.boards | where_exp: "board", "board.board=='Animu &amp; Mango' or board.parent_board=='Animu &amp; Mango'" %}
+	{% for board in boards %}
+		{% assign threads2 = site.threads | where: "board", board.board %}
+		{% assign threads = threads | concat: threads2 %}
+	{% endfor %}
+
+	{% assign messages = "" | split: "," %}
+	{% for thread in threads %}
+		{% assign messages2 = site.messages | where: "thread", thread.title %}
+		{% assign messages = messages | concat: messages2 | sort: "date" %}
+	{% endfor %}
+
+	{% assign user = site.users | where: "member_name", messages.last.user | first %}
+
+	{% assign last_msg_thread = site.threads | where: "title", messages.last.thread | first %}
+	<ul>
+		{% for message in messages %}
+		<li>{{message.date}} - {{message.subject}}</li>
+		{% endfor %}
+	</ul>
+	<p>Last message: {{messages.last.subject}}</p>
+	<pre>{{last_msg_thread | jsonify}}</pre>
+
 	<ul>
 		{% for category in site.data.forums.categories %}
+		{% assign boards = site.boards | where: "category", category.name | sort: "board_order" %}
+		{% if boards.size > 0 %}
 		<li>
-			{{category.name}}
-			{% assign boards = site.boards | where: "category", category.name | sort: "board_order" %}
+			{{category.name}} - boards: {{boards.size}}
 			<ul>
 				{% for board in boards %}
 				{% unless board.child_level %}
@@ -30,6 +67,7 @@
 				{% endfor %}
 			</ul>
 		</li>
+		{% endif %}
 		{% endfor %}
 	</ul>
 

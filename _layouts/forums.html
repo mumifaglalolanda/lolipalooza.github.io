@@ -41,93 +41,104 @@
 	<div id="boardindex_table">
 		<table class="table_list">
 			{% for category in site.data.forums.categories %}
-			<tbody class="header" id="category_{{category.id}}">
-				<tr>
-					<td colspan="5">
-						<div class="cat_bar">
-							<h3 class="catbg">
-								<a class="collapse" href="http://smf.halabalooza.orgy/index.php?action=collapse;c=7;sa=collapse;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e#c7"><img src="http://localhost/halabalooza/Themes/Curve2/images/collapse.gif" alt="-" /></a>
-								<a class="unreadlink" href="http://smf.halabalooza.orgy/index.php?action=unread;c=7">Mensajes no leídos</a>
-								<a id="c7" href="http://smf.halabalooza.orgy/index.php?action=collapse;c=7;sa=collapse;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e#c7">{{category.name}}</a>
-							</h3>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-			<tbody class="content" id="category_7_boards">
-            <tr style="line-height:8px;">
-            <td align="center" class="windowbg"><strong>Estado</strong></td>
-            <td align="left" class="windowbg"><strong>Foro</strong></td>
-            <td align="center" class="windowbg"><strong>Mensajes</strong></td>
-            <td align="center" class="windowbg"><strong>Temas</strong></td>
-            <td align="center" class="windowbg"><strong>Último</strong></td>
-            </tr>
-            	{% assign boards = site.boards | where: "category", category.name | sort: "board_order" %}
-            	{% for board in boards %}
-            	{% unless board.child_level %}
+				{% assign boards = site.boards | where: "category", category.name | sort: "board_order" %}
+				{% if boards.size > 0 %}
+				<tbody class="header" id="category_{{category.id}}">
+					<tr>
+						<td colspan="5">
+							<div class="cat_bar">
+								<h3 class="catbg">
+									<a class="collapse" href="http://smf.halabalooza.orgy/index.php?action=collapse;c=7;sa=collapse;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e#c7"><img src="http://localhost/halabalooza/Themes/Curve2/images/collapse.gif" alt="-" /></a>
+									<a class="unreadlink" href="http://smf.halabalooza.orgy/index.php?action=unread;c=7">Mensajes no leídos</a>
+									<a id="c7" href="http://smf.halabalooza.orgy/index.php?action=collapse;c=7;sa=collapse;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e#c7">{{category.name}}</a>
+								</h3>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				<tbody class="content" id="category_7_boards">
+	            <tr style="line-height:8px;">
+	            <td align="center" class="windowbg"><strong>Estado</strong></td>
+	            <td align="left" class="windowbg"><strong>Foro</strong></td>
+	            <td align="center" class="windowbg"><strong>Mensajes</strong></td>
+	            <td align="center" class="windowbg"><strong>Temas</strong></td>
+	            <td align="center" class="windowbg"><strong>Último</strong></td>
+	            </tr>
+	            	{% for board in boards %}
+		            	{% unless board.child_level %}
 
-            	{% assign subboards = boards | where: "child_level", 1 | sort: "board_order" %}
-				{% assign subboards = subboards | where: "parent_board", board.board | sort: "board_order" %}
+			            	{% assign subboards = boards | where: "child_level", 1 | where: "parent_board", board.board | sort: "board_order" %}
 
-				<tr id="board_23" class="windowbg2">
-					<td class="windowbg icon" {% if subboards.size > 0 %}rowspan="2"{% endif %}>
-						<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html" name="b23">
-							<img src="/assets/smf/curve/ImagesOnBoard/{% if board.icon %}{{board.icon}}{% else %}default1.png{% endif %}" alt="{{board.name}}" title="No hay nuevos Mensajes" />
-						</a>
-					</td>
-					<td class="info">
-						<a class="subject" href="{{ board.url }}" name="b23">{{board.board}}</a>
-						<p>{{board.description}}</p>
-						{% if board.moderator %}
-						<p class="moderators">Moderador: <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=4" title="Moderador del Foro">{{board.moderator}}</a></p>
-						{% endif %}
-               		</td>
-					<td class="windowbg" align="center" width="7%">421</td>
-					<td class="windowbg" align="center" width="7%">10</td>
-					<td class="lastpost">
-						<div style="float: left; margin-right: 4px;"><img src="http://i.imgur.com/2GwBECN.gif" alt="" width="38" height="38" align="middle" border="0" /></div>
-						<p>
-							<strong>Último:</strong>  <a href="http://smf.halabalooza.orgy/index.php/topic,3437.msg910316.html#new" title="Re:memes xdxdxddd">Re:memes xdxdxddd</a><br />
-							por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1601">imv115sorgesoureDug</a><br />
-							 Septiembre 10, 2021, 04:54:35 pm
-						</p>
-					</td>
-				</tr>
+							<tr id="board_23" class="windowbg2">
+								<td class="windowbg icon" {% if subboards.size > 0 %}rowspan="2"{% endif %}>
+									<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html" name="b23">
+										<img src="/assets/smf/curve/ImagesOnBoard/{% if board.icon %}{{board.icon}}{% else %}default1.png{% endif %}" alt="{{board.name}}" title="No hay nuevos Mensajes" />
+									</a>
+								</td>
+								<td class="info">
+									<a class="subject" href="{{ board.url }}" name="b23">{{board.board}}</a>
+									<p>{{board.description}}</p>
+									{% if board.moderator %}
+									<p class="moderators">Moderador: <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=4" title="Moderador del Foro">{{board.moderator}}</a></p>
+									{% endif %}
+			               		</td>
 
-				{% if subboards.size > 0 %}
-				<tr id="board_99_children">
-					<td colspan="4" class="children windowbg">
-						<strong>Subforos</strong>:
-						{% for subboard in subboards %}
-						<a href="{{ subboard.url }}" title="No hay nuevos Mensajes (Temas: 26, Mensajes: 211)">{{subboard.board}}</a>,
-						{% endfor %}
-					</td>
-				</tr>
+								{% capture str %}board.board=='{{board.board}}' or board.parent_board=='{{board.board}}'{% endcapture %}
+								{% assign boards = site.boards | where_exp: "board", str %}
+
+								{% assign threads = "" | split: "," %}
+								{% for board in boards %}
+									{% assign threads2 = site.threads | where: "board", board.board %}
+									{% assign threads = threads | concat: threads2 %}
+								{% endfor %}
+
+								{% assign messages = "" | split: "," %}
+								{% for thread in threads %}
+									{% assign messages2 = site.messages | where: "thread", thread.title %}
+									{% assign messages = messages | concat: messages2 | sort: "date" %}
+								{% endfor %}
+
+								{% assign last_user = site.users | where: "member_name", messages.last.user | first %}
+								{% assign last_msg_thread = site.threads | where: "title", messages.last.thread | first %}
+								
+								<td class="windowbg" align="center" width="7%">{{messages.size}}</td>
+								<td class="windowbg" align="center" width="7%">{{threads.size}}</td>
+								
+								<td class="lastpost">
+									{% if last_user %}
+									<div style="float: left; margin-right: 4px;"><img src="/assets/smf/attachments/{{last_user.avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
+									<p>
+										<strong>Último:</strong>  <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a><br />
+										por <a href="{{last_user.url}}">{{last_user.member_name}}</a><br />
+										 {{ messages.last.date | date_to_rfc822 }}
+									</p>
+									{% endif %}
+								</td>
+							</tr>
+
+							{% if subboards.size > 0 %}
+							<tr id="board_99_children">
+								<td colspan="4" class="children windowbg">
+									<strong>Subforos</strong>:
+									{% for subboard in subboards %}
+									<a href="{{ subboard.url }}" title="No hay nuevos Mensajes (Temas: 26, Mensajes: 211)">{{subboard.board}}</a>,
+									{% endfor %}
+								</td>
+							</tr>
+							{% endif %}
+
+						{% endunless %}
+					{% endfor %}
+				</tbody>
+				<tbody class="divider">
+					<tr>
+						<td colspan="4"></td>
+					</tr>
+				</tbody>
 				{% endif %}
-
-				{% endunless %}
-				{% endfor %}
-			</tbody>
-			<tbody class="divider">
-				<tr>
-					<td colspan="4"></td>
-				</tr>
-			</tbody>
 			{% endfor %}
 		</table>
 	</div>
-	<div id="posting_icons" class="floatleft">
-		<ul class="reset">
-			<li class="floatleft"><img src="http://localhost/halabalooza/Themes/Curve2/images/new_some.png" alt="" /> Nuevos Mensajes</li>
-			<li class="floatleft"><img src="http://localhost/halabalooza/Themes/Curve2/images/new_none.png" alt="" /> No hay nuevos Mensajes</li>
-			<li class="floatleft"><img src="http://localhost/halabalooza/Themes/Curve2/images/new_redirect.png" alt="" /> Foro de Redirección</li>
-		</ul>
-	</div><div class="mark_read">
-		<div class="buttonlist floatright">
-			<ul>
-				<li><a class="button_strip_markread" href="http://smf.halabalooza.orgy/index.php?action=markasread;sa=all;e2bff33874=7a879e6e43c43d66dbdea1a223cb7c1e"><span class="last">Marcar TODOS los mensajes como leidos</span></a></li>
-			</ul>
-		</div></div>
 	<span class="clear upperframe"><span></span></span>
 	<div class="roundframe"><div class="innerframe">
 		<div class="cat_bar">
@@ -151,26 +162,14 @@
 					<a rel="feedurl" href="http://smf.halabalooza.orgy/index.php?action=.xml;type=webslice">Suscribir a Webslice</a>
 				</div>
 				<dl id="ic_recentposts" class="middletext">
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3504.msg910320/topicseen.html#msg910320" rel="nofollow">Los fundamentos del dibujo</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=8391">Mumifag Lalolanda</a> (<a href="http://smf.halabalooza.orgy/index.php/board,61.0.html">Dibujos e Ilustraciones</a>)</dt>
-					<dd>Abril 13, 2022, 02:16:07 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3503.msg910319/topicseen.html#msg910319" rel="nofollow">Acerca de los consejos que dá Stephen King para aprender a escribir</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=8420">Meduka Meguca</a> (<a href="http://smf.halabalooza.orgy/index.php/board,17.0.html">Literatura</a>)</dt>
-					<dd>Marzo 05, 2022, 07:55:23 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3457.msg910318/topicseen.html#msg910318" rel="nofollow">Re:Historias miadas | Relatos erótikoz &#127863; :'v </a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1657">zvk795sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,54.0.html">Sexualidad</a>)</dt>
-					<dd>Diciembre 29, 2021, 02:36:35 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3466.msg910317/topicseen.html#msg910317" rel="nofollow">Re:Posteen recetas que se sepan</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=8391">Mumifag Lalolanda</a> (<a href="http://smf.halabalooza.orgy/index.php/board,60.0.html">Cocina y Gastronomía</a>)</dt>
-					<dd>Octubre 23, 2021, 11:45:17 am</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3466.msg910316/topicseen.html#msg910316" rel="nofollow">Re:Posteen recetas que se sepan</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=696">psa683sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,60.0.html">Cocina y Gastronomía</a>)</dt>
-					<dd>Septiembre 10, 2021, 05:27:13 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3437.msg910315/topicseen.html#msg910315" rel="nofollow">Re:memes xdxdxddd</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1601">imv115sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html">La Sociedad de los Oceosos Muertos</a>)</dt>
-					<dd>Septiembre 10, 2021, 04:54:35 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3502.msg910314/topicseen.html#msg910314" rel="nofollow">Herramientas avanzadas(?) de renderizado...</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=2018">PgK858sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,64.0.html">3DCG</a>)</dt>
-					<dd>Julio 26, 2021, 09:41:24 am</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,1985.msg910313/topicseen.html#msg910313" rel="nofollow">Re:Papercraft y Origami</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=2018">PgK858sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,13.0.html">Animu &amp; Mango</a>)</dt>
-					<dd>Julio 25, 2021, 09:42:28 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3501.msg910312/topicseen.html#msg910312" rel="nofollow">Principios básicos de Animación</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=696">psa683sorgesoureDug</a> (<a href="http://smf.halabalooza.orgy/index.php/board,61.0.html">Dibujos e Ilustraciones</a>)</dt>
-					<dd>Julio 25, 2021, 06:27:10 pm</dd>
-					<dt><strong><a href="http://smf.halabalooza.orgy/index.php/topic,3340.msg910311/topicseen.html#msg910311" rel="nofollow">Re:Ayudaaaaaa! Recuperar datos de mi Hdd externo con chingomil de sectores dañados</a></strong> por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=8391">Mumifag Lalolanda</a> (<a href="http://smf.halabalooza.orgy/index.php/board,39.0.html">Tecnología</a>)</dt>
-					<dd>Marzo 13, 2021, 06:11:33 pm</dd>
+					{% assign messages = site.messages | sort: "date" %}
+					{% for message in site.messages reversed limit:10 %}
+						{% assign thread = site.threads | where: "title", message.thread | first %}
+						{% assign user = site.users | where: "member_name", message.user | first %}
+						{% assign board = site.boards | where: "board", thread.board | first %}
+						<dt><strong><a href="{{thread.url}}" rel="nofollow">{{message.subject}}</a></strong> por <a href="{{user.url}}">{{user.member_name}}</a> (<a href="{{board.url}}">{{board.board}}</a>)</dt>
+						<dd>{{ message.date | date_to_rfc822 }}</dd>
+					{% endfor %}
 				</dl>
 			</div>
 			<div class="title_barIC">
@@ -182,12 +181,16 @@
 				</h4>
 			</div>
 			<p>
-				294277 Mensajes en 875 Temas por 537 Usuarios. Último usuario: <strong> <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=8436">Arthur Canga</a></strong><br />
-				Último mensaje: <strong>&quot;<a href="http://smf.halabalooza.orgy/index.php/topic,3504.msg910318/boardseen.html#new" title="Los fundamentos del dibujo">Los fundamentos del dibu...</a>&quot;</strong>  ( Abril 13, 2022, 02:16:07 pm )<br />
+				{% assign messages = site.messages | sort: "date" %}
+				{% assign threads = site.threads %}
+				{% assign last_message_thread = site.threads | where: "title", messages.last.thread %}
+				{% assign users = site.users | sort: "date_registered" %}
+				{{messages.size}} Mensajes en {{threads.size}} Temas por {{users.size}} Usuarios. Último usuario: <strong> <a href="{{users.last.url}}">{{users.last.member_name}}</a></strong><br />
+				Último mensaje: <strong>&quot;<a href="{{last_message_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a>&quot;</strong>  ( {{ messages.last.date | date_to_rfc822 }} )<br />
 				<a href="http://smf.halabalooza.orgy/index.php?action=recent">Ver los mensajes más recientes del foro.</a><br />
 				<a href="http://smf.halabalooza.orgy/index.php?action=stats">[Más Estadísticas]</a>
 			</p>
-			<!--<div class="title_barIC">
+			<div class="title_barIC">
 				<h4 class="titlebg">
 					<span class="ie6_header floatleft"> 
 					   <img class="icon" src="http://localhost/halabalooza/Themes/Curve2/images/icons/cbox.gif" alt=""> Visitas
@@ -199,8 +202,8 @@
          			<a href="http://s10.flagcounter.com/more/zV8"><img src="http://s10.flagcounter.com/count/zV8/bg_000000/txt_FFFFFF/border_CF343E/columns_2/maxflags_12/viewers_0/labels_1/pageviews_0/flags_0/" alt="free counters" border="0"></a>
          		</center> 
          	</p>
-         	<p>-->
-			<div class="title_barIC">
+         	<p>
+			<!--<div class="title_barIC">
 				<h4 class="titlebg">
 					<span class="ie6_header floatleft">
 						<a href="http://smf.halabalooza.orgy/index.php?action=who"><img class="icon" src="http://localhost/halabalooza/Themes/Curve2/images/icons/online.gif" alt="Usuarios en Línea" /></a>
@@ -217,7 +220,7 @@
 			<p class="last smalltext">
 				Máximo Online Hoy: <strong>1</strong>.
 				Máximo Online Siempre: 68 (Febrero 12, 2012, 07:03:52 pm)
-			</p>
+			</p>-->
 		</div>
 	</div></div>
 	<span class="lowerframe"><span></span></span>

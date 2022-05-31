@@ -55,6 +55,8 @@ plugins:
 #   - vendor/ruby/
 
 collections:
+
+  # Forums collections
   messages:
     title: fposts
     output: false
@@ -63,4 +65,7 @@ collections:
     output: true
   threads:
     title: threads
+    output: true
+  users:
+    title: users
     output: true
