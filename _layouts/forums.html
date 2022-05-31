@@ -98,7 +98,7 @@
 									{% assign messages = messages | concat: messages2 | sort: "date" %}
 								{% endfor %}
 
-								{% assign last_user = site.users | where: "member_name", messages.last.user | first %}
+								{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
 								{% assign last_msg_thread = site.threads | where: "title", messages.last.thread | first %}
 								
 								<td class="windowbg" align="center" width="7%">{{messages.size}}</td>
@@ -109,8 +109,8 @@
 									<div style="float: left; margin-right: 4px;"><img src="/assets/smf/attachments/{{last_user.avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
 									<p>
 										<strong>Último:</strong>  <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a><br />
-										por <a href="{{last_user.url}}">{{last_user.member_name}}</a><br />
-										 {{ messages.last.date | date_to_rfc822 }}
+										por <a href="{{last_user.url}}">{{last_user.nickname}}</a><br />
+										 {{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }}
 									</p>
 									{% endif %}
 								</td>
@@ -148,6 +148,8 @@
 			</h3>
 		</div>
 		<div id="upshrinkHeaderIC">
+			{% assign messages = site.messages | sort: "date" %}
+			{% if messages.size > 0 %}
 			<div class="title_barIC">
 				<h4 class="titlebg">
 					<span class="ie6_header floatleft">
@@ -162,16 +164,16 @@
 					<a rel="feedurl" href="http://smf.halabalooza.orgy/index.php?action=.xml;type=webslice">Suscribir a Webslice</a>
 				</div>
 				<dl id="ic_recentposts" class="middletext">
-					{% assign messages = site.messages | sort: "date" %}
 					{% for message in site.messages reversed limit:10 %}
 						{% assign thread = site.threads | where: "title", message.thread | first %}
-						{% assign user = site.users | where: "member_name", message.user | first %}
+						{% assign user = site.users | where: "nickname", message.user | first %}
 						{% assign board = site.boards | where: "board", thread.board | first %}
-						<dt><strong><a href="{{thread.url}}" rel="nofollow">{{message.subject}}</a></strong> por <a href="{{user.url}}">{{user.member_name}}</a> (<a href="{{board.url}}">{{board.board}}</a>)</dt>
-						<dd>{{ message.date | date_to_rfc822 }}</dd>
+						<dt><strong><a href="{{thread.url}}" rel="nofollow">{{message.subject}}</a></strong> por <a href="{{user.url}}">{{user.nickname}}</a> (<a href="{{board.url}}">{{board.board}}</a>)</dt>
+						<dd>{{ message.date | date_to_rfc822 | replace: "-0400", "" }}</dd>
 					{% endfor %}
 				</dl>
 			</div>
+			{% endif %}
 			<div class="title_barIC">
 				<h4 class="titlebg">
 					<span class="ie6_header floatleft">
@@ -185,8 +187,18 @@
 				{% assign threads = site.threads %}
 				{% assign last_message_thread = site.threads | where: "title", messages.last.thread %}
 				{% assign users = site.users | sort: "date_registered" %}
-				{{messages.size}} Mensajes en {{threads.size}} Temas por {{users.size}} Usuarios. Último usuario: <strong> <a href="{{users.last.url}}">{{users.last.member_name}}</a></strong><br />
-				Último mensaje: <strong>&quot;<a href="{{last_message_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a>&quot;</strong>  ( {{ messages.last.date | date_to_rfc822 }} )<br />
+				{{messages.size}} Mensajes en {{threads.size}} Temas por {{users.size}} Usuarios.
+
+				{% if users.size > 0 %}
+				Último usuario: <strong> <a href="{{users.last.url}}">{{users.last.nickname}}</a></strong><br />
+				{% endif %}
+
+				{% if messages.size > 0 %}
+				Último mensaje: <strong>&quot;<a href="{{last_message_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a>&quot;</strong>  ( {{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }} )
+				{% endif %}
+
+				<br />
+
 				<a href="http://smf.halabalooza.orgy/index.php?action=recent">Ver los mensajes más recientes del foro.</a><br />
 				<a href="http://smf.halabalooza.orgy/index.php?action=stats">[Más Estadísticas]</a>
 			</p>

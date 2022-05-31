@@ -31,7 +31,7 @@
 		{% assign messages = messages | concat: messages2 | sort: "date" %}
 	{% endfor %}
 
-	{% assign user = site.users | where: "member_name", messages.last.user | first %}
+	{% assign user = site.users | where: "nickname", messages.last.user | first %}
 
 	{% assign last_msg_thread = site.threads | where: "title", messages.last.thread | first %}
 	<ul>
@@ -40,7 +40,6 @@
 		{% endfor %}
 	</ul>
 	<p>Last message: {{messages.last.subject}}</p>
-	<pre>{{last_msg_thread | jsonify}}</pre>
 
 	<ul>
 		{% for category in site.data.forums.categories %}

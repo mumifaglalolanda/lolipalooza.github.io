@@ -54,7 +54,6 @@
 	<div class="pagesection" style="visibility:hidden;">
 		<div class="pagelinks floatleft">Páginas: [<strong>1</strong>] </div>
 	</div>
-	<form action="http://smf.halabalooza.orgy/index.php?action=quickmod;board=23.0" method="post" accept-charset="ISO-8859-1" class="clear" name="quickModForm" id="quickModForm">
 	<div class="tborder topic_table" id="messageindex">
 		<table class="table_grid" cellspacing="0">
 			<thead>
@@ -72,71 +71,116 @@
 					</td>
 				</tr>
 				-->
-				<tr class="titlebg"><td colspan="8"><b>Important Topics</b></td></tr>
 				{% assign threads = site.threads | where: "board", page.board %}
+
+				{% assign sticky_threads_count = 0 %}
 				{% for thread in threads %}
-				{% if thread.sticky %}
-				<tr>
-					<td class="icon1 stickybg">
-						<img src="/assets/smf/curve/img/topic/veryhot_post_sticky.gif" alt="" />
-					</td>
-					<td class="icon2 stickybg">
-						<img src="/assets/smf/curve/img/post/{% if thread.icon %}{{thread.icon}}{% else %}xx.gif{% endif %}"/>
-					</td>
-					<td class="subject stickybg2">
-						<div id="topic_909698">
-							<strong>Importante: <span id="msg_909698"><a href="{{thread.url}}">{{thread.title}}</a></span></strong>
-							<p>Iniciado por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1612" title="Ver perfil de xyk615sorgesoureDug">xyk615sorgesoureDug</a>
-								<!--<small id="pages909698">&#171; <a class="navPages" href="http://smf.halabalooza.orgy/index.php/topic,3482.0.html">1</a> <a class="navPages" href="http://smf.halabalooza.orgy/index.php/topic,3482.20.html">2</a>  &#187;</small>-->
-							</p>
-						</div>
-					</td>
-					<td class="stats stickybg">
-						37 Respuestas
-						<br />
-						46 Vistas
-					</td>
-					<td class="lastpost stickybg2">
-						<div style="float: left; margin-right: 4px;"><img src="http://smf.halabalooza.orgy/index.php?action=dlattach;attach=465;type=avatar" alt="" width="38" height="38" border="0" align="middle"></div>
-						<a href="http://smf.halabalooza.orgy/index.php/topic,3482.msg910308.html#new"><img src="/assets/smf/curve/img/icons/last_post.gif" alt="Último" title="Último" /></a>
-						Enero 12, 2021, 03:18:04 pm<br />
-						por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=696">psa683sorgesoureDug</a>
-					</td>
-				</tr>
-				{% endif %}
+					{% if thread.sticky %}
+						{% increment sticky_threads_count %}
+					{% endif %}
 				{% endfor %}
-				
-				<tr class="titlebg"><td colspan="8"><b>Normal Topics</b></td></tr>
+
+				{% if sticky_threads_count > 0 %}
+					<tr class="titlebg"><td colspan="8"><b>Important Topics</b></td></tr>
+					{% for thread in threads %}
+					{% if thread.sticky %}
+					{% assign messages = site.messages | where: "thread", thread.title %}
+					{% assign starter_user = site.users | where: "nickname", thread.user | first %}
+					{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
+					{% if last_user.avatar %}
+						{% if last_user.avatar contains "http" %}
+						{% assign last_user_avatar = last_user.avatar %}
+						{% else %}
+						{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
+						{% endif %}
+					{% else %}
+						{% assign last_user_avatar = "/assets/smf/noavatar.gif" %}
+					{% endif %}
+					<tr>
+						<td class="icon1 stickybg">
+							<img src="/assets/smf/curve/img/topic/veryhot_post_sticky.gif" alt="" />
+						</td>
+						<td class="icon2 stickybg">
+							<img src="/assets/smf/curve/img/post/{% if thread.icon %}{{thread.icon}}{% else %}xx.gif{% endif %}"/>
+						</td>
+						<td class="subject stickybg2">
+							<div id="topic_{{thread.id}}">
+								<strong>Importante: <span id="msg_{{messages.first.id_msg}}"><a href="{{thread.url}}">{{thread.title}}</a></span></strong>
+								<p>
+									Iniciado por <a href="{{starter_user.url}}" title="Ver perfil de {{starter_user.nickname}}">{{starter_user.nickname}}</a>
+									<!--<small id="pages909698">&#171; <a class="navPages" href="http://smf.halabalooza.orgy/index.php/topic,3482.0.html">1</a> <a class="navPages" href="http://smf.halabalooza.orgy/index.php/topic,3482.20.html">2</a>  &#187;</small>-->
+								</p>
+							</div>
+						</td>
+						<td class="stats stickybg">
+							{{messages.size}} Respuestas
+							<br />
+							{{thread.views}} Vistas
+						</td>
+						<td class="lastpost stickybg2">
+							<div style="float: left; margin-right: 4px;"><img src="{{last_user_avatar}}" alt="" width="38" height="38" border="0" align="middle"></div>
+							<a href="{{thread.url}}#new"><img src="/assets/smf/curve/img/icons/last_post.gif" alt="Último" title="Último" /></a>
+							{{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }}<br />
+							por <a href="{{last_user.url}}">{{last_user.nickname}}</a>
+						</td>
+					</tr>
+					{% endif %}
+					{% endfor %}
+					
+					<tr class="titlebg"><td colspan="8"><b>Normal Topics</b></td></tr>
+				{% endif %}
+
 				{% assign threads = site.threads | where: "board", page.board %}
+				{% assign last_messages = "" | split: "," %}
 				{% for thread in threads %}
-				{% unless thread.sticky %}
-				<tr>
-					<td class="icon1 windowbg">
-						<img src="/assets/smf/curve/img/topic/my_veryhot_post.gif" alt="" />
-					</td>
-					<td class="icon2 windowbg">
-						<img src="/assets/smf/curve/img/post/{% if thread.icon %}{{thread.icon}}{% else %}xx.gif{% endif %}" alt="" />
-					</td>
-					<td class="subject windowbg2">
-						<div id="topic_908906" onmouseout="mouse_on_div = 0;" onmouseover="mouse_on_div = 1;" ondblclick="modify_topic('3437', '908906');">
-							<span id="msg_908906"><a href="{{thread.url}}">{{thread.title}}</a></span>
-							<p>Iniciado por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1601" title="Ver perfil de imv115sorgesoureDug">imv115sorgesoureDug</a>
-							</p>
-						</div>
-					</td>
-					<td class="stats windowbg">
-						273 Respuestas
-						<br />
-						375 Vistas
-					</td>
-					<td class="lastpost windowbg2">
-						<div style="float: left; margin-right: 4px;"><img src="http://i.imgur.com/2GwBECN.gif" alt="" width="38" height="38" align="middle" border="0" /></div>
-						<a href="http://smf.halabalooza.orgy/index.php/topic,3437.msg910315.html#new"><img src="/assets/smf/curve/img/icons/last_post.gif" alt="Último" title="Último" /></a>
-						Septiembre 10, 2021, 04:54:35 pm<br />
-						por <a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1601">imv115sorgesoureDug</a>
-					</td>
-				</tr>
-				{% endunless %}
+					{% unless thread.sticky %}
+					{% assign last_message = site.messages | where: "thread", thread.title | last %}
+					{% assign last_messages = last_messages | push: last_message %}
+					{% endunless %}
+				{% endfor %}
+				{% assign last_messages = last_messages | sort: "date" %}
+
+				{% for last_message in last_messages reversed %}
+					{% assign thread = site.threads | where: "title", last_message.thread | first %}
+					{% assign messages = site.messages | where: "thread", thread.title %}
+					{% assign starter_user = site.users | where: "nickname", thread.user | first %}
+					{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
+					{% if last_user.avatar %}
+						{% if last_user.avatar contains "http" %}
+						{% assign last_user_avatar = last_user.avatar %}
+						{% else %}
+						{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
+						{% endif %}
+					{% else %}
+						{% assign last_user_avatar = "/assets/smf/noavatar.gif" %}
+					{% endif %}
+					<tr>
+						<td class="icon1 windowbg">
+							<img src="/assets/smf/curve/img/topic/my_veryhot_post.gif" alt="" />
+						</td>
+						<td class="icon2 windowbg">
+							<img src="/assets/smf/curve/img/post/{% if thread.icon %}{{thread.icon}}{% else %}xx.gif{% endif %}" alt="" />
+						</td>
+						<td class="subject windowbg2">
+							<div id="topic_{{thread.id}}">
+								<span id="msg_{{messages.first.id_msg}}"><a href="{{thread.url}}">{{thread.title}}</a></span>
+								<p>
+									Iniciado por <a href="{{starter_user.url}}" title="Ver perfil de {{starter_user.nickname}}">{{starter_user.nickname}}</a>
+								</p>
+							</div>
+						</td>
+						<td class="stats windowbg">
+							{{messages.size}} Respuestas
+							<br />
+							{{thread.views}} Vistas
+						</td>
+						<td class="lastpost windowbg2">
+							<div style="float: left; margin-right: 4px;"><img src="{{last_user_avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
+							<a href="{{thread.url}}#new"><img src="/assets/smf/curve/img/icons/last_post.gif" alt="Último" title="Último" /></a>
+							{{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }}<br />
+							por <a href="{{last_user.url}}">{{last_user.nickname}}</a>
+						</td>
+					</tr>
 				{% endfor %}
 				
 				<tr class="titlebg">
@@ -149,7 +193,6 @@
 	</div>
 	<a id="bot"></a>
 	<input type="hidden" name="e2bff33874" value="7a879e6e43c43d66dbdea1a223cb7c1e" />
-	</form>
 	<div class="pagesection" style="visibility:hidden;">
 		<div class="pagelinks">Páginas: [<strong>1</strong>] </div>
 	</div>
