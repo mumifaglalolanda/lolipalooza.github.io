@@ -49,13 +49,13 @@
 				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>{{board.category}}</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}#c7"><span>{{board.category}}</span></a> &#187;
 			</li>
 			<li>
 				<a href="http://smf.halabalooza.orgy/index.php/board,99.0.html"><span>{{page.board}}</span></a> &#187;
 			</li>
 			<li class="last">
-				<a href="http://smf.halabalooza.orgy/index.php/topic,598.0.html"><span>{{page.title}}</span></a>
+				<a href="{{page.url}}"><span>{{page.title}}</span></a>
 			</li>
 		</ul>
 	</div><script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script><!--Headers--><!--End Headers-->
@@ -72,9 +72,7 @@
 						Tema: {{page.title}} &nbsp;(Leído 877 veces)
 					</h3>
 				</div>
-				<form action="" method="post" accept-charset="ISO-8859-1" name="quickModForm" id="quickModForm" style="margin: 0;">
 				{% include smf/post.html %}
-				</form>
 			</div>
 			<a id="lastPost"></a>
 			<div class="pagesection" style="visibility: hidden;">
@@ -86,13 +84,13 @@
 				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>{{board.category}}</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}#c7"><span>{{board.category}}</span></a> &#187;
 			</li>
 			<li>
 				<a href="http://smf.halabalooza.orgy/index.php/board,99.0.html"><span>{{page.board}}</span></a> &#187;
 			</li>
 			<li class="last">
-				<a href="http://smf.halabalooza.orgy/index.php/topic,598.0.html"><span>{{page.title}}</span></a>
+				<a href="{{page.url}}"><span>{{page.title}}</span></a>
 			</li>
 		</ul>
 	</div>

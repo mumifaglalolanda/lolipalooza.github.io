@@ -1,0 +1,747 @@
+flags:
+  - icon: af
+    country: Afghanistan
+
+  - icon: al
+    country: Albania
+    
+  - icon: dz
+    country: Algeria
+    
+  - icon: as
+    country: American Samoa
+    
+  - icon: ad
+    country: Andorra
+
+  - icon: ao
+    country: Angola
+    
+  - icon: ai
+    country: Anguilla
+
+  - icon: aq
+    country: Antarctica
+
+  - icon: ag
+    country: Antigua and Barbuda
+    
+  - icon: ar
+    country: Argentina
+
+  - icon: am
+    country: Armenia
+
+  - icon: aw
+    country: Aruba
+    
+  - icon: au
+    country: Australia
+
+  - icon: at
+    country: Austria
+
+  - icon: az
+    country: Azerbaijan
+    
+  - icon: bs
+    country: Bahamas
+
+  - icon: bh
+    country: Bahrain
+
+  - icon: bd
+    country: Bangladesh
+    
+  - icon: bb
+    country: Barbados
+
+  - icon: by
+    country: Belarus
+
+  - icon: be
+    country: Belgium
+    
+  - icon: bz
+    country: Belize
+
+  - icon: bj
+    country: Benin
+
+  - icon: bm
+    country: Bermuda
+    
+  - icon: bt
+    country: Bhutan
+
+  - icon: bo
+    country: Bolivia
+
+  - icon: ba
+    country: Bosnia and Herzegovina
+    
+  - icon: bw
+    country: Botswana
+
+  - icon: bv
+    country: Bouvet Island
+
+  - icon: br
+    country: Brazil
+    
+  - icon: io
+    country: British Indian Ocean Territory
+
+  - icon: bn
+    country: Brunei Darussalam
+
+  - icon: bg
+    country: Bulgaria
+    
+  - icon: bf
+    country: Burkina Faso
+
+  - icon: bi
+    country: Burundi
+
+  - icon: kh
+    country: Cambodia
+    
+  - icon: cm
+    country: Cameroon
+
+  - icon: ca
+    country: Canada
+
+  - icon: cv
+    country: Cape Verde
+    
+  - icon: ky
+    country: Cayman Islands
+
+  - icon: cf
+    country: Central African Republic
+
+  - icon: td
+    country: Chad
+    
+  - icon: cl
+    country: Chile
+
+  - icon: cn
+    country: China
+
+  - icon: cx
+    country: Christmas Island
+    
+  - icon: cc
+    country: Cocos (Keeling) Islands
+
+  - icon: co
+    country: Colombia
+
+  - icon: km
+    country: Comoros
+    
+  - icon: cg
+    country: Congo, Republic of the
+
+  - icon: cd
+    country: Congo, The Democratic Republic of the
+
+  - icon: ck
+    country: Cook Islands
+    
+  - icon: cr
+    country: Costa Rica
+
+  - icon: ci
+    country: Côte d'Ivoire
+
+  - icon: hr
+    country: Croatia
+    
+  - icon: cu
+    country: Cuba
+
+  - icon: cy
+    country: Cyprus
+
+  - icon: cz
+    country: Czech Republic
+    
+  - icon: dk
+    country: Denmark
+
+  - icon: dj
+    country: Djibouti
+
+  - icon: dm
+    country: Dominica
+    
+  - icon: do
+    country: Dominican Republic
+
+  - icon: ec
+    country: Ecuador
+
+  - icon: eg
+    country: Egypt
+    
+  - icon: sv
+    country: El Salvador
+
+  - icon: en
+    country: England
+
+  - icon: gq
+    country: Equatorial Guinea
+    
+  - icon: er
+    country: Eritrea
+    
+  - icon: ee
+    country: Estonia
+
+  - icon: et
+    country: Ethiopia
+
+  - icon: fk
+    country: Falkland Islands (Islas Malvinas)
+    
+  - icon: fo
+    country: Faroe Islands
+
+  - icon: fj
+    country: Fiji
+
+  - icon: fi
+    country: Finland
+    
+  - icon: fr
+    country: France
+
+  - icon: gf
+    country: French Guiana
+
+  - icon: pf
+    country: French Polynesia
+    
+  - icon: tf
+    country: French Southern Territories
+
+  - icon: ga
+    country: Gabon
+
+  - icon: gm
+    country: Gambia
+    
+  - icon: ge
+    country: Georgia
+
+  - icon: de
+    country: Germany
+
+  - icon: gh
+    country: Ghana
+    
+  - icon: gi
+    country: Gibraltar
+
+  - icon: gr
+    country: Greece
+
+  - icon: gl
+    country: Greenland
+    
+  - icon: gd
+    country: Grenada
+
+  - icon: gp
+    country: Guadeloupe
+
+  - icon: gu
+    country: Guam
+    
+  - icon: gt
+    country: Guatemala
+
+  - icon: gn
+    country: Guinea
+
+  - icon: gw
+    country: Guinea-Bissau
+    
+  - icon: gy
+    country: Guyana
+
+  - icon: ht
+    country: Haiti
+
+  - icon: hm
+    country: Heard Island and McDonald Islands
+    
+  - icon: va
+    country: Vatican City State
+
+  - icon: hn
+    country: Honduras
+
+  - icon: hk
+    country: Hong Kong
+    
+  - icon: hu
+    country: Hungary
+
+  - icon: is
+    country: Iceland
+
+  - icon: in
+    country: India
+    
+  - icon: id
+    country: Indonesia
+
+  - icon: ir
+    country: Iran, Islamic Republic of
+
+  - icon: iq
+    country: Iraq
+    
+  - icon: ie
+    country: Ireland, Republic of
+
+  - icon: il
+    country: Israel
+
+  - icon: it
+    country: Italy
+    
+  - icon: jm
+    country: Jamaica
+
+  - icon: jp
+    country: Japan
+
+  - icon: jo
+    country: Jordan
+    
+  - icon: kz
+    country: Kazakhstan
+
+  - icon: ke
+    country: Kenya
+
+  - icon: ki
+    country: Kiribati
+    
+  - icon: kp
+    country: Korea, Democratic People's Republic of
+
+  - icon: kr
+    country: Korea, Republic of
+
+  - icon: kw
+    country: Kuwait
+    
+  - icon: kg
+    country: Kyrgyzstan
+
+  - icon: la
+    country: Lao People's Democratic Republic
+
+  - icon: lv
+    country: Latvia
+    
+  - icon: lb
+    country: Lebanon
+
+  - icon: ls
+    country: Lesotho
+
+  - icon: lr
+    country: Liberia
+    
+  - icon: ly
+    country: Libyan Arab Jamahiriya
+
+  - icon: li
+    country: Liechtenstein
+
+  - icon: lt
+    country: Lithuania
+    
+  - icon: lu
+    country: Luxembourg
+
+  - icon: mo
+    country: Macao
+
+  - icon: mk
+    country: Macedonia, The Former Yugoslav Republic of
+    
+  - icon: mg
+    country: Madagascar
+
+  - icon: mw
+    country: Malawi
+
+  - icon: my
+    country: Malaysia
+    
+  - icon: mv
+    country: Maldives
+
+  - icon: ml
+    country: Mali
+
+  - icon: mt
+    country: Malta
+    
+  - icon: mh
+    country: Marshall Islands
+
+  - icon: mq
+    country: Martinique
+
+  - icon: mr
+    country: Mauritania
+    
+  - icon: mu
+    country: Mauritius
+
+  - icon: yt
+    country: Mayotte
+
+  - icon: mx
+    country: Mexico
+    
+  - icon: fm
+    country: Micronesia, Federated States of
+
+  - icon: md
+    country: Moldova, Republic of
+
+  - icon: mc
+    country: Monaco
+    
+  - icon: mn
+    country: Mongolia
+
+  - icon: ms
+    country: Montserrat
+
+  - icon: ma
+    country: Morocco
+    
+  - icon: mz
+    country: Mozambique
+
+  - icon: mm
+    country: Myanmar
+
+  - icon: na
+    country: Namibia
+    
+  - icon: nr
+    country: Nauru
+
+  - icon: np
+    country: Nepal
+
+  - icon: nl
+    country: Netherlands
+    
+  - icon: an
+    country: Netherlands Antilles
+
+  - icon: nc
+    country: New Caledonia
+
+  - icon: nz
+    country: New Zealand
+    
+  - icon: ni
+    country: Nicaragua
+
+  - icon: ne
+    country: Niger
+
+  - icon: ng
+    country: Nigeria
+    
+  - icon: nu
+    country: Niue
+
+  - icon: nf
+    country: Norfolk Island
+
+  - icon: mp
+    country: Northern Mariana Islands
+    
+  - icon: no
+    country: Norway
+
+  - icon: om
+    country: Oman
+
+  - icon: pk
+    country: Pakistan
+    
+  - icon: pw
+    country: Palau
+
+  - icon: ps
+    country: Palestinian Territory, Occupied
+
+  - icon: pa
+    country: Panama
+    
+  - icon: pg
+    country: Papua New Guinea
+
+  - icon: py
+    country: Paraguay
+
+  - icon: pe
+    country: Peru
+    
+  - icon: ph
+    country: Philippines
+
+  - icon: pn
+    country: Pitcairn
+
+  - icon: pl
+    country: Poland
+    
+  - icon: pt
+    country: Portugal
+
+  - icon: pr
+    country: Puerto Rico
+
+  - icon: qa
+    country: Qatar
+    
+  - icon: re
+    country: Reunion
+
+  - icon: ro
+    country: Romania
+
+  - icon: ru
+    country: Russian Federation
+    
+  - icon: rw
+    country: Rwanda
+
+  - icon: sh
+    country: Saint Helena
+
+  - icon: kn
+    country: Saint Kitts and Nevis
+    
+  - icon: lc
+    country: Saint Lucia
+
+  - icon: pm
+    country: Saint Pierre and Miquelon
+
+  - icon: vc
+    country: Saint Vincent and the Grenadines
+    
+  - icon: ws
+    country: Samoa
+
+  - icon: sm
+    country: San Marino
+
+  - icon: st
+    country: Sao Tome and Principe
+    
+  - icon: sa
+    country: Saudi Arabia
+
+  - icon: scotland
+    country: Scotland
+
+  - icon: sn
+    country: Senegal
+    
+  - icon: cs
+    country: Serbia and Montenegro
+
+  - icon: sc
+    country: Seychelles
+
+  - icon: sl
+    country: Sierra Leone
+    
+  - icon: sg
+    country: Singapore
+
+  - icon: sk
+    country: Slovakia
+
+  - icon: si
+    country: Slovenia
+    
+  - icon: sb
+    country: Solomon Islands
+    
+  - icon: so
+    country: Somalia
+
+  - icon: za
+    country: South Africa
+
+  - icon: gs
+    country: South Georgia and the South Sandwich Islan
+    
+  - icon: es
+    country: Spain
+
+  - icon: lk
+    country: Sri Lanka
+
+  - icon: sd
+    country: Sudan
+    
+  - icon: sr
+    country: Suriname
+
+  - icon: sj
+    country: Svalbard and Jan Mayen
+
+  - icon: sz
+    country: Swaziland
+    
+  - icon: se
+    country: Sweden
+
+  - icon: ch
+    country: Switzerland
+
+  - icon: sy
+    country: Syrian Arab Republic
+    
+  - icon: tw
+    country: Taiwan
+
+  - icon: tj
+    country: Tajikistan
+
+  - icon: tz
+    country: Tanzania, United Republic of
+    
+  - icon: th
+    country: Thailand
+
+  - icon: tl
+    country: Timor-Leste
+
+  - icon: tg
+    country: Togo
+    
+  - icon: tk
+    country: Tokelau
+
+  - icon: to
+    country: Tonga
+
+  - icon: tt
+    country: Trinidad and Tobago
+    
+  - icon: tn
+    country: Tunisia
+
+  - icon: tr
+    country: Turkey
+
+  - icon: tm
+    country: Turkmenistan
+    
+  - icon: tc
+    country: Turks and Caicos Islands
+
+  - icon: tv
+    country: Tuvalu
+
+  - icon: ug
+    country: Uganda
+    
+  - icon: ua
+    country: Ukraine
+
+  - icon: ae
+    country: United Arab Emirates
+
+  - icon: gb
+    country: United Kingdom
+    
+  - icon: us
+    country: United States
+
+  - icon: um
+    country: United States Minor Outlying Islands
+
+  - icon: uy
+    country: Uruguay
+    
+  - icon: uz
+    country: Uzbekistan
+
+  - icon: vu
+    country: Vanuatu
+
+  - icon: ve
+    country: Venezuela
+    
+  - icon: vn
+    country: Viet Nam
+
+  - icon: vg
+    country: Virgin Islands, British
+
+  - icon: vi
+    country: Virgin Islands, U.S.
+
+  - icon: wales
+    country: Wales
+    
+  - icon: wf
+    country: Wallis and Futuna
+
+  - icon: eh
+    country: Western Sahara
+    
+  - icon: ye
+    country: Yemen
+
+  - icon: zm
+    country: Zambia
+
+  - icon: zw
+    country: Zimbabwe
+    
+  - icon: ub
+    country: La Unión de Repúblicas Socialistas Soviéticas
+    
+  - icon: pb
+    country: Bandera Pirata de la Nación de Wan Piss
+    
+  - icon: gc
+    country: Bandera del Orgullo Gay~
+
+  - icon: gg
+    country: Gondor
+    
+  - icon: mb
+    country: Mordor
+
+  - icon: ra
+    country: Rohan
+
+  - icon: ia
+    country: Isengard

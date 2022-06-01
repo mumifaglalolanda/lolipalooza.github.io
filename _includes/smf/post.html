@@ -2,54 +2,83 @@
 {% assign par = true %}
 {% assign i = 0 %}
 {% for message in messages %}
+	{% assign user = site.users | where: "nickname", message.user | first %}
+	{% if user.avatar %}
+		{% if user.avatar contains "http" %}
+		{% assign user_avatar = user.avatar %}
+		{% else %}
+		{% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
+		{% endif %}
+	{% else %}
+		{% assign user_avatar = "/assets/smf/noavatar.gif" %}
+	{% endif %}
+	{% assign user_country = site.data.country-flags.flags | where: "icon", user.country_flag | first %}
+
+	{% comment %}Calculando edad del usuario a partir de su fecha de nacimiento{% endcomment %}
+	{% unless user.birthdate == "0001-01-01" %}
+	{%   assign currentdate = site.time | date: '%s'      %}
+	{%   assign birthdate = user.birthdate | date: '%s'  %}
+	{%   assign secondsSince = currentdate | minus: birthdate     %}
+	{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+	{%   assign daysSince = hoursSince | divided_by: 24  %}
+	{%   assign yearsSince = daysSince | divided_by: 365  %}
+	{% endunless %}
+
+	{% assign user_messages = site.messages | where: "user", user.nickname %}
+
 		{% if par %}{% assign par = false %}{% else %}{% assign par = true %}{% endif %}
 		<div class="seperate">
-				<a id="msg3180"></a>
+				<a id="msg{{message.id_msg}}"></a>
 				<div class="windowbg{% if par %}2{% endif %}">
 					<span class="topslice"><span></span></span>
 					<div class="post_wrapper">
 						<div class="poster">
 							<h4>
-								<a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1" title="Ver perfil de Sloth Sinner">Sloth Sinner</a>
+								<a href="{{user.url}}" title="Ver perfil de {{user.nickname}}">{{user.nickname}}</a>
 							</h4>
-							<ul class="reset smalltext" id="msg_3180_extra_info">
+							<ul class="reset smalltext" id="msg_{{message.id_msg}}_extra_info">
 								<li class="stars"><img src="/assets/smf/curve/img/nv15_good.gif" alt="*"></li>
 								<li class="avatar">
-									<a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1">
-										<img class="avatar" src="http://smf.halabalooza.orgy/index.php?action=dlattach;attach=359;type=avatar" alt="">
+									<a href="{{user.url}}">
+										<img class="avatar" src="{{user_avatar}}" alt="">
 									</a>
 								</li>
-								<li class="blurb" style="overflow:hidden">El Prometeus del Internet</li>
+								<li class="blurb" style="overflow:hidden">{{user.personal_text}}</li>
 								<li class="profile">
 									<ul>
-										<li><img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino"></li>
-										<li> <img src="/assets/smf/curve/img/flags/ir.png" alt="ir" title="Iran, Islamic Republic of"></li>
-										<li><a href="http://smf.halabalooza.orgy/index.php?action=profile;u=1"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="Ver Perfil" title="Ver Perfil
-Edad: 1992
-Mensajes: 460
+										{% unless user.gender == 0 %}
+										<li><img class="gender" src="/assets/smf/curve/img/{% if user.gender==1 %}Male.gif{% else %}Female.gif{% endif %}" alt="{% if user.gender==1 %}Masculino{% else %}Femenino{% endif %}"></li>
+										{% endunless %}
+										{% unless user.country_flag == "" or user.country_flag == 0 %}
+										<li> <img src="/assets/smf/curve/img/flags/{{user.country_flag}}.png" alt="{{user.country_flag}}" title="{{user_country.country}}"></li>
+										{% endunless %}
+										<li><a href="{{user.url}}"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="Ver Perfil" title="Ver Perfil{% unless user.birthdate == "0001-01-01" %}
+Edad: {{yearsSince}}{% endunless %}
+Mensajes: {{user_messages.size}}
 "></a></li>
-										<li><a href="http://smf.halabalooza.orgy/index.php?action=pm;sa=send;u=1" title="Ubicación: En lo más profundo de tu conciencia (?)
-Humor: En estado de Nirvana
+										<li><a href="{{user.url}}" title="{% if user.location %}Ubicación: {{user.location}}{% endif %}
+{% if user.humor %}Humor: {{user.humor}}{% endif %}
 Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt="Mensaje Privado (Desconectado)"></a></li>
-										<li><a href="http://smf.halabalooza.orgy/index.php?action=shop;do=sendmoney;member=Sloth Sinner" alt="" title="☯ 2029 soles peruanos
-Enviar soles peruanos a Sloth Sinner"><img src="/assets/smf/curve/img/currency.png" width="17" height="17"></a></li>
+										<li><a href="" alt="" title="☯ {{user.money}} soles peruanos"><img src="/assets/smf/curve/img/currency.png" width="17" height="17"></a></li>
 									</ul>
 								</li>
+								{% if user.alineacion %}
 								<li class="im_icons">
 									<ul>
-										<li><img src="http://localhost/halabalooza/Themes/default/images/alineacion/Vida.gif" alt="Vida" title="Vida"></li>
+										<li><img src="/assets/smf/curve/img/alineacion/{{user.alineacion}}.gif" alt="{{user.alineacion}}" title="{{user.alineacion}}"></li>
 									</ul>
 								</li>
+								{% endif %}
 							</ul>
 						</div>
 						<div class="postarea">
 							<div class="flow_hidden">
 								<div class="keyinfo">
 									<div class="messageicon">
-										<img src="/assets/smf/curve/img/post/xx.gif" alt="">
+										<img src="/assets/smf/curve/img/post/{% if page.icon %}{{page.icon}}{% else %}xx.gif{% endif %}" alt="">
 									</div>
-									<h5 id="subject_3180">
-										<a href="http://smf.halabalooza.orgy/index.php/topic,598.msg3180.html#msg3180" rel="nofollow">{{message.subject}}</a>
+									<h5 id="subject_{{message.id_msg}}">
+										<a href="{{page.url}}#msg{{message.id_msg}}" rel="nofollow">{{message.subject}}</a>
 									</h5>
 									<div class="smalltext">
 										«
@@ -60,19 +89,19 @@ Enviar soles peruanos a Sloth Sinner"><img src="/assets/smf/curve/img/currency.p
 												Respuesta #{{i}} :
 											{% endif %}
 										</strong>
-										{{message.date}}
+										{{message.date | date: "%a, %b %d, %Y %H:%M:%S"}}
 										»
 									</div>
-									<div id="msg_3180_quick_mod"></div>
+									<div id="msg_{{message.id_msg}}_quick_mod"></div>
 								</div>
 							</div>
 							<div class="post">
-								<div class="inner" id="msg_3180">{{message.content}}</div>
+								<div class="inner" id="msg_{{message.id_msg}}">{{message.content}}</div>
 							</div>
 						</div>
 						<div class="moderatorbar">
-							<div class="smalltext modified" id="modified_3180"></div>
-							<div class="signature" id="msg_3180_signature"><div align="center"><img src="https://i.imgur.com/3Mk4cCg.jpg" alt="" class="bbc_img"></div></div>
+							<div class="smalltext modified" id="modified_{{message.id_msg}}"></div>
+							<div class="signature" id="msg_{{message.id_msg}}_signature">{{user.signature}}</div>
 						</div>
 					</div>
 					<span class="botslice"><span></span></span>
