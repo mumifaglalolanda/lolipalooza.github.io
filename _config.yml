@@ -58,7 +58,7 @@ collections:
 
   # Forums collections
   messages:
-    title: fposts
+    title: messages
     output: false
   boards:
     title: boards
@@ -68,4 +68,7 @@ collections:
     output: true
   users:
     title: users
+    output: true
+  css_posts:
+    title: css_posts
     output: true

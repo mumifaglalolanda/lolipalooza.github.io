@@ -1,4 +1,4 @@
 ---
-layout: lolnada
+layout: lolnada/index
 permalink: /lolnada
 ---
