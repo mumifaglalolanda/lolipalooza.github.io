@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prácticas de CSS</title>
+	<style type="text/css">
+		.spoiler{background: black; color: black;}
+		.spoiler:hover{color: white;}
+	</style>
+</head>
+<body>
+	<h1>Prácticas de HTML/CSS</h1>
+
+	<h3>Enlaces útiles</h3>
+
+	<div>
+		Página de <a href="http://www.w3resource.com/html-css-exercise/main-html-css-exercises.php" target="_blank">ejercicios.</a> 
+		CSS <a href="http://www.w3schools.com/css/default.asp" target="_blank">tutorial</a>. 
+		CSS <a href="http://www.w3schools.com/cssref/default.asp" target="_blank">referencia</a>.
+		<br />
+		HTML <a href="http://www.w3schools.com/html/default.asp" target="_blank">tutorial</a>. 
+		HTML <a href="http://www.w3schools.com/tags/default.asp" target="_blank">referencia de tags</a>. 
+		HTML <a href="http://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank">referencia de eventos</a>. 
+		HTML <a href="http://www.w3schools.com/tags/ref_colornames.asp" target="_blank">referencia de colores</a>. 
+		<br />
+		CSS <a href="http://www.w3schools.com/cssref/css_colornames.asp" target="_blank">Color names</a>. RBG/Hex <a href="http://www.2createawebsite.com/build/hex-colors.html#Inline" target="_blank">generator</a>.
+	</div>
+
+	<h3>Anotaciones</h3>
+
+	<ul>
+		<li>text-align: permite posicionar texto a la derecha/izquierda/centro/justificado.</li>
+		<li>text-decoration: trazar línea en texto (arriba/abajo/en medio).</li>
+		<li>text-transformation: convertir a mayúsculas/minúsculas/letras iniciales(capitalizar)</li>
+		<li>text-indent: añadir sangría</li>
+		<li>font-style: permite colocar letras en <i>italic</i>, o cursivas en español jeje ya se me olvidaba como se decía italic en español jejejejeejej</li>
+		<li>enlaces: a:link/visited/hover/active</li>
+		<li>Listas: list-style-type: circle/square(unorderer - ul) - upper-roman/lower-alpha(orderer - ol), list-style-image: url('');</li>
+		<li>vertical-align: top/bottom/middle.</li>
+		<li>
+			border <a href="http://www.w3schools.com/css/css_border.asp" target="_blank">styles</a>. 
+			<a href="http://www.w3schools.com/css/css_outline.asp" target="_blank">Outline</a> property.
+		</li>
+		<li>The <a href="http://www.w3schools.com/css/css_display_visibility.asp" target="_blank">display</a> property: inline/block/none/</li>
+		<li><b>display:none</b> vs <b>visibility:hidden</b> - La segunda oculta el elemento pero deja el espacio donde éste se encontraba.</li>
+		<li>margin:auto - para que text-align:center pueda colocar en el centro no solo el interior de un block element (div, por ejemplo) sino también pueda colocar en el centro el block element entero (en caso de que tenga un width inferior al 100%). También se puede usar margin:auto combinado con width: 300px para centrar block element.</li>
+		<li><i>position: static/relative/fixed/absolute</i> van de la mano con las propiedades <i>left,right,top,botton</i> properties. Nota: Left manda sobre Right y Top manda sobre Bottom. Se puede posicionar un block element con psoition:absolute y right:0px.</li>
+		<li>Float (left/right/none/inherit). Se puede usar con Clear (left/right/both/none/inherit).</li>
+		<li>display:inline-block se puede usar casi como un float:left. el inline-block se comporta como un elemento inline, pero a diferencia de éste último, se le pueden asignar propiedades width y height, ¿cómo la ves pendejete?</li>
+		<li>
+			Selección múltiple de elementos:
+			<ul>
+				<li>Descendientes: div p {}</li>
+				<li>Descendientes directos (hijos/child): div > p {}</li>
+				<li>Elementos adyacentes (hermanos/sibling): div + p {} <span style="color:red">Nota: la nomenclatura div + p significa <i>seleccionar el primer p que venga luego de un div</i>.</span></li>
+				<li>Todos los elementos consiguientes (general siblings): div ~ p {} <span style="color:red">Nota: la nomenclatura div ~ p significa <i>seleccionar todos los p que vengan luego de un div</i>. Nota2: sorpresivamente, ésto elige todos los p luego del div sin importar que hayan otros elementos atravesados entre el div y los p siguientes!!!</span></li>
+			</ul>
+		</li>
+		<li>Pseudo-clases: a:link, a:visited, a:hover, a:active. Otros ejemplos: p:first-child seleccionará al elemento p que es primer hijo de alguien. Mas ejemplos: <i>:lang</i>, <i>:focus</i>. Buscar referencia para ver MOAS.</li>
+		<li>Pseudo-elementos: ::first-letter, ::first-line, ::after, ::before, ::selection (para mozilla es ::-moz-selection) jeje es ::neta.</li>
+		<li>La propiedad <code>opacity</code> para imágenes (valores de 0.0 a 1.0). También se puede usar <code>filter: alpha(opacity=x)</code> donde x puede variar de 0 a 100. También se puede usar opacity en divs con background colors.</li>
+		<li>Truco para mostrar imágenes/botones a partir de un sprite/sheet <a href="http://www.w3schools.com/css/css_image_sprites.asp" target="_blank">aqui</a>.</li>
+		<li>Tipos de @media: ver <a href="http://www.w3schools.com/css/css_mediatypes.asp" target="_blank">aqui</a>.</li>
+		<li>Seleccionar elementos con atributos: a[atribute], a[attribute="value"], etc. Ver más en este <a href="http://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">capítulillo</a> jeje.</li>
+	</ul>
+
+	<p>Respecto a cómo trabajar con fuentes nuevas: la página W3Schools enseña un método que exige que subas las fuentes personalizadas a tu servidor con formato woff, sin embargo hay otra forma en la que puedes trabajar con fuentes desde el servidor de google. En <a href="http://stackoverflow.com/questions/26874901/how-can-i-download-woff-files-from-google-fonts" target="_blank">una consulta hecha</a> en Stack Overflow recomiendan la página <a href="http://www.localfont.com/" target="_blank">Localfont</a> para descargar fuentes de google en formato woff para que puedas subirlas a tu server <span class="spoiler">ggg tu gfa</span>.</p>
+
+	<h3>Posts</h3>
+
+	{% for post in site.css_posts %}
+		<p><a href="{{post.url}}">{{post.title}}</a></p>
+	{% endfor %}
+
+	<div><br /><a href="/lolnada">Volver al Index</a></div>
+</body>
+</html>
