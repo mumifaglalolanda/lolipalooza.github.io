@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Viejosputos.Info - Ahora con más viejosputos!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="{{site.data.lolnada.keywords}}" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/assets/guardian/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/assets/guardian/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/assets/guardian/css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="/assets/guardian/css/superfish.css">
+	<!-- Font Awesome Fonts-->
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/guardian/css/style.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="/assets/guardian/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/assets/guardian/js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+		<div id="fh5co-header">
+			<header id="fh5co-header-section">
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+						<h1 id="fh5co-logo"><a href="">VIEJOS<span>PUTOS</span><i>.info</i></a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+							<ul class="sf-menu" id="fh5co-primary-menu">
+								{% for item in site.data.lolnada.menu %}
+									<li {% if item.active %}class="active"{% endif %}>
+										<a
+											href="{{ item.href }}"
+											{% if item.elements %}class="fh5co-sub-ddown"{% endif %}
+											{% if element.target %}target="{{element.target}}"{% endif %}
+										>
+											{{item.title}}
+										</a>
+										{% if item.elements %}
+											<ul class="fh5co-sub-menu">
+												{% for element in item.elements %}
+													<li>
+														<a
+															href="{{element.href}}"
+															{% if element.target %}target="{{element.target}}"{% endif %}
+														>
+															{{element.title}}
+														</a>
+													</li>
+												{% endfor %}
+											</ul>
+										{% endif %}
+									</li>
+								{% endfor %}
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			
+		</div>
+		
+
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(/assets/guardian/images/home-image.jpg);">
+				<div class="desc animate-box">
+					<h2>{{site.data.lolnada.header.title}}</h2>
+					<span>{{site.data.lolnada.header.subtitle}}</span>
+					<span><a class="btn btn-primary" href="#" onclick="window.print()">{{site.data.lolnada.header.button}}</a></span>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- 
+		  -- Mis prácticas (JS, CSS, HTML, Php, jQuery, AngularJS).
+		  -- SQL queda por fuera porque se practica por vias distintas a este espacio.
+		  -->
+		<div id="fh5co-work-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Mis prácticas</h3>
+						<p>Prácticas de todos los conocimientos básicos necesarios para hacer el internetz!!!1!</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-8">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-1.jpg);">
+							<a class="image-popup text-center" href="/javascript">
+								<div class="prod-title">
+									<h3>VanillaJS / Javascript</h3>
+									<span>Ese bello y emergente lenguaje del lado del cliente para dotar de interactividad las pájinas güeb ggg.</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-2.jpg);">
+							<a class="image-popup text-center" href="php/">
+								<div class="prod-title">
+									<h3>Php</h3>
+									<span>El lenguaje del lado del servidor feo como un orco pero aún así domina la tierra media fuck year!!!1!</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-3.jpg);">
+							<a class="image-popup text-center" href="html/">
+								<div class="prod-title">
+									<h3>HTML</h3>
+									<span>El lenguaje de formato más usado en el mundo mundial</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-8">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-4.jpg);">
+							<a class="image-popup text-center" href="css/">
+								<div class="prod-title">
+									<h3>CSS</h3>
+									<span>El lenguaje(?) para dar estilo visual a las páginas <strike>porno</strike> de la web.</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-8">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-1b.jpg);">
+							<a class="image-popup text-center" href="jquery/">
+								<div class="prod-title">
+									<h3>jQuery</h3>
+									<span>Librería de Javascript que permite hacer más fácil ciertas cosas(?.</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="fh5co-grid animate-box" style="background-image: url(/assets/guardian/images/work-1c.png);">
+							<a class="image-popup text-center" href="angular/">
+								<div class="prod-title">
+									<h3>AngularJS</h3>
+									<span>Otra libería <strike>más del montón</strike> para dizque facilitar las cosas que según algunos <strike>pendejos</strike> ya VanillaJS lo hace fáchil.</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 
+		  -- Páginas de interés (W3Schools, etc.)
+		  -->
+		<div id="fh5co-services-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Otras páginas de interés</h3>
+						<p>Páginas de ayuda para hacr internuts!!1!</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-browser"></i></span>
+							<h3>W3Schools</h3>
+							<p>Página de tutoriales de los diversos conocimientos necesarios.</p>
+							<p><a href="http://www.w3schools.com/" class="btn btn-primary" target="_blank">Visitar</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-mobile"></i></span>
+							<h3>W3Resource</h3>
+							<p>Anexo de W3Schools, con gran cantidad de ejercicios de práctica.</p>
+							<p><a href="http://www.w3resource.com/" class="btn btn-primary" target="_blank">Visitar</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-tools"></i></span>
+							<h3>Layouts elegantes</h3>
+							<p>Página de descargas de layouts gratuitos.</p>
+							<p><a href="http://www.free-css.com/free-css-templates/" class="btn btn-primary" target="_blank">Visitar</a></p>
+						</div>
+					</div>
+					<!--<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-video"></i></span>
+							<h3>Video Editing</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-search"></i></span>
+							<h3>SEO Ranking</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="icon-cloud"></i></span>
+							<h3>Cloud Based Apps</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			<div class="continer">
+				<div class="row text-center">
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="fas fa-bicycle"></i></span>
+							<h3>Más Layouts elegantes</h3>
+							<p>Ejemplos de layouts elegantes cortesía de Bootstrap.</p>
+							<p><a href="https://startbootstrap.com/" class="btn btn-primary" target="_blank">Visitar</a></p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="services animate-box">
+							<span><i class="fas fa-briefcase"></i></span>
+							<h3>Mi directorio de trabajos</h3>
+							<p>Aquí colocaré todos los resultados de mis maquetaciones para practicar maquetado HTML/CSS. Jeje es maqueta <i>>le tiopedro face.exe</i></p>
+							<p><a href="myworks/" class="btn btn-primary">Visitar</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!-- 
+		  -- Aquí va el What others say
+		  -- Aún no tengo idea de qué hacer con eso :S
+		  -- (emoticonz ekis de xD xdddd lul epic win op XDDDDD)
+		  -->
+		<div id="fh5co-content-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>What Others Say</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="fh5co-testimonial text-center animate-box">
+							<figure>
+								<img src="/assets/guardian/images/user-1.png" alt="user">
+							</figure>
+							<blockquote>
+								<p>“I must express my <b>disbelief</b> without resulting to vulgarities, good sirs. I can barely say in between fits of <i>unrestrained mirth</i>. I almost lost my seating with that last outburst, and it has not subsided yet. My goodness. This is indeed, if I may be so bold as to use the common tongue, and excrement of <u>unrivaled</u> worth. Again, I say these things in the moments between unparalleled fits of laughter. It is the biggest of it's kind, as well as the greatest. I <strong>congratulate</strong> you on your efforts, and the efforts of all those involved."</p>
+							</blockquote>
+							<span>Melissa Twinklestar, 2hu.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- 
+		  -- Esto ya es el footer de la página y así
+		  -->
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								<a href="https://twitter.com/lolnada_gimenez" target="_blank"><i class="icon-twitter2"></i></a>
+								<a href="https://www.facebook.com/mumifag.lalolanda" target="_blank"><i class="icon-facebook2"></i></a>
+								<a href="https://github.com/mumifaglalolanda/" target="_blank"><i class="fab fa-github-square"></i></a>
+								<a href="https://slothsinner.deviantart.com/" target="_blank"><i class="icon-deviantart"></i></a>
+								<a href="https://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w" target="_blank"><i class="icon-youtube"></i></a>
+							</p>
+							<p>Copyright 2016 Free Html5 <a href="#">Guardian</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="/assets/guardian/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/assets/guardian/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/assets/guardian/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/assets/guardian/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="/assets/guardian/js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="/assets/guardian/js/hoverIntent.js"></script>
+	<script src="/assets/guardian/js/superfish.js"></script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="/assets/guardian/js/main.js"></script>
+
+	</body>
+</html>
+

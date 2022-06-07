@@ -1,0 +1,4 @@
+---
+layout: lolnada
+permalink: /lolnada
+---

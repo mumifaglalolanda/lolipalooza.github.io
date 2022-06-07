@@ -1,0 +1,77 @@
+title: "VIEJOS<span>PUTOS</span><i>.info</i>"
+
+keywords: "viejos putos, putos y además viejos, cida, canser, cacapost, memes"
+  
+menu:
+  - title: Home
+    href: "#"
+    active: true
+    elements:
+      - title: Services
+        href: services.html
+
+      - title: About
+        href: guardian/about.html
+      
+      - title: Blog
+        href: guardian/blog.html
+        
+      - title: Contact
+        href: guardian/contact.html
+  
+  - title: Mis Foros
+    href: "#"
+    elements:
+      
+      - title: SMF Halabalooza
+        target: _blank
+        href: http://smf.halabalooza.orgy
+      
+      - title: IPS Halabalooza
+        target: _blank
+        href: http://ips.halabalooza.orgy
+
+      - title: SMF DigiZona
+        target: _blank
+        href: http://smf.foros.dz
+      
+      - title: XenForo
+        target: _blank
+        href: http://xen.digizona.orgy
+      
+      - title: MyLaravel
+        target: _blank
+        href: http://my.laravel.forums
+      
+      - title: PhpBB3 Yellow Submarine
+        target: _blank
+        href: http://phpbb3.yellow.submarine
+
+  - title: Imageboards
+    href: "#"
+    elements:
+      
+      - title: Vichan
+        target: _blank
+        href: http://localhost/vichan/
+      
+      - title: Weachan
+        target: _blank
+        href: http://localhost/weachan/
+      
+      - title: Chan de carton
+        target: _blank
+        href: http://localhost/cartonchan/
+
+  - title: Wordpress
+    target: _blank
+    href: http://localhost/wordpress/
+    
+  - title: Mis bases de datos
+    target: _blank
+    href: http://localhost/phpmyadmin/
+  
+header:
+  title: Viejosputos.info
+  subtitle: Ahora con más <i><u>viejosputos</u></i> por kilómetro cuadrado!
+  button: A chinflar a su mauser!
