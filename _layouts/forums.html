@@ -7,6 +7,9 @@
 	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<meta name="description" content="{{site.data.forums.title}} - Índice" />
+
+	<meta name="robots" content="noindex">
+	
 	<title>{{site.data.forums.title}} - Índice</title>
 	<link rel="canonical" href="{{site.data.forums.base_url}}" />
 	<link rel="help" href="http://smf.halabalooza.orgy/index.php?action=help" />
@@ -106,7 +109,14 @@
 								
 								<td class="lastpost">
 									{% if last_user %}
-									<div style="float: left; margin-right: 4px;"><img src="/assets/smf/attachments/{{last_user.avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
+										{% if last_user.avatar %}
+											{% if last_user.avatar contains "http" %}
+											{% assign last_user_avatar = last_user.avatar %}
+											{% else %}
+											{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
+											{% endif %}
+										{% endif %}
+									<div style="float: left; margin-right: 4px;"><img src="{{last_user_avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
 									<p>
 										<strong>Último:</strong>  <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a><br />
 										por <a href="{{last_user.url}}">{{last_user.nickname}}</a><br />

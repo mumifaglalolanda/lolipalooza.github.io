@@ -62,13 +62,13 @@ Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt=
 										<li><a href="" alt="" title="☯ {{user.money}} soles peruanos"><img src="/assets/smf/curve/img/currency.png" width="17" height="17"></a></li>
 									</ul>
 								</li>
-								{% if user.alineacion %}
+								{% unless user.alineacion == "" %}
 								<li class="im_icons">
 									<ul>
 										<li><img src="/assets/smf/curve/img/alineacion/{{user.alineacion}}.gif" alt="{{user.alineacion}}" title="{{user.alineacion}}"></li>
 									</ul>
 								</li>
-								{% endif %}
+								{% endunless %}
 							</ul>
 						</div>
 						<div class="postarea">
