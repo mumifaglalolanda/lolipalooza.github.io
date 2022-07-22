@@ -45,14 +45,86 @@
 				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>{{page.category}}</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}#c7"><span>{{page.category}}</span></a> &#187;
 			</li>
+			{% if page.child_level %}
+			{% assign parent_board = site.boards | where: "board", page.parent_board | first %}
+			<li>
+				<a href="{{parent_board.url}}"><span>{{parent_board.board}}</span></a> &#187;
+			</li>
+			{% endif %}
 			<li class="last">
-				<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html"><span>{{page.board}}</span></a>
+				<a href="{{page.url}}"><span>{{page.board}}</span></a>
 			</li>
 		</ul>
 	</div><script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script><!--Headers--><!--End Headers-->
 	<a id="top"></a>
+	{% capture exp %}board.child_level==1 and board.parent_board=='{{page.board}}'{% endcapture %}
+	{% assign childboards = site.boards | where_exp: "board", exp | sort: "board_order" %}
+	{% if childboards.size > 0 %}
+	<div class="tborder childboards" id="board_{{page.board.id}}_childboards">
+		<div class="cat_bar">
+			<h3 class="catbg">Subforos</h3>
+		</div>
+		<div class="table_frame">
+			<table class="table_list">
+				<tbody id="board_{{page.board.id}}_children" class="content">
+				{% for board in childboards %}
+				<tr id="board_{{board.id}}" class="windowbg2">
+					<td class="icon windowbg"><a href="{{board.url}}" name="b{{board.id}}"><img src="/assets/smf/curve/ImagesOnBoard/{% if board.icon %}{{board.icon}}{% else %}default1.png{% endif %}" alt="{{board.board}}" title="No hay nuevos Mensajes" />
+						</a>
+					</td>
+					<td class="info">
+						<a class="subject" href="{{board.url}}" name="b{{board.id}}">{{board.board}}</a>
+						<p>{{board.description}}</p>
+					</td>
+					<td class="stats windowbg">
+						{% capture str %}board.board=='{{board.board}}' or board.parent_board=='{{board.board}}'{% endcapture %}
+						{% assign boards = site.boards | where_exp: "board", str %}
+
+						{% assign threads = "" | split: "," %}
+						{% for board in boards %}
+							{% assign threads2 = site.threads | where: "board", board.board %}
+							{% assign threads = threads | concat: threads2 %}
+						{% endfor %}
+
+						{% assign messages = "" | split: "," %}
+						{% for thread in threads %}
+							{% assign messages2 = site.messages | where: "thread", thread.title %}
+							{% assign messages = messages | concat: messages2 | sort: "date" %}
+						{% endfor %}
+
+						{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
+						{% assign last_msg_thread = site.threads | where: "title", messages.last.thread | first %}
+
+						<p>{{messages.size}} Mensajes <br />
+						{{threads.size}} Temas
+						</p>
+					</td>
+					<td class="lastpost">
+						{% if last_user %}
+							{% if last_user.avatar %}
+								{% if last_user.avatar contains "http" %}
+								{% assign last_user_avatar = last_user.avatar %}
+								{% else %}
+								{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
+								{% endif %}
+							{% endif %}
+							<div style="float: left; margin-right: 4px;"><img src="{{last_user_avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
+							<p>
+								<strong>Último</strong>  por <a href="{{last_user.url}}">{{last_user.nickname}}</a><br />
+								en <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a><br />
+								{{messages.last.date | date: "%a, %b %d, %Y %H:%M:%S"}}
+							</p>
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{% endif %}
 	<p class="description_board">{{page.description}}</p>
 	<div class="pagesection" style="visibility:hidden;">
 		<div class="pagelinks floatleft">Páginas: [<strong>1</strong>] </div>
@@ -79,7 +151,7 @@
 				{% assign sticky_threads_count = 0 %}
 				{% for thread in threads %}
 					{% if thread.sticky %}
-						{% increment sticky_threads_count %}
+						{% assign sticky_threads_count = sticky_threads_count | plus: 1 %}
 					{% endif %}
 				{% endfor %}
 
@@ -205,10 +277,10 @@
 				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
 			</li>
 			<li>
-				<a href="http://smf.halabalooza.orgy/index.php#c7"><span>{{page.category}}</span></a> &#187;
+				<a href="{{site.data.forums.base_url}}#c7"><span>{{page.category}}</span></a> &#187;
 			</li>
 			<li class="last">
-				<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html"><span>{{page.board}}</span></a>
+				<a href="{{page.url}}"><span>{{page.board}}</span></a>
 			</li>
 		</ul>
 	</div>

@@ -30,6 +30,21 @@
 		<div class="seperate">
 				<a id="msg{{message.id_msg}}"></a>
 				<div class="windowbg{% if par %}2{% endif %}">
+					{% if message.post_hidden %}
+					{% assign mod_user = site.users | where: "id_member", message.hidden_by | first %}
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4><a href="{{user.url}}" title="Ver perfil de {{user.nickname}}">{{user.nickname}}</a></h4>
+						</div>
+						<div class="postarea">
+							<small>
+								Este post ha sido borrado por <a href="{{mod_user.url}}">{{mod_user.nickname}}</a>. Razón: <em>{{message.hidden_reason}}</em><br>
+							</small>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+					{% else %}
 					<span class="topslice"><span></span></span>
 					<div class="post_wrapper">
 						<div class="poster">
@@ -100,11 +115,24 @@ Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt=
 							</div>
 						</div>
 						<div class="moderatorbar">
-							<div class="smalltext modified" id="modified_{{message.id_msg}}"></div>
-							<div class="signature" id="msg_{{message.id_msg}}_signature">{{user.signature}}</div>
+							{% if message.modified_time %}
+								<div class="smalltext modified" id="modified_{{message.id_msg}}">
+									« <em>
+										Última Modificación: {{message.modified_time | date: "%a, %b %d, %Y %H:%M:%S"}} por {{message.modified_name}}
+
+										{% if message.edit_reason %}
+										<br>Razón: {{message.edit_reason}}
+										{% endif %}
+									</em> »
+								</div>
+							{% endif %}
+							{% unless user.signature == "" %}
+								<div class="signature" id="msg_{{message.id_msg}}_signature">{{user.signature}}</div>
+							{% endunless %}
 						</div>
 					</div>
 					<span class="botslice"><span></span></span>
+					{% endif %}
 				</div>
 				<hr class="post_separator">
 		</div>
