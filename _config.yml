@@ -76,6 +76,3 @@ collections:
     title: css_posts
     output: true
     permalink: /:collection/:title
-  content:
-    output: true
-    permalink: /users/:title/:collection

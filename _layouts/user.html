@@ -60,7 +60,6 @@
 			</li>
 		</ul>
 	</div>
-{% assign content = site.content | where: "user", page.nickname | first %}
 <div id="admin_menu">
 	<ul class="dropmenu" id="dropdown_menu_1">
 			<li><a class="active firstlevel" href="#"><span class="firstlevel">Información del Perfil</span></a>
@@ -72,7 +71,15 @@
 						<a href="http://localhost/forosdz/index.php?action=profile;area=statistics;u=1"><span>Mostrar Estadísticas</span></a>
 					</li>
 					<li>
-						<a href="{{content.url}}"><span>Mostrar Mensajes y Temas...</span></a>
+						<a href="#" class="content-messages"><span>Mostrar Mensajes y Temas...</span></a>
+						<ul>
+							<li>
+								<a href="#" class="content-messages"><span>Mensajes</span></a>
+							</li>
+							<li>
+								<a href="#" class="content-threads"><span>Temas</span></a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</li>
@@ -138,7 +145,7 @@
 			<span id="userstatus"><img src="/assets/smf/curve/img/useroff.gif" alt="Desconectado" align="middle" /><span class="smalltext"> Desconectado</span>
 				</span>
 				<p id="infolinks">
-					<a href="{{content.url}}">Mostrar Mensajes</a><br />
+					<a href="#" class="content-messages">Mostrar Mensajes</a><br />
 					<a href="http://localhost/forosdz/index.php?action=profile;area=statistics;u=1">Mostrar Estadísticas</a>
 				</p>
 			</div>
@@ -167,7 +174,7 @@
 					<dt>Fecha de registro: </dt>
 					<dd>{{page.date_registered | date: "%a, %b %d, %Y %H:%M:%S"}}</dd>
 				</dl>
-				<dl>
+				<dl class="noborder">
 					{% unless page.country_flag == "" or page.country_flag == 0 %}
 					<dt>País:</dt>
 					<dd><img src="/assets/smf/curve/img/flags/{{page.country_flag}}.png" alt="{{page.country_flag}}" title="{{user_country.country}}"> {{user_country.country}}</dd>
@@ -227,6 +234,87 @@
 	</div>
 <div class="clear"></div>
 </div>
+{% assign messages = posts %}
+{% assign threads = site.threads | where: "user", page.nickname %}
+<div class="user-content" style="display:none;">
+	<div class="cat_bar">
+		<h3 class="catbg">
+			<span class="ie6_header floatleft"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="" class="icon" />Mostrar Mensajes
+			</span>
+		</h3>
+	</div>
+	<p class="windowbg description">
+		Esta sección te permite ver todos los mensajes hechos por este usuario, recuerda que solo puedes ver los mensajes en áreas en donde tu tienes acceso.
+	</p>
+	<div id="adm_submenus">
+		<ul class="dropmenu">
+			<li>
+				<a class="active firstlevel messages" href="#"><span class="firstlevel">Mensajes</span></a>
+			</li>
+			<li>
+				<a class="firstlevel threads" href="#"><span class="firstlevel">Temas</span></a>
+			</li>
+		</ul>
+	</div><br class="clear" />
+		<div class="cat_bar">
+			<h3 class="catbg">
+				Mensajes - {{page.nickname}}
+			</h3>
+		</div>
+		<div class="pagesection" style="visibility:hidden">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=15">2</a> <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=30">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=%1$d', 45, 420, 15);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=420">29</a> </span>
+		</div>
+		{% assign counter = 1 %}
+		{% for message in messages reversed %}
+			{% assign thread = site.threads | where: "title", message.thread %}
+			{% assign board = site.boards | where: "board", thread.board %}
+			<div class="topic message">
+				<div class="windowbg{% cycle '', '2' %} core_posts">
+					<span class="topslice"><span></span></span>
+					<div class="content">
+						<div class="counter">{{counter}}</div>
+						<div class="topic_details">
+							<h5><strong><a href="{{board.url}}">{{board.board}}</a> / <a href="{{thread.url}}#msg{{message.id_msg}}">{{message.subject}}</a></strong></h5>
+							<span class="smalltext">&#171;&nbsp;<strong>:</strong> {{message.date | date: "%a, %b %d, %Y %H:%M:%S"}}&nbsp;&#187;</span>
+						</div>
+						<div class="list_posts">{{message.content}}</div>
+					</div>
+					<br class="clear" />
+					<span class="botslice"><span></span></span>
+				</div>
+			</div>
+			{% assign counter = counter | plus: 1 %}
+		{% else %}
+		<div class="topic message"><em>Sin mensajes...</em></div>
+		{% endfor %}
+
+		{% assign counter = 1 %}
+		{% for thread in threads reversed %}
+			{% assign first_message = site.messages | where: "subject", thread.title | first %}
+			{% assign board = site.boards | where: "board", thread.board %}
+			<div class="topic thread">
+				<div class="windowbg core_posts">
+					<span class="topslice"><span></span></span>
+					<div class="content">
+						<div class="counter">1</div>
+						<div class="topic_details">
+							<h5><strong><a href="{{board.url}}">{{board.board}}</a> / <a href="{{thread.title}}#msg{{first_message.id_msg}}">{{thread.title}}</a></strong></h5>
+							<span class="smalltext">&#171;&nbsp;<strong>:</strong> {{first_message.date | date: "%a, %b %d, %Y %H:%M:%S"}}&nbsp;&#187;</span>
+						</div>
+						<div class="list_posts">{{first_message.content}}</div>
+					</div>
+					<br class="clear" />
+					<span class="botslice"><span></span></span>
+				</div>
+			</div>
+		{% else %}
+		<div class="topic thread"><em>Sin temas...</em></div>
+		{% endfor %}
+
+		<div class="pagesection" style="margin-bottom: 0;visibility: hidden;">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=15">2</a> <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=30">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=%1$d', 45, 420, 15);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=420">29</a> </span>
+		</div>
+</div>
 </div>
 		</div>
 	</div></div>
@@ -241,4 +329,37 @@
 		</ul>
 	</div></div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('[href=#]').on('click', function(e) {
+			e.preventDefault()
+		})
+		$('.content-messages').on('click', function() {
+			$('#profileview').hide()
+			$('.user-content').show()
+			$('.user-content .catbg').text('Mensajes - {{page.nickname}}')
+			$('.user-content .topic.message').show()
+			$('.user-content .topic.thread').hide()
+		})
+		$('.content-threads').on('click', function() {
+			$('#profileview').hide()
+			$('.user-content').show()
+			$('.user-content .catbg').text('Temas - {{page.nickname}}')
+			$('.user-content .topic.message').hide()
+			$('.user-content .topic.thread').show()
+		})
+		$('.firstlevel.messages,.firstlevel.threads').on('click', function(e) {
+			e.preventDefault()
+			$('.firstlevel.messages,.firstlevel.threads').toggleClass('active')
+			$('.topic.thread,.topic.message').hide()
+			if ($(this).hasClass('messages')) {
+				$('.cat_bar .catbg').text('Mensajes - {{page.nickname}}')
+				$('.topic.message').show()
+			} else if ($(this).hasClass('threads')) {
+				$('.cat_bar .catbg').text('Temas - {{page.nickname}}')
+				$('.topic.thread').show()
+			}
+		})
+	})
+</script>
 </body></html>
