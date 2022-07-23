@@ -1,0 +1,874 @@
+<!DOCTYPE HTML>
+	<!--[if IE 7]><html class="ie7"><![endif]--><!--[if IE 8]><html class="ie8"><![endif]--><!--[if IE 9]><html class="ie9"><![endif]--><!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<title>El sótano | Lolipalooza</title>
+		<script>window._BidFilter={site_id:1,pbjsKey:'pbjsSortable',checkAudio:true};</script>
+<script src="https://cdn.bidfilter.com/bidfilter.js" async></script>
+<script async src="https://tags-cdn.deployads.com/a/vs.boards.net.js"></script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script src="https://ads.proboards.com/cmp.js"></script>
+<script>
+  window.deployads = window.deployads || [];
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+
+    //Size Mapping
+    var topMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([728, 200], [[728, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([0, 0], [[300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150]])
+    .build();
+    var bottomMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[970, 90], [728, 90], [300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .addSize([728, 200], [[728, 90], [300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .addSize([0, 0], [[300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .build();
+    var adhesionMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([728, 200], [[728, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([0, 0], [[320, 50], [300, 50], [234, 60]])
+    .build();
+    //Size Mapping end
+
+    googletag.defineSlot('/1030735/Boards_net_Top', [[250, 250], [336, 280], [300, 250], [728, 90], [320, 50], [468, 60], [970, 90], [234, 60], [180, 150], [200, 200], [480, 75], [300, 50]], 'Boards_net_Top').defineSizeMapping(topMapping).addService(googletag.pubads());
+    googletag.defineSlot('/1030735/Boards_net_Bottom', [[125, 125], [250, 250], [320, 50], [970, 90], [200, 200], [300, 250], [728, 90], [234, 60], [336, 280], [180, 150], [300, 50]], 'Boards_net_Bottom').defineSizeMapping(bottomMapping).addService(googletag.pubads());
+    googletag.defineSlot('/1030735/Boards_net_Adhesion', [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]], 'Boards_net_Adhesion').defineSizeMapping(adhesionMapping).addService(googletag.pubads());
+    
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().setTargeting("sitename", "boards.net");
+    googletag.pubads().setTargeting("proboardsforumid", "6831421");
+    googletag.pubads().setTargeting("forum_id", "4");
+    googletag.pubads().setTargeting("vertical", "");
+    googletag.pubads().setCentering(true);
+    deployads.push(function () { deployads.gpt.enableServices() });
+
+    if("1" === "0") {
+        function onDomLoadAdhesion() {
+            let footeradcontainer = document.createElement('div');
+            footeradcontainer.classList.add('desktop-adhesion-ad__footer-ad-container');
+    
+            let desktopadhesion = document.createElement('div');
+            desktopadhesion.id = 'desktop-adhesion-ad__container';
+            desktopadhesion.classList.add('desktop-adhesion-ad__footer-ad');
+    
+            let innercontainer = document.createElement('div');
+            innercontainer.id = 'desktop-adhesion-ad__inner-container';
+    
+            let closebutton = document.createElement('button');
+            closebutton.classList.add('overlay-titleCloser');
+            closebutton.id = 'desktop-adhesion-ad__close-button';
+            closebutton.onclick = function() {
+                var vsAdhesion;
+                googletag.pubads().getSlots().forEach(function(i){
+                    if(i.getSlotElementId() === "Boards_net_Adhesion") {
+                        vsAdhesion = i;
+                    }
+                });
+                googletag.destroySlots([vsAdhesion]);
+            }
+    
+            let proboardsadhesion = document.createElement('div');
+            proboardsadhesion.id = 'Boards_net_Adhesion';
+    
+            footeradcontainer.appendChild(desktopadhesion);
+            desktopadhesion.appendChild(innercontainer);
+            innercontainer.appendChild(closebutton);
+            innercontainer.appendChild(proboardsadhesion);
+            document.body.appendChild(footeradcontainer);
+        
+            googletag.cmd.push(function() {
+                if (window.deployads) {
+                deployads.push(function() {
+                    deployads.gpt.display('Boards_net_Adhesion');
+                });
+                } else {
+                    googletag.display('Boards_net_Adhesion'); 
+                }
+            });
+        }
+        document.readyState === "loading"
+        ? document.addEventListener('DOMContentLoaded', onDomLoadAdhesion)
+        : onDomLoadAdhesion();
+    }
+  });
+</script>
+<style>
+.desktop-adhesion-ad__footer-ad-container .desktop-adhesion-ad__footer-ad {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	width: 100%;
+	color: #fff;
+	background-color: transparent;
+	position: fixed;
+	bottom: 0;
+	z-index: 400;
+	font-size: 26px;
+	-webkit-overflow-scrolling: touch;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0,0,0);
+	pointer-events: none;
+}
+#desktop-adhesion-ad__inner-container {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+#desktop-adhesion-ad__inner-container #desktop-adhesion-ad__close-button.overlay-titleCloser {
+	border: 1px solid #c9cdcf;
+	width: 24px;
+	height: 24px;
+	background: #fff;
+	font-size: large;
+	padding: unset;
+	border-radius: 3px;
+	color: #686c6e;
+	pointer-events: auto;
+}
+#Desktop_Adhesion {
+	pointer-events: auto;
+}
+#desktop-adhesion-ad__close-button.overlay-titleCloser {
+	margin: unset;
+	opacity: 1;
+	position: absolute;
+	line-height: 50%;
+}
+.overlay-titleCloser {
+	float: right;
+	cursor: pointer;
+	text-decoration: none;
+}
+.overlay-titleCloser:after {
+	font-family: 'font awesome 5 pro';
+	font-size: inherit;
+	font-style: normal;
+	font-weight: 100;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "X";
+}
+#desktop-adhesion-ad__close-button.overlay-titleCloser {
+    right: -33px;
+}
+#desktop-adhesion-ad__inner-container {
+    max-width: 728px;
+}
+</style>
+<script type="text/javascript">
+            window.partial = "board/show";
+            document.registerElement = false;
+            window._pbdata = [];
+            window.pb = {
+                data: {
+                    set: function(a) {
+                        window._pbdata.push(a)
+                    }
+                }
+            }
+        </script>
+
+        <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-M6QVNSC');</script>
+        <!-- End Google Tag Manager -->
+    
+<link rel="canonical" href="https://lolipalooza.boards.net/board/4/el-tano" />
+<link rel="alternate" type="application/rss+xml" href="http://lolipalooza.boards.net/rss/public" />
+<link rel="shortcut icon" type="image/x-icon" href="https://storage.proboards.com/6831421/images/rneVLPVmqeNFfGbLEcJM.ico" />
+<link rel="icon" type="image/x-icon" href="https://storage.proboards.com/6831421/images/rneVLPVmqeNFfGbLEcJM.ico" />
+<meta property="og:url" content="https://lolipalooza.boards.net/board/4/el-tano">
+<meta property="og:title" content="El sótano | Lolipalooza">
+<meta property="og:description" content="Vengan todos a mi sótano, la van a pasar moy rico y se divertirán muchísimo, solamente despójense de su ropita y no le digan a nadie que vienen jijijiji.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@proboards">
+
+<link rel="stylesheet" type="text/css" media="screen" href="//storage.proboards.com/forum/css/0/forum_1141.css" id="1141" />
+<link rel="stylesheet" type="text/css" media="print" href="//storage.proboards.com/forum/css/0/print_1141.css" />
+<script>translatePo = { language: 'en_US' };</script>
+<script type="text/javascript" src="//storage.proboards.com/forum/js/proboards.combined_1141.js" crossorigin="anonymous"></script>
+
+		<!-- Google Analytics Start -->
+		<script type="text/javascript">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-30657-154', 'auto' );ga('set', 'anonymizeIp', true);
+		</script>
+		<!-- Google Analytics End -->
+	
+
+        <script type="module">
+            var vglnk;
+            $(document).ready(function() {
+                $('a').each(function() {
+                    if($(this).prop('href').indexOf('login.proboards.com') !== -1) {
+                        $(this).addClass('norewrite');
+                    }
+                });
+
+                vglnk = {
+                    api_url: '//api.viglink.com/api', key: '71fe2139a887ad501313cd8cce3053c5', subId: '6831421'
+                };
+                var vglnkSrc = ('https:' == document.location.protocol ? vglnk.api_url : '//cdn.viglink.com/api') + '/vglnk.js';
+
+                // VigLink ProBoards Convert Code (using above key)
+                var s = document.createElement('script');
+                s.type = 'text/javascript'; s.async = true; s.src = vglnkSrc;
+                document.body.appendChild(s);
+
+                var retry = 0;
+                var reV = function() {
+                    if (typeof vglnk !== 'function' && retry++ < 5) {
+                        setTimeout(reV, 500);
+                    }
+                    else if (typeof vglnk !== 'function') {
+                        $('a').not('.norewrite').each(function() {
+                            var url = $(this).prop('href');
+                            if (url.indexOf('http') === 0 && url.indexOf(document.domain) === -1) {
+                                $(this).prop('href', 'http://redirect.viglink.com?key=71fe2139a887ad501313cd8cce3053c5&subId=6831421&u=' + escape(url));
+                            }
+                        });
+                    }
+                };
+                reV();
+            });
+        </script>
+    
+<script>
+            window.runAntiAdBlock = 1;
+        </script>
+<script>proboards.data([['forum_url',"lolipalooza.boards.net"],['ad_free',0],['locale_settings',{"input_date_placeholder":"mm/dd/yyyy","amcharts_date_format":"MM/DD/YYYY","thousands_separator":",","input_time_placeholder":"hh:mm pp","input_time_format":12,"input_date_regex":"^(\\d{2})/(\\d{2})/(\\d{4})$","input_date_format":"%m/%d/%Y"}],['image_path',"//storage.proboards.com/forum/images"],['time_style',0],['military_time',0],['timezone',"-4.00"],['serverDate',1658545576000],['search-query-min',3],['search-query-max',50],['is_current_user_guest',""],['plugin_max_key_length',4000],['plugin_max_super_forum_key_length',32000],['login_url',"https://login.proboards.com/login/6831421/1"],['register_url',"https://login.proboards.com/register/6831421"],['forum_id',"6831421"],['labels_viewable',[]],['labels_accessible',[]],['search_filter_img_src',"//storage.proboards.com/forum/images/icon-search-filters.png"],['lm_thread_count',5],['lm_limit',"30"],['lm_page',1],['board_id',"4"],['lm_id',"85ne7Ao0O3l0rRuuiUes"],['page_cache',".lm-content-85ne7Ao0O3l0rRuuiUes"],['_google_analytics_events',[{"hitType":"pageview"}]],['pop_menu_structure',{"startingMenu":"_root","menuStructure":{"1-2":{"items":[{"addSeparator":1,"href":"/#category-2","text":"Go to Moderators"},{"text":"Moderator Discussion","href":"https://lolipalooza.boards.net/board/2/moderator-discussion","addSeparator":null}],"title":"Moderators"},"_root":{"title":"Categories","items":[{"text":"Home","href":"/forum","addSeparator":1},{"text":"General","submenu":"1-1","addSeparator":null},{"submenu":"1-2","text":"Moderators","addSeparator":null}]},"1-1":{"title":"General","items":[{"text":"Go to General","href":"/#category-1","addSeparator":1},{"addSeparator":null,"href":"https://lolipalooza.boards.net/board/1/noticias-presentaciones","text":"Noticias y Presentaciones"},{"addSeparator":null,"href":"https://lolipalooza.boards.net/board/3/discusiones-generales","text":"Discusiones generales"},{"addSeparator":null,"submenu":"2-4","text":"El sótano"}]},"2-4":{"items":[{"addSeparator":1,"href":"https://lolipalooza.boards.net/board/4/el-tano","text":"Go to El sótano"},{"addSeparator":null,"href":"https://lolipalooza.boards.net/board/7/prueba","text":"Prueba"},{"text":"Test","href":"https://lolipalooza.boards.net/board/6/test","addSeparator":null}],"title":"El sótano"}},"positionAgainstSelector":".o-breadcrumbs","positionOffsetY":10,"opensOn":"click","addMenuClass":"c-pop-menu","placement":"bottom left"}],['screen_breakpoints',{"lg":1200,"sm":768,"xs":0,"md":992}],['csrf_token',"aTRg6YDZ"],['user',{"default_post_mode":"bbcode","time_format":"12hr","avatar":"<div class=\"avatar-wrapper avatar_size_default avatar-1\" title=\"Mumifag Lalolanda\"><img src=\"//storage.proboards.com/6831421/avatar/otRuetvtoBZCyxSuwmzx.jpg\" alt=\"Mumifag Lalolanda Avatar\" /></div>","theme_id":1,"date_format":"m/d/y","registered_on":{"unix_timestamp":1506716961},"groups":{"1":"Administrator"},"name":"Mumifag Lalolanda","birthday":{},"instant_messengers":{},"rank":{"id":12,"name":"Fire"},"global_id":13129221,"group_ids":[1],"is_invisible":0,"username":"admin","last_online":{"unix_timestamp":1658545552},"status":"The Personal is Political","is_staff":1,"has_new_messages":0,"friends":{"2":1},"id":1,"custom_field_names":["Facción","Waifu / Husbando"],"url":"/user/1","proboards_plus":0,"posts":110,"is_logged_in":1,"block_list":{"user_ids":[]},"custom_fields":{}}],['page',{"category":{"id":1,"name":"General","name_unescaped":"General"},"board":{"display_name":"El sótano","id":4,"disable_post_counts":"0","posts":71,"url":"/board/4/el-tano","disable_posting":"0","hidden":"0","name":"El sótano","description":"Vengan todos a mi sótano, la van a pasar moy rico y se divertirán muchísimo, solamente despójense de su ropita y no le digan a nadie que vienen jijijiji.","threads":5,"name_unescaped":"El sótano","show_announcements":"1"}}],['default_avatar',"//storage.proboards.com/forum/images/defaultavatar.png"],['route',{"params":{"board_id":"4"},"name":"board"}],['search_system',1],['insite_path',""],['maintenance_mode',0],['proboards.thread',{"22":{"is_falling":0,"id":22,"created_on":1506777061,"url":"https://lolipalooza.boards.net/thread/22/los-inventos-pendejos-perturbadores-derp","posts":"1","is_muted":0,"is_sticky":0,"is_bookmarked":0,"last_post_time":1506777061,"last_post_id":34,"subject":"Los inventos más pendejos y perturbadores de la DERP web","first_post_id":34,"board_id":4,"is_announcement":0,"is_locked":0,"is_new":0,"subject_unescaped":"Los inventos más pendejos y perturbadores de la DERP web","is_poll":0,"views":"843","created_by":1},"25":{"id":25,"is_falling":0,"url":"https://lolipalooza.boards.net/thread/25/la-cuchina-de-asdf","posts":"22","is_muted":0,"created_on":1573098419,"first_post_id":45,"is_bookmarked":0,"subject":"La cuchina de Asdf~","is_sticky":0,"last_post_time":1573099807,"last_post_id":66,"is_announcement":0,"is_locked":0,"board_id":4,"is_new":0,"subject_unescaped":"La cuchina de Asdf~","is_poll":0,"views":"58","created_by":1},"26":{"subject_unescaped":"El futuro es hoy: VR lolis","is_new":0,"is_locked":0,"is_announcement":0,"board_id":4,"created_by":1,"views":"32","is_poll":0,"is_muted":0,"posts":"2","url":"https://lolipalooza.boards.net/thread/26/el-futuro-es-hoy-lolis","created_on":1573162245,"id":26,"is_falling":0,"first_post_id":67,"is_bookmarked":0,"last_post_id":68,"is_sticky":0,"last_post_time":1573162282,"subject":"El futuro es hoy: VR lolis"},"24":{"created_by":1,"views":"52","is_poll":0,"is_new":0,"subject_unescaped":"Testeando enlaces de redes sociales | DELET DIS","is_locked":0,"is_announcement":0,"board_id":4,"first_post_id":42,"last_post_id":111,"is_bookmarked":0,"is_sticky":0,"last_post_time":1573224021,"subject":"Testeando enlaces de redes sociales | DELET DIS","posts":"4","is_muted":0,"url":"https://lolipalooza.boards.net/thread/24/testeando-enlaces-redes-sociales-delet","created_on":1573068432,"id":24,"is_falling":0},"27":{"is_poll":0,"created_by":1,"views":"105","board_id":4,"is_locked":0,"is_announcement":0,"subject_unescaped":"Fuck Polotics - Eat Pizza","is_new":0,"is_bookmarked":0,"last_post_time":1573345142,"is_sticky":0,"subject":"Fuck Polotics - Eat Pizza","last_post_id":112,"first_post_id":69,"is_falling":0,"id":27,"created_on":1573216027,"is_muted":0,"posts":"42","url":"https://lolipalooza.boards.net/thread/27/polotics-eat-pizza"}}]]);</script>
+<script>if (typeof(standard_board) == 'function') standard_board();
+if (typeof(standard_board_show) == 'function') standard_board_show();
+proboards.plugin._plugins["eton_quick_reply_bbbutton"] = {
+                                    version: "1.0.0",
+                                    settings: {"selectors":[],"custom_buttons":[{"image":"http://images.proboards.com/v5/admin/themes/images/edit.png","id":"","tag":"span","groups":[],"name":"Highlight","index":"","boards":[],"attributes":"style:background-color=yellow|style:outline=red solid 1px"}],"embeds":[],"themed":[],"ignore_buttons":[],"apply_to_full_reply":[],"nosmiles":"","enable_api":"enabled","apply_custom_full_reply":[]}
+                                };
+proboards.plugin._plugins["custom_thread_titles"] = {
+                                    version: "1.1.7",
+                                    settings: {"styles_only_affect_new_posted_threads":"","editor_allow":[],"generalized_boards":[],"button_image":"storage.proboards.com/3686239/images/HdaOktDRtcyhVkcgDdWb.jpg","_permissions_wormo_threadtitlestyle":{"read":{"include_owner":1,"level":"0"},"write":{"include_owner":1,"level":"1"}}}
+                                };
+proboards.plugin._plugins["yootil_library"] = {
+                                    version: "1.1.1",
+                                    settings: {"bar_enabled":"1","bar_position":"4"}
+                                };
+proboards.plugin._plugins["pixeldepth_trophies"] = {
+                                    version: "1.0.2",
+                                    settings: {"show_stats_on_profile":"1","show_trophies_on_profile":"1","show_in_members_list":"1","show_pack_tabs":"1","show_date":"1","show_time":"0","show_details":"0","banned_members":[],"banned_groups":[],"_permissions_pixeldepth_trophies":{"read":{"level":"0","include_rank":"0","include_groups":[],"exclude_groups":[],"include_owner":1},"write":{"level":"1","include_rank":"0","include_groups":[],"exclude_groups":[],"include_owner":1}},"max_level":"99","xp_modifier":"25","bronze_xp":"5","silver_xp":"15","gold_xp":"40","disable_notification":"0","notification_position":"1","notification_duration":"3","notification_theme":"","custom_notificaiton":"0","notification_template":"","show_total_trophies":"0","show_trophy_level":"0","show_trophy_cups":"0"}
+                                };
+proboards.plugin._plugins["pixeldepth_styled_names"] = {
+                                    version: "2.1.0",
+                                    settings: {"styled_groups":[{"colour":"","group":[],"custom_css":"","bold":"0"}],"styled_members":[{"custom_css":"","members":[],"bold":"0","colour":""}]}
+                                };
+proboards.plugin._plugins["notifications_alert"] = {
+                                    version: "1.0.0",
+                                    settings: {}
+                                };
+proboards.plugin._plugins["update_status_from_miniprofile"] = {
+                                    version: "1.1.5",
+                                    settings: {}
+                                };
+proboards.plugin._plugins["user_rpg_profile"] = {
+                                    version: "1.1.3",
+                                    settings: {"_permissions_post_rpg_user":{"write":{"level":"2","include_rank":"0","include_groups":["1"],"exclude_groups":[],"include_owner":0}},"blacklist_admin":"","list_type":"","blacklist":[],"hide_sig":"","origin":"4","x_offset":"10","y_offset":"28","icon_off":"","icon_on":"","mini":"$[user]<br />\n<span data-item=\"group\">$[user.group]<br /></span>\n<span data-item=\"stars\">$[user.stars]<br /></span>\n<br />\n<div class=\"avatar\">\n    $[user.avatar]\n</div>\n<br />\n<div class=\"info\">\n    <div data-item=\"gender\">Gender: $[user.gender]</div>\n    <div data-item=\"location\">Location: $[user.location]</div>\n</div>","profile":"<div class=\"container show-user user-npc-profile\">\n    <div class=\"title-bar\">\n        <h1>View NPC Profile - $[user.name]</h1>\n    </div>\n    <div class=\"content\">\n        <div class=\"pad-all-double clear\">\n            <div class=\"float-left\">\n                <div class=\"float-left pad-right\">\n                    <div class=\"avatar-wrapper avatar_size_medium\">\n                        <img alt=\"$[user.name] Avatar\" src=\"$[user.avatar.src]\">\n                    </div>\n                </div>\n                <div class=\"name_and_group float-right\">\n                    <span style=\"color: $[user.color];\" class=\"big_username\">$[user.name]</span><br />\n                    $[user.group]<br />$[user.stars]\n                </div>\n            </div>\n            <div class=\"float-right\">\n                <div class=\"float-right clear pad-top\">\n                    Username:\n                    <span class=\"note pad-right\">$[user.username]</span>\n                </div>\n            </div>\n        </div>\n        <div class=\"pad-all-double ui-helper-clearfix clear\">\n            <div data-item=\"info\" class=\"content-box center-col\">\n                <table data-item=\"birthday\"><tr><td class=\"headings\">Birthday:</td><td>$[user.birthday]</td></tr></table>\n                <table data-item=\"gender\"><tr><td class=\"headings\">Gender:</td><td>$[user.gender]</td></tr></table>\n                <table data-item=\"location\"><tr><td class=\"headings\">Location:</td><td>$[user.location]</td></tr></table>\n            </div>\n        </div>\n    </div>\n</div>","groups":[{"permissions":["1"],"display":"Kyaku Lolnada","name":"kyaku","color":"ff9300","avatar":"https://i.imgur.com/ASAlUWT.png","group":"Void","stars":"http://images.proboards.com/v5/stars/star_yellow.png","star_count":"2","birthday":"January 1st","gender":"","location":""},{"permissions":["1"],"display":"Lolilover","name":"lolilover","color":"000000","avatar":"https://i.imgur.com/31lRDQ7.jpg","group":"Pasivotas","stars":"http://images.proboards.com/v5/stars/star_yellow.png","star_count":"5","birthday":"","gender":"Female","location":"Internet"}]}
+                                };
+proboards.plugin._plugins["user_rpg_profile"].images = {"checked":"//storage.proboards.com/6831421/images/berJni0DQgTflmFgcRdV.png","default":"//storage.proboards.com/6831421/images/uOjfWvzuqJZGNHIjCpec.png","sword_s":"//storage.proboards.com/6831421/images/MNcrIXKlURDZzJXkMYw0.png","circle":"//storage.proboards.com/6831421/images/gOcqAhvyvMZwxEuaxRQH.gif","sword":"//storage.proboards.com/6831421/images/srQqyYgmwIAog0nSnRLw.png"};
+proboards.plugin._plugins["pixeldepth_trophies"].images = {"read_200":"//storage.proboards.com/6831421/images/MTJBQWpWIGtlSCcLkxrm.png","view_profile":"//storage.proboards.com/6831421/images/xTQXgdZUVjCfvHjNPxgD.png","bronze":"//storage.proboards.com/6831421/images/rJgapIBOOfExnDWTBgtG.png","post_10":"//storage.proboards.com/6831421/images/PefGQJGkaKtQvVSFKIuA.png","friend_30":"//storage.proboards.com/6831421/images/riLALzPBRFjKvvFhFfLk.png","topic_1":"//storage.proboards.com/6831421/images/TtVHBVaPtBrcYrgGZaVA.png","topic_15":"//storage.proboards.com/6831421/images/wuQBkUgvkXgtfkDdv0aR.png","post_350":"//storage.proboards.com/6831421/images/DLAXquqVTcYhPMVCOIic.png","friend_15":"//storage.proboards.com/6831421/images/zQlplEqpilMBjRkuEvKX.png","read_25":"//storage.proboards.com/6831421/images/pITCnAGoCygIx0wEttwx.png","silver_big":"//storage.proboards.com/6831421/images/WeEGnYrMvFENswNjwiIp.png","post_50":"//storage.proboards.com/6831421/images/MQkUtPeB0XcCTGZFbfNF.png","post_5000":"//storage.proboards.com/6831421/images/QnCPAtVqvRasVbeXgmeU.png","post_9001":"//storage.proboards.com/6831421/images/irhOeMmTVYuAENeynTAP.png","logged_in":"//storage.proboards.com/6831421/images/JbtKGSsuS0mrpgHWbLMo.png","locked":"//storage.proboards.com/6831421/images/DlTnsVgUo0SCOhNxS0rT.png","friend_5":"//storage.proboards.com/6831421/images/WGIXnXaMRHi0lObUblDk.png","bronze_big":"//storage.proboards.com/6831421/images/GOTGjFDfTWcODTmqEbCj.png","topic_50":"//storage.proboards.com/6831421/images/tujjqAmxoIQqPQHuvYfF.png","post_100":"//storage.proboards.com/6831421/images/cseq0cFQyxfVCrTulKTR.png","time_1hr":"//storage.proboards.com/6831421/images/bGGiPUAPzMmmPqj0ozVf.png","gold":"//storage.proboards.com/6831421/images/BLvUWwKWfPqfhErKIVEH.png","friend_50":"//storage.proboards.com/6831421/images/vYvYbJdYqO0mVcHf0SAP.png","read_50":"//storage.proboards.com/6831421/images/trzeiomtKuHgZJgbBSYj.png","missing":"//storage.proboards.com/6831421/images/GlFihDiEuVyXNnV0MkVw.png","25th":"//storage.proboards.com/6831421/images/KCYWQhmKFpgSEQWHmby0.png","read_100":"//storage.proboards.com/6831421/images/SmpSgGavdI0VRIwrMKBx.png","topic_5":"//storage.proboards.com/6831421/images/YxnnYlUvOxEltlrPwNNP.png","24th":"//storage.proboards.com/6831421/images/oRMvVLEDVewsdLpeGnyn.png","gold_big":"//storage.proboards.com/6831421/images/0ulmzVLwWkmRakfwffjA.png","read_1":"//storage.proboards.com/6831421/images/0AYgKydHJgmpNCCfF0wp.png","post_1000":"//storage.proboards.com/6831421/images/RnYuiwAGZuXZbDGrKbFv.png","post_1":"//storage.proboards.com/6831421/images/Eg0WLUOMPraosEAPtsRM.png","friend_1":"//storage.proboards.com/6831421/images/vDJjvzjmHd0HefqsHCYE.png","post_25":"//storage.proboards.com/6831421/images/yfogsNuUUlMcgGRDw0d0.png","silver":"//storage.proboards.com/6831421/images/yhilyfZvSr0EHUXWcnZf.png","time_5mins":"//storage.proboards.com/6831421/images/unLiMFg0RzpYACG0ltOj.png","read_5":"//storage.proboards.com/6831421/images/lHYfAQghWGKJXuopTHcC.png","topic_30":"//storage.proboards.com/6831421/images/lROyVtzJmYmYCTkaxccO.png","time_30mins":"//storage.proboards.com/6831421/images/aYm0ojOPuhOdLNImbubz.png","post_500":"//storage.proboards.com/6831421/images/OBJVxJUzFGfmqekEzGvr.png","time_12hrs":"//storage.proboards.com/6831421/images/LPlIqrMqTWUgSBgilWpK.png","post_250":"//storage.proboards.com/6831421/images/XJcidnhDIXyjwASdkjNZ.png"};
+proboards.plugin._plugins["eton_quick_reply_bbbutton"].images = {"insertUserLink":"http://images.proboards.com/v5/bbcode/membersearch.png","fontSize":"http://storage.proboards.com/1958664/i/yDOXXr2xKb4gE5J5j8mK.png","insertImage":"http://images.proboards.com/v5/bbcode/image.png","removeFormat":"http://images.proboards.com/v5/bbcode/remove-format.png","insertUnorderedList":"http://images.proboards.com/v5/bbcode/list.png","justifyFull":"http://images.proboards.com/v5/bbcode/justify-full.png","foreColor":"http://images.proboards.com/v5/bbcode/color.png","createEmail":"http://images.proboards.com/v5/bbcode/email.png","quote":"http://images.proboards.com/v5/bbcode/quote.png","superscript":"http://images.proboards.com/v5/bbcode/superscript.png","fontName":"http://storage.proboards.com/1958664/i/riOW3ZAp4wyjp4jqgPIy.png","insertVideo":"http://images.proboards.com/v5/bbcode/movie.png","strikethrough":"http://images.proboards.com/v5/bbcode/strikethrough.png","justifyRight":"http://images.proboards.com/v5/bbcode/justify-right.png","italic":"http://images.proboards.com/v5/bbcode/italic.png","insertCode":"http://images.proboards.com/v5/bbcode/code.png","insertHorizontalRule":"http://images.proboards.com/v5/bbcode/horizontal-rule.png","underline":"http://images.proboards.com/v5/bbcode/underline.png","justifyCenter":"http://images.proboards.com/v5/bbcode/justify-center.png","bold":"http://images.proboards.com/v5/bbcode/bold.png","insertSmiley":"http://images.proboards.com/v5/bbcode/smiley.png","justifyLeft":"http://images.proboards.com/v5/bbcode/justify-left.png","embed":"http://images.proboards.com/v5/bbcode/embed.png","subscript":"http://images.proboards.com/v5/bbcode/subscript.png","insertTable":"http://images.proboards.com/v5/bbcode/table.png","createLink":"http://images.proboards.com/v5/bbcode/link.png"};
+proboards.plugin._plugins["yootil_library"].images = {"expand":"//storage.proboards.com/6831421/images/foIt0KtdsrXipdyUYeiA.png","collapse":"//storage.proboards.com/6831421/images/PEfzVedVqZVSGFvONQXB.png","notify":"//storage.proboards.com/6831421/images/ovKJTnErFuNxhRftbLyH.png"};
+proboards.plugin._plugins["custom_thread_titles"].images = {"ba248eb170cf40a6a5203d2a1c21f1eb":"//storage.proboards.com/6831421/images/jilIE0uDwrZXkVPEKj0z.jpg"};
+proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2],["post_rpg_user",4]);proboards.plugin.keys.init_permissions(["pixeldepth_trophies", {"1":[1,1]}],["post_rpg_user", {"69":[1,1],"67":[1,1],"112":[1,1],"34":[1,1],"68":[1,1],"45":[1,1],"42":[1,1],"66":[1,1],"111":[1,1]}],["wormo_threadtitlestyle", {"22":[1,1],"25":[1,1],"26":[1,1],"24":[1,1],"27":[1,1]}]);proboards.plugin.keys.init_values(["pixeldepth_trophies", 1, {"d":{"mf":1,"tt":1380,"tp":6,"tr":84},"t":{"3":1506777060614,"1":1506777060614,"15":1573162279514,"5":1573098772828,"27":1506797054359,"28":1573217285187,"31":1506797054359,"6":1573223287412,"2":1506777060614,"13":1506795191344,"25":1506777060614,"26":1506781163529,"4":1506777060614,"21":1506781163529,"14":1506781163529}}],["post_rpg_user", 42, ""],["post_rpg_user", 68, "lolilover"],["post_rpg_user", 69, "lolilover"]);</script>
+
+	</head>
+	<body>
+        <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6QVNSC"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+		
+		<div id="wrapper">
+			<header>
+				<div id="banner-container" role="banner">
+					<h2 id="banner">
+						<a id="logo" href="/">Lolipalooza</a>
+					</h2>
+				</div>
+				<a id="navigation-skip" href="#content" accesskey="s" class="aria-hidden" title="Skip Navigation">Skip Navigation</a>
+				<a href="#" accesskey="d" title="Open Menu" onclick="proboards.hotkeys.activate(Keys.d); return false;"></a>
+				<div id="navigation-menu" class="ui-helper-clearfix">
+					<ul role="navigation">
+						
+							<li>
+								<a href="/">
+									Home
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/help">
+									Help
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/search">
+									Search
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/members">
+									Members
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/admin">
+									Admin
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/user/1">
+									Profile
+									
+								</a>
+							</li>
+						
+							<li>
+								<a href="/conversations">
+									Messages
+									
+								</a>
+							</li>
+						
+					</ul>
+					<p id="welcome">
+						
+							<span>Welcome Mumifag Lalolanda.</span>  <a href="https://login.proboards.com/logout/6831421">Logout</a>
+						
+					</p>
+				</div>
+			</header>
+
+			<a href="/threads/participated" class="recent-threads-button"><span class="new-icon">new</span> Participated</a>
+
+			
+				<div id="navigation-tree">
+					<div class="nav-tree-wrapper"><ul id="nav-tree" class="ui-helper-clearfix" role="navigation" itemscope itemtype="https://schema.org/BreadcrumbList"><li id="nav-tree-branch-0" class="nav-tree-branch ui-helper-clearfix has-menu" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div><a href="/" itemprop="item"><span itemprop="name">Lolipalooza</span></a></div><meta itemprop="position" content="1"><span class="menu_arrow"><span></span></span></li><li id="nav-tree-branch-1" class="nav-tree-branch ui-helper-clearfix has-menu" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div><a href="/#category-1" itemprop="item"><span itemprop="name">General</span></a></div><meta itemprop="position" content="2"><span class="menu_arrow"><span></span></span></li><li id="nav-tree-branch-2" class="nav-tree-branch ui-helper-clearfix" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><div><a href="/board/4/el-tano" itemprop="item"><span itemprop="name">El sótano</span></a></div><meta itemprop="position" content="3"><span class="menu_arrow"><span></span></span></li></ul></div><div class="popup_html">
+<ul id="nav-tree-menu-0" role="navigation">
+<li class="nav-tree-cat-1"><a href="/#category-1"><span class="new-icon pbi-new-icon">new</span><span class="item-text">General</span><div class="clear"></div></a>
+<ul role="navigation">
+<li class="nav-tree-board-1"><a href="https://lolipalooza.boards.net/board/1/noticias-presentaciones"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Noticias y Presentaciones</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-3"><a href="https://lolipalooza.boards.net/board/3/discusiones-generales"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Discusiones generales</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-4"><a href="https://lolipalooza.boards.net/board/4/el-tano"><span class="new-icon pbi-new-icon">new</span><span class="item-text">El sótano</span><div class="clear"></div></a>
+<ul role="navigation">
+<li class="nav-tree-board-7"><a href="https://lolipalooza.boards.net/board/7/prueba"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Prueba</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-6"><a href="https://lolipalooza.boards.net/board/6/test"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Test</span><div class="clear"></div></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-tree-cat-2"><a href="/#category-2"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Moderators</span><div class="clear"></div></a>
+<ul role="navigation">
+<li class="nav-tree-board-2"><a href="https://lolipalooza.boards.net/board/2/moderator-discussion"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Moderator Discussion</span><div class="clear"></div></a></li>
+</ul>
+</li>
+</ul>
+<ul id="nav-tree-menu-1" role="navigation">
+<li class="nav-tree-board-1"><a href="https://lolipalooza.boards.net/board/1/noticias-presentaciones"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Noticias y Presentaciones</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-3"><a href="https://lolipalooza.boards.net/board/3/discusiones-generales"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Discusiones generales</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-4"><a href="https://lolipalooza.boards.net/board/4/el-tano"><span class="new-icon pbi-new-icon">new</span><span class="item-text">El sótano</span><div class="clear"></div></a>
+<ul role="navigation">
+<li class="nav-tree-board-7"><a href="https://lolipalooza.boards.net/board/7/prueba"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Prueba</span><div class="clear"></div></a></li>
+<li class="nav-tree-board-6"><a href="https://lolipalooza.boards.net/board/6/test"><span class="new-icon pbi-new-icon">new</span><span class="item-text">Test</span><div class="clear"></div></a></li>
+</ul>
+</li>
+</ul></div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+		var reposition   = false;
+		var showOn       = 'hover';
+		var offset       = reposition
+			? '-13 6'
+			: ($.browser.msie && parseInt($.browser.version) == 8)
+				? '3 -1'
+				: '3 0';
+		var showCallback = function(e) {
+			var self = $(this);
+
+			// Make sure all other menus are closed
+			$('.popup_html > ul').not(self).menu('hide');
+
+			// Hide the navigation if they leave it.
+			setTimeout(function() {
+				$(document).on('mousemove.nav', function(e) {
+					var elem = $(e.target);
+					if (
+						elem.parents('#nav-tree, .popup_html').length == 0
+						&& !elem.is('#nav-tree, .popup_html')
+						&& !self.data('hotkey-open')
+					) {
+						self.menu('hide');
+						$(document).off('.nav');
+					}
+				});
+			}, 1000);
+		}
+	
+				$('#nav-tree-menu-0')
+					.addClass('nav-tree-menu')
+					.menu({
+						position: {
+							my: 'left top',
+							at: 'left bottom',
+							offset: offset,
+							of: $('#nav-tree-branch-0'),
+							collision: 'flipfit'
+						},
+						button: $('#nav-tree-branch-0'),
+						showDelay: 400,
+						showOn: showOn,
+						beforeShow: function() {},
+						show: showCallback
+					});
+				
+				$('#nav-tree-menu-1')
+					.addClass('nav-tree-menu')
+					.menu({
+						position: {
+							my: 'left top',
+							at: 'left bottom',
+							offset: offset,
+							of: $('#nav-tree-branch-1'),
+							collision: 'flipfit'
+						},
+						button: $('#nav-tree-branch-1'),
+						showDelay: 400,
+						showOn: showOn,
+						beforeShow: function() {},
+						show: showCallback
+					});
+				
+				$('#nav-tree-menu-2')
+					.addClass('nav-tree-menu')
+					.menu({
+						position: {
+							my: 'left top',
+							at: 'left bottom',
+							offset: offset,
+							of: $('#nav-tree-branch-2'),
+							collision: 'flipfit'
+						},
+						button: $('#nav-tree-branch-2'),
+						showDelay: 400,
+						showOn: showOn,
+						beforeShow: function() {},
+						show: showCallback
+					});
+				$('.nav-tree-cat-1').addClass('state-selected');$('.nav-tree-board-4').addClass('state-selected');
+			});
+		</script>
+	
+				</div>
+			
+
+			<div id="ad1"><div style="max-width: 970px; margin: 0 auto 10px; text-align: center;"><div id="Boards_net_Top" style="min-height:90px;">
+    <script type="text/javascript">
+        googletag.cmd.push(function() {
+            deployads.push(function() { deployads.gpt.display("Boards_net_Top"); });
+        });
+    </script>
+</div></div></div><script type="text/javascript" src="//storage.proboards.com/6831421/js/ALKoiEIKt0MtomyLPwRr.js" data-plugin="1" data-component="1"></script><script type="text/javascript" src="//storage.proboards.com/6831421/js/voMjeLhOXOhehzkyCejJ.js" data-plugin="2" data-component="2"></script><script type="text/javascript" src="//storage.proboards.com/6831421/js/tNmIhoBceVxDxEwuvddj.js" data-plugin="4" data-component="7"></script><link rel="stylesheet" type="text/css" href="//storage.proboards.com/6831421/css/xViPrnguAdtUAwwxenVk.css" /><script>
+    
+if(typeof yootil != "undefined" && yootil.location.profile() && location.href.match(/\/user\/\d+\/trophies/i)){
+	document.write("<style>div.show-user form.form_user_status > table {display: none; }</style>");
+}
+    
+</script><script type="text/javascript" src="//storage.proboards.com/6831421/js/IvoGnJXpYSAzKVNYdUNj.js" data-plugin="5" data-component="10"></script><link rel="stylesheet" type="text/css" href="//storage.proboards.com/6831421/css/uJHqZESVXZrrdA0ScwTm.css" /><script type="text/javascript" src="//storage.proboards.com/6831421/js/FhMCrsEAIOeWYvuRMEPZ.js" data-plugin="8" data-component="15"></script><script type="text/javascript" src="//storage.proboards.com/6831421/js/qYbINSZJFxRdoxVJoxcW.js" data-plugin="9" data-component="16"></script><script type="text/javascript" src="//storage.proboards.com/6831421/js/Fn0uBBnnaiiZWaJCBxwo.js" data-plugin="12" data-component="19"></script><link rel="stylesheet" type="text/css" href="//storage.proboards.com/6831421/css/TvBPKBvpkwHZMuCvCGMW.css" />
+
+			<div id="content" role="main">
+				
+				
+	<div class="container boards">
+		<div class="title-bar"><h2>Sub-Boards</h2></div>
+		<div class="content cap-bottom">
+			<table class="list" role="grid">
+	<thead>
+		<tr>
+			<th class="icon"></th>
+			<th class="main">Board</th>
+			<th class="threads">Threads</th>
+			<th class="posts">Posts</th>
+			<th class="latest last">Last Post</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+			
+				<tr id="board-7" class="o-board board item first">
+					<td class="icon"><img alt="No New Posts" title="No New Posts" src="//storage.proboards.com/forum/images/icons/board-no-new-post.png" /></td>
+					<td class="main clickable">
+						<span class="link"><a class="js-board__link board-link board-7" href="/board/7/prueba">Prueba</a></span><br />
+						<p class="description">Probando 1 2 3</p>
+						
+						
+					</td>
+					<td class="threads">0</td>
+					<td class="posts">0</td>
+					<td class="latest last">
+						
+							No posts have been made on this board.
+						
+					</td>
+				</tr>
+			
+		
+			
+				<tr id="board-6" class="o-board board item last">
+					<td class="icon"><img alt="No New Posts" title="No New Posts" src="//storage.proboards.com/forum/images/icons/board-no-new-post.png" /></td>
+					<td class="main clickable">
+						<span class="link"><a href="/board/6/test" class="js-board__link board-link board-6">Test</a></span><br />
+						<p class="description">Testeando la cosa...</p>
+						
+						
+					</td>
+					<td class="threads">0</td>
+					<td class="posts">0</td>
+					<td class="latest last">
+						
+							No posts have been made on this board.
+						
+					</td>
+				</tr>
+			
+		
+		
+	</tbody>
+</table>
+		</div>
+	</div>
+
+
+	<div class="container threads">
+		<div class="title-bar">
+			
+				<ul class="controls"><li><a href="/thread/new/4" role="button">Create Thread</a></li></ul>
+			
+			<h1>El sótano</h1>
+		</div>
+		<div class="control-bar ui-helper-clearfix scrollable-85ne7Ao0O3l0rRuuiUes">
+			<div class="lm-search-85ne7Ao0O3l0rRuuiUes ui-search"></div>
+			<div class="controls">
+				<ul class="select_menu_list ui-menu ui-selectMenu hide selections lm-selection-85ne7Ao0O3l0rRuuiUes"><li class="All"><a><span class="icon pbi-checkbox-checked"></span>All</a></li><li class="None"><a><span class="icon pbi-checkbox"></span>None</a></li><li class="Read"><a><span class="icon pbi-message-read"></span>Read</a></li><li class="New"><a><span class="icon pbi-message-unread"></span>New</a></li></ul>
+				<ul class="select_menu_list ui-menu ui-selectMenu hide actions lm-actions-85ne7Ao0O3l0rRuuiUes" data-status="Actions"><li class="mark_future ui-menu-has-sub-menu actionable"><a><span class="icon pbi-message-read"></span>Mark as Read</a><ul><li class="mark_as_read"><a><span class="icon"></span>Now</a></li><li class="mark_as_read_day"><a><span class="icon"></span>1 Day</a></li><li class="mark_as_read_week"><a><span class="icon"></span>1 Week</a></li><li class="mark_as_read_month"><a><span class="icon"></span>1 Month</a></li><li class="mark_as_read_forever"><a><span class="icon"></span>Forever</a></li></ul></li><li class="mark_as_new"><a><span class="icon pbi-message-unread"></span>Mark as New</a></li><li class="mark_board_read"><a><span class="icon"></span>Mark Board Read</a></li><li class="board_notifications"><a><span class="icon"></span>Notification Options</a></li><li class="bookmark"><a><span class="icon"></span>Bookmark</a></li><li class="unbookmark"><a><span class="icon"></span>Remove Bookmark</a></li><li class="labels ui-menu-has-sub-menu"><a><span class="icon"></span>Labels</a><ul class="labels lm-labels-85ne7Ao0O3l0rRuuiUes"></ul></li><li class="modFunctions ui-menu-has-sub-menu"><a><span class="icon pbi-modbadge"></span>Moderate</a><ul><li class="announce"><a><span class="icon"></span>Make Announcement</a></li><li class="unannounce"><a><span class="icon"></span>Remove Announcement</a></li><li class="sticky"><a><span class="icon"></span>Sticky</a></li><li class="unsticky"><a><span class="icon"></span>Unsticky</a></li><li class="lock"><a><span class="icon pbi-lock"></span>Lock</a></li><li class="unlock"><a><span class="icon pbi-lock"></span>Unlock</a></li><li class="move_thread ui-menu-has-sub-menu"><a><span class="icon"></span>Move</a><ul><li class="move_thread"><a><span class="icon"></span>Entire Thread</a></li></ul></li><li class="delete_thread"><a><span class="icon"></span>Delete Thread</a></li><li class="bump"><a><span class="icon"></span>Bump</a></li><li class="enable_falling"><a><span class="icon"></span>Enable Falling</a></li><li class="disable_falling"><a><span class="icon"></span>Disable Falling</a></li></ul></li><li class="default-menu-option"><a>Please make a selection first</a></li></ul>
+			</div>
+			<ul class="ui-pagination lm-pagination-85ne7Ao0O3l0rRuuiUes"><li class="prev state-disabled"><a>&laquo; Prev</a></li><li class="state-selected"><a>1</a></li><li class="next state-disabled"><a>Next &raquo;</a></li></ul>
+		</div>
+		<div class="content cap-bottom">
+			<table class="list">
+				<thead>
+					<tr class="head">
+						<th class="icon"><span class="aria-hidden">Status</span>&nbsp;</th>
+						<th class="checkbox">&nbsp;</th>
+						<th class="main">Subject</th>
+						<th class="created-by">Created By</th>
+						<th class="replies">Replies</th>
+						<th class="views">Views</th>
+						<th class="latest last">Last Post</th>
+					</tr>
+				</thead>
+				<tbody class="lm-content-85ne7Ao0O3l0rRuuiUes">
+					
+	<tr id="thread-27" class="item thread first">
+		<td class="icon"><img src="//storage.proboards.com/forum/images/icons/thread.png" alt="Thread" title="Thread" /></td>
+		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
+		<td class="main clickable" title="No Preview Available">
+			<table>
+				<tr>
+					<td><span class="control-icons lm-icons-"><span class="new-icon"><a href="/threads/recent/27">new</a></span><span class="bookmark_icon hide"><img title="Bookmark" alt="Bookmark" src="//storage.proboards.com/forum/images/icons/bookmark.png" /></span><span class="lock_icon hide"><img title="This thread is locked" alt="Locked" src="//storage.proboards.com/forum/images/icons/lock.png" /></span><span class="falling_icon hide"><img src="//storage.proboards.com/forum/images/icons/falling.png" title="This thread is falling" alt="Falling" /></span></span></td>
+					<td>
+						<span class="no-labels js-no-labels"></span>
+						<span class="link target"><a href="/thread/27/polotics-eat-pizza" class="js-thread__link thread-link thread-27 board-4">Fuck Polotics - Eat Pizza</a></span>
+						<div class="ui-micro-pagination">Pages: <ul class=""><li><a href="/thread/27/polotics-eat-pizza?page=1">1</a></li><li><a href="/thread/27/polotics-eat-pizza?page=2">2</a></li><li><a href="/thread/27/polotics-eat-pizza?page=3">3</a></li></ul></div>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="created-by clickable"><a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a></td>
+		<td class="replies clickable"><a href="#" title="View Participants" class="thread-participants">41</a></td>
+		<td class="views">105</td>
+		<td class="latest last">by <a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a><br /><abbr data-timestamp="1573345142000" class="o-timestamp time" title="Nov 9, 2019 20:19:02 GMT -4">Nov 9, 2019 20:19:02 GMT -4</abbr></td>
+	</tr>
+
+	<tr id="thread-24" class="item thread">
+		<td class="icon"><img alt="Thread" title="Thread" src="//storage.proboards.com/forum/images/icons/thread.png" /></td>
+		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
+		<td class="main clickable" title="&gt;:D">
+			<table>
+				<tr>
+					<td><span class="control-icons lm-icons-"><span class="new-icon"><a href="/threads/recent/24">new</a></span><span class="bookmark_icon hide"><img alt="Bookmark" title="Bookmark" src="//storage.proboards.com/forum/images/icons/bookmark.png" /></span><span class="lock_icon hide"><img title="This thread is locked" alt="Locked" src="//storage.proboards.com/forum/images/icons/lock.png" /></span><span class="falling_icon hide"><img title="This thread is falling" alt="Falling" src="//storage.proboards.com/forum/images/icons/falling.png" /></span></span></td>
+					<td>
+						<span class="no-labels js-no-labels"></span>
+						<span class="link target"><a class="js-thread__link thread-link thread-24 board-4" href="/thread/24/testeando-enlaces-redes-sociales-delet">Testeando enlaces de redes sociales | DELET DIS</a></span>
+						
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="created-by clickable"><a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a></td>
+		<td class="replies clickable"><a title="View Participants" href="#" class="thread-participants">3</a></td>
+		<td class="views">52</td>
+		<td class="latest last">by <a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a><br /><abbr data-timestamp="1573224021000" class="o-timestamp time" title="Nov 8, 2019 10:40:21 GMT -4">Nov 8, 2019 10:40:21 GMT -4</abbr></td>
+	</tr>
+
+	<tr id="thread-26" class="item thread">
+		<td class="icon"><img title="Thread" alt="Thread" src="//storage.proboards.com/forum/images/icons/thread.png" /></td>
+		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
+		<td class="main clickable" title="Ayyyyyyyy!&#013;&#013;">
+			<table>
+				<tr>
+					<td><span class="control-icons lm-icons-"><span class="new-icon"><a href="/threads/recent/26">new</a></span><span class="bookmark_icon hide"><img alt="Bookmark" title="Bookmark" src="//storage.proboards.com/forum/images/icons/bookmark.png" /></span><span class="lock_icon hide"><img src="//storage.proboards.com/forum/images/icons/lock.png" alt="Locked" title="This thread is locked" /></span><span class="falling_icon hide"><img src="//storage.proboards.com/forum/images/icons/falling.png" alt="Falling" title="This thread is falling" /></span></span></td>
+					<td>
+						<span class="no-labels js-no-labels"></span>
+						<span class="link target"><a href="/thread/26/el-futuro-es-hoy-lolis" class="js-thread__link thread-link thread-26 board-4">El futuro es hoy: VR lolis</a></span>
+						
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="created-by clickable"><a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a></td>
+		<td class="replies clickable"><a class="thread-participants" href="#" title="View Participants">1</a></td>
+		<td class="views">32</td>
+		<td class="latest last">by <a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a><br /><abbr data-timestamp="1573162282000" title="Nov 7, 2019 17:31:22 GMT -4" class="o-timestamp time">Nov 7, 2019 17:31:22 GMT -4</abbr></td>
+	</tr>
+
+	<tr id="thread-25" class="item thread">
+		<td class="icon"><img src="//storage.proboards.com/forum/images/icons/thread.png" title="Thread" alt="Thread" /></td>
+		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
+		<td class="main clickable" title="No Preview Available">
+			<table>
+				<tr>
+					<td><span class="control-icons lm-icons-"><span class="new-icon"><a href="/threads/recent/25">new</a></span><span class="bookmark_icon hide"><img src="//storage.proboards.com/forum/images/icons/bookmark.png" title="Bookmark" alt="Bookmark" /></span><span class="lock_icon hide"><img src="//storage.proboards.com/forum/images/icons/lock.png" alt="Locked" title="This thread is locked" /></span><span class="falling_icon hide"><img src="//storage.proboards.com/forum/images/icons/falling.png" title="This thread is falling" alt="Falling" /></span></span></td>
+					<td>
+						<span class="no-labels js-no-labels"></span>
+						<span class="link target"><a class="js-thread__link thread-link thread-25 board-4" href="/thread/25/la-cuchina-de-asdf">La cuchina de Asdf~</a></span>
+						<div class="ui-micro-pagination">Pages: <ul class=""><li><a href="/thread/25/la-cuchina-de-asdf?page=1">1</a></li><li><a href="/thread/25/la-cuchina-de-asdf?page=2">2</a></li></ul></div>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="created-by clickable"><a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a></td>
+		<td class="replies clickable"><a title="View Participants" href="#" class="thread-participants">21</a></td>
+		<td class="views">58</td>
+		<td class="latest last">by <a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a><br /><abbr title="Nov 7, 2019 0:10:07 GMT -4" class="o-timestamp time" data-timestamp="1573099807000">Nov 7, 2019 0:10:07 GMT -4</abbr></td>
+	</tr>
+
+	<tr id="thread-22" class="item thread last">
+		<td class="icon"><img src="//storage.proboards.com/forum/images/icons/thread.png" title="Thread" alt="Thread" /></td>
+		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
+		<td class="main clickable" title="No Preview Available">
+			<table>
+				<tr>
+					<td><span class="control-icons lm-icons-"><span class="new-icon"><a href="/threads/recent/22">new</a></span><span class="bookmark_icon hide"><img src="//storage.proboards.com/forum/images/icons/bookmark.png" alt="Bookmark" title="Bookmark" /></span><span class="lock_icon hide"><img alt="Locked" title="This thread is locked" src="//storage.proboards.com/forum/images/icons/lock.png" /></span><span class="falling_icon hide"><img src="//storage.proboards.com/forum/images/icons/falling.png" alt="Falling" title="This thread is falling" /></span></span></td>
+					<td>
+						<span class="no-labels js-no-labels"></span>
+						<span class="link target"><a href="/thread/22/los-inventos-pendejos-perturbadores-derp" class="js-thread__link thread-link thread-22 board-4">Los inventos más pendejos y perturbadores de la DERP web</a></span>
+						
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td class="created-by clickable"><a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a></td>
+		<td class="replies clickable"><a href="#" title="View Participants" class="thread-participants">0</a></td>
+		<td class="views">843</td>
+		<td class="latest last">by <a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a><br /><abbr title="Sept 30, 2017 9:11:01 GMT -4" class="o-timestamp time" data-timestamp="1506777061000">Sept 30, 2017 9:11:01 GMT -4</abbr></td>
+	</tr>
+
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+	
+		<div class="container legend">
+			<div class="title-bar"><h2>Legend</h2></div>
+			<div class="content">
+				<table>
+					<tr>
+						
+							<td><img src="//storage.proboards.com/forum/images/icons/thread.png" alt="" title="" /> <span>Thread</span></td>
+						
+							<td><img alt="" title="" src="//storage.proboards.com/forum/images/icons/thread-announcement.png" /> <span>Announcement</span></td>
+						
+							<td><img title="" alt="" src="//storage.proboards.com/forum/images/icons/thread-sticky.png" /> <span>Sticky</span></td>
+						
+							<td><img alt="" title="" src="//storage.proboards.com/forum/images/icons/thread-locked.png" /> <span>Locked</span></td>
+						
+							<td><span class="new-icon">new</span> <span>New</span></td>
+						
+							<td><img src="//storage.proboards.com/forum/images/icons/poll.png" alt="" title="" /> <span>Poll</span></td>
+						
+							<td><img src="//storage.proboards.com/forum/images/icons/bookmark.png" title="" alt="" /> <span>Bookmark</span></td>
+						
+					</tr>
+				</table>
+			</div>
+		</div>
+	
+
+
+
+	<div class="container stats">
+		<div class="title-bar"><h2>Board Information &amp; Statistics</h2></div>
+		<div class="content">
+			<table>
+				<tbody>
+					
+						<tr>
+							<td colspan="2">
+								<table>
+									<tr>
+										<td class="icon"><img src="//storage.proboards.com/forum/images/info/description.png" title="Board Description" alt="Board Description" /></td>
+										<td class="info last">
+											<div class="board-name">El sótano</div>
+											<div class="board-description">Vengan todos a mi sótano, la van a pasar moy rico y se divertirán muchísimo, solamente despójense de su ropita y no le digan a nadie que vienen jijijiji.</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="icon"><img src="//storage.proboards.com/forum/images/info/stats.png" title="Board Statistics" alt="Board Statistics" /></td>
+									<td class="info">
+										<table>
+											<tbody>
+												<tr><th colspan="2">Threads and Posts</th></tr>
+												<tr><td>Total Threads:</td><td>5</td></tr>
+												<tr><td>Total Posts:</td><td>71</td></tr>
+												
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="icon"><img title="Members" alt="Members" src="//storage.proboards.com/forum/images/info/members.png" /></td>
+									<td class="info last">
+										<table>
+											<tbody>
+												<tr><th colspan="1">On This Board</th></tr>
+												<tr><td>You <strong>can</strong> create threads.</td></tr>
+												<tr><td>You <strong>can</strong> reply to threads.</td></tr>
+												<tr><td>You <strong>can</strong> create polls.</td></tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+						<tr class="last">
+							<td colspan="2">
+								<table>
+									<tr>
+										<td class="icon"><img src="//storage.proboards.com/forum/images/info/online.png" alt="Members Online" title="Members Online" /></td>
+										<td class="info last">
+											<table>
+												<tbody>
+													<tr><th>Users Viewing</th></tr>
+													<tr><td>1 Staff, 0 Members, <a href="#" class="guests-online-link">0 Guests</a>.</td></tr>
+													<tr><td><tr><td>
+														
+															<a href="/user/1" data-id="1" title="@admin" class="o-user-link js-user-link user-link user-1 group-1">Mumifag Lalolanda</a>
+														
+														
+													</td></tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+				
+			</div>
+
+			<script type="text/javascript">
+<!--   
+var route=proboards.data("route").name,sd=document.getElementsByTagName("span"),id=proboards.data("user").id;    
+
+function updatestatus(){window.location="/user/"+id+"/";}
+    
+if(/(post|thread|recent_posts|conversation)/i.test(route)){
+for(x=sd.length-1;x>0;x--){
+var su=sd[x].className.split("user-")[1];     
+if(/personal-text/i.test(sd[x].className) && id==su){
+sd[x].style.cssText="cursor:pointer;";    
+sd[x].title="click here to update your status.";    
+sd[x].innerHTML='<a href="javascript:updatestatus();">'+sd[x].innerHTML+'</a>';        
+}}}
+// -->
+</script><script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "6036030" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = "https://sb.scorecardresearch.com/cs/6036030/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=6036030&amp;cv=3.6.0&amp;cj=1">
+</noscript><div id="pbn-bar-wrapper" style="position: fixed; right: 0px; bottom: 0px; height: 22px; *height: 23px; display: block; text-align: right; z-index: 20;"><img src="//storage.proboards.com/forum/images/button_collapse.png" alt=">" style="display: inline-block; float: right;" /><div id="pbn-bar" style="display: inline-block; float: right; height: 23px; width: 68px; background-color: #F0F0F0; border-width: 1px 0px 0px 1px; border-style: solid; border-color: #B0B0B0;"><a href="https://login.proboards.com/select/login/6831421" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;" id="switch-account"><img src="//storage.proboards.com/forum/images/switch_user.png" alt="Switch Account" title="Switch Account" /></a><a href="https://www.proboards.com/account/forum" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;"><img src="//storage.proboards.com/forum/images/switch_forum.png" alt="Switch Forum" title="Switch Forum" /></a><a href="https://www.proboards.com/account/settings" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;"><img src="//storage.proboards.com/forum/images/icon-options.png" alt="Account Settings" title="Account Settings" /></a></div></div><div style="display: flex; max-width: 970px; max-width: 100%; margin: 0 auto 10px; text-align: center; justify-content: space-around;flex-wrap: wrap"><div id="Boards_net_Bottom">
+    <script type="text/javascript">
+        googletag.cmd.push(function() {
+            deployads.push(function() { deployads.gpt.display("Boards_net_Bottom"); });
+        });
+    </script>
+</div>
+</div>
+        <footer class="c-footer" role="contentinfo">
+            <div id="remove_ads_link" style="display:block!important;"><a href="https://www.proboards.com/store/add_cart/ad_free/50000/lolipalooza.boards.net/1">Click here to remove banner ads from this forum.</a></div>
+            <div id="hosted_by_link" style="display:block!important;">This Forum Is Hosted For FREE By <a href="https://www.proboards.com" target="_blank">ProBoards</a><br />Get Your Own <a href="https://www.proboards.com/create-free-forum" target="_blank">Free Forum</a>!</div>
+            <div class="c-footer__link-wrapper"><a href="https://www.proboards.com/tos" accesskey="8">Terms of Service</a> &nbsp; <a href="https://www.proboards.com/privacy" title="Privacy">Privacy</a> &nbsp; <a href="https://www.proboards.com/privacy#cookies" title="Cookies">Cookies</a> &nbsp; <a href="javascript:alert('VerticalScope may earn an affiliate commission when you click on links on this website.')">FTC Disclosure</a> &nbsp; <a href="https://www.proboards.com/report-abuse" accesskey="7">Report Abuse</a> &nbsp; <a class="qc-ccpa-persistent-link" title="Do Not Sell My Personal Information">Do Not Sell My Personal Information &nbsp;</a></div>
+        </footer>
+    
+
+		</div>
+		
+	</body>
+</html>
