@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/curve/scripts/index.css" />
+	<script type="text/javascript" src="/assets/smf/curve/scripts/script.js"></script>
+	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Mostrar Mensajes - {{page.user}}" />
+
+	<meta name="robots" content="noindex">
+	
+	<title>Mostrar Mensajes - {{page.user}}</title>
+	<link rel="help" href="http://localhost/forosdz/index.php?action=help" />
+	<link rel="search" href="http://localhost/forosdz/index.php?action=search" />
+	<link rel="contents" href="{{site.data.forums.base_url}}" />
+	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://localhost/forosdz/index.php?type=rss;action=.xml" />
+	<script type="text/javascript"><!-- // --><![CDATA[
+		var _ohWidth = '640';
+		var _ohHeight = '360';
+	// ]]></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="//code.jquery.com/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="/assets/smf/ohyoutube.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/oharaEmbed.css" />
+	<style type="text/css">
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+{% assign user = site.users | where: "nickname", page.user | first %}
+{% assign messages = site.messages | where: "user", page.user %}
+{% assign threads = site.threads | where: "user", page.user %}
+<div id="wrapper" style="width: 90%">
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
+			</h1>
+			<img id="upshrink" src="/assets/smf/curve/img/upshrink.png" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
+		</div>
+		<div id="upper_section" class="middletext"></div>
+		<br class="clear" />
+		{% include smf/navigator.html %}
+		<br class="clear" />
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_section">
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
+			</li>
+			<li>
+				<a href="{{user.url}}"><span>Perfil de {{user.nickname}}</span></a> &#187;
+			</li>
+			<li>
+				<a href="{{page.url}}"><span>Mostrar Mensajes</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="{{page.url}}"><span>Mensajes</span></a>
+			</li>
+		</ul>
+	</div>
+<div id="admin_menu">
+	<ul class="dropmenu" id="dropdown_menu_1">
+			<li><a class="active firstlevel" href="#"><span class="firstlevel">Información del Perfil</span></a>
+				<ul>
+					<li>
+						<a href="{{user.url}}"><span>Resumen</span></a>
+					</li>
+					<li>
+						<a href="http://localhost/forosdz/index.php?action=profile;area=statistics;u=1"><span>Mostrar Estadísticas</span></a>
+					</li>
+					<li>
+						<a class="chosen" href="{{page.url}}"><span>Mostrar Mensajes y Temas...</span></a>
+					</li>
+				</ul>
+			</li>
+	</ul>
+</div>
+<div id="admin_content">
+	<div class="cat_bar">
+		<h3 class="catbg">
+			<span class="ie6_header floatleft"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="" class="icon" />Mostrar Mensajes
+			</span>
+		</h3>
+	</div>
+	<p class="windowbg description">
+		Esta sección te permite ver todos los mensajes hechos por este usuario, recuerda que solo puedes ver los mensajes en áreas en donde tu tienes acceso.
+	</p>
+	<div id="adm_submenus">
+		<ul class="dropmenu">
+			<li>
+				<a class="active firstlevel messages" href="#"><span class="firstlevel">Mensajes</span></a>
+			</li>
+			<li>
+				<a class="firstlevel threads" href="#"><span class="firstlevel">Temas</span></a>
+			</li>
+		</ul>
+	</div><br class="clear" />
+		<div class="cat_bar">
+			<h3 class="catbg">
+				Mensajes - {{user.nickname}}
+			</h3>
+		</div>
+		<div class="pagesection" style="visibility:hidden">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=15">2</a> <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=30">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=%1$d', 45, 420, 15);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=420">29</a> </span>
+		</div>
+		{% assign counter = 1 %}
+		{% for message in messages reversed %}
+			{% assign thread = site.threads | where: "title", message.thread %}
+			{% assign board = site.boards | where: "board", thread.board %}
+			<div class="topic message">
+				<div class="windowbg{% cycle '', '2' %} core_posts">
+					<span class="topslice"><span></span></span>
+					<div class="content">
+						<div class="counter">{{counter}}</div>
+						<div class="topic_details">
+							<h5><strong><a href="{{board.url}}">{{board.board}}</a> / <a href="{{thread.url}}#msg{{message.id_msg}}">{{message.subject}}</a></strong></h5>
+							<span class="smalltext">&#171;&nbsp;<strong>:</strong> {{message.date | date: "%a, %b %d, %Y %H:%M:%S"}}&nbsp;&#187;</span>
+						</div>
+						<div class="list_posts">{{message.content}}</div>
+					</div>
+					<br class="clear" />
+					<span class="botslice"><span></span></span>
+				</div>
+			</div>
+			{% assign counter = counter | plus: 1 %}
+		{% else %}
+		<div class="topic message"><em>Sin mensajes...</em></div>
+		{% endfor %}
+
+		{% assign counter = 1 %}
+		{% for thread in threads reversed %}
+			{% assign first_message = site.messages | where: "subject", thread.title | first %}
+			{% assign board = site.boards | where: "board", thread.board %}
+			<div class="topic thread hidden">
+				<div class="windowbg core_posts">
+					<span class="topslice"><span></span></span>
+					<div class="content">
+						<div class="counter">1</div>
+						<div class="topic_details">
+							<h5><strong><a href="{{board.url}}">{{board.board}}</a> / <a href="{{thread.title}}#msg{{first_message.id_msg}}">{{thread.title}}</a></strong></h5>
+							<span class="smalltext">&#171;&nbsp;<strong>:</strong> {{first_message.date | date: "%a, %b %d, %Y %H:%M:%S"}}&nbsp;&#187;</span>
+						</div>
+						<div class="list_posts">{{first_message.content}}</div>
+					</div>
+					<br class="clear" />
+					<span class="botslice"><span></span></span>
+				</div>
+			</div>
+		{% else %}
+		<div class="topic thread hidden"><em>Sin temas...</em></div>
+		{% endfor %}
+
+		<div class="pagesection" style="margin-bottom: 0;visibility: hidden;">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=15">2</a> <a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=30">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=%1$d', 45, 420, 15);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://localhost/forosdz/index.php?action=profile;u=1;area=showposts;start=420">29</a> </span>
+		</div>
+</div>
+		</div>
+	</div></div>
+	<div id="footer_section"><div class="frame">
+		<ul class="reset">
+			<li class="copyright">
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://localhost/forosdz/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.13</a> | <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2015</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span></li>
+			<li><a id="button_xhtml" href="http://validator.w3.org/check?uri=referer" target="_blank" class="new_win" title="XHTML 1.0 válido!"><span>XHTML</span></a></li>
+			<li><a id="button_rss" href="http://localhost/forosdz/index.php?action=.xml;type=rss" class="new_win"><span>RSS</span></a></li>
+			<li class="last"><a id="button_wap2" href="http://localhost/forosdz/index.php?wap2" class="new_win"><span>WAP2</span></a></li>
+		</ul>
+	</div></div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.firstlevel.messages,.firstlevel.threads').on('click', function(e) {
+			e.preventDefault()
+			$('.firstlevel.messages,.firstlevel.threads').toggleClass('active')
+			$('.topic.thread,.topic.message').toggleClass('hidden')
+			if ($(this).hasClass('messages')) {
+				$('.cat_bar .catbg').text('Mensajes - {{user.nickname}}')
+			} else if ($(this).hasClass('threads')) {
+				$('.cat_bar .catbg').text('Temas - {{user.nickname}}')
+			}
+		})
+	})
+</script>
+</body></html>

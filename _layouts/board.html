@@ -125,7 +125,9 @@
 		</div>
 	</div>
 	{% endif %}
-	<p class="description_board">{{page.description}}</p>
+	{% unless page.description == "" %}
+		<p class="description_board">{{page.description}}</p>
+	{% endunless %}
 	<div class="pagesection" style="visibility:hidden;">
 		<div class="pagelinks floatleft">Páginas: [<strong>1</strong>] </div>
 	</div>

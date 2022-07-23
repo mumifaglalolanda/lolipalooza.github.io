@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/curve/scripts/index.css" />
+	<script type="text/javascript" src="/assets/smf/curve/scripts/script.js"></script>
+	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Perfil de {{page.nickname}}" />
+
+	<meta name="robots" content="noindex">
+	
+	<title>Perfil de {{page.nickname}}</title>
+	<link rel="canonical" href="{{page.url}}" />
+	<link rel="help" href="http://localhost/forosdz/index.php?action=help" />
+	<link rel="search" href="http://localhost/forosdz/index.php?action=search" />
+	<link rel="contents" href="{{site.data.forums.base_url}}" />
+	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://localhost/forosdz/index.php?type=rss;action=.xml" />
+	<script type="text/javascript"><!-- // --><![CDATA[
+		var _ohWidth = '640';
+		var _ohHeight = '360';
+	// ]]></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="//code.jquery.com/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="/assets/smf/ohyoutube.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/oharaEmbed.css" />
+	<style type="text/css">
+		#basicinfo h4 {
+		  white-space: normal;
+		}
+		#basicinfo img.avatar {
+		  max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper" style="width: 90%">
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
+			</h1>
+			<img id="upshrink" src="/assets/smf/curve/img/upshrink.png" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
+		</div>
+		<div id="upper_section" class="middletext"></div>
+		<br class="clear" />
+		{% include smf/navigator.html %}
+		<br class="clear" />
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_section">
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
+			</li>
+			<li>
+				<a href="{{page.url}}"><span>Perfil de {{page.nickname}}</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="{{page.url}}"><span>Resumen</span></a>
+			</li>
+		</ul>
+	</div>
+{% assign content = site.content | where: "user", page.nickname | first %}
+<div id="admin_menu">
+	<ul class="dropmenu" id="dropdown_menu_1">
+			<li><a class="active firstlevel" href="#"><span class="firstlevel">Información del Perfil</span></a>
+				<ul>
+					<li>
+						<a class="chosen" href="{{page.url}}"><span>Resumen</span></a>
+					</li>
+					<li>
+						<a href="http://localhost/forosdz/index.php?action=profile;area=statistics;u=1"><span>Mostrar Estadísticas</span></a>
+					</li>
+					<li>
+						<a href="{{content.url}}"><span>Mostrar Mensajes y Temas...</span></a>
+					</li>
+				</ul>
+			</li>
+	</ul>
+</div>
+<div id="admin_content">
+<div id="profileview" class="flow_auto">
+	{% if page.avatar %}
+		{% if page.avatar contains "http" %}
+		{% assign user_avatar = page.avatar %}
+		{% else %}
+		{% capture user_avatar %}/assets/smf/attachments/{{page.avatar}}{% endcapture %}
+		{% endif %}
+	{% else %}
+		{% assign user_avatar = "/assets/smf/noavatar.gif" %}
+	{% endif %}
+
+	{% assign posts = site.messages | where: "user", page.nickname %}
+
+	{% unless page.country_flag == "" or page.country_flag == 0 %}
+	{% assign user_country = site.data.country-flags.flags | where: "icon", page.country_flag | first %}
+	{% endunless %}
+
+	{% comment %}Calculando edad del usuario a partir de su fecha de nacimiento{% endcomment %}
+	{% unless page.birthdate == "0001-01-01" %}
+	{%   assign currentdate = site.time | date: '%s'      %}
+	{%   assign birthdate = page.birthdate | date: '%s'  %}
+	{%   assign secondsSince = currentdate | minus: birthdate     %}
+	{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+	{%   assign daysSince = hoursSince | divided_by: 24  %}
+	{%   assign yearsSince = daysSince | divided_by: 365  %}
+	{% endunless %}
+
+	{% unless page.additional_groups == "" %}
+	{% assign additional_group = site.data.groups | where: "id", page.additional_groups | first %}
+	{% endunless %}
+
+	{% capture exp %}group.min_posts>= 0 and group.min_posts<={{posts.size}}{% endcapture %}
+	{% assign groups = site.data.groups | sort: "min_posts" %}
+	{% assign post_group = groups | where_exp: "group", exp | last %}
+	<div class="cat_bar">
+		<h3 class="catbg">
+			<span class="ie6_header floatleft"><img src="/assets/smf/curve/img/icons/profile_sm.gif" alt="" class="icon" />Resumen</span>
+		</h3>
+	</div>
+	<div id="basicinfo">
+		<div class="windowbg">
+			<span class="topslice"><span></span></span>
+			<div class="content flow_auto">
+				<div class="username">
+					<h4>{{page.nickname}} <span class="position">{% unless page.additional_groups == "" %}{{additional_group.name}}{% endunless %}<img src="/assets/smf/curve/img/{{post_group.banner}}" alt="*"></span>
+					</h4>
+				</div>
+				<img class="avatar" src="{{user_avatar}}" alt="" />
+				<ul class="reset">
+					<li class="custom_field"><a href="https://www.facebook.com/mumifag.lalolanda"><img src="http://localhost/forosdz/Themes/default/images/custom/facebook.png" alt="mumifag.lalolanda" title="Facebook" /></a></li>
+					<li class="custom_field"><a href="https://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w"><img src="http://localhost/forosdz/Themes/default/images/custom/youtube.png" alt="UCJ3pHysxYaf-deQGOC_Lr6w" title="Canal de Youtube" /></a></li>
+				
+				
+				
+				
+			</ul>
+			<span id="userstatus"><img src="/assets/smf/curve/img/useroff.gif" alt="Desconectado" align="middle" /><span class="smalltext"> Desconectado</span>
+				</span>
+				<p id="infolinks">
+					<a href="{{content.url}}">Mostrar Mensajes</a><br />
+					<a href="http://localhost/forosdz/index.php?action=profile;area=statistics;u=1">Mostrar Estadísticas</a>
+				</p>
+			</div>
+			<span class="botslice"><span></span></span>
+		</div>
+	</div>
+	<div id="detailedinfo">
+		<div class="windowbg2">
+			<span class="topslice"><span></span></span>
+			<div class="content">
+				<dl>
+					<dt>Mensajes: </dt>
+					<dd>{{posts.size}} (0.036 por día)</dd>
+					<dt>Título Personalizado: </dt>
+					<dd>{{page.personal_text}}</dd>
+					<dt>Texto personal: </dt>
+					<dd>{{page.usertitle | default: "none"}}</dd>
+					<dt>Karma: </dt>
+					<dd>+{{page.karma_bad}}/-{{page.karma_good}}</dd>
+					{% unless page.birthdate == "0001-01-01" %}
+					{% endunless %}
+					{% unless page.location == "" %}
+					<dt>Ubicación:</dt>
+					<dd>{{page.location}}</dd>
+					{% endunless %}
+					<dt>Fecha de registro: </dt>
+					<dd>{{page.date_registered | date: "%a, %b %d, %Y %H:%M:%S"}}</dd>
+				</dl>
+				<dl>
+					{% unless page.country_flag == "" or page.country_flag == 0 %}
+					<dt>País:</dt>
+					<dd><img src="/assets/smf/curve/img/flags/{{page.country_flag}}.png" alt="{{page.country_flag}}" title="{{user_country.country}}"> {{user_country.country}}</dd>
+					{% endunless %}
+					{% unless page.birthdate == "0001-01-01" %}
+					<dt>Edad:</dt>
+					<dd>{{yearsSince}}</dd>
+					{% endunless %}
+					{% unless page.gender == 0 %}
+					<dt>Sexo: </dt>
+					<dd>
+						{% if page.gender == 2 %}
+							<img class="gender" src="/assets/smf/curve/img/Female.gif" alt="Femenino">
+							Femenino
+						{% else %}
+							<img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino">
+							Masculino
+						{% endif %}
+					</dd>
+					{% endunless %}
+					<dt>Grupo:</dt>
+					<dd>{{post_group.name}}</dd>
+					{% unless page.alineacion == "" %}
+					<dt>Facción:</dt>
+					<dd><img src="/assets/smf/curve/img/alineacion/{{page.alineacion}}.gif" alt="{{page.alineacion}}" title="{{page.alineacion}}" /></dd>
+					{% endunless %}
+					{% unless page.humor == "" %}
+					<dt>Humor:</dt>
+					<dd>{{page.humor}}</dd>
+					{% endunless %}
+					<dt>Dinero:</dt>
+					<dd>☯ {{page.money}} soles peruanos</dd>
+					<dt>Dinero en banco:</dt>
+					<dd>☯ {{page.moneyBank}} soles peruanos</dd>
+				</dl>
+				<div class="custom_fields_above_signature">
+					<h5>About me:</h5>
+					<ul class="reset nolist">
+						<li>
+							{% unless page.about == "" %}
+								{{page.about}}
+							{% else %}
+								<em>I will write this later. :)</em>
+							{% endunless %}
+						</li>
+					</ul>
+				</div>
+				{% unless page.signature == "" %}
+				<div class="signature">
+					<h5>Firma:</h5>
+					{{page.signature}}
+				</div>
+				{% endunless %}
+			</div>
+			<span class="botslice"><span></span></span>
+		</div>
+	</div>
+<div class="clear"></div>
+</div>
+</div>
+		</div>
+	</div></div>
+	<div id="footer_section"><div class="frame">
+		<ul class="reset">
+			<li class="copyright">
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://localhost/forosdz/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.13</a> | <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2015</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span></li>
+			<li><a id="button_xhtml" href="http://validator.w3.org/check?uri=referer" target="_blank" class="new_win" title="XHTML 1.0 válido!"><span>XHTML</span></a></li>
+			<li><a id="button_rss" href="http://localhost/forosdz/index.php?action=.xml;type=rss" class="new_win"><span>RSS</span></a></li>
+			<li class="last"><a id="button_wap2" href="http://localhost/forosdz/index.php?wap2" class="new_win"><span>WAP2</span></a></li>
+		</ul>
+	</div></div>
+</div>
+</body></html>

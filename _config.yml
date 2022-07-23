@@ -63,12 +63,19 @@ collections:
   boards:
     title: boards
     output: true
+    permalink: /:collection/:title
   threads:
     title: threads
     output: true
+    permalink: /:collection/:title
   users:
     title: users
     output: true
+    permalink: /:collection/:title
   css_posts:
     title: css_posts
     output: true
+    permalink: /:collection/:title
+  content:
+    output: true
+    permalink: /users/:title/:collection

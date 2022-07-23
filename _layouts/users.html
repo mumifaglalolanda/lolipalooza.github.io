@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{% assign users = site.users %}
+	<link rel="stylesheet" type="text/css" href="/assets/smf/curve/scripts/index.css" />
+	<script type="text/javascript" src="/assets/smf/curve/scripts/script.js"></script>
+	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Viendo miembros 1 a {{users.size}} " />
+
+	<meta name="robots" content="noindex">
+
+	<title>Viendo miembros 1 a {{users.size}} </title>
+	<link rel="help" href="http://localhost/forosdz/index.php?action=help" />
+	<link rel="search" href="http://localhost/forosdz/index.php?action=search" />
+	<link rel="contents" href="http://localhost/forosdz/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://localhost/forosdz/index.php?type=rss;action=.xml" />
+</head>
+<body>
+<div id="wrapper" style="width: 90%">
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
+			</h1>
+			<img id="upshrink" src="/assets/smf/curve/img/upshrink.png" alt="*" title="Encoger o expandir encabezado." />
+			<div id="siteslogan" class="floatright">{{site.data.forums.subtitle}}</div>
+		</div>
+		<br class="clear" />
+		{% include smf/navigator.html %}
+		<br class="clear" />
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_section">
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
+			</li>
+			<li>
+				<a href="{{page.url}}"><span>Lista de usuarios</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="{{page.url}}"><span>Viendo miembros 1 a {{users.size}} </span></a> (de {{users.size}} miembros en total)
+			</li>
+		</ul>
+	</div>
+	<div class="main_section" id="memberlist">
+		<div class="cat_bar">
+			<h4 class="catbg">
+				<span class="floatleft">Lista de usuarios</span>
+				<span class="floatright">
+					{% assign letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | split: "" %}
+					{% for i in letters %}<a class="letters" href="#{{i}}">{{i}}</a> {% endfor %}
+				</span>
+			</h4>
+		</div>
+		<div class="pagesection">
+			
+		<div class="buttonlist floatright">
+			<ul>
+				<li><a class="button_strip_view_all_members active" href="{{page.url}}"><span>Ver todos los usuarios</span></a></li>
+				<li><a class="button_strip_mlist_search" href="#"><span class="last">Buscar por usuarios</span></a></li>
+			</ul>
+		</div>
+			<div class="pagelinks floatleft">Páginas: [<strong>1</strong>] </div>
+		</div>
+		<div id="mlist" class="tborder topic_table">
+			<table class="table_grid" cellspacing="0" width="100%">
+			<thead>
+				<tr class="catbg">
+					<th scope="col" class=" first_th" width="60">
+						<a href="#" rel="nofollow">Estado</a></th>
+					<th scope="col" class="" width="20">
+						<a href="#" rel="nofollow">Sexo</a></th>
+					<th scope="col" class="">
+						<a href="#" rel="nofollow">Avatar</a></th>
+					<th scope="col" class="" style="width: auto;" nowrap="nowrap">
+						<a href="#" rel="nofollow">Usuario <img src="/assets/smf/curve/img/sort_up.gif" alt="" /></a></th>
+					<th scope="col" class="" width="25">
+						<a href="#" rel="nofollow">Email</a></th>
+					<th scope="col" class="" width="70">
+						<a href="#" rel="nofollow">Web</a></th>
+					<th scope="col" class="">
+						<a href="#" rel="nofollow">Grupo</a></th>
+					<th scope="col" class="">
+						<a href="#" rel="nofollow">Fecha de registro</a></th>
+					<th scope="col" class="">
+						<a href="#" rel="nofollow">Última vez activo</a></th>
+					<th scope="col" class=" last_th" width="115" colspan="2">
+						<a href="#" rel="nofollow">Mensajes</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% assign _messages = "" | split: "" %}
+				{% for user in users %}
+					{% assign messages = site.messages | where: "user", user.nickname %}
+					{% assign messages = messages.size | split: "" %}
+					{% assign _messages = _messages | concat: messages %}
+				{% endfor %}
+				{% assign max = _messages | sort | last %}
+
+				{% for user in users %}
+
+					{% if user.avatar %}
+						{% if user.avatar contains "http" %}
+						{% assign user_avatar = user.avatar %}
+						{% else %}
+						{% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
+						{% endif %}
+					{% else %}
+						{% assign user_avatar = "" %}
+					{% endif %}
+
+					{% assign messages = site.messages | where: "user", user.nickname %}
+
+					{% capture exp %}group.min_posts>= 0 and group.min_posts<={{messages.size}}{% endcapture %}
+					{% assign groups = site.data.groups | sort: "min_posts" %}
+					{% assign post_group = groups | where_exp: "group", exp | last %}
+					
+					<tr class="{{ user.nickname | slice: 0 | upcase }}">
+						<td class="windowbg2">
+							<a href="{{user.url}}" title="Desconectado"><img src="/assets/smf/curve/img/useroff.gif" alt="Desconectado" align="middle" /></a>
+						</td>
+						<td class="windowbg" align="center">
+							{% unless user.gender == 0 %}
+								{% if user.gender == 2 %}
+									<img class="gender" src="/assets/smf/curve/img/Female.gif" alt="Femenino">
+								{% else %}
+									<img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino">
+								{% endif %}
+							{% endunless %}
+						</td>
+						<td class="windowbg2 avatar"><img class="avatar" src="{{user_avatar}}" alt="" /></td>
+						<td class="windowbg lefttext"><a href="{{user.url}}" title="Ver perfil de {{user.nickname}}">{{user.nickname}}</a></td>
+						<td class="windowbg2"><a href="#" rel="nofollow"><img src="/assets/smf/curve/img/email_sm.gif" alt="Email" title="Email {{user.nickname}}" /></a></td>
+						<td class="windowbg"></td>
+						<td class="windowbg lefttext">{{post_group.name}}</td>
+						<td class="windowbg lefttext">{{user.date_registered | date: "%Y-%m-%d"}}</td>
+						<td class="windowbg lefttext"></td>
+						<td class="windowbg2" style="white-space: nowrap" width="15">{{messages.size}}</td>
+						<td class="windowbg statsbar" width="120">
+							{% unless messages.size==0 %}
+							{% assign width = messages.size | times: 104 | divided_by: max %}
+							<div class="bar" style="width: {{width}}px;">
+								<div style="width: {{width | minus: 4}}px;"></div>
+							</div>
+							{% endunless %}
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+			</table>
+		</div>
+		<div class="pagesection">
+			<div class="pagelinks floatleft">Páginas: [<strong>1</strong>] </div>
+		</div>
+	</div>
+		</div>
+	</div></div>
+	<div id="footer_section"><div class="frame">
+		<ul class="reset">
+			<li class="copyright">
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://localhost/forosdz/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.13</a> | <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2015</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span></li>
+			<li><a id="button_xhtml" href="http://validator.w3.org/check?uri=referer" target="_blank" class="new_win" title="XHTML 1.0 válido!"><span>XHTML</span></a></li>
+			<li><a id="button_rss" href="http://localhost/forosdz/index.php?action=.xml;type=rss" class="new_win"><span>RSS</span></a></li>
+			<li class="last"><a id="button_wap2" href="http://localhost/forosdz/index.php?wap2" class="new_win"><span>WAP2</span></a></li>
+		</ul>
+	</div></div>
+</div>
+<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="//code.jquery.com/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('[href=#]').on('click', function (e) {
+			e.preventDefault()
+		})
+		$('.letters').on('click', function (e) {
+			e.preventDefault()
+			var letter = $(this).text()
+			$('tbody tr').hide()
+			$('tbody tr.'+letter).show()
+		})
+	})
+</script>
+</body></html>

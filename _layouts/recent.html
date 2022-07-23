@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/assets/smf/curve/scripts/index.css" />
+	<script type="text/javascript" src="/assets/smf/curve/scripts/script.js"></script>
+	<script type="text/javascript" src="/assets/smf/curve/scripts/theme.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="description" content="Mensajes recientes" />
+
+	<meta name="robots" content="noindex">
+
+	<title>Mensajes recientes</title>
+	<link rel="help" href="http://smf.halabalooza.orgy/index.php?action=help" />
+	<link rel="search" href="http://smf.halabalooza.orgy/index.php?action=search" />
+	<link rel="contents" href="http://smf.halabalooza.orgy/index.php" />
+	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://smf.halabalooza.orgy/index.php?type=rss;action=.xml" />
+	<script type="text/javascript"><!-- // --><![CDATA[
+		var _ohWidth = '640';
+		var _ohHeight = '360';
+	// ]]></script>
+	<script type="text/javascript">!window.jQuery && document.write(unescape('%3Cscript src="//code.jquery.com/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<script type="text/javascript" src="/assets/smf/ohyoutube.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/smf/oharaEmbed.css" />
+</head>
+<body>
+<div id="wrapper" style="width: 90%">
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">
+				<a href="{{site.data.forums.base_url}}">{{site.data.forums.title}}</a>
+			</h1>
+			<img id="upshrink" src="http://localhost/halabalooza/Themes/Curve2/images/upshrink.png" alt="*" title="Encoger o expandir encabezado." style="display: none;" />
+			<div id="siteslogan" class="floatright">{{site.data.forums.subtitle}}</div>
+		</div>
+		<br class="clear" />
+		{% include smf/navigator.html %}
+		<br class="clear" />
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_section">
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="{{site.data.forums.base_url}}"><span>{{site.data.forums.title}}</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="{{page.url}}"><span>Mensajes recientes</span></a>
+			</li>
+		</ul>
+	</div><!--Headers--><!--End Headers-->
+	<div id="recent" class="main_section">
+		<div class="cat_bar">
+			<h3 class="catbg">
+				<span class="ie6_header floatleft"><img src="/assets/smf/curve/img/post/xx.gif" alt="" class="icon" />Mensajes recientes</span>
+			</h3>
+		</div>
+		<div class="pagesection" style="visibility:hidden">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=10">2</a> <a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=20">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://smf.halabalooza.orgy/index.php?action=recent;start=%1$d', 30, 90, 10);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=90">10</a> </span>
+		</div>
+		{% assign messages = site.messages %}
+		{% assign counter = 1 %}
+		{% for message in messages reversed %}
+			{% assign board = site.boards | where: "board", thread.board %}
+			{% assign thread = site.threads | where: "title", message.thread %}
+			{% assign user = site.users | where: "nickname", message.user | first %}
+			<div class="windowbg{% cycle '', '2' %} core_posts">
+				<span class="topslice"><span></span></span>
+				<div class="content">
+					<div class="counter">{{counter}}</div>
+					<div class="topic_details">
+						<h5><a href="{{board.url}}">{{board.board}}</a> / <a href="{{thread.url}}#msg{{message.id_msg}}" rel="nofollow">{{message.subject}}</a></h5>
+						<span class="smalltext">&#171;&nbsp;Último por <strong><a href="{{user.url}}">{{user.nickname}}</a> </strong> <em> {{message.date | date: "%a, %b %d, %Y %H:%M:%S"}}</em>&nbsp;&#187;</span>
+					</div>
+					<div class="list_posts">{{message.content}}</div>
+				</div>
+				<span class="botslice clear"><span></span></span>
+			</div>
+			{% assign counter = counter | plus: 1 %}
+		{% else %}
+		<em>Sin mensajes...</em>
+		{% endfor %}
+		<div class="pagesection" style="visibility:hidden">
+			<span>Páginas: [<strong>1</strong>] <a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=10">2</a> <a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=20">3</a> <span style="font-weight: bold;" onclick="expandPages(this, 'http://smf.halabalooza.orgy/index.php?action=recent;start=%1$d', 30, 90, 10);" onmouseover="this.style.cursor='pointer';"> ... </span><a class="navPages" href="http://smf.halabalooza.orgy/index.php?action=recent;start=90">10</a> </span>
+		</div>
+	</div><!--Footers--><!--End Footers-->
+		</div>
+	</div></div>
+	<div id="footer_section"><div class="frame">
+		<ul class="reset">
+			<li class="copyright">
+		<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://www.simplemachines.org/" title="Foro Simple Machines" target="_blank" class="new_win">Powered by SMF 2.0 RC4</a> | <a href="http://www.simplemachines.org/about/copyright.php" title="Software Libre para Foros" target="_blank" class="new_win">SMF &copy; 2006&ndash;2009, Simple Machines LLC</a> | <a href="http://www.smfsimple.com" title="Smf - Soporte - Tutoriales - Mods - Themes">SMF Simple &copy;
+</a>
+		</span><br /><div align="center"><span class="smalltext">Protected by: <a href="http://www.eastcoastrollingthunder.com" target="_blank" class="new_win">Forum Firewall &copy; 2010-2011</a></span></div></li>
+			<li><a id="button_xhtml" href="http://validator.w3.org/check/referer" target="_blank" class="new_win" title="XHTML 1.0 válido!"><span>XHTML</span></a></li>
+			<li><a id="button_rss" href="http://smf.halabalooza.orgy/index.php?action=.xml;type=rss" class="new_win"><span>RSS</span></a></li>
+			<li class="last"><a id="button_wap2" href="http://smf.halabalooza.orgy/index.php?wap2" class="new_win"><span>WAP2</span></a></li>
+		</ul>
+	</div></div>
+</div>
+</body></html>

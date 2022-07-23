@@ -70,10 +70,11 @@
 	            	{% for board in boards %}
 		            	{% unless board.child_level %}
 
-			            	{% assign subboards = boards | where: "child_level", 1 | where: "parent_board", board.board | sort: "board_order" %}
+							{% capture exp %}board.child_level==1 and board.parent_board=='{{board.board}}'{% endcapture %}
+							{% assign childboards = site.boards | where_exp: "board", exp | sort: "board_order" %}
 
 							<tr id="board_23" class="windowbg2">
-								<td class="windowbg icon" {% if subboards.size > 0 %}rowspan="2"{% endif %}>
+								<td class="windowbg icon" {% if childboards.size > 0 %}rowspan="2"{% endif %}>
 									<a href="http://smf.halabalooza.orgy/index.php/board,23.0.html" name="b23">
 										<img src="/assets/smf/curve/ImagesOnBoard/{% if board.icon %}{{board.icon}}{% else %}default1.png{% endif %}" alt="{{board.name}}" title="No hay nuevos Mensajes" />
 									</a>
@@ -118,20 +119,20 @@
 										{% endif %}
 									<div style="float: left; margin-right: 4px;"><img src="{{last_user_avatar}}" alt="" width="38" height="38" align="middle" border="0" /></div>
 									<p>
-										<strong>Último:</strong>  <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a><br />
+										<strong>Último:</strong>  <a href="{{last_msg_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject | truncate: 27}}</a><br />
 										por <a href="{{last_user.url}}">{{last_user.nickname}}</a><br />
-										 {{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }}
+										 {{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }}
 									</p>
 									{% endif %}
 								</td>
 							</tr>
 
-							{% if subboards.size > 0 %}
+							{% if childboards.size > 0 %}
 							<tr id="board_99_children">
 								<td colspan="4" class="children windowbg">
 									<strong>Subforos</strong>:
-									{% for subboard in subboards %}
-									<a href="{{ subboard.url }}" title="No hay nuevos Mensajes (Temas: 26, Mensajes: 211)">{{subboard.board}}</a>,
+									{% for subboard in childboards %}
+									<a href="{{ subboard.url }}" title="No hay nuevos Mensajes (Temas: 26, Mensajes: 211)">{{subboard.board}}</a>{% unless forloop.last %}, {% endunless %}
 									{% endfor %}
 								</td>
 							</tr>
@@ -163,7 +164,7 @@
 			<div class="title_barIC">
 				<h4 class="titlebg">
 					<span class="ie6_header floatleft">
-						<a href="http://smf.halabalooza.orgy/index.php?action=recent"><img class="icon" src="assets/smf/curve/img/post/xx.gif" alt="Mensajes recientes" /></a>
+						<a href="/messages/recent"><img class="icon" src="assets/smf/curve/img/post/xx.gif" alt="Mensajes recientes" /></a>
 						Mensajes recientes
 					</span>
 				</h4>
@@ -174,12 +175,15 @@
 					<a rel="feedurl" href="http://smf.halabalooza.orgy/index.php?action=.xml;type=webslice">Suscribir a Webslice</a>
 				</div>
 				<dl id="ic_recentposts" class="middletext">
-					{% for message in site.messages reversed limit:10 %}
+					{% assign messages = site.messages | sort: "date" %}
+					{% assign count = 0 %}
+					{% for message in messages reversed %}
 						{% assign thread = site.threads | where: "title", message.thread | first %}
 						{% assign user = site.users | where: "nickname", message.user | first %}
 						{% assign board = site.boards | where: "board", thread.board | first %}
 						<dt><strong><a href="{{thread.url}}" rel="nofollow">{{message.subject}}</a></strong> por <a href="{{user.url}}">{{user.nickname}}</a> (<a href="{{board.url}}">{{board.board}}</a>)</dt>
-						<dd>{{ message.date | date_to_rfc822 | replace: "-0400", "" }}</dd>
+						<dd>{{ message.date | date: "%a, %b %d, %Y %H:%M:%S" }}</dd>
+						{% assign count = count | plus: 1 %}{% if count == 10 %}{% break %}{% endif %}
 					{% endfor %}
 				</dl>
 			</div>
@@ -204,12 +208,12 @@
 				{% endif %}
 
 				{% if messages.size > 0 %}
-				Último mensaje: <strong>&quot;<a href="{{last_message_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a>&quot;</strong>  ( {{ messages.last.date | date_to_rfc822 | replace: "-0400", "" }} )
+				Último mensaje: <strong>&quot;<a href="{{last_message_thread.url}}" title="{{messages.last.subject}}">{{messages.last.subject}}</a>&quot;</strong>  ( {{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }} )
 				{% endif %}
 
 				<br />
 
-				<a href="http://smf.halabalooza.orgy/index.php?action=recent">Ver los mensajes más recientes del foro.</a><br />
+				<a href="/messages/recent">Ver los mensajes más recientes del foro.</a><br />
 				<a href="http://smf.halabalooza.orgy/index.php?action=stats">[Más Estadísticas]</a>
 			</p>
 			<div class="title_barIC">

@@ -1,0 +1,215 @@
+- id: 1
+  name: Administración Corrupta e Irresponsable
+  min_posts: -1
+  stars: 1
+  banner: h_admin.gif
+
+- id: 2
+  name: Supermoderador con delirios de Grandeza(?)
+  min_posts: -1
+  stars: 1
+  banner: h_supermod.gif
+
+- id: 3
+  name: Moderador con síndrome de Asperger
+  min_posts: -1
+  stars: 1
+  banner: h_mod.gif
+
+- id: 4
+  name: Recién Nacido
+  min_posts: 0
+  stars: 1
+  banner: nv1_good.gif
+
+- id: 5
+  name: Nómada
+  min_posts: 10
+  stars: 1
+  banner: nv2_good.gif
+
+- id: 6
+  name: Cazador / Recolector
+  min_posts: 20
+  stars: 1
+  banner: nv3_good.gif
+
+- id: 7
+  name: Campesino / Agricultor
+  min_posts: 30
+  stars: 1
+  banner: nv4_good.gif
+
+- id: 8
+  name: Artesano
+  min_posts: 45
+  stars: 1
+  banner: nv5_good.gif
+
+- id: 9
+  name: Constructor
+  min_posts: 60
+  stars: 1
+  banner: nv6_good.gif
+
+- id: 10
+  name: Ladrón
+  min_posts: 75
+  stars: 1
+  banner: nv7_good.gif
+
+- id: 11
+  name: Bárbaro
+  min_posts: 90
+  stars: 1
+  banner: nv8_good.gif
+
+- id: 13
+  name: Spambot
+  min_posts: -1
+  stars: 1
+  banner: h_spambot.gif
+
+- id: 14
+  name: Mercader
+  min_posts: 110
+  stars: 1
+  banner: nv9_good.gif
+
+- id: 15
+  name: Soldado
+  min_posts: 150
+  stars: 1
+  banner: nv10_good.gif
+
+- id: 16
+  name: Arquero
+  min_posts: 200
+  stars: 1
+  banner: nv11_good.gif
+
+- id: 17
+  name: Ballestero
+  min_posts: 250
+  stars: 1
+  banner: nv12_good.gif
+
+- id: 18
+  name: Infantería
+  min_posts: 300
+  stars: 1
+  banner: nv13_good.gif
+
+- id: 19
+  name: Falange
+  min_posts: 350
+  stars: 1
+  banner: nv14_good.gif
+
+- id: 20
+  name: Guardián
+  min_posts: 400
+  stars: 1
+  banner: nv15_good.gif
+
+- id: 21
+  name: Jinete
+  min_posts: 500
+  stars: 8
+  banner: star.gif
+
+- id: 22
+  name: Arquero a Caballo
+  min_posts: 600
+  stars: 8
+  banner: star.gif
+
+- id: 23
+  name: Mercenario
+  min_posts: 700
+  stars: 9
+  banner: star.gif
+
+- id: 24
+  name: Caballero
+  min_posts: 800
+  stars: 9
+  banner: star.gif
+
+- id: 25
+  name: Noble
+  min_posts: 900
+  stars: 10
+  banner: star.gif
+
+- id: 26
+  name: Realeza
+  min_posts: 1000
+  stars: 10
+  banner: star.gif
+
+- id: 27
+  name: Burgués
+  min_posts: 1200
+  stars: 11
+  banner: star.gif
+
+- id: 28
+  name: Empresario
+  min_posts: 1400
+  stars: 11
+  banner: star.gif
+
+- id: 29
+  name: Militar
+  min_posts: 2000
+  stars: 12
+  banner: star.gif
+
+- id: 30
+  name: Oficial Superior
+  min_posts: 2500
+  stars: 12
+  banner: star.gif
+
+- id: 31
+  name: Agente de Inteligencia
+  min_posts: 3000
+  stars: 13
+  banner: star.gif
+
+- id: 32
+  name: Dictador
+  min_posts: 4000
+  stars: 13
+  banner: star.gif
+
+- id: 33
+  name: Oligarca
+  min_posts: 5000
+  stars: 14
+  banner: star.gif
+
+- id: 34
+  name: Vanguardista
+  min_posts: 6000
+  stars: 14
+  banner: star.gif
+
+- id: 35
+  name: Tripulante espacial
+  min_posts: 8000
+  stars: 15
+  banner: star.gif
+
+- id: 36
+  name: Humano intergaláctico
+  min_posts: 10000
+  stars: 15
+  banner: star.gif
+
+- id: 37
+  name: Viajero del Tiempo-Espacio
+  min_posts: 15000
+  stars: 16
+  banner: star.gif
