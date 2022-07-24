@@ -1,0 +1,84 @@
+<div class='ipsLayout_container'>
+<a href='{{site.data.forums.base_url}}' id='elLogo' class="header-full" accesskey='1'>
+<img class="header-full" src="/assets/gtaforums/branding/gtaforums-logo.svg" alt='{{site.data.forums.title}}'>
+
+
+
+<div id="gtaf-logo-text" class="header-full">{{site.data.forums.title2}}</div>
+<div id="gtaf-logo-slogan" class="header-full">{{site.data.forums.subtitle2}}</div>
+</a>
+<div id="elSearchWrapper">
+<div id='elSearch' class='' data-controller='core.front.core.quickSearch'>
+<form accept-charset='utf-8' action='//gtaforums.com/search/?do=quicksearch' method='post'>
+<input type='search' id='elSearchField' placeholder='Search...' name='q' autocomplete='off' aria-label='Search'>
+<button class='cSearchSubmit' type="submit" aria-label='Search'><i class="fa fa-search"></i></button>
+<div id="elSearchExpanded">
+<div class="ipsMenu_title">
+Search In
+</div>
+<ul class="ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-role="searchContexts">
+<li>
+<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+<input type="radio" name="type" value="all" checked id="elQuickSearchRadio_type_all">
+<label for='elQuickSearchRadio_type_all' id='elQuickSearchRadio_type_all_label'>Everywhere</label>
+</span>
+</li>
+<li>
+<span class='ipsSideMenu_item' data-ipsMenuValue='forums_topic'>
+<input type="radio" name="type" value="forums_topic" id="elQuickSearchRadio_type_forums_topic">
+<label for='elQuickSearchRadio_type_forums_topic' id='elQuickSearchRadio_type_forums_topic_label'>Topics</label>
+</span>
+</li>
+<li data-role="showMoreSearchContexts">
+<span class='ipsSideMenu_item' data-action="showMoreSearchContexts" data-exclude="forums_topic">
+More options...
+</span>
+</li>
+</ul>
+<div class="ipsMenu_title">
+Find results that contain...
+</div>
+<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='andOr'>
+<li>
+<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='and'>
+<input type="radio" name="search_and_or" value="and" checked id="elRadio_andOr_and">
+<label for='elRadio_andOr_and' id='elField_andOr_label_and'><em>All</em> of my search term words</label>
+</span>
+</li>
+<li>
+<span class='ipsSideMenu_item ' data-ipsMenuValue='or'>
+<input type="radio" name="search_and_or" value="or" id="elRadio_andOr_or">
+<label for='elRadio_andOr_or' id='elField_andOr_label_or'><em>Any</em> of my search term words</label>
+</span>
+</li>
+</ul>
+<div class="ipsMenu_title">
+Find results in...
+</div>
+<ul class='ipsSideMenu_list ipsSideMenu_withRadios ipsSideMenu_small ipsType_normal' role="radiogroup" data-ipsSideMenu data-ipsSideMenu-type="radio" data-ipsSideMenu-responsive="false" data-filterType='searchIn'>
+<li>
+<span class='ipsSideMenu_item ipsSideMenu_itemActive' data-ipsMenuValue='all'>
+<input type="radio" name="search_in" value="all" checked id="elRadio_searchIn_and">
+<label for='elRadio_searchIn_and' id='elField_searchIn_label_all'>Content titles and body</label>
+</span>
+</li>
+<li>
+<span class='ipsSideMenu_item' data-ipsMenuValue='titles'>
+<input type="radio" name="search_in" value="titles" id="elRadio_searchIn_titles">
+<label for='elRadio_searchIn_titles' id='elField_searchIn_label_titles'>Content titles only</label>
+</span>
+</li>
+</ul>
+</div>
+</form>
+</div>
+</div>
+
+<ul class='ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop'>
+<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileDrawer'>
+<a href='#'>
+<i class='fa fa-navicon'></i>
+</a>
+</li>
+</ul>
+</div>

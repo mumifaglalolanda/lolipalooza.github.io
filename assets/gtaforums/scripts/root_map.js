@@ -1,0 +1,22 @@
+var ipsJavascriptMap={
+	"core":{
+		"global_core":"global_global_core.js",
+		"front_core":"front_front_core.js",
+		"front_system":"front_front_system.js",
+		"front_streams":"front_front_streams.js",
+		"front_statuses":"front_front_statuses.js",
+		"front_search":"front_front_search.js",
+		"front_widgets":"front_front_widgets.js",
+		"front_profile":"front_front_profile.js",
+		"front_messages":"front_front_messages.js",
+		"front_ignore":"front_front_ignore.js",
+		"front_modcp":"front_front_modcp.js",
+		"admin_core":"admin_admin_core.js",
+		"admin_system":"admin_admin_system.js",
+		"admin_dashboard":"admin_admin_dashboard.js",
+		"admin_members":"admin_admin_members.js",
+		"admin_support":"admin_admin_support.js"
+	},"forums":{
+		"front_topic":"front_front_topic.js"
+	}
+};

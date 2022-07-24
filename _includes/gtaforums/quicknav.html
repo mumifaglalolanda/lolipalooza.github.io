@@ -1,0 +1,38 @@
+<ol id='gtaf-quickNav'>
+{% for category in site.data.forums.categories %}
+  {% assign boards = site.boards | where: "category", category.name | sort: "board_order" %}
+  {% if boards.size > 0 %}
+    <li class='gtaf-quickNav-category'>
+      <div class="gtaf-quickNav-category-title">
+      <a href='#' class='gtaf-quickNav-category-toggle' title='Toggle this category'></a>
+      <a href='{{category.url}}'>{{category.name}}</a>
+      </div>
+      <ol class="gtaf-quickNav-forums">
+        {% for board in boards %}
+          {% unless board.child_level %}
+
+            {% capture exp %}board.child_level==1 and board.parent_board=='{{board.board}}'{% endcapture %}
+            {% assign childboards = site.boards | where_exp: "board", exp | sort: "board_order" %}
+
+            <li class="gtaf-quickNav-forum ">
+              <h4 class="gtaf-quickNav-forum-title">
+                <a href="{{board.url}}"><i class="fa fa-circle"></i> {{board.board}}</a>
+              </h4>
+
+              {% if childboards.size > 0 %}
+              <ol class="gtaf-quickNav-forum-subforums">
+                {% for subboard in childboards %}
+                <li class="">
+                  <a href="{{subboard.url}}"><i class="fa fa-circle"></i> {{subboard.board}}</a>
+                </li>
+                {% endfor %}
+              </ol>
+              {% endif %}
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ol>
+    </li>
+  {% endif %}
+{% endfor %}
+</ol>
