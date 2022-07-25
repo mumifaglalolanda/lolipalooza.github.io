@@ -2,7 +2,7 @@
 <html lang="en-US" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Unread Content - GTAForums</title>
+<title>Unread Content - {{site.data.forums.title}}</title>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3898146-3"></script>
 <script>
@@ -15,11 +15,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@GTANet" />
-<meta property="og:site_name" content="GTAForums">
+<meta property="og:site_name" content="{{site.data.forums.title}}">
 <meta property="og:locale" content="en_US">
 <link rel="canonical" href="https://gtaforums.com/discover/unread/" />
 <link rel="alternate" type="application/rss+xml" title="GTANetcom" href="https://gtaforums.com/rss/4-gtanetcom.xml/?member_id=717099&amp;key=2eb33c7206881a76834a3532ae02e768" />
 {% include gtaforums/styles.html %}
+<link rel='stylesheet' href='/assets/gtaforums/styles/streams.css' media='all'>
+<link rel='stylesheet' href='/assets/gtaforums/styles/streams_responsive.css' media='all'>
 </head>
 <body class='header-compact-static ipsApp ipsApp_front ipsJS_has ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='core' data-pageLocation='front' data-pageModule='discover' data-pageController='streams' data-pageID='1'>
 
@@ -39,12 +41,12 @@
 <div id='ipsLayout_contentWrapper'>
 <ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
 <li id='elMobileBreadcrumb'>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.url}}'>
 <span>Activity</span>
 </a>
 </li>
 <li>
-<a data-action="defaultStream" href='https://gtaforums.com/discover/unread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+<a data-action="defaultStream" href='{{page.url}}'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 </li>
 <li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileCreateMenuDrawer'>
 <a href='#'><i class='fa fa-plus'></i></a>
@@ -58,23 +60,20 @@
 <li>
 <a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/unread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
 </li>
-<li>
-<a data-action="markSiteRead" class='ipsType_light' data-controller="core.front.core.markRead" href='https://gtaforums.com/markallread/?csrfKey=3877d35377c8356d20a3e6bbeab459b2&amp;ref=aHR0cHM6Ly9ndGFmb3J1bXMuY29tL2Rpc2NvdmVyL3VucmVhZC8/JnZpZXc9ZXhwYW5kZWQ=' title='Mark all content on the site as read' data-ipsTooltip><i class='fa fa-check' aria-hidden="true"></i> Mark site read</a>
-</li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='https://gtaforums.com/'>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.url}}'>
 <span>Activity <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/unread/'>
+<a href='{{page.url}}'>
 <span>Unread Content </span>
 </a>
 </li>
@@ -94,28 +93,9 @@
 <span data-role='streamBlurb'>Showing all content I have not read.</span>
 </p>
 </div>
-<ul class="ipsList_reset sm:ipsFlex-as:stretch ipsFlex-flex:01 ipsFlex sm:ipsFlex-fd:column-reverse sm:ipsFlex-ai:stretch ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsType_blendLinks">
-<a href="https://gtaforums.com/discover/unread/?do=subscribe" class='ipsButton ipsButton_link ipsButton_verySmall' data-action='subscribe' data-ipsDialog data-ipsDialog-flashMessage='subscribed' data-ipsDialog-size='narrow' data-ipsDialog-title='Subscribe to Unread Content' data-ipsToolTip title='Receive regular emails with a summary of new activity on this stream'>
-<i class='fa fa-envelope fa-fw'></i> &nbsp;Send me email updates
-</a>
-<li>
-<a href='#' class='ipsButton ipsButton_light ipsButton_verySmall ipsButton_fullWidth' id='elStreamOptions' data-ipsMenu data-ipsMenu-appendTo='[data-streamID="1"]'>Stream Options <i class='fa fa-caret-down'></i></a>
-</li>
-</ul>
-<ul class='ipsMenu ipsMenu_auto ipsHide' id='elStreamOptions_menu'>
-<li class='ipsMenu_item '>
-<a data-action="toggleStreamDefault" data-change="1" href="https://gtaforums.com/discover/unread/?csrfKey=3877d35377c8356d20a3e6bbeab459b2&amp;default=1">Set as your default stream</a>
-</li>
-<li class='ipsMenu_item ipsHide'>
-<a data-action="toggleStreamDefault" data-change="0" href="https://gtaforums.com/discover/unread/?csrfKey=3877d35377c8356d20a3e6bbeab459b2&amp;default=0">Remove as default stream</a>
-</li>
-<li class='ipsMenu_sep'><hr></li>
-<li class='ipsMenu_item'><a href="https://gtaforums.com/discover/1.xml/?member=717099&amp;key=2eb33c7206881a76834a3532ae02e768"><i class="fa fa-rss fa-fw"></i> &nbsp;Subscribe to RSS feed</a></li>
-</ul>
 </div>
 </div>
-<div data-controller='core.front.streams.form'>
-<form accept-charset='utf-8' class="ipsForm ipsForm_vertical" action="https://gtaforums.com/discover/unread/" method="post" enctype="multipart/form-data" data-ipsForm id='elFilterForm'>
+<div data-controller='core.front.streams.form' style="display:none">
 <input type="hidden" name="stream_submitted" value="1">
 <input type="hidden" name="csrfKey" value="3877d35377c8356d20a3e6bbeab459b2">
 <input type="hidden" name="stream_default_view" value="expanded">
@@ -135,27 +115,9 @@
 <p class='cStreamFilter_blurb ipsType_reset ipsTruncate ipsTruncate_line' data-role='filterOverview'></p>
 </a>
 </li>
-<li data-filter='stream_read'>
-<a href='#elStreamReadStatus_menu' id='elStreamReadStatus' data-ipsMenu data-ipsMenu-activeClass='cStreamFilter_active' data-ipsMenu-selectable='radio' data-ipsMenu-appendTo='#elStreamFilterForm'>
-<h3 class='ipsType_reset ipsTruncate ipsTruncate_line'>Read Status</h3>
-<p class='cStreamFilter_blurb ipsType_reset ipsTruncate ipsTruncate_line' data-role='filterOverview'></p>
-</a>
-</li>
-<li data-filter='stream_solved'>
-<a href='#elStreamSolvedStatus_menu' id='elStreamSolvedStatus' data-ipsMenu data-ipsMenu-activeClass='cStreamFilter_active' data-ipsMenu-selectable='radio' data-ipsMenu-appendTo='#elStreamFilterForm'>
-<h3 class='ipsType_reset ipsTruncate ipsTruncate_line'>Solved</h3>
-<p class='cStreamFilter_blurb ipsType_reset ipsTruncate ipsTruncate_line' data-role='filterOverview'></p>
-</a>
-</li>
 <li data-filter='stream_ownership'>
 <a href='#elStreamOwnership_menu' id='elStreamOwnership' data-ipsMenu data-ipsMenu-activeClass='cStreamFilter_active' data-ipsMenu-selectable='radio' data-ipsMenu-appendTo='#elStreamFilterForm' data-ipsMenu-closeOnClick='false'>
 <h3 class='ipsType_reset ipsTruncate ipsTruncate_line'>Ownership</h3>
-<p class='cStreamFilter_blurb ipsType_reset ipsTruncate ipsTruncate_line' data-role='filterOverview'></p>
-</a>
-</li>
-<li data-filter='stream_follow'>
-<a href='#elStreamFollowStatus_menu' id='elStreamFollowStatus' data-ipsMenu data-ipsMenu-activeClass='cStreamFilter_active' data-ipsMenu-selectable='checkbox' data-ipsMenu-appendTo='#elStreamFilterForm' data-ipsMenu-closeOnClick='false'>
-<h3 class='ipsType_reset ipsTruncate ipsTruncate_line'>Following</h3>
 <p class='cStreamFilter_blurb ipsType_reset ipsTruncate ipsTruncate_line' data-role='filterOverview'></p>
 </a>
 </li>
@@ -408,7 +370,6 @@ Specific date range
 </li>
 </ul>
 </div>
-</form>
 </div>
 </div>
 <div data-role='streamBody'>
@@ -418,1173 +379,184 @@ Specific date range
 <p id='elStreamUpdateMsg' class='ipsMargin_right ipsHide ipsType_light ipsType_small ipsType_reset ipsJS_show ipsResponsive_hidePhone' data-role='updateMessage'><i class='fa fa-refresh'></i> This stream auto-updates</p>
 <ul class="ipsButton_split ipsClearfix">
 <li>
-<a href="https://gtaforums.com/discover/unread/?view=condensed&amp;csrfKey=3877d35377c8356d20a3e6bbeab459b2" data-action='switchView' data-view='condensed' data-ipsTooltip title="Display results in a compact one line per entry format" class="ipsButton ipsButton_verySmall ipsButton_veryLight" rel="nofollow"><i class="fa fa-list"></i> &nbsp;Condensed</a>
+<a href="#" data-action='switchView' data-view='condensed' data-ipsTooltip title="Display results in a compact one line per entry format" class="ipsButton ipsButton_verySmall ipsButton_veryLight" rel="nofollow"><i class="fa fa-list"></i> &nbsp;Condensed</a>
 </li>
 <li>
-<a href="https://gtaforums.com/discover/unread/?view=expanded&amp;csrfKey=3877d35377c8356d20a3e6bbeab459b2" data-action='switchView' data-view='expanded' data-ipsTooltip title="Display results with more detail including a content preview" class="ipsButton ipsButton_verySmall ipsButton_primary" rel="nofollow"><i class="fa fa-bars"></i> &nbsp;Expanded</a>
+<a href="#" data-action='switchView' data-view='expanded' data-ipsTooltip title="Display results with more detail including a content preview" class="ipsButton ipsButton_verySmall ipsButton_primary" rel="nofollow"><i class="fa fa-bars"></i> &nbsp;Expanded</a>
 </li>
 </ul>
 </div>
+
+
 <ol class='ipsStream ipsStream_withTimeline ipsList_reset' data-role='streamContent'>
+
 <li class='ipsStreamItem_time' data-timeType='past_hour'>Past hour</li>
+
+<li class='ipsStreamItem_time' data-timeType='today'>Today</li>
+
+{% for message in site.messages reversed %}
+{% assign user = site.users | where: "nickname", message.user | first %}
+{% if user.avatar %}
+  {% if user.avatar contains "http" %}
+  {% assign user_avatar = user.avatar %}
+  {% else %}
+  {% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
+  {% endif %}
+{% else %}
+  {% assign user_avatar = "/assets/smf/noavatar.gif" %}
+{% endif %}
+{% assign thread = site.threads | where: "title", message.thread | first %}
+{% assign board = site.boards | where: "board", thread.board | first %}
+{% assign op = site.users | where: "nickname", thread.user | first %}
+{% assign replies = site.messages | where: "thread", thread.title %}
+{% if message.id_msg == replies.first.id_msg %}<!-- this is original post -->
+<li class="ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_condensed ipsAreaBackground_reset ipsPad  " data-role="activityItem" data-timestamp="1658757495" style="opacity: 1; display:none" id="ips_uid_1738_204">
+  <div class="ipsStreamItem_container ipsClearfix">
+      <div class="ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini">
+          <span class="ipsStreamItem_contentType" data-ipstooltip="" title="Topic"><i class="fa fa-comments"></i></span>
+          <a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipshover="" data-ipshover-target="{{page.template}}{{user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to {{user.nickname}}'s profile">
+            <img src="{{user_avatar}}" alt="{{user.nickname}}" loading="lazy">
+          </a>
+        <div class="ipsStreamItem_unread">
+          <h2 class="ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall">
+              <span>
+                <a href="{{page.template}}{{thread.url}}" data-linktype="star" title="Go to first unread post" data-ipstooltip="">
+                  <span class="ipsItemStatus "><i class="fa fa-circle"></i></span>
+                </a>
+              </span>
+            <span class="ipsType_break ipsContained">
+              <a href="{{page.template}}{{thread.url}}" data-linktype="link" data-searchable=""> {{thread.title}}</a>
+            </span>
+          </h2>
+            <ul class="ipsList_inline ipsStreamItem_stats ipsType_light ipsType_blendLinks">
+              <li>
+                <a rel="nofollow" href="{{page.template}}{{thread.url}}" class="ipsType_blendLinks"><i class="fa fa-clock-o"></i> <time datetime="2022-07-25T13:58:15Z" title="07/25/2022 09:58  AM" data-short="{{message.date | date: "%B %d, %Y at %H:%M"}}">{{message.date | date: "%B %d, %Y at %H:%M"}}</time></a>
+              </li>
+            </ul>
+            <p class="ipsStreamItem_status ipsType_reset ipsType_blendLinks">
+              <a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="{{page.template}}{{user.url}}?do=hovercard" title="Go to {{user.nickname}}'s profile" class="ipsType_break">{{user.nickname}}</a> posted a topic in  <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
+            </p>
+        </div>
+      </div>
+  </div>
+</li>
+<li class="ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  " data-role="activityItem" data-timestamp="1658764390" style="opacity: 1;" id="ips_uid_1738_39">
+<div class="ipsStreamItem_container ipsClearfix">
+<div class="ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini">
+<span class="ipsStreamItem_contentType" data-ipstooltip="" title="Topic"><i class="fa fa-comments"></i></span>
+<a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipshover="" data-ipshover-target="{{page.template}}{{user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to {{user.nickname}}'s profile" id="ips_uid_1738_139">
+<img src="{{user_avatar}}" alt="{{user.nickname}}" loading="lazy">
+</a>
+<div class="ipsStreamItem_unread">
+<h2 class="ipsType_reset ipsStreamItem_title ipsContained_container ">
+<span>
+<a href="{{page.template}}{{thread.url}}?do=getNewComment" data-linktype="star" title="Go to first unread post" data-ipstooltip="">
+<span class="ipsItemStatus "><i class="fa fa-circle"></i></span>
+</a>
+</span>
+<span class="ipsType_break ipsContained">
+<a href="{{page.template}}{{thread.url}}" data-linktype="link" data-searchable=""> {{thread.title}}</a>
+</span>
+</h2>
+<p class="ipsType_reset ipsStreamItem_status ipsType_blendLinks">
+<a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="{{page.template}}{{user.url}}?do=hovercard" title="Go to {{user.nickname}}'s profile" class="ipsType_break" id="ips_uid_1738_140">{{user.nickname}}</a> posted a topic in <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
+</p>
+</div>
+</div>
+<div class="ipsStreamItem_snippet ipsType_break">
+<div class="ipsType_richText ipsContained ipsType_medium">
+<div data-ipstruncate="" data-ipstruncate-type="remove" data-ipstruncate-size="3 lines" data-ipstruncate-watch="false" style="overflow-wrap: break-word;">{{message | strip_html}}</div>
+</div>
+</div>
+<ul class="ipsList_inline ipsStreamItem_meta ipsGap:1">
+<li class="ipsType_light ipsType_medium">
+<a rel="nofollow" href="https://gtaforums.com/topic/984162-lvl-225-ps4-player-looking-for-a-crew-to-join/" class="ipsType_blendLinks"><i class="fa fa-clock-o"></i> <time datetime="2022-07-25T15:53:10Z" title="07/25/2022 11:53  AM" data-short="2 hr">{{message.date | date: "%B %d, %Y at %H:%M"}}</time></a>
+</li>
+</ul>
+</div>
+</li>
+{% else %}
+<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_condensed ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658775940' style="display:none">
+<div class='ipsStreamItem_container ipsClearfix'>
+<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
+<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
+<a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipsHover data-ipsHover-target="{{page.template}}{{user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to {{user.nickname}}'s profile">
+<img src='{{user_avatar}}' alt='{{user.nickname}}' loading="lazy">
+</a>
+<div class='ipsStreamItem_unread'>
+<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
+<span>
+<a href='{{page.template}}{{thread.url}}' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
+<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
+</a>
+</span>
+<span class='ipsType_break ipsContained'>
+<a href='{{page.template}}{{thread.url}}' data-linkType="link" data-searchable> {{thread.title}}</a>
+</span>
+</h2>
+ <ul class='ipsList_inline ipsStreamItem_stats ipsType_light ipsType_blendLinks'>
+<li>
+<a rel="nofollow" href='https://gtaforums.com/topic/905733-saints-row-2022-reboot/?do=findComment&amp;comment=1071904111' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-25T19:05:40Z' title='07/25/2022 03:05  PM' data-short='{{message.date | date: "%B %d, %Y at %H:%M"}}'>{{message.date | date: "%B %d, %Y at %H:%M"}}</time></a>
+</li>
+<li>
+<a href='https://gtaforums.com/topic/905733-saints-row-2022-reboot/?do=findComment&amp;comment=1071904111' class='ipsType_blendLinks'>
+<i class='fa fa-comment'></i> {{replies.size}}
+</a>
+</li>
+</ul>
+<p class='ipsStreamItem_status ipsType_reset ipsType_blendLinks'>
+<a href='https://gtaforums.com/profile/641416-jason/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/641416-jason/?do=hovercard' title="Go to {{user.nickname}}'s profile" class="ipsType_break">{{user.nickname}}</a> replied to
+<a href='{{page.template}}{{op.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{page.template}}{{op.url}}?do=hovercard' title="Go to {{op.nickname}}'s profile" class="ipsType_break">{{op.nickname}}</a>'s topic in <a href='{{page.template}}{{board.url}}'>{{board.board}}</a>
+</p>
+</div>
+</div>
+</div>
+</li>
 <li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658545172'>
 <div class='ipsStreamItem_container ipsClearfix'>
 <div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
 <span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/910946-rammer2k/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/910946-rammer2k/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Rammer2k's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-910946.jpg' alt='Rammer2k' loading="lazy">
+<a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipsHover data-ipsHover-target="{{page.template}}{{user.url}}/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to {{user.nickname}}'s profile">
+<img src='{{user_avatar}}' alt='{{user.nickname}}' loading="lazy">
 </a>
 <div class='ipsStreamItem_unread'>
 <h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
 <span>
-<a href='https://gtaforums.com/topic/984072-upcoming-improvements-to-the-gta-online-experience/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
+<a href='{{page.template}}{{thread.url}}' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
 <span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
 </a>
 </span>
 <span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984072-upcoming-improvements-to-the-gta-online-experience/' data-linkType="link" data-searchable> Upcoming Improvements to the GTA Online Experience</a>
+<a href='{{page.template}}{{thread.url}}' data-linkType="link" data-searchable> {{thread.title}}</a>
 </span>
 </h2>
 <p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/910946-rammer2k/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/910946-rammer2k/?do=hovercard' title="Go to Rammer2k's profile" class="ipsType_break">Rammer2k</a> replied to
-<a href='https://gtaforums.com/profile/179282-spider-vice/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/179282-spider-vice/?do=hovercard' title="Go to Spider-Vice's profile" class="ipsType_break">Spider-Vice</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
+<a href='{{page.template}}{{user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{page.template}}{{user.url}}?do=hovercard' title="Go to {{user.nickname}}'s profile" class="ipsType_break">{{user.nickname}}</a> replied to
+<a href='{{page.template}}{{op.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{page.template}}{{op.url}}?do=hovercard' title="Go to {{op.nickname}}'s profile" class="ipsType_break">{{op.nickname}}</a>'s topic in <a href='{{page.template}}{{board.url}}'>{{board.board}}</a>
 </p>
 </div>
 </div>
 <div class='ipsStreamItem_snippet ipsType_break'>
 <div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Good thing I robbed El Rubio enough times to get all the awards, and bank $100million to not worry about these changes.
-</div>
+<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>{{message | strip_html}}</div>
 </div>
 </div>
 <ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
 <li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984072-upcoming-improvements-to-the-gta-online-experience/?do=findComment&amp;comment=1071901014' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:59:32Z' title='07/22/2022 10:59  PM' data-short='1 min'>Just now</time></a>
+<a rel="nofollow" href='https://gtaforums.com/topic/984072-upcoming-improvements-to-the-gta-online-experience/?do=findComment&amp;comment=1071901014' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:59:32Z' title='07/22/2022 10:59  PM' data-short='1 min'>{{message.date | date: "%B %d, %Y at %H:%M"}}</time></a>
 </li>
 <li class='ipsType_light ipsType_medium'>
 <a href='https://gtaforums.com/topic/984072-upcoming-improvements-to-the-gta-online-experience/?do=findComment&amp;comment=1071901014' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 194 replies
+<i class='fa fa-comment'></i> {{replies.size}} replies
 </a>
 </li>
 </ul>
 </div>
 </li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658544849'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1004086-watain/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1004086-watain/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Watain's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-1004086.png' alt='Watain' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984036-the-criminal-enterprises-coming-july-26-to-gta-online/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984036-the-criminal-enterprises-coming-july-26-to-gta-online/' data-linkType="link" data-searchable> The Criminal Enterprises, Coming July 26 to GTA Online</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1004086-watain/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1004086-watain/?do=hovercard' title="Go to Watain's profile" class="ipsType_break">Watain</a> replied to
-<a href='https://gtaforums.com/profile/179282-spider-vice/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/179282-spider-vice/?do=hovercard' title="Go to Spider-Vice's profile" class="ipsType_break">Spider-Vice</a>'s topic in <a href='https://gtaforums.com/forum/497-the-criminal-enterprises/'>The Criminal Enterprises</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-I'm really looking forward to this update tbh. I haven't been this excited since we got the arcades and game cabinets.
-I dunno, in some ways the Diamond casino and Cayo Perico just didn't interest me that much and while those heists are cool, I find the setups being total drags and completely devoid of any fun. It took me until just a couple of weeks ago to even give Cayo a go. Being a day one GTAO player I tend to lean towards the nostalgic elements of the game. Og heists, Bikers, Gunrunning and all that stuff around 2015-2016, those were the days imo.
-It's nice to see the "classic GTAO" get a refreshener in that sense and I hope this update will really breath some much needed new life into all that old content. I'd rather go back to doing some revitalized biker business than making the Cayo heist a chore. With new additions to these old business types, I wonder if we will also see new customization options for our properties.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984036-the-criminal-enterprises-coming-july-26-to-gta-online/?do=findComment&amp;comment=1071901013' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:54:09Z' title='07/22/2022 10:54  PM' data-short='6 min'>6 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984036-the-criminal-enterprises-coming-july-26-to-gta-online/?do=findComment&amp;comment=1071901013' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 902 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658544655'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1031447-cuts3r/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1031447-cuts3r/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to CUTS3R's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-1031447.jpg' alt='CUTS3R' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984043-the-criminal-enterprises-vehicle-analysis/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984043-the-criminal-enterprises-vehicle-analysis/' data-linkType="link" data-searchable> The Criminal Enterprises: Vehicle Analysis</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1031447-cuts3r/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1031447-cuts3r/?do=hovercard' title="Go to CUTS3R's profile" class="ipsType_break">CUTS3R</a> replied to
-<a href='https://gtaforums.com/profile/1202653-ns535i/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1202653-ns535i/?do=hovercard' title="Go to ns535i's profile" class="ipsType_break">ns535i</a>'s topic in <a href='https://gtaforums.com/forum/497-the-criminal-enterprises/'>The Criminal Enterprises</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Personally for the bullet classic i always wanted them to had one with the same deafening engine sound it had in GT2 but im not sure there is one in game remotely close to that...
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984043-the-criminal-enterprises-vehicle-analysis/?do=findComment&amp;comment=1071901012' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:50:55Z' title='07/22/2022 10:50  PM' data-short='9 min'>9 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984043-the-criminal-enterprises-vehicle-analysis/?do=findComment&amp;comment=1071901012' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 82 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658543763'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1105562-anywhere-usa/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1105562-anywhere-usa/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Anywhere USA's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-1105562.jpeg' alt='Anywhere USA' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/983545-playing-gta-2/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/983545-playing-gta-2/' data-linkType="link" data-searchable> Playing GTA 2</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1105562-anywhere-usa/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1105562-anywhere-usa/?do=hovercard' title="Go to Anywhere USA's profile" class="ipsType_break">Anywhere USA</a> replied to
-<a href='https://gtaforums.com/profile/1105562-anywhere-usa/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1105562-anywhere-usa/?do=hovercard' title="Go to Anywhere USA's profile" class="ipsType_break">Anywhere USA</a>'s topic in <a href='https://gtaforums.com/forum/72-gta-2/'>GTA 2</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Ok, piled up 20, but 3 of them despawned due to being too far north from the icon and I could only blast one special forces car before being reduced to hamburgers
-Note to self, pack more efficently. Fill the third row and then leap over em....
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/983545-playing-gta-2/?do=findComment&amp;comment=1071901008' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:36:03Z' title='07/22/2022 10:36  PM' data-short='24 min'>24 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/983545-playing-gta-2/?do=findComment&amp;comment=1071901008' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 151 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658543375'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1121701-ddarko12/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1121701-ddarko12/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to ddarko12's profile">
-<img src='https://gtaforums.com/uploads/monthly_2018_06/donnie-darkos-mission-1523639062.thumb.jpg.e32ec190bfb3543302575fa18b283cdd.jpg' alt='ddarko12' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984051-the-criminal-enterprises-btch-moan/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984051-the-criminal-enterprises-btch-moan/' data-linkType="link" data-searchable> The Criminal Enterprises B*tch &amp; Moan</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1121701-ddarko12/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1121701-ddarko12/?do=hovercard' title="Go to ddarko12's profile" class="ipsType_break">ddarko12</a> replied to
-<a href='https://gtaforums.com/profile/1292627-haakim_/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1292627-haakim_/?do=hovercard' title="Go to Haakim_'s profile" class="ipsType_break">Haakim_</a>'s topic in <a href='https://gtaforums.com/forum/497-the-criminal-enterprises/'>The Criminal Enterprises</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Are they really nerfing cayo? Jesus, makes me feel glad I still have millions from duped cars. I cannot understand Rockstar's obsession with grinding I don't have time for it.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984051-the-criminal-enterprises-btch-moan/?do=findComment&amp;comment=1071901007' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:29:35Z' title='07/22/2022 10:29  PM' data-short='30 min'>30 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984051-the-criminal-enterprises-btch-moan/?do=findComment&amp;comment=1071901007' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 55 replies
-</a>
-</li>
-<li>
-<div class='ipsReactOverview ipsReactOverview_small ipsType_light'>
-<ul>
-<li class='ipsReactOverview_repCount'>
-1
-</li>
-<li>
-<a href='https://gtaforums.com/topic/984051-the-criminal-enterprises-btch-moan/?do=showReactionsComment&amp;comment=1071901007&amp;reaction=1' data-ipsDialog data-ipsDialog-size='medium' data-ipsDialog-title="See who reacted to this" data-ipsTooltip title="See who reacted &quot;Like&quot;">
-<img src='https://gtaforums.com/uploads/reactions/icons8-good-quality-filled-50.png' alt="Like">
-</a>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658543367'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1191949-sadieadler/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1191949-sadieadler/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to SadieAdler's profile">
-<img src='https://gtaforums.com/uploads/monthly_2022_04/aloy1.thumb.png.40b9781a752df09de60d97008fc1bf12.png' alt='SadieAdler' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/973687-rdo-speculation-general-chat-part-ii/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/973687-rdo-speculation-general-chat-part-ii/' data-linkType="link" data-searchable> RDO Speculation &amp; General Chat (Part II)</a>
-</span>
-
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1191949-sadieadler/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1191949-sadieadler/?do=hovercard' title="Go to SadieAdler's profile" class="ipsType_break">SadieAdler</a> replied to
-<a href='https://gtaforums.com/profile/576738-kirsty/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/576738-kirsty/?do=hovercard' title="Go to Kirsty's profile" class="ipsType_break">Kirsty</a>'s topic in <a href='https://gtaforums.com/forum/432-red-dead-online/'>Red Dead Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Haven't felt like hopping back on these forums since the news because it's been very disheartening for me as I'm sure it has been for many in the RDO community.
-I just wanted to quickly mention that Bethesda games actually recently announced that they're partnering with an independent developer to create more content for Fallout 76. Whilst I'm sure there are plenty of different circumstances and variables involved, I can't help but wonder why Rockstar couldn't do this with Red Dead Online. Outsource content updates to another developer if they'd rather focus on GTA 6, like they're doing with the Max Payne remake and Remedy
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/973687-rdo-speculation-general-chat-part-ii/?do=findComment&amp;comment=1071901006' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:29:27Z' title='07/22/2022 10:29  PM' data-short='30 min'>30 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/973687-rdo-speculation-general-chat-part-ii/?do=findComment&amp;comment=1071901006' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 4,176 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658543242'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Topic'><i class='fa fa-comments'></i></span>
-<a href="https://gtaforums.com/profile/1230449-sagnik-gta-lover/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1230449-sagnik-gta-lover/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Sagnik gta lover's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c4ad62%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3ES%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='Sagnik gta lover' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container '>
-<span>
-<a href='https://gtaforums.com/topic/984084-original-cars-dashboard-speedometre/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984084-original-cars-dashboard-speedometre/' data-linkType="link" data-searchable> Original cars dashboard Speedometre</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1230449-sagnik-gta-lover/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1230449-sagnik-gta-lover/?do=hovercard' title="Go to Sagnik gta lover's profile" class="ipsType_break">Sagnik gta lover</a> posted a topic in <a href='https://gtaforums.com/forum/137-help-support/'>Help &amp; Support</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Hello i was surfing through los Santos in first person view when I noticed something . The cars of Gta sa doesn't have a active speedometer so i would like to know if there is any mod about that which brings speedometer in the original cars
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984084-original-cars-dashboard-speedometre/' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:27:22Z' title='07/22/2022 10:27  PM' data-short='32 min'>32 minutes ago</time></a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658542141'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/947536-awesomefoot/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/947536-awesomefoot/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to awesomefoot's profile">
-<img src='https://gtaforums.com/uploads/monthly_2021_12/0_0.thumb.jpg.3f1301dee8443a318bc4c5e90db35089.jpg' alt='awesomefoot' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/982779-arcade-games-elimination-game/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/982779-arcade-games-elimination-game/' data-linkType="link" data-searchable> Arcade Games Elimination Game</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/947536-awesomefoot/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/947536-awesomefoot/?do=hovercard' title="Go to awesomefoot's profile" class="ipsType_break">awesomefoot</a> replied to
-<a href='https://gtaforums.com/profile/1030016-amy-vinewood/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1030016-amy-vinewood/?do=hovercard' title="Go to Amy Vinewood's profile" class="ipsType_break">Amy Vinewood</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-1. Don't Cross the Line - 67
-2. Invade and Persuade II: Run and Gun - 33
-3. Space Monkey 3: Bananas Gone Bad - 68
-4. Nazar Speaks - 64
-5. The Love Professor - 11 (-2)
-6. QUB3D - 122 (+1)
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/982779-arcade-games-elimination-game/?do=findComment&amp;comment=1071901002' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:09:01Z' title='07/22/2022 10:09  PM' data-short='51 min'>51 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/982779-arcade-games-elimination-game/?do=findComment&amp;comment=1071901002' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 355 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658541758'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/706954-kris194/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/706954-kris194/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Kris194's profile">
-<img src='https://gtaforums.com/uploads/monthly_2021_07/maxpayne3_maxartwork6_256x256.thumb.jpg.af143182c8ab6c8ea95bcfa867aaaf21.jpg' alt='Kris194' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/983967-gta-6-speculation-discussion-part-7-the-one-with-the-announcement/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/983967-gta-6-speculation-discussion-part-7-the-one-with-the-announcement/' data-linkType="link" data-searchable> GTA 6 Speculation &amp; Discussion [Part 7] - The one with the announcement</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/706954-kris194/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/706954-kris194/?do=hovercard' title="Go to Kris194's profile" class="ipsType_break">Kris194</a> replied to
-<a href='https://gtaforums.com/profile/43123-uni/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/43123-uni/?do=hovercard' title="Go to uNi's profile" class="ipsType_break">uNi</a>'s topic in <a href='https://gtaforums.com/forum/396-gta-vi/'>GTA VI</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-I'm wondering, out of all people asking about next GTA being released Day 1 on PC, how many of them do have PC that is at least as fast as XSX?
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/983967-gta-6-speculation-discussion-part-7-the-one-with-the-announcement/?do=findComment&amp;comment=1071901001' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T02:02:38Z' title='07/22/2022 10:02  PM' data-short='57 min'>57 minutes ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/983967-gta-6-speculation-discussion-part-7-the-one-with-the-announcement/?do=findComment&amp;comment=1071901001' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 925 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem_time' data-timeType='today'>Today</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658540071'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/911729-arrows-to-athens/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/911729-arrows-to-athens/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Arrows to Athens's profile">
-<img src='https://gtaforums.com/uploads/monthly_2019_07/Markus.thumb.jpg.c27918670dc4062445953aa3bc0f1406.jpg' alt='Arrows to Athens' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/915863-the-btch-moan-thread-part-3/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/915863-the-btch-moan-thread-part-3/' data-linkType="link" data-searchable> The B*tch &amp; Moan Thread (Part 3)</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/911729-arrows-to-athens/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/911729-arrows-to-athens/?do=hovercard' title="Go to Arrows to Athens's profile" class="ipsType_break">Arrows to Athens</a> replied to
-<a href='https://gtaforums.com/profile/878472-shadowfennekin/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/878472-shadowfennekin/?do=hovercard' title="Go to Shadowfennekin's profile" class="ipsType_break">Shadowfennekin</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-One of the new improvements, I think, just hidden.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/915863-the-btch-moan-thread-part-3/?do=findComment&amp;comment=1071900993' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T01:34:31Z' title='07/22/2022 09:34  PM' data-short='1 hr'>1 hour ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/915863-the-btch-moan-thread-part-3/?do=findComment&amp;comment=1071900993' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 22,632 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658539976'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1293024-darthrad3r/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1293024-darthrad3r/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to DARTHRAD3R's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%237062c4%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3ED%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='DARTHRAD3R' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/910793-professional-gta-5-roleplay-for-xbox-one/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/910793-professional-gta-5-roleplay-for-xbox-one/' data-linkType="link" data-searchable> PROFESSIONAL GTA 5 ROLEPLAY FOR XBOX ONE!</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1293024-darthrad3r/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1293024-darthrad3r/?do=hovercard' title="Go to DARTHRAD3R's profile" class="ipsType_break">DARTHRAD3R</a> replied to
-<a href='https://gtaforums.com/profile/1121635-thattallguyeli/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1121635-thattallguyeli/?do=hovercard' title="Go to ThatTallGuyEli's profile" class="ipsType_break">ThatTallGuyEli</a>'s topic in <a href='https://gtaforums.com/forum/298-find-lobbies-players/'>Find Lobbies &amp; Players</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Can i play to be a cop plz
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/910793-professional-gta-5-roleplay-for-xbox-one/?do=findComment&amp;comment=1071900992' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T01:32:56Z' title='07/22/2022 09:32  PM' data-short='1 hr'>1 hour ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/910793-professional-gta-5-roleplay-for-xbox-one/?do=findComment&amp;comment=1071900992' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 88 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658539650'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1287702-red-dead-redemption/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1287702-red-dead-redemption/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Red Dead Redemption's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23bcc462%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3ER%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='Red Dead Redemption' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/919564-red-dead-redemption-2-chronological-mission-order/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/919564-red-dead-redemption-2-chronological-mission-order/' data-linkType="link" data-searchable> RED DEAD REDEMPTION 2 - &quot;Chronological&quot; Mission Order</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1287702-red-dead-redemption/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1287702-red-dead-redemption/?do=hovercard' title="Go to Red Dead Redemption's profile" class="ipsType_break">Red Dead Redemption</a> replied to
-<a href='https://gtaforums.com/profile/1079105-spydr-webz/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1079105-spydr-webz/?do=hovercard' title="Go to Spydr Webz's profile" class="ipsType_break">Spydr Webz</a>'s topic in <a href='https://gtaforums.com/forum/405-red-dead-redemption-2/'>Red Dead Redemption 2</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-In the first mission do you guys ask if it’s a trap or about the money. Would be good to get some info asap lol
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/919564-red-dead-redemption-2-chronological-mission-order/?do=findComment&amp;comment=1071900989' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T01:27:30Z' title='07/22/2022 09:27  PM' data-short='1 hr'>1 hour ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/919564-red-dead-redemption-2-chronological-mission-order/?do=findComment&amp;comment=1071900989' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 5,616 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658539024'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/57914-voodoo/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/57914-voodoo/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Voodoo's profile">
-<img src='https://gtaforums.com/uploads/monthly_2022_04/photo-27490.thumb.gif.b90ded1b72cdf1c1b5c2f92b38edd3bf.gif' alt='Voodoo' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/444134-the-precinct/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/444134-the-precinct/' data-linkType="link" data-searchable> The Precinct</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/57914-voodoo/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/57914-voodoo/?do=hovercard' title="Go to Voodoo's profile" class="ipsType_break">Voodoo</a> replied to
-<a href='https://gtaforums.com/profile/144406-the-precinct/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/144406-the-precinct/?do=hovercard' title="Go to The Precinct's profile" class="ipsType_break">The Precinct</a>'s topic in <a href='https://gtaforums.com/forum/448-gangs/'>Gangs</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/444134-the-precinct/?do=findComment&amp;comment=1071900985' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T01:17:04Z' title='07/22/2022 09:17  PM' data-short='1 hr'>1 hour ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/444134-the-precinct/?do=findComment&amp;comment=1071900985' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 1,278 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658538549'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Topic'><i class='fa fa-comments'></i></span>
-<a href="https://gtaforums.com/profile/1270347-zzoko/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1270347-zzoko/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to zzoko's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%2392c462%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EZ%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='zzoko' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container '>
-<span>
-<a href='https://gtaforums.com/topic/984083-are-there-any-openiv-package-creator-alternatives/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984083-are-there-any-openiv-package-creator-alternatives/' data-linkType="link" data-searchable> Are there any openiv package creator alternatives?</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1270347-zzoko/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1270347-zzoko/?do=hovercard' title="Go to zzoko's profile" class="ipsType_break">zzoko</a> posted a topic in <a href='https://gtaforums.com/forum/370-gta-v/'>GTA V</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-So when you create a .oiv file that contains all your modded files which is installed with openiv i usually use a program called openiv package creator ( link to it ) however its quite limited and also doesnt allow you to save your current progress which means that once you create the .oiv theres no way to edit it/continue adding stuff without having to mess around by opening the .oiv in winrar and manually adding code for new files, it also crashes if u try to delete archieves, i noticed that quantv and nve use a different format for stored files so do they use a different program that im unaware of or some other method ?!
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984083-are-there-any-openiv-package-creator-alternatives/' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T01:09:09Z' title='07/22/2022 09:09  PM' data-short='1 hr'>1 hour ago</time></a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658537371'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1104889-itsallup/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1104889-itsallup/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to itsallup's profile">
-<img src='https://gtaforums.com/uploads/monthly_2022_05/taxid1.thumb.PNG.4872aeb8c699e93d2718617d3a7e2b1c.PNG' alt='itsallup' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/324076-lfm-s-club-7%E2%84%A2/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/324076-lfm-s-club-7%E2%84%A2/' data-linkType="link" data-searchable> LFM / S Club 7™</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1104889-itsallup/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1104889-itsallup/?do=hovercard' title="Go to itsallup's profile" class="ipsType_break">itsallup</a> replied to
-<a href='https://gtaforums.com/profile/29439-salvatore-leone/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/29439-salvatore-leone/?do=hovercard' title="Go to Salvatore Leone's profile" class="ipsType_break">Salvatore Leone</a>'s topic in <a href='https://gtaforums.com/forum/448-gangs/'>Gangs</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Congratulations for Stahli becoming a made man, now lets hope you take care of those $1 dollar bills on the floor of the club !
-I'll be here outside watching the cars tryin to earn some change valet parking...
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/324076-lfm-s-club-7%E2%84%A2/?do=findComment&amp;comment=1071900972' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:49:31Z' title='07/22/2022 08:49  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/324076-lfm-s-club-7%E2%84%A2/?do=findComment&amp;comment=1071900972' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 6,805 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658537029'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1204486-the-tracker/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1204486-the-tracker/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to The Tracker's profile">
-<img src='https://gtaforums.com/uploads/monthly_2021_06/s-l225.thumb.jpg.3c4275ade82c188b3097803cb6e1af29.jpg' alt='The Tracker' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/719356-things-gta-iv-did-better-than-gta-v/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/719356-things-gta-iv-did-better-than-gta-v/' data-linkType="link" data-searchable> Things GTA IV did better than GTA V</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1204486-the-tracker/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1204486-the-tracker/?do=hovercard' title="Go to The Tracker's profile" class="ipsType_break">The Tracker</a> replied to
-<a href='https://gtaforums.com/profile/937686-octavio89/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/937686-octavio89/?do=hovercard' title="Go to Octavio89's profile" class="ipsType_break">Octavio89</a>'s topic in <a href='https://gtaforums.com/forum/120-gta-iv/'>GTA IV</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Also two places to play pool, two places to go bowling, and to places dance (TBoGT).
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/719356-things-gta-iv-did-better-than-gta-v/?do=findComment&amp;comment=1071900968' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:43:49Z' title='07/22/2022 08:43  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/719356-things-gta-iv-did-better-than-gta-v/?do=findComment&amp;comment=1071900968' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 6,066 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658536791'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1204486-the-tracker/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1204486-the-tracker/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to The Tracker's profile">
-<img src='https://gtaforums.com/uploads/monthly_2021_06/s-l225.thumb.jpg.3c4275ade82c188b3097803cb6e1af29.jpg' alt='The Tracker' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984056-would-you-rather-gta-vi-be-non-modern-or-modern/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984056-would-you-rather-gta-vi-be-non-modern-or-modern/' data-linkType="link" data-searchable> Would you rather GTA VI be non modern or modern?</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1204486-the-tracker/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1204486-the-tracker/?do=hovercard' title="Go to The Tracker's profile" class="ipsType_break">The Tracker</a> replied to
-<a href='https://gtaforums.com/profile/1174915-yolobigman/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1174915-yolobigman/?do=hovercard' title="Go to yolobigman's profile" class="ipsType_break">yolobigman</a>'s topic in <a href='https://gtaforums.com/forum/396-gta-vi/'>GTA VI</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Niko kind of did, in one conversation with Roman he recalls on him not telling him anything about "the economical situation of the country" before he came to Liberty City.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984056-would-you-rather-gta-vi-be-non-modern-or-modern/?do=findComment&amp;comment=1071900966' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:39:51Z' title='07/22/2022 08:39  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984056-would-you-rather-gta-vi-be-non-modern-or-modern/?do=findComment&amp;comment=1071900966' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 20 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658536583'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1019085-dieseltech20/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1019085-dieseltech20/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to dieseltech20's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462c4%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3ED%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='dieseltech20' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/982336-gta-v-ee-pc-version-discussion/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/982336-gta-v-ee-pc-version-discussion/' data-linkType="link" data-searchable> GTA V &quot;E&amp;E&quot; PC Version Discussion</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1019085-dieseltech20/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1019085-dieseltech20/?do=hovercard' title="Go to dieseltech20's profile" class="ipsType_break">dieseltech20</a> replied to
-<a href='https://gtaforums.com/profile/1237107-needforsuv/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1237107-needforsuv/?do=hovercard' title="Go to needforsuv's profile" class="ipsType_break">needforsuv</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-The current PC version looks better on my PC than the PS5 version. Much higher frames as well.
-Rather than waste time on this E&amp;E crap as you all call it, I would prefer they put in the time on the next installment so that it releases at THE SAME TIME as the console versions.
-f*ck E&amp;E.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/982336-gta-v-ee-pc-version-discussion/?do=findComment&amp;comment=1071900963' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:36:23Z' title='07/22/2022 08:36  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/982336-gta-v-ee-pc-version-discussion/?do=findComment&amp;comment=1071900963' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 290 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658535955'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/938042-justinlynch3/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/938042-justinlynch3/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to justinlynch3's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-938042.jpg' alt='justinlynch3' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/916436-gta-online-screenshots-show-your-character/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/916436-gta-online-screenshots-show-your-character/' data-linkType="link" data-searchable> GTA Online Screenshots: Show Your Character</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/938042-justinlynch3/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/938042-justinlynch3/?do=hovercard' title="Go to justinlynch3's profile" class="ipsType_break">justinlynch3</a> replied to
-<a href='https://gtaforums.com/profile/986706-sleepwalk1980/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/986706-sleepwalk1980/?do=hovercard' title="Go to sleepwalk1980's profile" class="ipsType_break">sleepwalk1980</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-The pale skin and dark hair reminds me of former WWE Superstar Paige.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/916436-gta-online-screenshots-show-your-character/?do=findComment&amp;comment=1071900955' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:25:55Z' title='07/22/2022 08:25  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/916436-gta-online-screenshots-show-your-character/?do=findComment&amp;comment=1071900955' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 6,126 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658535721'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/179282-spider-vice/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/179282-spider-vice/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Spider-Vice's profile">
-<img src='https://gtaforums.com/uploads/monthly_2022_04/prop_raccoon_d.thumb.png.4b7d1a6a2f42cecd136ea8ae4e44a1ab.png' alt='Spider-Vice' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984075-wow-this-seems-like-huge-news-being-overlooked/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984075-wow-this-seems-like-huge-news-being-overlooked/' data-linkType="link" data-searchable> Wow, this seems like huge news being overlooked.</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/179282-spider-vice/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/179282-spider-vice/?do=hovercard' title="Go to Spider-Vice's profile" class="ipsType_break">Spider-Vice</a> replied to
-<a href='https://gtaforums.com/profile/938042-justinlynch3/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/938042-justinlynch3/?do=hovercard' title="Go to justinlynch3's profile" class="ipsType_break">justinlynch3</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-This.
-Cheers!
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984075-wow-this-seems-like-huge-news-being-overlooked/?do=findComment&amp;comment=1071900952' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:22:01Z' title='07/22/2022 08:22  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984075-wow-this-seems-like-huge-news-being-overlooked/?do=findComment&amp;comment=1071900952' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 5 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658534435'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1293021-xowv/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1293021-xowv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to xowv's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%236286c4%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EX%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='xowv' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/856985-pegassi-reaper-appreciation-discussion-thread/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/856985-pegassi-reaper-appreciation-discussion-thread/' data-linkType="link" data-searchable> Pegassi Reaper Appreciation &amp; Discussion Thread</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1293021-xowv/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1293021-xowv/?do=hovercard' title="Go to xowv's profile" class="ipsType_break">xowv</a> replied to
-<a href='https://gtaforums.com/profile/953563-hyperar/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/953563-hyperar/?do=hovercard' title="Go to hyperar's profile" class="ipsType_break">hyperar</a>'s topic in <a href='https://gtaforums.com/forum/395-vehicles/'>Vehicles</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Hello everyone, this is my first post here. I haven't played GTA:O since 2017 so I have a lot of new cars to catch up to.
-However first I wanted to work on some of my existing older cars, so here is my Reaper:
-Brushed Gold base layer
-#85CC66AA with Dew Yellow perl
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/856985-pegassi-reaper-appreciation-discussion-thread/?do=findComment&amp;comment=1071900937' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-23T00:00:35Z' title='07/22/2022 08:00  PM' data-short='2 hr'>2 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/856985-pegassi-reaper-appreciation-discussion-thread/?do=findComment&amp;comment=1071900937' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 585 replies
-</a>
-</li>
-<li>
-<div class='ipsReactOverview ipsReactOverview_small ipsType_light'>
-<ul>
-<li class='ipsReactOverview_repCount'>
-1
-</li>
-<li>
-<a href='https://gtaforums.com/topic/856985-pegassi-reaper-appreciation-discussion-thread/?do=showReactionsComment&amp;comment=1071900937&amp;reaction=1' data-ipsDialog data-ipsDialog-size='medium' data-ipsDialog-title="See who reacted to this" data-ipsTooltip title="See who reacted &quot;Like&quot;">
-<img src='https://gtaforums.com/uploads/reactions/icons8-good-quality-filled-50.png' alt="Like">
-</a>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658534279'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1196267-psxdriverplayer/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1196267-psxdriverplayer/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to psxdriverplayer's profile">
-<img src='https://gtaforums.com/uploads/monthly_2022_05/1498150562_AvatarSABER.thumb.PNG.0bc24939087d5a47bd9ae6ae696e9006.PNG' alt='psxdriverplayer' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/982543-leaf-links-cartel-%F0%9F%8F%8C%E2%9B%B3-part-tw/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/982543-leaf-links-cartel-%F0%9F%8F%8C%E2%9B%B3-part-tw/' data-linkType="link" data-searchable> Leaf Links Cartel 🏌⛳ (Part <span class="__cf_email__" data-cfemail="72260532">[email&#160;protected]</span>)</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1196267-psxdriverplayer/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1196267-psxdriverplayer/?do=hovercard' title="Go to psxdriverplayer's profile" class="ipsType_break">psxdriverplayer</a> replied to
-<a href='https://gtaforums.com/profile/1286942-leaf-links-cartel/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1286942-leaf-links-cartel/?do=hovercard' title="Go to Leaf Links Cartel's profile" class="ipsType_break">Leaf Links Cartel</a>'s topic in <a href='https://gtaforums.com/forum/448-gangs/'>Gangs</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-I hate reading online forums. Yet I am here and read here some crap and then some crappy crap and some insanity ANYWAY!
-Was reading a thread of "does them remakesters make OGs pointless" and the first thing that came to mind was "NOTHING IS EVER POINTLESS". Except that I'm gonna put this the other way around, remakesters are f*cking pointless. We have the thing, why make it again? Make a f*cking sequel instead, like GTA NINEHUNDREDANDNINETYNINETHOUSANDNINEHUNDREDANDNINETYNINE PART WHATEVERYOUGOTFIVEMINUTES FOR THAT PLESTESSON SIXSIXSIX OR SOMETHING, THERE'S YOUR CRAPPY REMAKESTER, PLAYING SIMILARLY OR IDENTICALLY ANYWAY. Or make a re-release which has nothing changed just to piss people off, first wanting to play a game and then when they get it they suddenly don't want to play it for whatever reason. I PLAY DOOM THROUGH DOSBOX STILL, YOU HAVE NO EXCUSES NOT TO DO THE SAME. I. SAID. NO. EXCUSES. (&lt;- DO NOT START, THIS MEANS YOU COULD DO IT, BUT FOR SOME REASON DO NOT DO IT. DESPITE IT BEING AN OPTION. DO NOT MAKE ME EXPLAIN ME JOKES ANY MORE, IT REALLY RUINS THEM. AND NO, I DO NOT MEAN YOU WOULD HAVE TO USE DEFAULT KEYBINDS WITH THAT DOS THINGY, WHY DO THAT IF YOU DON'T WANT TO AS IT ALLOWS YOU TO CHANGE THOSE BY DESIGN? HINT: SETUP.EXE IS YOUR FRIEND WITH DOS GAMES. "BETTER GET USED TO IT.")
-The guy complained about "originally getting them originals" (YEAH, I WONDER WHY THAT ACTUALLY HAPPENED) and then feeling that "muneyz was wasted" (not the GTA way) because "a remakester of them came out". BUDDY, YE WASTED YER SHIETY MUNEYZ ANYWAY IN THE FIRST PLACE, SO WHO GIVES A SHIET? HAD YE BOUGHT ONLY EITHER IN ANY TIME, IT WOULD BE A WASTE IN ANY CASE. DINGUS.
-Then there was the complaining that "one may never visit those originals again after playing that crappy ass remakester". WELL NOT WITH THAT ATTITUDE, CERTAINLY NOT.
-Then there was this other guy coming to convo and saying "peoples who grew with der original hold it high because of nostalgia". HOW DOES THIS EVEN WORK EXACTLY? HOW COME NOSTALGIA IS ALWAYS BROUGHT UP WHEN OLD STUFF IS DISCUSSED AND IF IT IS NICE? THERE ABSOLUTELY IS NEVER THAT CHANCE THAT THE OLD IS ACTUALLY BETTER?! WHAT THE FUK?! WHY IS IT THAT IT IS ALWAYS IN SOME FORM OR ANOTHER, THAT NOS
-Then there's this one guy saying "remakesters allow new peoples to experience a game". FIRST OF ALL, YE FUKKEN GUESSED - HOW EXACTLY? THEY COULD GET THE ORIGINAL WHAT IS STOPPING THEM. SECOND, REMAKESTER IS NOT THE SAME GAME. NOT EVEN TECHNICALLY. I WISH PEOPLE WOULD STOP SAYING THIS SHIET. AND SPREADING THAT MISINFORMATION THAT IN PS1 CRASH BANDICOOT TO SAVE YOU HAVE TO GET A GEM. THAT ONLY SAVES A FACT THAT "NICE, YOU HAVE THAT GEM" AND THAT IS IT. MAKE IT TO THE FINAL LEVEL AND IF ALL YOU GET IS A GEM SAVE DURING THAT TIME YOU WILL START AT THE BEGINNING OF THE GAME. TRY IT I DARE YOU. LAUGH AFTER THAT, NOT BEFORE IT. IF YOU CAN. GETTING BACK TO RANT, THIRD, HOW CAN PEOPLE WHO PLAYED OG BE NOSTALGIC HERE AGAIN, THEY HAVE PLAYED A DIFFERENT FUKKEN GAME! THAT DIFFERENT GAME IS WHAT THEY SHOULD WANT FOR NOSTALGY FIX! NOTHING MAKES SENSE HERE!
-Then there's a guy saying original should be in some form included when a remakester. I actually agree to that, but that just makes one think if it's there and you pay for it, WHY NOT JUST GET THE ORIGINAL IN THE FIRST PLACE ANYWAY?!
-I recalled looking at a dude who made a revieweroni vidya aboot a remakester and he said "didn't play the originals so no nostalgy here" and a guy said in the comments "makes review more valid". YOU CAN GUESS WHAT I THOUGHT. IF YOUR ANSWER IS "HOW EXACTLY" THEN YOU WOULD BE ABSOLUTELY CORRECT. AND ALSO I THOUGHT THAT: DOES IT ALSO WORK WITH A SCENARIO OF YOU HAVING PLAYED THE ORIGINALS BUT NEVER ABANDONING THEM SO NO NOSTALGIA GETS TO FORM? IF THE ANSWER IS "DOES NOT COUNT" YOU'RE A FUKKEN HYPOCRITE PLANE AND SIMPLE [fukken sic].
-Don't feel like playing originals? Don't. That doesn't mean a remakester is needed. They're not needed, peoples are just fukken incredibly dumb crash dummies.
-I mean, CONSIDER THE FOLLOWING:
-I HAVE SUCH GAMES AS
-- Crash Bandicoot (&lt;- DO NOT ASK WHICH ONE THAT IS, IT CLEARLY IS THE FIRST ONE, IF YE DIDN'T FIGURE THAT ONE OUT WITHOUT THIS HELP PROMPT THEN I AM DISAPPOINT. VERY DISAPPOINT.)
-- Crash Bandicoot 2: Cortex Strikes Back
-- Crash Bandicoot 3: Warped! (&lt;- That's how it is called in European packaging, SHUT THE FUK UP)
-- Crash Team Racing (&lt;- That's how it is called in European packaging, SHUT THE FUK UP)
-- Spyro The Dragon
-- Tony Hawk's Skateboarding
-- Spyro 2: Gateway To Glimmer (&lt;- That's how it is called in Europe, SHUT THE FUK UP)
-- Spyro: Year Of The Dragon (v1.0 &amp; v1.1)
-- Grand Theft Auto III (v1.40 &amp; v1.60 - PS2)
-- Grand Theft Auto: Vice City (v1.50 &amp; v3.00 - PS2 + PC v1.0)
-- Rayman 3: Hoodlum Havoc
-- Grand Theft Auto: San Andreas (v1.03 &amp; v2.01 - PS2 + PC v1.0)
-- Half-Life
-- Half-Life: Opposing Force
-- Half-Life: Blue Shift
-- Mafia
-(I could list some Doom games but those doesn't count, as sourceports are not official (outside Doom95 and there was one obscure one for obscure hardware that was was it semi-official and that shiet doesn't count, DOS FOR LIFE SHUT THE FUK UP))
-SO WHAT IS IN COMMON WITH GAMES IN THAT LIST? THEY ALL HAVE A REMAKESTER OF SOME SORT, EITHER SOME LATER MANGLED HD RELEASE OR A REMAKESTER. AND I DON'T OWN ANY OF THEM, IS ALWAYS THEM ORIGINALS. (I know, OPPO und BLUE are a bit of cheating since they have a Steam release, but I don't own them that way. FUK STEAM SHUT THE FUK UP. Also regular HL has a PS2 version which looks prettier than the PC version by default MODDINGS DO NOT COUNT SHUT THE FUK UP)
-I have gathered originals either after or before the remakester happening. Some might wonder the fuk, but seriously, ORIGINAL or else, get out. And no, I play me games, not just play them when I get them and then forget all about them, NO NOSTALGY HERE IT SUKS WHY PEOPLE ACCUMULATE THAT THOSE DAMN BAS
-I mean, I even have no nostalgia for Windows f*cking eXPerience, I AM USING IT AS WE SPEAK!
-Mr. PSX's solution? Have nothing. I know, a bit extreme, but what would ye suggest?
-And I've heard some say "in der perfect world, unfinished game X gets a remakester which haz this und that and is complete finally" and you know what I say? HAHAHAHA NO. IN THE PERFECT WORLD THAT GAME WOULD'VE BEEN RELEASED COMPLETE TO BEGIN WITH.
-AM I CONTROVERSIAL NOW?
-Also fun story, there's this game called "You Don't Know Jack". I like to refer to it as "You Don't Know Jack Shiet". (DISCLAIMER: NEVER PLAYED THAT.)
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/982543-leaf-links-cartel-%F0%9F%8F%8C%E2%9B%B3-part-tw/?do=findComment&amp;comment=1071900933' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-22T23:57:59Z' title='07/22/2022 07:57  PM' data-short='3 hr'>3 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/982543-leaf-links-cartel-%F0%9F%8F%8C%E2%9B%B3-part-tw/?do=findComment&amp;comment=1071900933' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 4,915 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658533778'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/938355-tcmike/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/938355-tcmike/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to TCMike's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-938355.png' alt='TCMike' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/932193-what-are-you-getting-on-the-lucky-wheel/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/932193-what-are-you-getting-on-the-lucky-wheel/' data-linkType="link" data-searchable> What are you getting on the Lucky Wheel?</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/938355-tcmike/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/938355-tcmike/?do=hovercard' title="Go to TCMike's profile" class="ipsType_break">TCMike</a> replied to
-<a href='https://gtaforums.com/profile/972685-hkgts/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/972685-hkgts/?do=hovercard' title="Go to HKGTS's profile" class="ipsType_break">HKGTS</a>'s topic in <a href='https://gtaforums.com/forum/273-gta-online/'>GTA Online</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Red Floral Sweater.... just in time for the heatwave...
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/932193-what-are-you-getting-on-the-lucky-wheel/?do=findComment&amp;comment=1071900930' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-22T23:49:38Z' title='07/22/2022 07:49  PM' data-short='3 hr'>3 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/932193-what-are-you-getting-on-the-lucky-wheel/?do=findComment&amp;comment=1071900930' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 3,055 replies
-</a>
-</li>
-<li>
-<div class='ipsReactOverview ipsReactOverview_small ipsType_light'>
-<ul>
-<li class='ipsReactOverview_repCount'>
-1
-</li>
-<li>
-<a href='https://gtaforums.com/topic/932193-what-are-you-getting-on-the-lucky-wheel/?do=showReactionsComment&amp;comment=1071900930&amp;reaction=11' data-ipsDialog data-ipsDialog-size='medium' data-ipsDialog-title="See who reacted to this" data-ipsTooltip title="See who reacted &quot;KEKW&quot;">
-<img src='https://gtaforums.com/uploads/reactions/kekw.png' alt="KEKW">
-</a>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658533768'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/969196-subvod/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/969196-subvod/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to subvod's profile">
-<img src='https://gtaforums.com/uploads/profile/photo-thumb-969196.jpg' alt='subvod' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/917511-things-you-didnt-know-about-rdr2-until-now/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/917511-things-you-didnt-know-about-rdr2-until-now/' data-linkType="link" data-searchable> Things you didn&#039;t know about RDR2 until now</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/969196-subvod/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/969196-subvod/?do=hovercard' title="Go to subvod's profile" class="ipsType_break">subvod</a> replied to
-<a href='https://gtaforums.com/profile/826854-thelordmarvel/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/826854-thelordmarvel/?do=hovercard' title="Go to TheLordMarvel's profile" class="ipsType_break">TheLordMarvel</a>'s topic in <a href='https://gtaforums.com/forum/405-red-dead-redemption-2/'>Red Dead Redemption 2</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-You gain honor by shooting rats in the cemetery during Angelo Bronte, A Man of Honor.
-
-Specialty ammo is available in from all Gunsmiths, but some, such as shotgun slugs, can be bought at certain stores. Such as the general store in Strawberry.
-(Speaking of that, after checking elsewhere the Bourbon and Gin on the shelves at the Strawberry general store are double the normal cost.)
-Each newspaper can be obtained from only one press agency.
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/917511-things-you-didnt-know-about-rdr2-until-now/?do=findComment&amp;comment=1071900929' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-22T23:49:28Z' title='07/22/2022 07:49  PM' data-short='3 hr'>3 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/917511-things-you-didnt-know-about-rdr2-until-now/?do=findComment&amp;comment=1071900929' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 1,985 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='ipsStreamItem ipsStreamItem_contentBlock ipsStreamItem_expanded ipsAreaBackground_reset ipsPad  ' data-role='activityItem' data-timestamp='1658532890'>
-<div class='ipsStreamItem_container ipsClearfix'>
-<div class='ipsStreamItem_header ipsPhotoPanel ipsPhotoPanel_mini'>
-<span class='ipsStreamItem_contentType' data-ipsTooltip title='Post'><i class='fa fa-comment'></i></span>
-<a href="https://gtaforums.com/profile/1292963-forellis-are-goats/" rel="nofollow" data-ipsHover data-ipsHover-target="https://gtaforums.com/profile/1292963-forellis-are-goats/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Forellis are goats's profile">
-<img src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462b6%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EF%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E' alt='Forellis are goats' loading="lazy">
-</a>
-<div class='ipsStreamItem_unread'>
-<h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
-<span>
-<a href='https://gtaforums.com/topic/984062-what-is-the-fate-for-the-forelli-brothers-and-were-they-a-small-faction-within-the-leones/?do=getNewComment' data-linkType="star" title='Go to first unread post' data-ipsTooltip>
-<span class='ipsItemStatus '><i class="fa fa-circle"></i></span>
-</a>
-</span>
-<span class='ipsType_break ipsContained'>
-<a href='https://gtaforums.com/topic/984062-what-is-the-fate-for-the-forelli-brothers-and-were-they-a-small-faction-within-the-leones/' data-linkType="link" data-searchable> What is the fate for the Forelli brothers and were they a small faction within the Leones</a>
-</span>
-</h2>
-<p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
-<a href='https://gtaforums.com/profile/1292963-forellis-are-goats/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1292963-forellis-are-goats/?do=hovercard' title="Go to Forellis are goats's profile" class="ipsType_break">Forellis are goats</a> replied to
-<a href='https://gtaforums.com/profile/1292963-forellis-are-goats/' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='https://gtaforums.com/profile/1292963-forellis-are-goats/?do=hovercard' title="Go to Forellis are goats's profile" class="ipsType_break">Forellis are goats</a>'s topic in <a href='https://gtaforums.com/forum/42-classic-gta-iii/'>Classic GTA III</a>
-</p>
-</div>
-</div>
-<div class='ipsStreamItem_snippet ipsType_break'>
-<div class='ipsType_richText ipsContained ipsType_medium'>
-<div data-ipsTruncate data-ipsTruncate-type='remove' data-ipsTruncate-size='3 lines' data-ipsTruncate-watch='false'>
-Alright thanks because some people said that forelli brothers were a faction that were trying to break off independent from Leones but then why did Joey Leon kill 2 of them if they were Leones so I got cunfused
-</div>
-</div>
-</div>
-<ul class='ipsList_inline ipsStreamItem_meta ipsGap:1'>
-<li class='ipsType_light ipsType_medium'>
-<a rel="nofollow" href='https://gtaforums.com/topic/984062-what-is-the-fate-for-the-forelli-brothers-and-were-they-a-small-faction-within-the-leones/?do=findComment&amp;comment=1071900924' class='ipsType_blendLinks'><i class='fa fa-clock-o'></i> <time datetime='2022-07-22T23:34:50Z' title='07/22/2022 07:34  PM' data-short='3 hr'>3 hours ago</time></a>
-</li>
-<li class='ipsType_light ipsType_medium'>
-<a href='https://gtaforums.com/topic/984062-what-is-the-fate-for-the-forelli-brothers-and-were-they-a-small-faction-within-the-leones/?do=findComment&amp;comment=1071900924' class='ipsType_blendLinks'>
-<i class='fa fa-comment'></i> 2 replies
-</a>
-</li>
-</ul>
-</div>
-</li>
+{% endif %}
+{% endfor %}
 </ol>
+
 <ol class="ipsList_reset">
 <li class='ipsType_center ipsJS_show ' data-role="loadMoreContainer">
 <a href='#' class='ipsButton ipsButton_veryLight ipsButton_small' data-action='loadMore'>Load more activity</a>
@@ -1856,6 +828,21 @@ Sign Out
 }	
 </script>
 
-
+<script type="text/javascript">
+$(document).ready(function() {
+  $('[data-action=switchView]').on('click', function() {
+    var view = $(this).data('view')
+    if (view == 'condensed') {
+      $('.ipsStreamItem_condensed').show()
+      $('.ipsStreamItem_expanded').hide()
+    } else if (view == 'expanded') {
+      $('.ipsStreamItem_condensed').hide()
+      $('.ipsStreamItem_expanded').show()
+    }
+    if($(this).hasClass('ipsButton_veryLight'))
+      $('[data-action=switchView]').toggleClass('ipsButton_veryLight').toggleClass('ipsButton_primary')
+  })
+})
+</script>
 </body>
 </html>

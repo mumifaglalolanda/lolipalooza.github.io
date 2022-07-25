@@ -62,7 +62,7 @@
 </a>
 </li>
 <li>
-<a data-action="defaultStream" href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+<a data-action="defaultStream" href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 </li>
 <li class='ipsJS_show'>
 <a href='https://gtaforums.com/search/'><i class='fa fa-search'></i></a>
@@ -71,17 +71,17 @@
 <nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='{{site.data.forums.base_url}}'>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
 <li>
-<a href='{{site.data.forums.base_url}}'>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>{{page.category}} <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
@@ -132,7 +132,7 @@
         </div>
         <div class="ipsDataItem_main">
           <h4 class="ipsDataItem_title ipsType_break">
-            <a href="{{board.url}}">{{board.board}}</a>
+            <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
           </h4>
           <div class='ipsType_richText ipsDataItem_meta ipsContained' data-controller='core.front.core.lightboxedImages'>
             <p>{{board.description}}</p>
@@ -180,7 +180,7 @@
             <li class='ipsType_light ipsType_blendLinks'>
               By
               {{last_user.nickname}},
-              <a href='{{last_msg_thread.url}}' title='Go to last post'><time datetime='2022-07-23T02:50:55Z' title='07/23/2022 12:50  PM' data-short='3 min'>{{messages.last.date | date: "%a, %b %d, %Y %H:%M:%S"}}</time></a>
+              <a href='{{page.template}}{{last_msg_thread.url}}' title='Go to last post'><time datetime='2022-07-23T02:50:55Z' title='07/23/2022 12:50  PM' data-short='3 min'>{{messages.last.date | date: "%a, %b %d, %Y %H:%M:%S"}}</time></a>
             </li>
           </ul>
         {% endif %}
@@ -271,7 +271,7 @@
         <h4 class='ipsDataItem_title ipsContained_container'>
           <span><span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_positive" data-ipsTooltip title='Pinned'><i class='fa fa-thumb-tack'></i></span></span>
           <span class='ipsType_break ipsContained'>
-            <a href='{{thread.url}}' class='' title='{{thread.title}}' data-ipsHover data-ipsHover-target='{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>
+            <a href='{{page.template}}{{thread.url}}' class='' title='{{thread.title}}' data-ipsHover data-ipsHover-target='{{page.template}}{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>
             <span>{{thread.title}}</span>
             </a>
           </span>
@@ -310,7 +310,7 @@
         </li>
         <li>{{last_user.nickname}}</li>
         <li class="ipsType_light">
-          <a href='{{thread.url}}' title='Go to last post' class='ipsType_blendLinks'>
+          <a href='{{page.template}}{{thread.url}}' title='Go to last post' class='ipsType_blendLinks'>
           <time datetime='2022-07-23T02:27:49Z' title='07/23/2022 12:27  PM' data-short='26 min'>{{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }}</time>
           </a>
         </li>
@@ -348,7 +348,7 @@
     <div class='ipsDataItem_main'>
       <h4 class='ipsDataItem_title ipsContained_container'>
         <span class='ipsType_break ipsContained'>
-          <a href='{{thread.url}}' class='' title='Arcade Games Elimination Game ' data-ipsHover data-ipsHover-target='{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>
+          <a href='{{page.template}}{{thread.url}}' class='' title='Arcade Games Elimination Game ' data-ipsHover data-ipsHover-target='{{page.template}}{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>
             <span>{{thread.title}}</span>
           </a>
         </span>
@@ -387,7 +387,7 @@
       </li>
       <li>{{last_user.nickname}}</li>
       <li class="ipsType_light">
-        <a href='{{thread.url}}' title='Go to last post' class='ipsType_blendLinks'>
+        <a href='{{page.template}}{{thread.url}}' title='Go to last post' class='ipsType_blendLinks'>
         <time datetime='2022-07-23T02:09:01Z' title='07/23/2022 12:09  PM' data-short='45 min'>{{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }}</time>
         </a>
       </li>
@@ -467,17 +467,17 @@
 </ul>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='{{site.data.forums.base_url}}'>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
 <li>
-<a href='{{site.data.forums.base_url}}'>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>{{page.category}} <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
@@ -536,7 +536,7 @@ Leaderboard
 <ul class='ipsDrawer_list'>
 <li data-action="back"><a href='#'>Back</a></li>
 <li>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.template}}/messages/recent'>
 All Activity
 </a>
 </li>

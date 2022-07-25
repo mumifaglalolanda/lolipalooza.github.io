@@ -58,21 +58,67 @@ collections:
 
   # Forums collections
   messages:
-    title: messages
     output: false
   boards:
-    title: boards
     output: true
-    permalink: /:collection/:title
   threads:
-    title: threads
     output: true
-    permalink: /:collection/:title
   users:
-    title: users
     output: true
-    permalink: /:collection/:title
   css_posts:
     title: css_posts
     output: true
-    permalink: /:collection/:title
+  boards_gtaf:
+    output: true
+  threads_gtaf:
+    output: true
+  users_gtaf:
+    output: true
+
+# Crear carpetas mirror en windows: > mklink /d \MyFolder \Users\User1\Documents
+# https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
+defaults:
+  -
+    scope:
+      path: "_boards"
+    values:
+      layout: smf/board
+      template: ""
+      permalink: /:collection/:title/
+  -
+    scope:
+      path: "_threads"
+    values:
+      layout: smf/thread
+      template: ""
+      permalink: /:collection/:title/
+  -
+    scope:
+      path: "_users"
+    values:
+      layout: smf/user
+      template: ""
+      permalink: /:collection/:title/
+  -
+    scope:
+      path: "_boards_gtaf"
+    values:
+      layout: gtaforums/board
+      template: "/gtaforums"
+      permalink: /gtaforums/boards/:title/
+
+  -
+    scope:
+      path: "_threads_gtaf"
+    values:
+      layout: gtaforums/thread
+      template: "/gtaforums"
+      permalink: /gtaforums/threads/:title/
+
+  -
+    scope:
+      path: "_users_gtaf"
+    values:
+      layout: gtaforums/user
+      template: "/gtaforums"
+      permalink: /gtaforums/users/:title/

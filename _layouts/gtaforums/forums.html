@@ -42,7 +42,7 @@
 <div id='ipsLayout_contentWrapper'>
 <ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
 <li>
-<a data-action="defaultStream" href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+<a data-action="defaultStream" href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 </li>
 <li class='ipsJS_show'>
 <a href='https://gtaforums.com/search/'><i class='fa fa-search'></i></a>
@@ -51,7 +51,7 @@
 <nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
@@ -100,13 +100,13 @@ Forums
             </div>
             <div class="ipsDataItem_main">
               <h4 class="ipsDataItem_title ipsType_break">
-                <a href="{{board.url}}">{{board.board}}</a>
+                <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
               </h4>
               {% if childboards.size > 0 %}
               <ul class="ipsDataItem_subList ipsList_inline">
                 {% for subboard in childboards %}
                 <li class="">
-                <a href="{{subboard.url}}">{{subboard.board}}</a>
+                <a href="{{page.template}}{{subboard.url}}">{{subboard.board}}</a>
                 </li>
                 {% endfor %}
               </ul>
@@ -155,11 +155,11 @@ Forums
                   <img src='{{last_user_avatar}}' alt='CUTS3R' loading="lazy">
                   </span>
                 </li>
-                <li class='ipsDataItem_lastPoster__title'><a href="{{last_msg_thread.url}}" title='The Criminal Enterprises: Vehicle Analysis'>{{messages.last.subject | truncate: 27}}</a></li>
+                <li class='ipsDataItem_lastPoster__title'><a href="{{page.template}}{{last_msg_thread.url}}" title='The Criminal Enterprises: Vehicle Analysis'>{{messages.last.subject | truncate: 27}}</a></li>
                 <li class='ipsType_light ipsType_blendLinks'>
                   By
                   {{last_user.nickname}},
-                  <a href='{{last_msg_thread.url}}' title='Go to last post'><time datetime='2022-07-23T02:50:55Z' title='07/23/2022 02:50  AM' data-short='2 min'>{{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }}</time></a>
+                  <a href='{{page.template}}{{last_msg_thread.url}}' title='Go to last post'><time datetime='2022-07-23T02:50:55Z' title='07/23/2022 02:50  AM' data-short='2 min'>{{ messages.last.date | date: "%a, %b %d, %Y %H:%M:%S" }}</time></a>
                 </li>
               </ul>
             {% endif %}
@@ -189,7 +189,7 @@ Forums
 <h3 class='ipsType_reset ipsWidget_title'>
 <div id="gtaforums_whosOnline_title">{{users.size}} CRIMINALS REGISTERED</div> <div id="gtaforums_whosOnline_subtitle">
 <span class='ipsType_light ipsType_unbold ipsType_medium'>137 Members, 22 Anonymous, 1,593 Guests</span>
-<span class='ipsType_medium ipsType_light ipsType_unbold ipsType_blendLinks'><a href='/users'>(See full list)</a></span>
+<span class='ipsType_medium ipsType_light ipsType_unbold ipsType_blendLinks'><a href='{{page.template}}/users'>(See full list)</a></span>
 </div>
 </h3>
 <div class='ipsWidget_inner ipsPad'>
@@ -252,7 +252,7 @@ Forums
 </ul>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
@@ -313,7 +313,7 @@ Leaderboard
 <ul class='ipsDrawer_list'>
 <li data-action="back"><a href='#'>Back</a></li>
 <li>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.template}}/messages/recent'>
 All Activity
 </a>
 </li>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Online Users - GTAForums</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3898146-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-3898146-3');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@GTANet" />
+<meta property="og:site_name" content="GTAForums">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://gtaforums.com/online/" />
+<link rel="next" href="https://gtaforums.com/online/?page=2" />
+<link rel="last" href="https://gtaforums.com/online/?page=92" />
+<link rel="alternate" type="application/rss+xml" title="GTANetcom" href="https://gtaforums.com/rss/4-gtanetcom.xml/?member_id=717099&amp;key=2eb33c7206881a76834a3532ae02e768" />
+{% include gtaforums/styles.html %}
+</head>
+<body class='header-compact-static ipsApp ipsApp_front ipsJS_has ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='core' data-pageLocation='front' data-pageModule='online' data-pageController='online'>
+
+<div class="vm-placement" data-id="6012ea4bfe24b76bfed2645e" style="display:none"></div>
+
+<body class='ipsApp ipsApp_front ipsJS_has ipsClearfix' data-controller='core.front.core.app' data-message="" data-pageApp='core' data-pageLocation='front' data-pageModule='online' data-pageController='online'>
+<a href='#ipsLayout_mainArea' class='ipsHide' title='Go to main content on this page' accesskey='m'>Jump to content</a>
+<div id='ipsLayout_header' class='ipsClearfix'>
+
+<header>
+{% include gtaforums/header.html %}
+</header>
+
+</div>
+<main id='ipsLayout_body' class='ipsLayout_container'>
+
+<div id='ipsLayout_contentArea'>
+<div id='ipsLayout_contentWrapper'>
+<ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
+<li id='elMobileBreadcrumb'>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a data-action="defaultStream" href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+</li>
+<li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileCreateMenuDrawer'>
+<a href='#'><i class='fa fa-plus'></i></a>
+</li>
+<li class='ipsJS_show'>
+<a href='https://gtaforums.com/search/'><i class='fa fa-search'></i></a>
+</li>
+</ul>
+<nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
+<ul class='ipsList_inline ipsPos_right'>
+<li>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
+</li>
+</ul>
+<ul data-role="breadcrumbList">
+<li>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
+<span>Home <i class='fa fa-angle-right'></i></span>
+</a>
+</li>
+<li>
+<a href='{{page.url}}'>
+<span>Registered User List </span>
+</a>
+</li>
+</ul>
+</nav>
+
+{% assign users = site.users %}
+
+<div id='ipsLayout_mainArea'>
+<div class='ipsPageHeader sm:ipsPadding:half ipsClearfix ipsMargin_bottom sm:ipsMargin_bottom:half'>
+<h1 class='ipsType_pageTitle'>Registered Users</h1>
+</div>
+<br>
+<div class='ipsBox'>
+<h2 class='ipsType_sectionTitle ipsType_reset ipsType_medium'>{{users.size}} users</h2>
+<div data-baseurl='https://gtaforums.com/online/' data-resort='listResort' data-controller='core.global.core.table'>
+<div class="ipsButtonBar ipsPad_half ipsClearfix ipsClear">
+<ul class="ipsButtonRow ipsPos_right ipsClearfix">
+<li>
+<a href="#elFilterByMenu_63e1405b58c639166ab6587ca5b0b766_menu" data-role="tableFilterMenu" id="elFilterByMenu_63e1405b58c639166ab6587ca5b0b766" data-ipsMenu data-ipsMenu-activeClass="ipsButtonRow_active" data-ipsMenu-selectable="radio">Filter By <i class="fa fa-caret-down"></i></a>
+<ul class='ipsMenu ipsMenu_auto ipsMenu_withStem ipsMenu_selectable ipsHide' id='elFilterByMenu_63e1405b58c639166ab6587ca5b0b766_menu'>
+<li data-action="tableFilter" data-ipsMenuValue='' class='ipsMenu_item ipsMenu_itemChecked'>
+<a href='{{page.url}}?sortdirection=desc&amp;filter=' class='ipsButtonRow_active'>All</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='filter_loggedin' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=filter_loggedin&amp;sortdirection=desc'>Logged In</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_10' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_10&amp;sortdirection=desc'>$outh $ide Hoodz</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_4' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_4&amp;sortdirection=desc'>Administrator</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_24' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_24&amp;sortdirection=desc'>Andolini Mafia Family</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_170' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_170&amp;sortdirection=desc'>Community Ledby</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_91' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_91&amp;sortdirection=desc'>Cyclop 9</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_56' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_56&amp;sortdirection=desc'>Feroci</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_171' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_171&amp;sortdirection=desc'>GTA Series Ledby</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_103' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_103&amp;sortdirection=desc'>GTAF Crew</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_2' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_2&amp;sortdirection=desc'>Guests</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_180' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_180&amp;sortdirection=desc'>Hot Cops</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_178' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_178&amp;sortdirection=desc'>Leaf Links Cartel</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_27' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_27&amp;sortdirection=desc'>Leone Family Mafia</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_3' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_3&amp;sortdirection=desc'>Members</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_87' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_87&amp;sortdirection=desc'>Modding Staff</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_5' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_5&amp;sortdirection=desc'>Moderator</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_86' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_86&amp;sortdirection=desc'>New Members</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_111' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_111&amp;sortdirection=desc'>Paleto Bay Mayor's Office</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_40' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_40&amp;sortdirection=desc'>The Connection</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_11' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_11&amp;sortdirection=desc'>The Precinct</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_126' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_126&amp;sortdirection=desc'>Victim of The Pit™</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_62' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_62&amp;sortdirection=desc'>Zaibatsu</a>
+</li>
+<li data-action="tableFilter" data-ipsMenuValue='group_129' class='ipsMenu_item '>
+<a href='{{page.url}}?filter=group_129&amp;sortdirection=desc'>Zero Cool</a>
+</li>
+</ul>
+</li>
+</ul>
+<div data-role="tablePagination">
+<ul class='ipsPagination' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_652745509' data-ipsPagination-seoPagination='false' data-pages='92'>
+<li class='ipsPagination_first ipsPagination_inactive'><a href='https://gtaforums.com/online/' rel="first" data-page='1' data-ipsTooltip title='First page'><i class='fa fa-angle-double-left'></i></a></li>
+<li class='ipsPagination_prev ipsPagination_inactive'><a href='https://gtaforums.com/online/' rel="prev" data-page='0' data-ipsTooltip title='Previous page'>Prev</a></li>
+<li class='ipsPagination_page ipsPagination_active'><a href='https://gtaforums.com/online/' data-page='1'>1</a></li>
+<li class='ipsPagination_page'><a href='#' data-page='2'>2</a></li>
+<li class='ipsPagination_page'><a href='#' data-page='3'>3</a></li>
+<li class='ipsPagination_page'><a href='#' data-page='4'>4</a></li>
+<li class='ipsPagination_page'><a href='#' data-page='5'>5</a></li>
+<li class='ipsPagination_page'><a href='#' data-page='6'>6</a></li>
+<li class='ipsPagination_next'><a href='#' rel="next" data-page='2' data-ipsTooltip title='Next page'>Next</a></li>
+<li class='ipsPagination_last'><a href='#' rel="last" data-page='92' data-ipsTooltip title='Last page'><i class='fa fa-angle-double-right'></i></a></li>
+<li class='ipsPagination_pageJump'>
+<a href='#' data-ipsMenu data-ipsMenu-closeOnClick='false' data-ipsMenu-appendTo='#elPagination_307eb6e16bd0052d05fcd9f0b7f38953_652745509' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_652745509_jump'>Page 1 of 92 &nbsp;<i class='fa fa-caret-down'></i></a>
+<div class='ipsMenu ipsMenu_narrow ipsPadding ipsHide' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_652745509_jump_menu'>
+<ul class='ipsForm ipsForm_horizontal'>
+<li class='ipsFieldRow'>
+</li>
+<li class='ipsFieldRow ipsFieldRow_fullWidth'>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<ol class='ipsList_reset ipsPad ipsGrid ipsGrid_collapsePhone ipsClear' data-ipsGrid data-role='tableRows'>
+{% for user in users %}
+{% if user.avatar %}
+  {% if user.avatar contains "http" %}
+  {% assign user_avatar = user.avatar %}
+  {% else %}
+  {% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
+  {% endif %}
+{% else %}
+  {% assign user_avatar = "/assets/smf/noavatar.gif" %}
+{% endif %}
+
+{% assign messages = site.messages | where: "user", user.nickname %}
+
+{% capture exp %}group.min_posts>= 0 and group.min_posts<={{messages.size}}{% endcapture %}
+{% assign groups = site.data.groups | sort: "min_posts" %}
+{% assign post_group = groups | where_exp: "group", exp | last %}
+<li class='ipsGrid_span4 ipsPhotoPanel ipsPhotoPanel_small ipsClearfix cOnlineUser '>
+<a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="{{page.template}}{{user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to {{user.nickname}}'s profile">
+<img src='{{user_avatar}}' alt='{{user.nickname}}' loading="lazy">
+</a>
+<div>
+<div class='ipsContained'>
+<h3 class='ipsType_reset ipsType_normal'>
+<a href='{{page.template}}{{user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='' title="Go to {{user.nickname}}'s profile" class="ipsType_break">{{user.nickname}}</a>
+</h3>
+<p class='ipsType_reset ipsTruncate ipsTruncate_line ipsType_break'>{{post_group.name}}</p>
+<p class='ipsType_reset ipsTruncate ipsTruncate_line ipsType_light'>Register date: {{user.date_registered | date: "%d/%m/%Y %I:%M %p"}}</p>
+</div>
+</div>
+</li>
+{% endfor %}
+</ol>
+<div class="ipsButtonBar ipsPad_half ipsClearfix ipsClear " data-role="tablePagination">
+<ul class='ipsPagination' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_711021006' data-ipsPagination-seoPagination='false' data-pages='92'>
+<li class='ipsPagination_first ipsPagination_inactive'><a href='https://gtaforums.com/online/' rel="first" data-page='1' data-ipsTooltip title='First page'><i class='fa fa-angle-double-left'></i></a></li>
+<li class='ipsPagination_prev ipsPagination_inactive'><a href='https://gtaforums.com/online/' rel="prev" data-page='0' data-ipsTooltip title='Previous page'>Prev</a></li>
+<li class='ipsPagination_page ipsPagination_active'><a href='https://gtaforums.com/online/' data-page='1'>1</a></li>
+<li class='ipsPagination_page'><a href='https://gtaforums.com/online/?page=2' data-page='2'>2</a></li>
+<li class='ipsPagination_page'><a href='https://gtaforums.com/online/?page=3' data-page='3'>3</a></li>
+<li class='ipsPagination_page'><a href='https://gtaforums.com/online/?page=4' data-page='4'>4</a></li>
+<li class='ipsPagination_page'><a href='https://gtaforums.com/online/?page=5' data-page='5'>5</a></li>
+<li class='ipsPagination_page'><a href='https://gtaforums.com/online/?page=6' data-page='6'>6</a></li>
+<li class='ipsPagination_next'><a href='https://gtaforums.com/online/?page=2' rel="next" data-page='2' data-ipsTooltip title='Next page'>Next</a></li>
+<li class='ipsPagination_last'><a href='https://gtaforums.com/online/?page=92' rel="last" data-page='92' data-ipsTooltip title='Last page'><i class='fa fa-angle-double-right'></i></a></li>
+<li class='ipsPagination_pageJump'>
+<a href='#' data-ipsMenu data-ipsMenu-closeOnClick='false' data-ipsMenu-appendTo='#elPagination_307eb6e16bd0052d05fcd9f0b7f38953_711021006' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_711021006_jump'>Page 1 of 92 &nbsp;<i class='fa fa-caret-down'></i></a>
+<div class='ipsMenu ipsMenu_narrow ipsPadding ipsHide' id='elPagination_307eb6e16bd0052d05fcd9f0b7f38953_711021006_jump_menu'>
+<form accept-charset='utf-8' method='post' action='https://gtaforums.com/online/' data-role="pageJump" data-baseUrl='#'>
+<ul class='ipsForm ipsForm_horizontal'>
+<li class='ipsFieldRow'>
+<input type='number' min='1' max='92' placeholder='Page number' class='ipsField_fullWidth' name='page'>
+</li>
+<li class='ipsFieldRow ipsFieldRow_fullWidth'>
+<input type='submit' class='ipsButton_fullWidth ipsButton ipsButton_verySmall ipsButton_primary' value='Go'>
+</li>
+</ul>
+</form>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
+<a href='#' id='elRSS' class='ipsPos_right ipsType_large' title='Available RSS feeds' data-ipsTooltip data-ipsMenu data-ipsMenu-above><i class='fa fa-rss-square'></i></a>
+<ul id='elRSS_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+<li class='ipsMenu_item'><a title="GTANetcom" href="https://gtaforums.com/rss/4-gtanetcom.xml/?member_id=717099&amp;key=2eb33c7206881a76834a3532ae02e768">GTANetcom</a></li>
+</ul>
+<ul class='ipsList_inline ipsPos_right'>
+<li>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
+</li>
+<li>
+<a data-action="markSiteRead" class='ipsType_light' data-controller="core.front.core.markRead" href='https://gtaforums.com/markallread/?csrfKey=ceb722b64c42e65f5df40f3040885d27&amp;ref=aHR0cHM6Ly9ndGFmb3J1bXMuY29tL29ubGluZS8=' title='Mark all content on the site as read' data-ipsTooltip><i class='fa fa-check' aria-hidden="true"></i> Mark site read</a>
+</li>
+</ul>
+<ul data-role="breadcrumbList">
+<li>
+<a title="Home" href='https://gtaforums.com/'>
+<span>Home <i class='fa fa-angle-right'></i></span>
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/online/'>
+<span>Online User List </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</main>
+
+<footer id='ipsLayout_footer' class='ipsClearfix'>
+{% include gtaforums/footer.html %}
+</footer>
+
+<div id='elMobileDrawer' class='ipsDrawer ipsHide'>
+<div class='ipsDrawer_menu'>
+<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+<div class='ipsDrawer_content ipsFlex ipsFlex-fd:column'>
+<div class='elMobileDrawer__user ipsBorder_bottom ipsAreaBackground_reset ipsPadding_horizontal ipsPadding_vertical:half ipsPos_sticky ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap'>
+<div class='ipsFlex-flex:11'>
+<ul class='elMobileDrawer__user-panel ipsList_reset ipsType_blendLinks ipsFlex ipsFlex-ai:center'>
+<li class='ipsMargin_right:half'>
+<a href="https://gtaforums.com/profile/717099-sloth/" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="https://gtaforums.com/profile/717099-sloth/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to Sloth-'s profile">
+<img src='https://gtaforums.com/uploads/monthly_2020_05/Pk4G__T3_400x400.thumb.jpg.c40191c779ebba09cc6b3c69b2898f8b.jpg' alt='Sloth-' loading="lazy">
+</a>
+</li>
+<li>
+<div class='ipsType_light'>Signed in as</div>
+<div class='ipsType_dark ipsType_large ipsType_bold'><a href='https://gtaforums.com/profile/717099-sloth/' title='Go to your profile'>Sloth-</a></div>
+</li>
+</ul>
+</div>
+<ul id='elUserNav_mobile' class='ipsList_inline signed_in ipsClearfix'>
+<li class='cNotifications cUserNav_icon'>
+<a href='#elMobNotifications_menu' id='elMobNotifications' data-ipsMenu data-ipsMenu-menuID='elFullNotifications_menu' data-ipsMenu-closeOnClick='false'>
+<i class='fa fa-bell'></i> <span class='ipsNotificationCount ipsHide' data-notificationType='notify'>0</span>
+</a>
+</li>
+<li class='cInbox cUserNav_icon'>
+<a href='#elMobInbox_menu' id='elMobInbox' data-ipsMenu data-ipsMenu-menuID='elFullInbox_menu' data-ipsMenu-closeOnClick='false'>
+<i class='fa fa-envelope '></i> <span class='ipsNotificationCount ipsHide' data-notificationType='inbox'>0</span>
+</a>
+</li>
+</ul>
+</div>
+<ul class='ipsDrawer_list ipsFlex-flex:11'>
+<li class='ipsDrawer_itemParent'>
+<h4 class='ipsDrawer_title'><a href='#'>Account</a></h4>
+<ul class='ipsDrawer_list'>
+<li data-action="back"><a href='#'>Back</a></li>
+<li><a href='https://gtaforums.com/profile/717099-sloth/' title='Go to your profile'>Profile</a></li>
+<li><a href='https://gtaforums.com/followed/'>Manage Followed Content</a></li>
+<li id='elAccountSettingsLinkMobile'><a href='https://gtaforums.com/settings/' title='Edit account settings'>Account Settings</a></li>
+<li><a href='https://gtaforums.com/ignore/'>Ignored Users</a></li>
+
+</ul>
+</li>
+<li class='ipsDrawer_itemParent'>
+<h4 class='ipsDrawer_title'><a href='#'>Browse</a></h4>
+<ul class='ipsDrawer_list'>
+<li data-action="back"><a href='#'>Back</a></li>
+<li>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
+Forums
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/staff/'>
+Staff
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/leaderboard/'>
+Leaderboard
+</a>
+</li>
+</ul>
+</li>
+<li class='ipsDrawer_itemParent'>
+<h4 class='ipsDrawer_title'><a href='#'>Activity</a></h4>
+<ul class='ipsDrawer_list'>
+<li data-action="back"><a href='#'>Back</a></li>
+<li>
+<a href='{{page.template}}/messages/recent'>
+All Activity
+</a>
+</li>
+<li class='ipsDrawer_itemParent'>
+<h4 class='ipsDrawer_title'><a href='#'>My Activity Streams</a></h4>
+<ul class='ipsDrawer_list'>
+<li data-action="back"><a href='#'>Back</a></li>
+<li class='ipsDrawer_section'>
+Default Streams
+</li>
+<li>
+<a href='{{page.template}}/messages/recent'>
+Unread Content
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/discover/content-started/'>
+Content I Started
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/discover/followed-content/'>
+Content I Follow
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/discover/followed-members/'>
+Members I Follow
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/discover/content-posted/'>
+Content I Posted In
+</a>
+</li>
+<li class='ipsPad_half'>
+<a href='https://gtaforums.com/discover/?do=create' class='ipsButton ipsButton_important ipsButton_verySmall ipsButton_fullWidth'>
+Create New Stream
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='{{page.template}}/messages/recent'>
+Unread Content
+</a>
+</li>
+<li>
+<a href='https://gtaforums.com/search/'>
+Search
+</a>
+</li>
+</ul>
+</li>
+<li><a href='https://gtaforums.com/leaderboard/'>Leaderboard</a></li>
+<li>
+<a href='https://gtaforums.com/index.php?app=core&amp;module=system&amp;controller=login&amp;do=logout&amp;csrfKey=ceb722b64c42e65f5df40f3040885d27'>
+Sign Out
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id='elMobileCreateMenuDrawer' class='ipsDrawer ipsHide'>
+<div class='ipsDrawer_menu'>
+<a href='#' class='ipsDrawer_close' data-action='close'><span>&times;</span></a>
+<div class='ipsDrawer_content ipsSpacer_bottom ipsPad'>
+<ul class='ipsDrawer_list'>
+<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+<li>
+<a href="https://gtaforums.com/submit/" data-ipsDialog="1" data-ipsDialog-size="narrow" data-ipsDialog-title='Select Forum' data-ipsdialog-fixed="true">Topic</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+{% include gtaforums/scripts.html %}
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://gtaforums.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://gtaforums.com/#website",
+    "mainEntityOfPage": "https://gtaforums.com/",
+    "name": "GTAForums",
+    "url": "https://gtaforums.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://gtaforums.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (USA)",
+            "alternateName": "en-US"
+        }
+    ]
+}	
+</script>
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://gtaforums.com/#organization",
+    "mainEntityOfPage": "https://gtaforums.com/",
+    "name": "GTAForums",
+    "url": "https://gtaforums.com/",
+    "sameAs": [
+        "https://twitter.com/GTAForums",
+        "https://twitter.com/GTANet"
+    ]
+}	
+</script>
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://gtaforums.com/online/",
+                "name": "Online User List"
+            }
+        }
+    ]
+}	
+</script>
+
+
+</body>
+</html>

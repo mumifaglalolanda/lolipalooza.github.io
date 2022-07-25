@@ -63,12 +63,12 @@
 <div id='ipsLayout_contentWrapper'>
 <ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
 <li id='elMobileBreadcrumb'>
-<a href='{{board.url}}'>
+<a href='{{page.template}}{{board.url}}'>
 <span>{{board.board}}</span>
 </a>
 </li>
 <li>
-<a data-action="defaultStream" href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+<a data-action="defaultStream" href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 </li>
 <li class='ipsJS_show'>
 <a href='https://gtaforums.com/search/'><i class='fa fa-search'></i></a>
@@ -77,22 +77,22 @@
 <nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='{{site.data.forums.base_url}}'>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
 <li>
-<a href='{{site.data.forums.base_url}}'>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>{{board.category}} <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
 <li>
-<a href='{{board.url}}'>
+<a href='{{page.template}}{{board.url}}'>
 <span>{{board.board}} <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
@@ -146,7 +146,7 @@
 <span class='ipsType_normal'>
 <strong>By
 {{op.nickname}}, </strong><br />
-<span class='ipsType_light'><time datetime='2022-07-18T07:22:05Z' title='07/18/2022 03:22  AM' data-short='4 dy'>{{messages.first.date | date: "%B %d, %Y"}}</time> in <a href="{{board.url}}">{{board.board}}</a></span>
+<span class='ipsType_light'><time datetime='2022-07-18T07:22:05Z' title='07/18/2022 03:22  AM' data-short='4 dy'>{{messages.first.date | date: "%B %d, %Y"}}</time> in <a href="{{page.template}}{{board.url}}">{{board.board}}</a></span>
 </span>
 </p>
 </div>
@@ -377,7 +377,7 @@
 
 <div class='ipsPager ipsSpacer_top'>
 <div class="ipsPager_prev">
-<a href="{{board.url}}" title="Go to {{board.board}}" rel="parent">
+<a href="{{page.template}}{{board.url}}" title="Go to {{board.board}}" rel="parent">
 <span class="ipsPager_type">Go to topic listing</span>
 </a>
 </div>
@@ -406,7 +406,7 @@
 </ul>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recent'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>All Activity</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
@@ -480,7 +480,7 @@ Leaderboard
 <ul class='ipsDrawer_list'>
 <li data-action="back"><a href='#'>Back</a></li>
 <li>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.template}}/messages/recent'>
 All Activity
 </a>
 </li>

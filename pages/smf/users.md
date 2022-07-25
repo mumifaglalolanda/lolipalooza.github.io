@@ -1,4 +1,5 @@
 ---
-layout: users
+layout: smf/users
+template: ""
 permalink: /users
 ---

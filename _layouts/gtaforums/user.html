@@ -67,12 +67,12 @@
 <div id='ipsLayout_contentWrapper'>
 <ul id='elMobileNav' class='ipsResponsive_hideDesktop' data-controller='core.front.core.mobileNav'>
 <li id='elMobileBreadcrumb'>
-<a href='{{site.data.forums.base_url}}'>
+<a href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home</span>
 </a>
 </li>
 <li>
-<a data-action="defaultStream" href='https://gtaforums.com/discover/unread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+<a data-action="defaultStream" href='{{page.template}}/messages/recentunread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
 </li>
 <li data-ipsDrawer data-ipsDrawer-drawerElem='#elMobileCreateMenuDrawer'>
 <a href='#'><i class='fa fa-plus'></i></a>
@@ -84,12 +84,12 @@
 <nav class='ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover'>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/unread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recentunread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
 </li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='{{site.data.forums.base_url}}'>
+<a title="Home" href='{{page.template}}{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
@@ -424,11 +424,11 @@
   <div class="">
   <h2 class="ipsType_reset ipsStreamItem_title ipsContained_container ">
   <span class="ipsType_break ipsContained">
-  <a href="{{thread.url}}#comment-{{message.id_msg}}" data-linktype="link" data-searchable=""> {{message.subject}}</a>
+  <a href="{{page.template}}{{thread.url}}#comment-{{message.id_msg}}" data-linktype="link" data-searchable=""> {{message.subject}}</a>
   </span>
   </h2>
   <p class="ipsType_reset ipsStreamItem_status ipsType_blendLinks">
-  <a href="{{page.url}}" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="{{page.url}}?do=hovercard" title="Go to {{page.nickname}}'s profile" class="ipsType_break">{{page.nickname}}</a> posted a topic in <a href="{{board.url}}">{{board.board}}</a>
+  <a href="{{page.url}}" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="{{page.url}}?do=hovercard" title="Go to {{page.nickname}}'s profile" class="ipsType_break">{{page.nickname}}</a> posted a topic in <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
   </p>
   </div>
   </div>
@@ -439,7 +439,7 @@
   </div>
   <ul class="ipsList_inline ipsStreamItem_meta ipsGap:1">
   <li class="ipsType_light ipsType_medium">
-  <a rel="nofollow" href="{{thread.url}}#comment-{{message.id_msg}}" class="ipsType_blendLinks"><i class="fa fa-clock-o"></i> <time datetime="2022-07-24T16:44:09Z" title="07/24/2022 12:44  PM" data-short="15 min">{{message.date | date: "%A, %B %d, %Y at %H:%M"}}</time></a>
+  <a rel="nofollow" href="{{page.template}}{{thread.url}}#comment-{{message.id_msg}}" class="ipsType_blendLinks"><i class="fa fa-clock-o"></i> <time datetime="2022-07-24T16:44:09Z" title="07/24/2022 12:44  PM" data-short="15 min">{{message.date | date: "%A, %B %d, %Y at %H:%M"}}</time></a>
   </li>
   </ul>
   </div>
@@ -456,12 +456,12 @@
   <h2 class='ipsType_reset ipsStreamItem_title ipsContained_container ipsStreamItem_titleSmall'>
   <span><span class='ipsItemStatus ipsItemStatus_read ipsItemStatus_posted'><i class="fa fa-star"></i></span></span>
   <span class='ipsType_break ipsContained'>
-  <a href='{{thread.url}}#comment-{{message.id_msg}}' data-linkType="link" data-searchable> {{message.subject}}</a>
+  <a href='{{page.template}}{{thread.url}}#comment-{{message.id_msg}}' data-linkType="link" data-searchable> {{message.subject}}</a>
   </span>
   </h2>
   <p class='ipsType_reset ipsStreamItem_status ipsType_blendLinks'>
   <a href='{{page.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{page.url}}?do=hovercard' title="Go to {{page.nickname}}'s profile" class="ipsType_break">{{page.nickname}}</a> replied to
-  <a href='{{thread_user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{thread_user.url}}?do=hovercard' title="Go to {{thread_user.nickname}}'s profile" class="ipsType_break">{{thread_user.nickname}}</a>'s topic in <a href='{{board.url}}'>{{board.board}}</a>
+  <a href='{{page.template}}{{thread_user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target='{{page.template}}{{thread_user.url}}?do=hovercard' title="Go to {{thread_user.nickname}}'s profile" class="ipsType_break">{{thread_user.nickname}}</a>'s topic in <a href='{{page.template}}{{board.url}}'>{{board.board}}</a>
   </p>
   </div>
   </div>
@@ -613,20 +613,20 @@
 {% endif %}
 <li class="ipsDataItem ipsDataItem_responsivePhoto ipsDataItem_unread  ">
 <div class='ipsDataItem_icon ipsPos_top'>
-<a href='{{thread.url}}' title='Go to first unread post' data-ipsTooltip>
+<a href='{{page.template}}{{thread.url}}' title='Go to first unread post' data-ipsTooltip>
 <span class='ipsItemStatus'><i class="fa fa-circle"></i></span>
 </a>
 </div>
 <div class='ipsDataItem_main'>
 <h4 class='ipsDataItem_title ipsContained_container'>
 <span class='ipsType_break ipsContained'>
-<a href='{{thread.url}}' data-ipsHover data-ipsHover-target='{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>{{thread.title}}</a>
+<a href='{{page.template}}{{thread.url}}' data-ipsHover data-ipsHover-target='{{page.template}}{{thread.url}}/?preview=1' data-ipsHover-timeout='1.5'>{{thread.title}}</a>
 </span>
 </h4>
 <p class='ipsType_reset ipsType_medium ipsType_light'>
 By
 <a href='{{page.url}}' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='#' title="Go to {{page.nickname}}'s profile" class="ipsType_break">{{page.nickname}}</a>, <time datetime='2022-03-15T05:08:04Z' title='03/15/2022 01:08  AM' data-short='Mar 15'>{{replies.first.date | date: "%B %d, %Y at %H:%M"}}</time>
-in <a href="{{board.url}}">{{board.board}}</a>
+in <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
 </p>
 <ul class='ipsList_inline ipsClearfix ipsType_light'>
 </ul>
@@ -643,15 +643,15 @@ in <a href="{{board.url}}">{{board.board}}</a>
 </ul>
 <ul class='ipsDataItem_lastPoster ipsDataItem_withPhoto'>
 <li>
-<a href="{{last_user.url}}" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="{{last_user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to {{last_user.nickname}}'s profile">
+<a href="{{page.template}}{{last_user.url}}" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="{{page.template}}{{last_user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to {{last_user.nickname}}'s profile">
 <img src='{{last_user_avatar}}' alt='{{last_user.nickname}}' loading="lazy">
 </a>
 </li>
 <li>
-<a href='{{last_user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='#' title="Go to {{last_user.nickname}}'s profile" class="ipsType_break">{{last_user.nickname}}</a>
+<a href='{{page.template}}{{last_user.url}}' rel="nofollow" data-ipsHover data-ipsHover-width='370' data-ipsHover-target='#' title="Go to {{last_user.nickname}}'s profile" class="ipsType_break">{{last_user.nickname}}</a>
 </li>
 <li class="ipsType_light">
-<a href='{{thread.url}}#comment-{{replies.last.id_msg}}' title='Go to last post' class='ipsType_blendLinks'>
+<a href='{{page.template}}{{thread.url}}#comment-{{replies.last.id_msg}}' title='Go to last post' class='ipsType_blendLinks'>
 <time datetime='2022-03-16T04:44:48Z' title='03/16/2022 12:44  AM' data-short='Mar 16'>{{replies.last.date | date: "%A, %B %d, %Y at %H:%M"}}</time>
 </a>
 </li>
@@ -671,18 +671,18 @@ in <a href="{{board.url}}">{{board.board}}</a>
 <div class="ipsComment_toolWrap ipsFlex-flex:00"></div>
 <div class='sm:ipsMargin_top:double'>
 <h3 class='ipsType_sectionHead ipsType_break'>
-<a href='{{thread.url}}/?do=getNewComment' title='Go to first unread post' data-ipsTooltip>
+<a href='{{page.template}}{{thread.url}}/?do=getNewComment' title='Go to first unread post' data-ipsTooltip>
 <span class='ipsItemStatus'><i class="fa fa-circle"></i></span>
 </a>
-<a href='{{thread.url}}#comment-{{comment.id_msg}}' title='View the topic {{thread.title}}'>{{thread.title}}</a>
+<a href='{{page.template}}{{thread.url}}#comment-{{message.id_msg}}' title='View the topic {{thread.title}}'>{{thread.title}}</a>
 </h3>
-<p class='ipsType_normal ipsType_light ipsType_blendLinks ipsType_reset'>in <a href='{{board.url}}'>{{board.board}}</a></p>
+<p class='ipsType_normal ipsType_light ipsType_blendLinks ipsType_reset'>in <a href='{{page.template}}{{board.url}}'>{{board.board}}</a></p>
 </div>
 </div>
 <div class=''>
 <div class='ipsPadding_horizontal ipsPadding_bottom ipsPadding_top:half'>
 <p class='ipsComment_meta ipsType_light ipsType_medium ipsType_blendLinks'>
-<a href='{{thread.url}}#comment-{{comment.id_msg}}' class='ipsType_blendLinks'>Posted <time datetime='2022-07-24T16:44:09Z' title='07/24/2022 12:44  PM' data-short='1 hr'>{{message.date | date: "%A, %B %d, %Y at %H:%M"}}</time></a>
+<a href='{{page.template}}{{thread.url}}#comment-{{message.id_msg}}' class='ipsType_blendLinks'>Posted <time datetime='2022-07-24T16:44:09Z' title='07/24/2022 12:44  PM' data-short='1 hr'>{{message.date | date: "%A, %B %d, %Y at %H:%M"}}</time></a>
 </p>
 <div data-role='commentContent' class='ipsType_break ipsType_richText ipsContained ipsMargin_top' data-controller='core.front.core.lightboxedImages'>{{message.content}}</div>
 </div>
@@ -710,7 +710,7 @@ in <a href="{{board.url}}">{{board.board}}</a>
 </ul>
 <ul class='ipsList_inline ipsPos_right'>
 <li>
-<a data-action="defaultStream" class='ipsType_light ' href='https://gtaforums.com/discover/unread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
+<a data-action="defaultStream" class='ipsType_light ' href='{{page.template}}/messages/recentunread/'><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Unread Content</span></a>
 </li>
 <li>
 <a data-action="markSiteRead" class='ipsType_light' data-controller="core.front.core.markRead" href='https://gtaforums.com/markallread/?csrfKey=3877d35377c8356d20a3e6bbeab459b2&amp;ref=aHR0cHM6Ly9ndGFmb3J1bXMuY29tL3Byb2ZpbGUvNzE3MDk5LXNsb3RoLw==' title='Mark all content on the site as read' data-ipsTooltip><i class='fa fa-check' aria-hidden="true"></i> Mark site read</a>
@@ -806,7 +806,7 @@ Leaderboard
 <ul class='ipsDrawer_list'>
 <li data-action="back"><a href='#'>Back</a></li>
 <li>
-<a href='https://gtaforums.com/discover/'>
+<a href='{{page.template}}/messages/recent'>
 All Activity
 </a>
 </li>
@@ -818,44 +818,44 @@ All Activity
 Default Streams
 </li>
 <li>
-<a href='https://gtaforums.com/discover/unread/'>
+<a href='{{page.template}}/messages/recentunread/'>
 Unread Content
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/content-started/'>
+<a href='{{page.template}}/messages/recentcontent-started/'>
 Content I Started
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/followed-content/'>
+<a href='{{page.template}}/messages/recentfollowed-content/'>
 Content I Follow
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/followed-members/'>
+<a href='{{page.template}}/messages/recentfollowed-members/'>
 Members I Follow
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/content-posted/'>
+<a href='{{page.template}}/messages/recentcontent-posted/'>
 Content I Posted In
 </a>
 </li>
 <li class='ipsPad_half'>
-<a href='https://gtaforums.com/discover/?do=create' class='ipsButton ipsButton_important ipsButton_verySmall ipsButton_fullWidth'>
+<a href='{{page.template}}/messages/recent?do=create' class='ipsButton ipsButton_important ipsButton_verySmall ipsButton_fullWidth'>
 Create New Stream
 </a>
 </li>
 </ul>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/unread/'>
+<a href='{{page.template}}/messages/recentunread/'>
 Unread Content
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/discover/content-started/'>
+<a href='{{page.template}}/messages/recentcontent-started/'>
 Content I Started
 </a>
 </li>
@@ -1012,6 +1012,57 @@ Sign Out
       })
     }, 250)
   })
+
+  var hoverCard = `<div class="cUserHovercard" id="elUserHovercard_7170991077467925">
+<div class='ipsPageHead_special cUserHovercard__header' id='elProfileHeader_1077467925' data-controller='core.global.core.coverPhoto' data-url="{{page.url}}" data-coverOffset='684'>
+<div class='ipsCoverPhoto_container' style="background-color: hsl(175, 100%, 80% )">
+<img src='https://gtaforums.com/uploads/set_resources_9/84c1e40ea0e759e3f1505eb1788ddf3c_pattern.png' class='ipsCoverPhoto_photo' data-action="toggleCoverPhoto" alt=''>
+</div>
+<a href='{{page.url}}'><img src='{{user_avatar}}' class="ipsUserPhoto ipsUserPhoto_large ipsUserPhoto_outlined ipsUserPhoto_outlined:medium cUserHovercard__photo"></a>
+</div>
+<div class='ipsPadding ipsFlex ipsFlex-fd:column ipsFlex-ai:center'>
+<h2 class='ipsType_reset ipsType_center ipsPos_relative cUserHovercard__title'>
+<a href='{{page.url}}'>{{page.nickname}}</a>
+</h2>
+<p class='ipsType_reset ipsType_normal'>
+Members
+</p>
+<p class='ipsType_reset ipsType_medium ipsType_light'>
+Joined <time datetime='2012-08-01T01:40:27Z' title='07/31/2012 09:10  PM' data-short='9 yr'>{{page.date_registered | date: "%B %d, %Y"}}</time>
+</p>
+<p class='ipsType_reset ipsType_medium ipsType_light'>
+<i class="fa fa-circle ipsType_medium ipsOnlineStatus_online" data-ipsTooltip title='{{page.nickname}} is not online'></i>
+Not Online
+</p>
+<dl class='ipsMargin:none ipsMargin_top ipsAreaBackground_light ipsRadius ipsFlex ipsFlex-ai:center ipsFlex-jc:around ipsFlex-as:stretch ipsPadding:half'>
+<div class='ipsPadding_horizontal:half ipsFlex ipsFlex-fd:column-reverse ipsFlex-ai:center'>
+<dt class='ipsType_light'>Posts</dt>
+<dd class='ipsType_semiBold ipsType_large ipsType_dark ipsMargin:none'>{{posts.size}}</dd>
+</div>
+<div class='ipsPadding_horizontal:half ipsFlex ipsFlex-fd:column-reverse ipsFlex-ai:center'>
+<dt class='ipsType_light'>Karma</dt>
+<dd class='ipsType_semiBold ipsType_large ipsType_dark ipsMargin:none'>+{{page.karma_bad}} / -{{page.karma_good}}</dd>
+</div>
+</dl>
+<div class='ipsBorder_top ipsMargin_top ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-as:stretch ipsPadding_top'>
+<div class='ipsType_medium ipsMargin_right'>
+<p class='ipsType_reset ipsType_semiBold'>
+<i class='fa fa-info-circle fa-fw ipsType_light'></i> 0 warning points
+</p>
+</div>
+</div>
+</div>
+<div class='ipsBorder_top ipsPadding'>
+<div class='ipsList_reset ipsFlex ipsFlex-ai:center ipsGap:3 ipsGap_row:0'>
+<a href="#" class='ipsFlex-flex:11 ipsButton ipsButton_light ipsButton_verySmall'>Find Content</a>
+</div>
+</div>
+</div>
+</div>`
+
+  if (window.location.search == "?do=hovercard") {
+    document.body.innerHTML = hoverCard
+  }
 </script>
 
 
