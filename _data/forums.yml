@@ -6,24 +6,24 @@ base_url: /forums
 
 navigator:
   - name: Inicio
-    href: /forums
+    href: "/forums"
     id: button_home
     active: true
 
   - name: Ayuda
-    href: /forums/ayuda
+    href: "/forums/ayuda"
     id: button_help
 
   - name: Buscar
-    href: #
+    href: "#"
     id: button_search
 
   - name: Blogs
-    href: /blogs
+    href: "/blogs"
     id: button_blog
 
   - name: Usuarios
-    href: /users
+    href: "/users"
     id: button_mlist
 
 categories:
