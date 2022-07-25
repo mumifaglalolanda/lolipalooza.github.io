@@ -18,8 +18,14 @@
 	<link rel="alternate" type="application/rss+xml" title="{{site.data.forums.title}} - RSS" href="http://smf.halabalooza.orgy/index.php?type=rss;action=.xml" />
 </head>
 <body>
-{% assign users = site.users | where: "nickname", "Mumifag Lalolanda" %}
-{{users | jsonify}}
+{% assign users1 = site.users | where: "nickname", "Mumifag Lalolanda" %}
+{% assign users2 = site.users | where: "nickname", "Dragon Maid~" %}
+{% assign users = users1 | concat: users2 %}
+<ul>
+{% for user in users %}
+<li>{{user.nickname}}</li>
+{% endfor %}
+</ul>
 <div id="wrapper" style="width: 90%">
 	<div id="header"><div class="frame">
 		<div id="top_section">
