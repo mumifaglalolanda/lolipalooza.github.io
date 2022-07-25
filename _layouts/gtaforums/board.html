@@ -441,28 +441,22 @@
 </div>
 </div>
 </div>
-<!--
+
+
 <div class='cWidgetContainer ' data-role='widgetReceiver' data-orientation='horizontal' data-widgetArea='footer'>
 <ul class='ipsList_reset'>
-<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='plugin_20_gtaforumsRecentlyBrowsing_erkos10em' data-blockConfig="true" data-blockTitle="GTAForums Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page." data-controller='core.front.widgets.block'>
+<li class='ipsWidget ipsWidget_horizontal ipsBox  ' data-blockID='plugin_20_gtaforumsRecentlyBrowsing_36lcyvl4e' data-blockConfig="true" data-blockTitle="GTAForums Recently Browsing" data-blockErrorMessage="This block cannot be shown. This could be because it needs configuring, is unable to show on this page, or will show after reloading this page." data-controller='core.front.widgets.block'>
 <h3 class='ipsType_reset ipsWidget_title'>
-<div id="gtaforums_recentlyBrowsing_title">234 Users Currently Viewing</div>
+<div id="gtaforums_recentlyBrowsing_title">1 Guest Currently Viewing</div>
 <div id="gtaforums_recentlyBrowsing_subtitle">
-<span class='ipsType_light ipsType_unbold ipsType_medium'>58 members, 10 Anonymous, 166 Guests</span>
+<span class='ipsType_light ipsType_unbold ipsType_medium'>0 members, 0 Anonymous, 1 Guests</span>
 </div>
 </h3>
 <div class='ipsWidget_inner ipsPad'>
-<ul class='ipsList_inline ipsList_csv ipsList_noSpacing ipsType_normal'>
-<li>
-Phil Cassidy7</li>
-<li>
-Mattperson27</li>
-<li>
-needforsuv</li>
+</div></li>
 </ul>
 </div>
-</div>
--->
+
 
 <!-- hidden breadcrumb -->
 <nav class='ipsBreadcrumb ipsBreadcrumb_bottom ipsFaded_withHover'>
@@ -478,18 +472,16 @@ needforsuv</li>
 </ul>
 <ul data-role="breadcrumbList">
 <li>
-<a title="Home" href='https://gtaforums.com/'>
+<a title="Home" href='{{site.data.forums.base_url}}'>
 <span>Home <i class='fa fa-angle-right'></i></span>
 </a>
 </li>
 <li>
-<a href='https://gtaforums.com/forum/440-multiplayer/'>
-<span>Multiplayer <i class='fa fa-angle-right' aria-hidden="true"></i></span>
+<a href='{{site.data.forums.base_url}}'>
+<span>{{page.category}} <i class='fa fa-angle-right' aria-hidden="true"></i></span>
 </a>
 </li>
-<li>
-GTA Online
-</li>
+<li>{{page.board}}</li>
 </ul>
 </nav>
 

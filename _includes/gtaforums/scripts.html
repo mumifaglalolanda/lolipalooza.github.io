@@ -1,51 +1,37 @@
 <script type='text/javascript'>
-		var ipsDebug = false;		
-	
-		var CKEDITOR_BASEPATH = '//gtaforums.com/applications/core/interface/ckeditor/ckeditor/';
-	
-		var ipsSettings = {
-			
-			
-			cookie_path: "/",
-			
-			cookie_prefix: "ips4_",
-			
-			
-			cookie_ssl: true,
-			
-			upload_imgURL: "",
-			message_imgURL: "",
-			notification_imgURL: "",
-			baseURL: "//gtaforums.com/",
-			jsURL: "//gtaforums.com/applications/core/interface/js/js.php",
-			csrfKey: "8a52deddafa10182bc2c6cb09ed8781a",
-			antiCache: "85e5b9be311657324497",
-			jsAntiCache: "85e5b9be311658453281",
-			disableNotificationSounds: true,
-			useCompiledFiles: true,
-			links_external: true,
-			memberID: 0,
-			lazyLoadEnabled: true,
-			blankImg: "//gtaforums.com/applications/core/interface/js/spacer.png",
-			googleAnalyticsEnabled: true,
-			matomoEnabled: false,
-			viewProfiles: false,
-			mapProvider: 'none',
-			mapApiKey: '',
-			pushPublicKey: "BBusW9Xi2bWlvNLK3_xFqbfiVzGnRV3GHvmOf8fjEC6pahcbrG6clbWsPfRiv0_8zY4CNaWpCnLhLVkxuikbzAM",
-			relativeDates: true
-		};
-		
-		
-		
-		
-			ipsSettings['maxImageDimensions'] = {
-				width: 1000,
-				height: 750
-			};
-		
-		
-	</script>
+var ipsDebug = false;		
+var CKEDITOR_BASEPATH = '//gtaforums.com/applications/core/interface/ckeditor/ckeditor/';
+var ipsSettings = {
+	cookie_path: "/",
+	cookie_prefix: "ips4_",
+	cookie_ssl: true,
+	upload_imgURL: "",
+	message_imgURL: "",
+	notification_imgURL: "",
+	baseURL: "//gtaforums.com/",
+	jsURL: "//gtaforums.com/applications/core/interface/js/js.php",
+	csrfKey: "8a52deddafa10182bc2c6cb09ed8781a",
+	antiCache: "85e5b9be311657324497",
+	jsAntiCache: "85e5b9be311658453281",
+	disableNotificationSounds: true,
+	useCompiledFiles: true,
+	links_external: true,
+	memberID: 0,
+	lazyLoadEnabled: true,
+	blankImg: "//gtaforums.com/applications/core/interface/js/spacer.png",
+	googleAnalyticsEnabled: true,
+	matomoEnabled: false,
+	viewProfiles: false,
+	mapProvider: 'none',
+	mapApiKey: '',
+	pushPublicKey: "BBusW9Xi2bWlvNLK3_xFqbfiVzGnRV3GHvmOf8fjEC6pahcbrG6clbWsPfRiv0_8zY4CNaWpCnLhLVkxuikbzAM",
+	relativeDates: true
+};
+ipsSettings['maxImageDimensions'] = {
+	width: 1000,
+	height: 750
+};	
+</script>
 <script type='text/javascript' src='/assets/gtaforums/scripts/root_library.js' data-ips></script>
 <script type='text/javascript' src='/assets/gtaforums/scripts/root_js_lang_1.js' data-ips></script>
 <script type='text/javascript' src='/assets/gtaforums/scripts/root_framework.js' data-ips></script>
@@ -56,16 +42,23 @@
 <script type='text/javascript' src='/assets/gtaforums/scripts/front_front_forum.js' data-ips></script>
 <script type='text/javascript' src='/assets/gtaforums/scripts/root_map.js' data-ips></script>
 <script type='text/javascript'>
-			ips.setSetting( 'date_format', jQuery.parseJSON('"mm\/dd\/yy"') );
-			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
-			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
-			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
-			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
-			ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
-			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
-			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
-			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1648508803') );
-			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
-			ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
-			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
-	</script>
+	ips.setSetting( 'date_format', jQuery.parseJSON('"mm\/dd\/yy"') );
+	ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+	ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"black"') );
+	ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+	ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+	ips.setSetting( 'emoji_style', jQuery.parseJSON('"twemoji"') );
+	ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+	ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+	ips.setSetting( 'emoji_cache', jQuery.parseJSON('1648508803') );
+	ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+	ips.setSetting( 'cloud2', jQuery.parseJSON('false') );
+	ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$('[href=#]').on('click', function (e) {
+		e.preventDefault()
+	})
+})
+</script>

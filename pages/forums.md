@@ -1,4 +1,4 @@
 ---
-layout: forums
+layout: smf/forums
 permalink: /forums
 ---
