@@ -117,8 +117,7 @@
 </div>
 </header>
 </div>
-{% capture exp %}board.child_level==1 and board.parent_board=='{{page.board}}'{% endcapture %}
-{% assign childboards = site.boards | where_exp: "board", exp | sort: "board_order" %}
+{% assign childboards = site.boards | where: "child_level", 1 | where: "parent_board", page.board | sort: "board_order" %}
 {% if childboards.size > 0 %}
   <div class='ipsList_reset cForumList ipsBox ipsSpacer_bottom ipsResponsive_pull' data-controller='core.global.core.table, forums.front.forum.forumList' data-baseURL=''>
     <h2 class='ipsType_sectionTitle ipsType_reset'>Subforums</h2>
