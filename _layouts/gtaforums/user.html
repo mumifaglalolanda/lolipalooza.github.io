@@ -131,9 +131,9 @@
 {% assign additional_group = site.data.groups | where: "id", page.additional_groups | first %}
 {% endunless %}
 
-{% capture exp %}group.min_posts>= 0 and group.min_posts<={{posts.size}}{% endcapture %}
 {% assign groups = site.data.groups | sort: "min_posts" %}
-{% assign post_group = groups | where_exp: "group", exp | last %}
+{% capture exp %}group.min_posts<={{posts.size}}{% endcapture %}
+{% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
 
 <div id='ipsLayout_mainArea'>
 
