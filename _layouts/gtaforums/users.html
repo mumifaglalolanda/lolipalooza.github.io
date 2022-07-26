@@ -207,9 +207,9 @@
 
 {% assign messages = site.messages | where: "user", user.nickname %}
 
-{% capture exp %}group.min_posts>= 0 and group.min_posts<={{messages.size}}{% endcapture %}
 {% assign groups = site.data.groups | sort: "min_posts" %}
-{% assign post_group = groups | where_exp: "group", exp | last %}
+{% capture exp %}group.min_posts<={{messages.size}}{% endcapture %}
+{% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
 <li class='ipsGrid_span4 ipsPhotoPanel ipsPhotoPanel_small ipsClearfix cOnlineUser '>
 <a href="{{page.template}}{{user.url}}" rel="nofollow" data-ipsHover data-ipsHover-width="370" data-ipsHover-target="{{page.template}}{{user.url}}?do=hovercard" class="ipsUserPhoto ipsUserPhoto_mini" title="Go to {{user.nickname}}'s profile">
 <img src='{{user_avatar}}' alt='{{user.nickname}}' loading="lazy">
