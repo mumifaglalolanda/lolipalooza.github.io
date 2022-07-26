@@ -84,7 +84,15 @@ collections:
   threads_lp:
     output: true
   users_lp:
-    output: true  
+    output: true
+
+  # Forosdz template
+  boards_dz:
+    output: true
+  threads_dz:
+    output: true
+  users_dz:
+    output: true
 
 # Crear carpetas mirror en windows: > mklink /j \MyFolder \Users\User1\Documents
 # https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
@@ -163,3 +171,29 @@ defaults:
       layout: lolipalooza/user
       template: "/lp"
       permalink: /lp/users/:title/
+
+
+  # Forosdz template
+  -
+    scope:
+      path: "_boards_dz"
+    values:
+      layout: forosdz/board
+      template: "/dz"
+      permalink: /dz/boards/:title/
+
+  -
+    scope:
+      path: "_threads_dz"
+    values:
+      layout: forosdz/thread
+      template: "/dz"
+      permalink: /dz/threads/:title/
+
+  -
+    scope:
+      path: "_users_dz"
+    values:
+      layout: forosdz/user
+      template: "/dz"
+      permalink: /dz/users/:title/
