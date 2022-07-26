@@ -75,7 +75,7 @@ collections:
   users_gtaf:
     output: true
 
-# Crear carpetas mirror en windows: > mklink /d \MyFolder \Users\User1\Documents
+# Crear carpetas mirror en windows: > mklink /j \MyFolder \Users\User1\Documents
 # https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
 defaults:
   -
