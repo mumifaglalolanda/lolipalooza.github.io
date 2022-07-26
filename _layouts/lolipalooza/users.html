@@ -136,6 +136,19 @@ proboards.plugin._plugins["user_rpg_profile"].images = {"circle":"//storage.prob
 proboards.plugin._plugins["eton_quick_reply_bbbutton"].images = {"bold":"http://images.proboards.com/v5/bbcode/bold.png","createEmail":"http://images.proboards.com/v5/bbcode/email.png","removeFormat":"http://images.proboards.com/v5/bbcode/remove-format.png","embed":"http://images.proboards.com/v5/bbcode/embed.png","quote":"http://images.proboards.com/v5/bbcode/quote.png","subscript":"http://images.proboards.com/v5/bbcode/subscript.png","fontSize":"http://storage.proboards.com/1958664/i/yDOXXr2xKb4gE5J5j8mK.png","fontName":"http://storage.proboards.com/1958664/i/riOW3ZAp4wyjp4jqgPIy.png","insertUnorderedList":"http://images.proboards.com/v5/bbcode/list.png","underline":"http://images.proboards.com/v5/bbcode/underline.png","strikethrough":"http://images.proboards.com/v5/bbcode/strikethrough.png","justifyFull":"http://images.proboards.com/v5/bbcode/justify-full.png","insertHorizontalRule":"http://images.proboards.com/v5/bbcode/horizontal-rule.png","createLink":"http://images.proboards.com/v5/bbcode/link.png","foreColor":"http://images.proboards.com/v5/bbcode/color.png","justifyLeft":"http://images.proboards.com/v5/bbcode/justify-left.png","superscript":"http://images.proboards.com/v5/bbcode/superscript.png","insertCode":"http://images.proboards.com/v5/bbcode/code.png","insertVideo":"http://images.proboards.com/v5/bbcode/movie.png","justifyRight":"http://images.proboards.com/v5/bbcode/justify-right.png","insertImage":"http://images.proboards.com/v5/bbcode/image.png","justifyCenter":"http://images.proboards.com/v5/bbcode/justify-center.png","insertSmiley":"http://images.proboards.com/v5/bbcode/smiley.png","insertUserLink":"http://images.proboards.com/v5/bbcode/membersearch.png","italic":"http://images.proboards.com/v5/bbcode/italic.png","insertTable":"http://images.proboards.com/v5/bbcode/table.png"};
 proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2],["post_rpg_user",4]);proboards.plugin.keys.init_permissions(["post_rpg_user", {"114":[1,1]}],["pixeldepth_trophies", {"2":[1,1],"1":[1,1]}]);proboards.plugin.keys.init_values(["pixeldepth_trophies", 1, {"t":{"27":1506797054359,"21":1506781163529,"25":1506777060614,"6":1573223287412,"31":1506797054359,"5":1573098772828,"13":1506795191344,"4":1506777060614,"15":1573162279514,"2":1506777060614,"1":1506777060614,"3":1506777060614,"28":1573217285187,"14":1506781163529,"26":1506781163529},"d":{"tt":1380,"mf":1,"tr":84,"tp":7}}],["pixeldepth_trophies", 2, {"d":{},"t":{"1":1506791766783}}]);</script>
 
+        <style type="text/css">
+            .avatar {
+              height: 65px;
+            }
+            .avatar img {
+              max-width: 65px;
+              border-radius: 5px;
+            }
+            .members .rank {
+              width: auto;
+            }
+        </style>
+
 	</head>
 	<body>
         <!-- Google Tag Manager (noscript) -->
@@ -162,17 +175,10 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
 			
             <ul class="select_menu_list views ui-menu ui-selectMenu hide lm-views-3BvBMzskaVlNAqb36HQD">
                 <li class="viewStaff"><a><span class="icon"></span>View Staff</a></li>
-                <li class="viewFollowing"><a><span class="icon"></span>View Following</a></li>
-                <li class="viewFollowers"><a><span class="icon"></span>View Followers</a></li>
-                <li class="viewFriends"><a><span class="icon"></span>View Friends</a></li>
-                <li class="viewOnlineNow"><a><span class="icon"></span>View Online Now</a></li>
-                <li class="viewOnlineToday"><a><span class="icon"></span>View Online Today</a></li>
-                <li class="viewBirthdays"><a><span class="icon"></span>View Today's Birthdays</a></li>
                 <li class="viewBoard"><a><span class="icon"></span>View By Board</a></li>
                 <li class="viewAll"><a><span class="icon"></span>View All</a></li>
             </ul>
 			<ul class="select_menu_list ui-menu ui-selectMenu hide selections lm-selection-3BvBMzskaVlNAqb36HQD"><li class="All"><a><span class="icon pbi-checkbox-checked"></span>All</a></li><li class="None"><a><span class="icon pbi-checkbox"></span>None</a></li></ul>
-			<ul class="select_menu_list ui-menu ui-selectMenu hide actions lm-actions-3BvBMzskaVlNAqb36HQD" data-status="Actions"><li class="follow"><a><span class="icon"></span>Follow</a></li><li class="unfollow"><a><span class="icon"></span>Unfollow</a></li><li class="send_message"><a><span class="icon pbi-message-unread"></span>Send Message</a></li><li class="remove_from_group"><a><span class="icon"></span>Remove from Group</a></li><li class="modFunctions ui-menu-has-sub-menu"><a><span class="icon pbi-modbadge"></span>Moderate</a><ul><li class="ban_user"><a><span class="icon"></span>Ban Member</a></li><li class="delete_thread"><a><span class="icon"></span>Delete Member</a></li></ul></li><li class="default-menu-option"><a>Please make a selection first</a></li></ul>
 		</div>
 		<ul class="ui-pagination lm-pagination-3BvBMzskaVlNAqb36HQD"><li class="prev state-disabled"><a>&laquo; Prev</a></li><li class="state-selected"><a>1</a></li><li class="next state-disabled"><a>Next &raquo;</a></li></ul>
 	</div>
@@ -181,37 +187,61 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
 			<thead>
 				<tr class="head">
 					<th class="checkbox">&nbsp;</th>
-					<th class="name sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-name">Name</th>
-					<th class="username sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-username">Username</th>
+                    <th class="avatar sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-avatar">Avatar</th>
+                    <th class="name sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-name">Name</th>
+                    <th class="gender sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-gender">Gender</th>
+                    <th class="country last sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-country">Country</th>
 					<th class="rank sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-order">Group / Rank</th>
 					<th class="posts sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-posts">Posts</th>
 					<th class="date-registered sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-registered_on">Date Registered</th>
-					<th class="last-online last sortable sortable-3BvBMzskaVlNAqb36HQD sortable-type-last_online">Last Online</th>
 				</tr>
 			</thead>
 			<tbody class="list-content lm-content-3BvBMzskaVlNAqb36HQD">
-				
-	<tr id="member-1" class="member item first clickable" data-ip="181.208.181.126">
+{% assign users = site.users %}
+{% for user in users %}
+    {% if user.avatar %}
+        {% if user.avatar contains "http" %}
+        {% assign user_avatar = user.avatar %}
+        {% else %}
+        {% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
+        {% endif %}
+    {% else %}
+        {% assign user_avatar = "" %}
+    {% endif %}
+
+    {% unless user.country_flag == "" or user.country_flag == 0 %}
+    {% assign user_country = site.data.country-flags.flags | where: "icon", user.country_flag | first %}
+    {% endunless %}
+
+    {% assign messages = site.messages | where: "user", user.nickname %}
+
+    {% assign groups = site.data.groups | sort: "min_posts" %}
+    {% capture exp %}group.min_posts<={{messages.size}}{% endcapture %}
+    {% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
+
+	<tr id="member-{{user.id_member}}" class="member item first clickable">
 		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
-		<td class="name target"><a title="@admin" data-id="1" class="o-user-link js-user-link user-link user-1 group-1" href="/user/1">Mumifag Lalolanda</a></td>
-		<td class="username">admin</td>
-		<td class="rank">Administrator</td>
-		<td class="posts">111</td>
-		<td class="date-registered"><abbr class="o-timestamp time" data-timestamp="1506716961000" title="Sept 29, 2017 16:29:21 GMT -4">Sept 29, 2017 16:29:21 GMT -4</abbr></td>
-		<td class="last-online last">Member is Online</td>
+        <td class="avatar"><a title="@{{user.nickname | downcase}}" data-id="{{user.id_member}}" class="o-user-link js-user-link user-link user-{{user.id_member}} group-1" href="{{page.template}}{{user.url}}"><img src="{{user_avatar}}"></a></td>
+        <td class="name target"><a title="@{{user.nickname | downcase}}" data-id="{{user.id_member}}" class="o-user-link js-user-link user-link user-{{user.id_member}} group-1" href="{{page.template}}{{user.url}}"> {{user.nickname}}</a></td>
+        <td class="gender">
+        {% unless user.gender == 0 %}
+            {% if user.gender == 2 %}
+                <img class="gender" src="/assets/smf/curve/img/Female.gif" alt="Femenino">
+            {% else %}
+                <img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino">
+            {% endif %}
+        {% endunless %}
+        </td>
+        <td class="country last">
+        {% unless user.country_flag == "" or user.country_flag == 0 %}
+            <img src="/assets/smf/curve/img/flags/{{user.country_flag}}.png" alt="{{user.country_flag}}" title="{{user_country.country}}"> {{user_country.country}}
+        {% endunless %}
+        </td>
+		<td class="rank">{{post_group.name}}</td>
+		<td class="posts">{{messages.size}}</td>
+		<td class="date-registered"><abbr class="o-timestamp time" data-timestamp="1506716961000" title="{{page.date_registered | date: "%B %d, %Y %I:%M:%S %p"}}">{{user.date_registered | date: "%B %d, %Y %I:%M:%S %p"}}</abbr></td>
 	</tr>
-
-	<tr id="member-2" class="member item last clickable" data-ip="181.208.49.90">
-		<td class="checkbox clickable"><input type="checkbox" class="list-item-checkbox" /></td>
-		<td class="name target"><a href="/user/2" data-id="2" class="o-user-link js-user-link user-link user-2 group-0" title="@shelitos">Shelitos</a></td>
-		<td class="username">shelitos</td>
-		<td class="rank">Void</td>
-		<td class="posts">1</td>
-		<td class="date-registered"><abbr class="o-timestamp time" title="Sept 30, 2017 13:02:21 GMT -4" data-timestamp="1506790941000">Sept 30, 2017 13:02:21 GMT -4</abbr></td>
-		<td class="last-online last"><abbr title="Sept 30, 2017 14:09:15 GMT -4" data-timestamp="1506794955000" class="o-timestamp time">Sept 30, 2017 14:09:15 GMT -4</abbr></td>
-	</tr>
-
-
+{% endfor %}
 			</tbody>
 		</table>
 	</div>

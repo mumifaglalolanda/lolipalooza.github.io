@@ -228,16 +228,20 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
 	
 	<span class="custom-title user-{{user.id_member}}">{{user.personal_text}}</span><br />
 	<br />
-		<div class="avatar"><div class="avatar-wrapper avatar_size_default avatar-{{user.id}}" title="{{user.nickname}}"><img src="{{user_avatar}}" alt="Mumifag Lalolanda Avatar" /></div></div><br />
+		<div class="avatar"><div class="avatar-wrapper avatar_size_default avatar-{{user.id}}" title="{{user.nickname}}"><img src="{{user_avatar}}" alt="{{user.nickname}}'s Avatar" /></div></div><br />
 
         {% unless usertitle == "" %}
-		<span class="personal-text user-1">{{user.usertitle}}</span><br />
+		<span class="personal-text user-{{user.id_member}}">{{user.usertitle}}</span><br />
         {% endunless %}
 	
 	
 		<div class="info">
 			Posts: {{user_messages.size}}
 			
+                {% unless user.birthdate == "0001-01-01" %}
+                <br /><span class="custom-field-waifuhusbando">Edad: {{yearsSince}}</span>
+                {% endunless %}
+            
                 {% unless user.alineacion == "" %}
 				<br /><span class="custom-field-faccin">Facción: {{user.alineacion}}</span>
                 {% endunless %}
@@ -255,6 +259,10 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
                     País: <img src="/assets/smf/curve/img/flags/{{user.country_flag}}.png" alt="{{user.country_flag}}" title="{{user_country.country}}">
                 </span>
                 {% endunless %}
+                 
+                {% unless user.location == "" %}
+                <br /><span class="custom-field-waifuhusbando">Ubicación: {{user.location}}</span>
+                {% endunless %}
 			
 			<!--<br /><span class="italic">Member is Online</span>-->
 		</div><br />
@@ -265,7 +273,7 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
 						<article>
 							<div class="content-head ui-helper-clearfix">
 								<div class="info">
-									<a href="{{page.url}}" class="js-thread__link thread-link thread-{{page.id}} board-{{board.id}}">page.title</a>
+									<a href="{{page.url}}" class="js-thread__link thread-link thread-{{page.id}} board-{{board.id}}">{{message.subject}}</a>
 									<span class="date"><abbr data-timestamp="1506724087000" title="{{ message.date | date: "%B %d, %Y %I:%M:%S %p" }}" class="o-timestamp time">{{ message.date | date: "%B %d, %Y %I:%M:%S %p" }}</abbr></span>
 									
 									<span class="likes">&nbsp;</span>

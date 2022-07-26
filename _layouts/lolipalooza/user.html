@@ -33,7 +33,7 @@
 <meta name="robots" content="noindex">
 <meta property="og:url" content="{{page.url}}">
 <meta property="og:title" content="{{page.nickname}} | {{site.data.forums.title2}}">
-<meta property="og:description" content="Visit our forum at: lolipalooza.boards.net">
+<meta property="og:description" content="{{site.data.forums.subtitle2}}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@proboards">
@@ -151,186 +151,201 @@ proboards.plugin.keys.init(["wormo_threadtitlestyle",3],["pixeldepth_trophies",2
 
 			{% include lolipalooza/body-scripts.html %}
 
+    {% if page.avatar %}
+        {% if page.avatar contains "http" %}
+        {% assign user_avatar = page.avatar %}
+        {% else %}
+        {% capture user_avatar %}/assets/smf/attachments/{{page.avatar}}{% endcapture %}
+        {% endif %}
+    {% else %}
+        {% assign user_avatar = "/assets/smf/noavatar.gif" %}
+    {% endif %}
+
+    {% assign posts = site.messages | where: "user", page.nickname %}
+
+    {% unless page.country_flag == "" or page.country_flag == 0 %}
+    {% assign user_country = site.data.country-flags.flags | where: "icon", page.country_flag | first %}
+    {% endunless %}
+
+    {% comment %}Calculando edad del usuario a partir de su fecha de nacimiento{% endcomment %}
+    {% unless page.birthdate == "0001-01-01" %}
+    {%   assign currentdate = site.time | date: '%s'      %}
+    {%   assign birthdate = page.birthdate | date: '%s'  %}
+    {%   assign secondsSince = currentdate | minus: birthdate     %}
+    {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+    {%   assign daysSince = hoursSince | divided_by: 24  %}
+    {%   assign yearsSince = daysSince | divided_by: 365  %}
+    {% endunless %}
+
+    {% unless page.additional_groups == "" %}
+    {% assign additional_group = site.data.groups | where: "id", page.additional_groups | first %}
+    {% endunless %}
+
+    {% assign groups = site.data.groups | sort: "min_posts" %}
+    {% capture exp %}group.min_posts<={{posts.size}}{% endcapture %}
+    {% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
+
 			<div id="content" role="main">
 				
 				<div class="container show-user">
 	<div class="title-bar">
-		<h1>View Profile - Mumifag Lalolanda (admin)</h1>
+		<h1>View Profile - {{page.nickname}}</h1>
 	</div>
 	<div class="content cap-bottom">
 		<div class="ui-tabMenu">
 			<ul class="ui-helper-clearfix">
-				<li class="ui-active"><a href="/user/1">Summary</a></li><li><a href="/user/1/activity">Activity</a></li><li><a href="/user/1/following">Following</a></li><li><a href="/user/1/friends">Friends</a></li><li><a href="/user/1/groups">Groups</a></li><li><a href="/user/1/notifications">Notifications</a></li><li><a href="/user/1/gift">Gift</a></li>
+				<li class="ui-active"><a href="{{page.url}}">Summary</a></li><li><a href="{{page.url}}/activity">Activity</a></li>
 			</ul>
 		</div>
 		<div class="pad-all-double clear">
 			<div class="float-left">
-				<div class="float-left pad-right"><div class="avatar-wrapper avatar_size_medium avatar-1" title="Mumifag Lalolanda"><img src="//storage.proboards.com/6831421/avatar/otRuetvtoBZCyxSuwmzx.jpg" alt="Mumifag Lalolanda Avatar" /></div></div>
+				<div class="float-left pad-right"><div class="avatar-wrapper avatar_size_medium avatar-{{page.id_member}}" title="{{page.nickname}}"><img src="{{user_avatar}}" alt="{{page.nickname}}'s Avatar" /></div></div>
 				<div class="name_and_group float-right">
-					<span class="big_username" style="color: inherit;">Mumifag Lalolanda</span><br />
+					<span class="big_username" style="color: inherit;">{{page.nickname}}</span><br />
 					
-						Administrator<br /><img alt="*" src="//storage.proboards.com/forum/images/stars/star_red.png" /><img alt="*" src="//storage.proboards.com/forum/images/stars/star_red.png" /><img alt="*" src="//storage.proboards.com/forum/images/stars/star_red.png" /><img alt="*" src="//storage.proboards.com/forum/images/stars/star_red.png" /><img alt="*" src="//storage.proboards.com/forum/images/stars/star_red.png" />
-					
+                        {% if false %}
+                            Administrator<br />
+                            {% for i in (1..5) %}<img src="//storage.proboards.com/forum/images/stars/star_red.png" alt="*" />{% endfor %}
+                        {% else %}
+                            <img src="/assets/smf/curve/img/{{post_group.banner}}" title="{{post_group.name}}" alt="{{post_group.name}}">
+                        {% endif %}
+
 				</div>
 			</div>
 			<div class="float-right controls">
-				<ul class="options_menu user-menu hide"><li class="warn_user"><a><span class="icon"></span>Warn Member</a></li><li class="disable"><a><span class="icon"></span>Disable Account</a></li><li class="searchIP actionable ui-menu-has-sub-menu" data-ip="181.208.181.126"><a><span class="icon"></span>IP 181.208.181.126</a><ul><li class="ipSearchThreads"><a><span class="icon"></span>Threads</a></li><li class="ipSearchPosts"><a><span class="icon"></span>Posts</a></li><li class="ipSearchMembers"><a><span class="icon"></span>Members</a></li><li class="ipSearchLogs"><a><span class="icon"></span>Security Logs</a></li></ul></li><li class="give_gift"><a href="/user/1/gift"><span class="icon"></span>Give Member Gift</a></li></ul><div id="options-container" class="button"></div>
-				<a href="/conversation/new/1" class="button">Send Message</a>
-				<a class="button" href="/user/1/avatar">Edit Profile</a>
-				
-				
 				<div class="float-right clear pad-top">
-					Username: <span class="note pad-right">admin</span>
-					
-						Member is Online
-					
+					Username: <span class="note pad-right">{{page.nickname | downcase}}</span>
+					<br /><em>Member is Offline</em>
 				</div>
 			</div>
 		</div>
 		<div class="pad-all-double ui-helper-clearfix clear">
-			<form id="form_nIeve0fJ" class="form_user_status js-form-user-status" role="form" action="/status/update" method="post">
-<input type="hidden" id="form_nIeve0fJ_csrf_token_input" name="csrf_token" value="aTRg6YDZ" />
-<input type="hidden" id="form_nIeve0fJ_no_result_input" name="no_result" value="1" />
-<input type="hidden" id="form_nIeve0fJ_ga_client_id_input" name="ga_client_id" /><noscript><ul class="noscript-form-error"></ul></noscript>
 	<table>
 		<tr>
 			<td id="center-column">
-				
-					<div class="content-box center-col">
-						<table>
-							<tr>
-								<td class="status-input">
-									<input type="text" id="form_nIeve0fJ_update_input" name="update" maxlength="100" placeholder="Enter your message here..." />
-								</td>
-								<td class="status-submit">
-									<input id="form_nIeve0fJ_submit_button" name="submit" value="Update Status" type="submit" class="no-disable" />
-								</td>
-							</tr>
-						</table>
-					</div>
-				
-				
 				
 				<div class="content-box center-col">
 					<table>
 						<tr>
 							<td class="headings">Latest Status:</td>
-							<td><span class="personal-text user-1">The Personal is Political</span></td>
+							<td><span class="personal-text user-{{page.id_member}}">{{page.personal_text}}</span></td>
 						</tr>
 						
-							<tr>
-								<td class="headings">Custom Title:</td>
-								<td><span class="custom-title user-1">Being meguca is suffering</span></td>
-							</tr>
+                        {% unless page.usertitle == "" %}
+						<tr>
+							<td class="headings">Custom Title:</td>
+							<td><span class="custom-title user-{{page.id_member}}">{{page.usertitle}}</span></td>
+						</tr>
+                        {% endunless %}
+                        
+                        <tr>
+                            <td class="headings">Karma:</td>
+                            <td>+{{page.karma_bad}} / -{{page.karma_good}}</td>
+                        </tr>
 						
+                        {% unless page.website_url == "" or page.website_url == nil %}
+						<tr>
+							<td class="headings">Website:</td>
+							<td>
+                              {% unless page.website_title == "" %}
+                                <a href="{{page.website_url}}">{{page.website_title}}</a>
+                              {% else %}
+                                <a href="{{page.website_url}}">{{page.website_url}}</a>
+                              {% endunless %}
+                            </td>
+						</tr>
+                        {% endunless %}
 						
-							<tr>
-								<td class="headings">Email:</td>
-								<td>mumifag_lalolanda@hotmail.com</td>
-							</tr>
-						
-						
-						
-						
-						
-						
-							<tr>
-								<td class="headings">Location:</td>
-								<td>Detrás de tí</td>
-							</tr>
+                        {% unless page.location == "" %}
+                        <tr>
+                            <td class="headings">Location:</td>
+                            <td>{{page.location}}</td>
+                        </tr>
+                        {% endunless %}
 						
 						<tr>
 							<td class="headings">Posts:</td>
-							<td>111</td>
+							<td>{{posts.size}}</td>
 						</tr>
 						<tr>
 							<td class="headings">Date Registered:</td>
-							<td><abbr data-timestamp="1506716961000" title="Sept 29, 2017 16:29:21 GMT -4" class="o-timestamp time">Sept 29, 2017 16:29:21 GMT -4</abbr></td>
+							<td><abbr data-timestamp="1506716961000" title="{{page.date_registered | date: "%B %d, %Y %I:%M:%S %p"}}" class="o-timestamp time">{{page.date_registered | date: "%B %d, %Y %I:%M:%S %p"}}</abbr></td>
 						</tr>
 						
-							<tr class="custom-field-faccin">
-								<td class="headings">
-									Facción:
-								</td>
-								<td>
-									Elemental
-								</td>
-							</tr>
-						
-							<tr class="custom-field-waifuhusbando">
-								<td class="headings">
-									Waifu / Husbando:
-								</td>
-								<td>
-									Tomoe Mami
-								</td>
-							</tr>
+						<tr class="custom-field-faccin">
+							<td class="headings">Facción:</td>
+							<td>
+								<img src="/assets/smf/curve/img/alineacion/{{page.alineacion}}.gif" alt="{{page.alineacion}}" title="{{page.alineacion}}"> {{page.alineacion}}
+							</td>
+						</tr>
+                        
+                        {% unless page.birthdate == "0001-01-01" %}
+                        <tr>
+                            <td class="headings">Edad:</td>
+                            <td>{{yearsSince}}</td>
+                        </tr>
+                        {% endunless %}
+                        
+                        {% unless page.country_flag == "" or page.country_flag == 0 %}
+                        <tr>
+                            <td class="headings">País:</td>
+                            <td><img src="/assets/smf/curve/img/flags/{{page.country_flag}}.png" alt="{{page.country_flag}}" title="{{user_country.country}}"> {{user_country.country}}</td>
+                        </tr>
+                        {% endunless %}
+
+                        {% unless page.gender == 0 %}
+                        <tr>
+                            <td class="headings">Sexo:</td>
+                            <td>
+                            {% if page.gender == 2 %}
+                                <img class="gender" src="/assets/smf/curve/img/Female.gif" alt="Femenino">
+                                Femenino
+                            {% else %}
+                                <img class="gender" src="/assets/smf/curve/img/Male.gif" alt="Masculino">
+                                Masculino
+                            {% endif %}
+                            </td>
+                        </tr>
+                        {% endunless %}
+
+                        <tr>
+                            <td class="headings">Dinero:</td>
+                            <td>☯ {{page.money}} soles peruanos</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="headings">Dinero en banco:</td>
+                            <td>☯ {{page.moneyBank}} soles peruanos</td>
+                        </tr>
 						
 					</table>
 				</div>
 				
-					<div class="content-box center-col">
-						
-							<div class="social networks">
-								<h4>Social Networks</h4>
-								
-									<a href="http://www.facebook.com/mumifag.lalolanda" rel="nofollow" target="_blank">Facebook</a><br />
-								
-									<a target="_blank" rel="nofollow" href="http://twitter.com/lolnada_gimenez">Twitter</a><br />
-								
-									<a href="http://www.youtube.com/channel/UCJ3pHysxYaf-deQGOC_Lr6w?view_as=subscriber" target="_blank" rel="nofollow">YouTube</a><br />
-								
-							</div>
-						
-						
+				<div class="content-box center-col">
+					<div class="social networks">
+						<h4>Social Networks</h4>
+							<a href="" rel="nofollow" target="_blank">Facebook</a><br />
+							<a target="_blank" rel="nofollow" href="">Twitter</a><br />
+							<a href="" target="_blank" rel="nofollow">YouTube</a><br />
 					</div>
+				</div>
 				
 				<div class="content-box center-col">
 					<a href="/user/1/recent">View this member's recent posts.</a><br />
 					<a href="/user/1/recent_threads">View this member's recent threads.</a>
 				</div>
 				
+                {% unless page.signature == "" %}
 					<div class="content-box center-col">
 						Signature <hr />
-						<div align="center"><i>"If you stand for nothing, you will fall for everything"</i></div>
+						{{page.signature}}
 					</div>
+                {% endunless %}
 				
 			</td>
-			<td id="right-column">
-				
-					<div id="following" class="content-box right-col">
-						<h4><a href="/members?user=1&amp;view=following">Following (<span class="total-following-num">1</span>)</a></h4>
-						
-							<div class="mini-user">
-								<div class="mini-avatar">
-									<div class="avatar-wrapper avatar_size_medium avatar-2" title="Shelitos"><img src="//storage.proboards.com/6831421/avatar/JgxRMm0YBJDkFklKxaYH.jpg" alt="Shelitos Avatar" /></div>
-								</div>
-								<span class="name">
-									<a class="o-user-link js-user-link user-link user-2 group-0" data-id="2" href="/user/2" title="@shelitos">Shelitos</a>
-								</span>
-							</div>
-						
-					</div>
-				
-				
-					<div id="followers" class="content-box right-col">
-						<h4><a href="/members?user=1&amp;view=followers">Followers (<span class="total-followers-num">1</span>)</a></h4>
-						
-							<div class="mini-user">
-								<div class="mini-avatar">
-									<div class="avatar-wrapper avatar_size_medium avatar-2" title="Shelitos"><img src="//storage.proboards.com/6831421/avatar/JgxRMm0YBJDkFklKxaYH.jpg" alt="Shelitos Avatar" /></div>
-								</div>
-								<span class="name">
-									<a class="o-user-link js-user-link user-link user-2 group-0" data-id="2" href="/user/2" title="@shelitos">Shelitos</a>
-								</span>
-							</div>
-						
-					</div>
-				
-			</td>
+			<td id="right-column"></td>
 		</tr>
 	</table>
-</form>
 		<script>
 		$(document).ready(function() {
 			
