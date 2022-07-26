@@ -1,0 +1,49 @@
+<script type="text/javascript">
+<!--   
+var route=proboards.data("route").name,sd=document.getElementsByTagName("span"),id=proboards.data("user").id;    
+
+function updatestatus(){window.location="/user/"+id+"/";}
+    
+if(/(post|thread|recent_posts|conversation)/i.test(route)){
+for(x=sd.length-1;x>0;x--){
+var su=sd[x].className.split("user-")[1];     
+if(/personal-text/i.test(sd[x].className) && id==su){
+sd[x].style.cssText="cursor:pointer;";    
+sd[x].title="click here to update your status.";    
+sd[x].innerHTML='<a href="javascript:updatestatus();">'+sd[x].innerHTML+'</a>';        
+}}}
+// -->
+</script>
+
+<!--
+<script>
+  //var _comscore = _comscore || [];
+  //_comscore.push({ c1: "2", c2: "6036030" });
+  //(function() {
+  //  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+  //  s.src = "https://sb.scorecardresearch.com/cs/6036030/beacon.js";
+  //  el.parentNode.insertBefore(s, el);
+  //})();
+</script>
+
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=6036030&amp;cv=3.6.0&amp;cj=1">
+</noscript>
+
+<div id="pbn-bar-wrapper" style="position: fixed; right: 0px; bottom: 0px; height: 22px; *height: 23px; display: block; text-align: right; z-index: 20;"><img src="/assets/lolipalooza/images/button_collapse.png" alt=">" style="display: inline-block; float: right;" /><div id="pbn-bar" style="display: inline-block; float: right; height: 23px; width: 68px; background-color: #F0F0F0; border-width: 1px 0px 0px 1px; border-style: solid; border-color: #B0B0B0;"><a href="https://login.proboards.com/select/login/6831421" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;" id="switch-account"><img src="/assets/lolipalooza/images/switch_user.png" alt="Switch Account" title="Switch Account" /></a><a href="https://www.proboards.com/account/forum" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;"><img src="/assets/lolipalooza/images/switch_forum.png" alt="Switch Forum" title="Switch Forum" /></a><a href="https://www.proboards.com/account/settings" style="cursor: pointer; margin-top: 3px; display: inline-block; float: left; padding: 0px 3px;"><img src="/assets/lolipalooza/images/icon-options.png" alt="Account Settings" title="Account Settings" /></a></div></div>
+
+<div style="display: flex; max-width: 970px; max-width: 100%; margin: 0 auto 10px; text-align: center; justify-content: space-around;flex-wrap: wrap"><div id="Boards_net_Bottom">
+    <script type="text/javascript">
+        googletag.cmd.push(function() {
+            deployads.push(function() { deployads.gpt.display("Boards_net_Bottom"); });
+        });
+    </script>
+</div>
+</div>
+-->
+<footer class="c-footer" role="contentinfo">
+    <div id="hosted_by_link" style="display:block!important;">
+        Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a><br>
+        Template by <a href="https://www.proboards.com" target="_blank">ProBoards</a>
+    </div>
+</footer>

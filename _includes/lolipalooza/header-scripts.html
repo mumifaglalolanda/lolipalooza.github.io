@@ -1,0 +1,90 @@
+<script>window._BidFilter={site_id:1,pbjsKey:'pbjsSortable',checkAudio:true};</script>
+<script src="https://cdn.bidfilter.com/bidfilter.js" async></script>
+<script async src="https://tags-cdn.deployads.com/a/vs.boards.net.js"></script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script src="https://ads.proboards.com/cmp.js"></script>
+<script>
+  window.deployads = window.deployads || [];
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+
+    //Size Mapping
+    var topMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([728, 200], [[728, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([0, 0], [[300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150]])
+    .build();
+    var bottomMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[970, 90], [728, 90], [300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .addSize([728, 200], [[728, 90], [300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .addSize([0, 0], [[300, 250], [336, 280], [320, 50], [300, 50], [250, 250], [234, 60], [200, 200], [180, 150], [125, 125]])
+    .build();
+    var adhesionMapping = googletag.sizeMapping()
+    .addSize([970, 200], [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([728, 200], [[728, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]])
+    .addSize([0, 0], [[320, 50], [300, 50], [234, 60]])
+    .build();
+    //Size Mapping end
+
+    googletag.defineSlot('/1030735/Boards_net_Top', [[250, 250], [336, 280], [300, 250], [728, 90], [320, 50], [468, 60], [970, 90], [234, 60], [180, 150], [200, 200], [480, 75], [300, 50]], 'Boards_net_Top').defineSizeMapping(topMapping).addService(googletag.pubads());
+    googletag.defineSlot('/1030735/Boards_net_Bottom', [[125, 125], [250, 250], [320, 50], [970, 90], [200, 200], [300, 250], [728, 90], [234, 60], [336, 280], [180, 150], [300, 50]], 'Boards_net_Bottom').defineSizeMapping(bottomMapping).addService(googletag.pubads());
+    googletag.defineSlot('/1030735/Boards_net_Adhesion', [[728, 90], [970, 90], [468, 60], [480, 75], [320, 50], [300, 50], [234, 60]], 'Boards_net_Adhesion').defineSizeMapping(adhesionMapping).addService(googletag.pubads());
+    
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().setTargeting("sitename", "boards.net");
+    googletag.pubads().setTargeting("proboardsforumid", "6831421");
+    googletag.pubads().setTargeting("forum_id", "0");
+    googletag.pubads().setTargeting("vertical", "");
+    googletag.pubads().setCentering(true);
+    deployads.push(function () { deployads.gpt.enableServices() });
+
+    if("1" === "0") {
+        function onDomLoadAdhesion() {
+            let footeradcontainer = document.createElement('div');
+            footeradcontainer.classList.add('desktop-adhesion-ad__footer-ad-container');
+    
+            let desktopadhesion = document.createElement('div');
+            desktopadhesion.id = 'desktop-adhesion-ad__container';
+            desktopadhesion.classList.add('desktop-adhesion-ad__footer-ad');
+    
+            let innercontainer = document.createElement('div');
+            innercontainer.id = 'desktop-adhesion-ad__inner-container';
+    
+            let closebutton = document.createElement('button');
+            closebutton.classList.add('overlay-titleCloser');
+            closebutton.id = 'desktop-adhesion-ad__close-button';
+            closebutton.onclick = function() {
+                var vsAdhesion;
+                googletag.pubads().getSlots().forEach(function(i){
+                    if(i.getSlotElementId() === "Boards_net_Adhesion") {
+                        vsAdhesion = i;
+                    }
+                });
+                googletag.destroySlots([vsAdhesion]);
+            }
+    
+            let proboardsadhesion = document.createElement('div');
+            proboardsadhesion.id = 'Boards_net_Adhesion';
+    
+            footeradcontainer.appendChild(desktopadhesion);
+            desktopadhesion.appendChild(innercontainer);
+            innercontainer.appendChild(closebutton);
+            innercontainer.appendChild(proboardsadhesion);
+            document.body.appendChild(footeradcontainer);
+        
+            googletag.cmd.push(function() {
+                if (window.deployads) {
+                deployads.push(function() {
+                    deployads.gpt.display('Boards_net_Adhesion');
+                });
+                } else {
+                    googletag.display('Boards_net_Adhesion'); 
+                }
+            });
+        }
+        document.readyState === "loading"
+        ? document.addEventListener('DOMContentLoaded', onDomLoadAdhesion)
+        : onDomLoadAdhesion();
+    }
+  });
+</script>

@@ -1,0 +1,31 @@
+                <div id="banner-container" role="banner">
+                    <h2 id="banner">
+                        <a id="logo" href="/">{{site.data.forums.title2}}</a>
+                    </h2>
+                </div>
+                <a id="navigation-skip" href="#content" accesskey="s" class="aria-hidden" title="Skip Navigation">Skip Navigation</a>
+                <a href="#" accesskey="d" title="Open Menu" onclick="proboards.hotkeys.activate(Keys.d); return false;"></a>
+                <div id="navigation-menu" class="ui-helper-clearfix">
+                    <ul role="navigation">
+                        <li>
+                            <a href="/" {% if page.layout == 'lolipalooza/forums' %}class="state-active"{% endif %}>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/help">
+                                Help
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/search">
+                                Search
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/members" {% if page.layout == 'lolipalooza/users' %}class="state-active"{% endif %}>
+                                Members
+                            </a>
+                        </li>
+                    </ul>
+                </div>
