@@ -114,10 +114,9 @@
 
 					{% assign messages = site.messages | where: "user", user.nickname %}
 
-					{% capture exp %}group.min_posts>= 0 and group.min_posts<={{messages.size}}{% endcapture %}
 					{% assign groups = site.data.groups | sort: "min_posts" %}
-					{% assign post_group = groups | where_exp: "group", exp | last %}
-					
+					{% capture exp %}group.min_posts<={{messages.size}}{% endcapture %}
+					{% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
 					<tr class="{{ user.nickname | slice: 0 | upcase }}">
 						<td class="windowbg2">
 							<a href="{{user.url}}" title="Desconectado"><img src="/assets/smf/curve/img/useroff.gif" alt="Desconectado" align="middle" /></a>
