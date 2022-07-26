@@ -227,9 +227,9 @@
 
   {% assign user_messages = site.messages | where: "user", user.nickname %}
 
-  {% capture exp %}group.min_posts>= 0 and group.min_posts<={{user_messages.size}}{% endcapture %}
   {% assign groups = site.data.groups | sort: "min_posts" %}
-  {% assign post_group = groups | where_exp: "group", exp | last %}
+  {% capture exp %}group.min_posts<={{user_messages.size}}{% endcapture %}
+  {% assign post_group = groups | where_exp: "group", "group.min_posts>= 0" | where_exp: "group", exp | last %}
   <!-- -->
   <a id='comment-{{message.id_msg}}'></a>
   <article id='elComment_{{message.id_msg}}' class='cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    '>
