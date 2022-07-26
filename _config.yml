@@ -56,7 +56,11 @@ plugins:
 
 collections:
 
-  # Forums collections
+  css_posts:
+    title: css_posts
+    output: true
+
+  # SMF forums template
   messages:
     output: false
   boards:
@@ -65,9 +69,8 @@ collections:
     output: true
   users:
     output: true
-  css_posts:
-    title: css_posts
-    output: true
+
+  # GTAForums template
   boards_gtaf:
     output: true
   threads_gtaf:
@@ -75,9 +78,19 @@ collections:
   users_gtaf:
     output: true
 
+  # Lolipalooza boards.net template
+  boards_lp:
+    output: true
+  threads_lp:
+    output: true
+  users_lp:
+    output: true  
+
 # Crear carpetas mirror en windows: > mklink /j \MyFolder \Users\User1\Documents
 # https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
 defaults:
+
+  # SMF forums template
   -
     scope:
       path: "_boards"
@@ -99,6 +112,9 @@ defaults:
       layout: smf/user
       template: ""
       permalink: /:collection/:title/
+
+
+  # GTAForums template
   -
     scope:
       path: "_boards_gtaf"
@@ -122,3 +138,28 @@ defaults:
       layout: gtaforums/user
       template: "/gtaforums"
       permalink: /gtaforums/users/:title/
+
+  # Lolipalooza boards.net template
+  -
+    scope:
+      path: "_boards_lp"
+    values:
+      layout: lolipalooza/board
+      template: "/lp"
+      permalink: /lp/boards/:title/
+
+  -
+    scope:
+      path: "_threads_lp"
+    values:
+      layout: lolipalooza/thread
+      template: "/lp"
+      permalink: /lp/threads/:title/
+
+  -
+    scope:
+      path: "_users_lp"
+    values:
+      layout: lolipalooza/user
+      template: "/lp"
+      permalink: /lp/users/:title/
