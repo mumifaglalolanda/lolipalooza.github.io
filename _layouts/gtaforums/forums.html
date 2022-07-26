@@ -115,8 +115,8 @@ Forums
                 <p>{{board.description}}</p>
               </div>
             </div>
-            {% assign boards1 = site.boards | where_exp: "board", board.board %}
-            {% assign boards2 = site.boards | where_exp: "parent_board", board.board %}
+            {% assign boards1 = site.boards | where: "board", board.board %}
+            {% assign boards2 = site.boards | where: "parent_board", board.board %}
             {% assign boards = boards1 | concat: boards2 %}
 
             {% assign threads = "" | split: "," %}
