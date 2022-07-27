@@ -1,0 +1,19 @@
+<select id="template-selector">
+	<option>Elegir plantilla...</option>
+	<option value="">SMF</option>
+	<option value="/gtaforums">GTAForums</option>
+	<option value="/lp">Lolipalooza</option>
+	<option value="/dz">Forosdz</option>
+	<option value="/ng">Newgrounds</option>
+</select>
+
+<script type="text/javascript">
+document.addEventListener('input', function (event) {
+
+	// Only run for #template-selector select
+	if (event.target.id !== 'template-selector') return;
+
+	var selector = event.target.value;
+	window.location = selector + location.pathname.replace(/(\/gtaforums|\/lp|\/dz|\/ng)/,"")
+}, false);
+</script>
