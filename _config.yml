@@ -94,6 +94,14 @@ collections:
   users_dz:
     output: true
 
+  # Newgrounds forum template
+  boards_ng:
+    output: true
+  threads_ng:
+    output: true
+  users_ng:
+    output: true
+
 # Crear carpetas mirror en windows: > mklink /j \MyFolder \Users\User1\Documents
 # https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
 defaults:
@@ -172,7 +180,6 @@ defaults:
       template: "/lp"
       permalink: /lp/users/:title/
 
-
   # Forosdz template
   -
     scope:
@@ -197,3 +204,28 @@ defaults:
       layout: forosdz/user
       template: "/dz"
       permalink: /dz/users/:title/
+
+  # Newgrounds forum template
+  -
+    scope:
+      path: "_boards_ng"
+    values:
+      layout: newgrounds/board
+      template: "/dz"
+      permalink: /dz/boards/:title/
+
+  -
+    scope:
+      path: "_threads_ng"
+    values:
+      layout: newgrounds/thread
+      template: "/ng"
+      permalink: /ng/threads/:title/
+
+  -
+    scope:
+      path: "_users_ng"
+    values:
+      layout: newgrounds/user
+      template: "/ng"
+      permalink: /ng/users/:title/
