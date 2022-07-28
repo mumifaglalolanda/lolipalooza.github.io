@@ -211,8 +211,8 @@ defaults:
       path: "_boards_ng"
     values:
       layout: newgrounds/board
-      template: "/dz"
-      permalink: /dz/boards/:title/
+      template: "/ng"
+      permalink: /ng/boards/:title/
 
   -
     scope:

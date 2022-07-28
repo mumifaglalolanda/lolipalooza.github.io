@@ -26,5 +26,5 @@ total_time_logged_in: 0
 country_flag: ps
 money: 0
 moneyBank: 0
-about: ""
+about: ''
 ---

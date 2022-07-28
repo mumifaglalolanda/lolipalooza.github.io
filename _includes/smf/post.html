@@ -1,6 +1,6 @@
 {% assign messages = site.messages | where: "thread", page.title %}
 {% assign par = true %}
-{% assign i = 0 %}
+{% assign count = 0 %}
 {% for message in messages %}
 	{% assign user = site.users | where: "nickname", message.user | first %}
 	{% if user.avatar %}
@@ -102,10 +102,10 @@ Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt=
 									<div class="smalltext">
 										«
 										<strong>
-											{% if i == 0 %}
+											{% if count == 0 %}
 												Original Poster :
 											{% else %}
-												Respuesta #{{i}} :
+												Respuesta #{{count}} :
 											{% endif %}
 										</strong>
 										{{message.date | date: "%a, %b %d, %Y %H:%M:%S"}}
@@ -140,5 +140,5 @@ Mensaje Privado (Desconectado)"><img src="/assets/smf/curve/img/im_off.gif" alt=
 				</div>
 				<hr class="post_separator">
 		</div>
-	{% assign i = i | plus:1 %}
+	{% assign count = count | plus:1 %}
 {% endfor %}

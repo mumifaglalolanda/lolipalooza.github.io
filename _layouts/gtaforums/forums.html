@@ -102,6 +102,7 @@ Forums
               <h4 class="ipsDataItem_title ipsType_break">
                 <a href="{{page.template}}{{board.url}}">{{board.board}}</a>
               </h4>
+              {% assign childboards = site.boards | where: "child_level", 1 | where: "parent_board", board.board | sort: "board_order" %}
               {% if childboards.size > 0 %}
               <ul class="ipsDataItem_subList ipsList_inline">
                 {% for subboard in childboards %}
