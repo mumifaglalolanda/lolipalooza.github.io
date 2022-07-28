@@ -137,8 +137,9 @@
             <p>{{board.description}}</p>
           </div>
         </div>
-        {% capture str %}board.board=='{{board.board}}' or board.parent_board=='{{board.board}}'{% endcapture %}
-        {% assign boards = site.boards | where_exp: "board", str %}
+        {% assign boards1 = site.boards | where: "board", board.board %}
+        {% assign boards2 = site.boards | where: "parent_board", board.board %}
+        {% assign boards = boards1 | concat: boards2 %}
 
         {% assign threads = "" | split: "," %}
         {% for board in boards %}
