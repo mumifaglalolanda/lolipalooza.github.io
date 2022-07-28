@@ -1,0 +1,17 @@
+---
+thread: "La cuchina de Asdf~"
+id_msg: 909634
+date: "2020-01-20 19:30:55"
+
+subject: "Re:La cuchina de Asdf~"
+user: "liv482sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="2529702773919177" class="fb_bbc_thumb">			<a href="https://www.facebook.com/riquisimo.net/videos/2529702773919177/">				<img class="" src="https://graph.facebook.com/2529702773919177/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/riquisimo.net/videos/2529702773919177/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2529702773919177").addEventListener("click", get_fb_embed);		</script>

@@ -1,0 +1,17 @@
+---
+thread: "lolnada"
+id_msg: 4259
+date: "2012-09-08 01:11:50"
+
+subject: "Re:lolnada"
+user: "ubh562sorgesoureDug"
+
+modified_time: 2013-07-05 18:46:58
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<strong><span style="color: blue;" class="bbc_color"><span style="font-size: 24pt;" class="bbc_size"><span style="font-family: verdana;" class="bbc_font"><span class="bbc_u">BlueTooth</span></span></span></span></strong><br /><br />Proyecto osciloscopio en android. Tarjeta de adquisición de datos con módulo bluetooth y dsPIC transfiriendo los datos vía bluetooth hacia el telf con android.<br /><a href="http://hackaday.com/2010/10/14/android-oscilloscope/" class="bbc_link new_win" target="_blank">http://hackaday.com/2010/10/14/android-oscilloscope/</a><br /><br />Compatibilidad de un módulo específico de BlueTooth con distintos dispositivos. Info útil sobre BlueTooth en general.<br /><a href="http://www.todopic.com.ar/foros/index.php?PHPSESSID=nvav4f1d0ccncg01sp7lfe8315&amp;topic=30791.20" class="bbc_link new_win" target="_blank">http://www.todopic.com.ar/foros/index.php?PHPSESSID=nvav4f1d0ccncg01sp7lfe8315&amp;topic=30791.20</a><br /><br />BlueTerm (app para Android)<br />Emulador de terminal (terminal emulator vt100) para conectarse a cualquier dispositivo con puerto serie mediante un adaptador bluetooth-serie.<br />Necesitas un adaptador bluetooth-serie. (es opensource)<br /><a href="https://play.google.com/store/apps/details?id=es.pymasde.blueterm&amp;hl=es" class="bbc_link new_win" target="_blank">https://play.google.com/store/apps/details?id=es.pymasde.blueterm&amp;hl=es</a><br />Registrarse en <a href="http://www.slatedroid.com/topic/29254-blueterm-for-android-403/" class="bbc_link new_win" target="_blank">esta página</a>, ahí está el enlace para bajar BlueTerm.<br /><br />Comunicacion bluetooth-serial entre HC-06 y dispositivo (recomiendan un software para emular el puerto serial en la laptop así como el blueterm para android)<br /><a href="http://tallerarduino.wordpress.com/tag/gp-gc021/" class="bbc_link new_win" target="_blank">http://tallerarduino.wordpress.com/tag/gp-gc021/</a><br /><br />Página donde hablan de BlueTooth<br />Ventajas y desventajas frente a otras tecnologías, seguridad, estandard IEEE 802.15.1 norma que define los protocolos del bluetooth.<br /><a href="http://www.ejemplosde.net/tps/bluetooth.html" class="bbc_link new_win" target="_blank">http://www.ejemplosde.net/tps/bluetooth.html</a><br />Solo como dato curioso, el estandar del Wi-Fi es el IEEE 802.11.<br /><br />BlueTooth Tutorial (english) (hablan del software para PCs bluesoleil):<br /><a href="http://www.sparkfun.com/tutorials/67" class="bbc_link new_win" target="_blank">http://www.sparkfun.com/tutorials/67</a><br /><br />CoD Generator:<br /><a href="http://bluetooth-pentest.narod.ru/software/bluetooth_class_of_device-service_generator.html" class="bbc_link new_win" target="_blank">http://bluetooth-pentest.narod.ru/software/bluetooth_class_of_device-service_generator.html</a><br /><br />Trabajando con RN41-RN42<br /><a href="http://www.microelectronicos.net/?p=1075" class="bbc_link new_win" target="_blank">http://www.microelectronicos.net/?p=1075</a>

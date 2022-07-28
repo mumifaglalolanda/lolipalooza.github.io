@@ -1,0 +1,17 @@
+---
+thread: "La cuchina de Asdf~"
+id_msg: 909820
+date: "2020-02-11 22:36:31"
+
+subject: "Re:La cuchina de Asdf~"
+user: "awd491sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="2797312146974126" class="fb_bbc_thumb">			<a href="https://www.facebook.com/cucinareok/videos/2797312146974126/">				<img class="" src="https://graph.facebook.com/2797312146974126/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/cucinareok/videos/2797312146974126/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2797312146974126").addEventListener("click", get_fb_embed);		</script><br /><br />		<div id="480581529523497" class="fb_bbc_thumb">			<a href="https://www.facebook.com/cucinareok/videos/480581529523497/">				<img class="" src="https://graph.facebook.com/480581529523497/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/cucinareok/videos/480581529523497/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("480581529523497").addEventListener("click", get_fb_embed);		</script>

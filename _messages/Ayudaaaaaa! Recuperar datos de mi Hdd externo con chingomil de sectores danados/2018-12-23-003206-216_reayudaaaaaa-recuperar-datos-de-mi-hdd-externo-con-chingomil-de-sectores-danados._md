@@ -1,0 +1,17 @@
+---
+thread: "Ayudaaaaaa! Recuperar datos de mi Hdd externo con chingomil de sectores da&ntilde;ados"
+id_msg: 908258
+date: "2018-12-23 00:32:06"
+
+subject: "Re:Ayudaaaaaa! Recuperar datos de mi Hdd externo con chingomil de sectores da&ntilde;ados"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+No se donde poner ésto así que lo pongo aquí:<br /><br />Comandos desde cónsola para guardar como texto plano listados completos de archivos y directorios en un Hdd:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">dir /s/b/o:n &gt; f.txt</code><br />Debes dirigirte a la ruta desde la que deseas capturar todos los archivos y directorios para que el comando funcione. El archivo <em><strong>f.txt</strong></em> se guardará en dicha ruta. O puedes personalizar su ruta así:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">dir /s/b/o:n &gt; c:/users/my-user/desktop/f.txt</code>Solo por dar un ejemplo.<br /><br />Con ésto solo capturas el listado de directorios (e ignorar archivos) (¡creo!):<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">dir /s /b /o:n /ad &gt; f.txt</code><br />Referencias:<br /><a href="https://stackoverflow.com/questions/16078421/how-do-i-get-a-list-of-folders-and-sub-folders-without-the-files" class="bbc_link new_win" target="_blank">https://stackoverflow.com/questions/16078421/how-do-i-get-a-list-of-folders-and-sub-folders-without-the-files</a><br /><a href="https://stackoverflow.com/questions/15214486/command-to-list-all-files-in-a-folder-as-well-as-sub-folders-in-windows" class="bbc_link new_win" target="_blank">https://stackoverflow.com/questions/15214486/command-to-list-all-files-in-a-folder-as-well-as-sub-folders-in-windows</a>

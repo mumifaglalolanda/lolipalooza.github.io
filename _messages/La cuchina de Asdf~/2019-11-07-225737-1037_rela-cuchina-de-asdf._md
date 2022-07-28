@@ -1,0 +1,17 @@
+---
+thread: "La cuchina de Asdf~"
+id_msg: 908809
+date: "2019-11-07 22:57:37"
+
+subject: "Re:La cuchina de Asdf~"
+user: "Mekcm955sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="262499897954462" class="fb_bbc_thumb">			<a href="https://www.facebook.com/chefclubtvmexico/videos/262499897954462/">				<img class="" src="https://graph.facebook.com/262499897954462/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/chefclubtvmexico/videos/262499897954462/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("262499897954462").addEventListener("click", get_fb_embed);		</script><br /><br />		<div id="2135051326824016" class="fb_bbc_thumb">			<a href="https://www.facebook.com/chefclubtvmexico/videos/2135051326824016/">				<img class="" src="https://graph.facebook.com/2135051326824016/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/chefclubtvmexico/videos/2135051326824016/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2135051326824016").addEventListener("click", get_fb_embed);		</script><br />

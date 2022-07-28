@@ -1,0 +1,17 @@
+---
+thread: "La cuchina de Asdf~"
+id_msg: 908818
+date: "2019-11-07 22:59:17"
+
+subject: "Re:La cuchina de Asdf~"
+user: "rjj073sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="10157931741322835" class="fb_bbc_thumb">			<a href="https://www.facebook.com/kiwilimon/videos/10157931741322835/">				<img class="" src="https://graph.facebook.com/10157931741322835/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/kiwilimon/videos/10157931741322835/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("10157931741322835").addEventListener("click", get_fb_embed);		</script><br /><br />		<div id="2150686224979798" class="fb_bbc_thumb">			<a href="https://www.facebook.com/chefclubargentina/videos/2150686224979798/">				<img class="" src="https://graph.facebook.com/2150686224979798/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/chefclubargentina/videos/2150686224979798/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2150686224979798").addEventListener("click", get_fb_embed);		</script><br />

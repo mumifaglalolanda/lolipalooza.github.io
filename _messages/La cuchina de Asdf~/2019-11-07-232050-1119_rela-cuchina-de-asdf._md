@@ -1,0 +1,17 @@
+---
+thread: "La cuchina de Asdf~"
+id_msg: 908891
+date: "2019-11-07 23:20:50"
+
+subject: "Re:La cuchina de Asdf~"
+user: "unz461sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="454928288450810" class="fb_bbc_thumb">			<a href="https://www.facebook.com/ChefclubLightFunMX/videos/454928288450810/">				<img class="" src="https://graph.facebook.com/454928288450810/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/ChefclubLightFunMX/videos/454928288450810/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("454928288450810").addEventListener("click", get_fb_embed);		</script><br />		<div id="543192803113281" class="fb_bbc_thumb">			<a href="https://www.facebook.com/gustoso.tv/videos/543192803113281/">				<img class="" src="https://graph.facebook.com/543192803113281/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/gustoso.tv/videos/543192803113281/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("543192803113281").addEventListener("click", get_fb_embed);		</script><br />
