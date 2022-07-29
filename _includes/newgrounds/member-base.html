@@ -1,0 +1,34 @@
+<div class="pod" id="whoisonline">
+		<div class="pod-head">
+			<h2>Member Base</h2>
+		</div>
+		<div class="pod-body forum_legend">
+			<span class="small">
+				<strong class="notation">
+					Registered Users: 
+					(</strong><strong class="formatted-number">{{site.users.size}}</strong><strong class="notation">) 
+					&nbsp; 
+					In Forums: 
+					(</strong><strong class="formatted-number">0</strong><strong class="notation">)
+				</strong>
+			</span>
+			<hr class="low-profile"/>
+			<span class="small">
+				{% for user in site.users %}
+					<span class="padded-right "><a href="{{page.template}}{{user.url}}">{{user.nickname}}</a></span>
+				{% endfor %}
+			</span>
+		</div>
+		{% assign staff = site.users | where_exp: "user", "user.additional_group <= 3" %}
+		{% if staff.size > 0 %}
+		<div class="pod-body forum_legend">
+			<strong class="notation small">Staff &amp; Moderators</strong>
+<hr class="low-profile"/>
+<span class="mod">
+			{% for user in staff %}
+				<span class="padded-right"><a href="{{page.template}}{{user.url}}">{{user.nickname}}</a></span>
+			{% endfor %}
+</span>
+		</div>
+		{% endif %}
+	</div>

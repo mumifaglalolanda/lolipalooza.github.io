@@ -1,0 +1,122 @@
+<script>
+	ngutils.footer.init(["footer-feature-btn-games","footer-feature-btn-movies","footer-feature-btn-audio","footer-feature-btn-art","footer-feature-btn-channels","footer-feature-btn-users"]);
+</script>
+
+			
+			<div style="clear:both"></div>
+			<div class="footer-main ">
+	<div class="footer-background">
+					<div class="footer-wall-artist">
+				<a class="flexbox inline align-center no-visited" href="https://gris9.newgrounds.com">
+					<div class="flex-1 text-align-right"><strong class="highlight">Wall Art by</strong></div>
+										<div class="padded"><svg viewBox="0 0 248 248" alt="GRIS9's icon" class="svgmask sz-45 s0 cX" >
+	<image href="https://uimg.ngfiles.com/icons/7197/7197223_large.png?f1583018307"/>
+	<use href="#path_s0"/>
+</svg></div>
+					<div class="flex-1"><strong>GRIS9</strong></div>
+				</a>
+			</div>
+				<div class="footer-navigation no-visited">
+			<div class="footer-navigation-column">
+				<div class="footer-navigation-cell">
+					<h4>Main Sections</h4>
+					<ul>
+												<li><a href="https://www.newgrounds.com/games">Games</a></li>
+						<li><a href="https://www.newgrounds.com/movies">Movies</a></li>
+						<li><a href="https://www.newgrounds.com/art">Art</a></li>
+						<li><a href="https://www.newgrounds.com/audio">Audio</a></li>
+						<li><a href="https://www.newgrounds.com/social" rel="nofollow">Your Feed</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-navigation-column">
+				<div class="footer-navigation-cell">
+					<h4>Extra, Extra!</h4>
+					<ul>
+						<li><a href="https://www.newgrounds.com/collection/series">Series</a></li>
+						<li><a href="https://www.newgrounds.com/collection">Collections</a></li>
+						<li><a href="https://www.newgrounds.com/games/under_judgment">Game Judging</a></li>
+						<li><a href="https://www.newgrounds.com/movies/under_judgment">Movie Judging</a></li>
+						<li><a href="https://www.newgrounds.com/portal">Classic Portal</a></li>
+						<li><a href="https://www.newgrounds.com/downloads">Downloads</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/creator-resources">Creator Resources</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-navigation-column">
+				<div class="footer-navigation-cell">
+					<h4>Community</h4>
+					<ul>
+						<li><a href="https://www.newgrounds.com/bbs">Forums</a></li>
+						<li><a href="https://www.newgrounds.com/chat">Chat</a></li>
+						<li><a href="https://www.newgrounds.com/calendar">Calendar</a></li>
+						<li><a href="https://www.newgrounds.com/news/artists">Artist News</a></li>
+						<li><a href="https://www.newgrounds.com/rankings">Rankings</a></li>
+						<li><a href="https://www.newgrounds.com/wiki">NG Wiki</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-navigation-column">
+				<div class="footer-navigation-cell">
+					<h4>NG Related</h4>
+					<ul>
+						<li><a href="https://www.newgrounds.com/wiki/about-newgrounds">About</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/faq">Help / FAQ</a></li>
+						<li><a href="https://www.newgrounds.com/support">Support</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/about-newgrounds/staff">The Staff</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/about-newgrounds/history">History</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/help-information/rss">RSS</a></li>
+						<li><a href="https://www.newgrounds.com/wiki/help-information/dmca-notice">Copyright</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-decoration"></div>
+	</div>
+	<div class="footer-bottom">
+		<div class="footer-copyright no-visited">
+			Powered by <a href="https://jekyllrb.com/">Jekyll</a> | Template by <a href="https://www.newgrounds.com">Newgrounds</a><br>
+			&copy;Copyright 1995-2022 Newgrounds, Inc. All rights reserved.
+			<a href="https://www.newgrounds.com/wiki/help-information/privacy-policy">Privacy Policy</a>
+			|
+			<a href="https://www.newgrounds.com/wiki/help-information/terms-of-use">Terms of Use</a>
+		</div>
+	</div>
+</div>
+			<div class="footer-social-icons">
+				<div class="flexbox inline align-center">
+					<div class="flex-1">
+						<a class="icon-facebook" href="https://www.facebook.com/newgrounds"></a>
+					</div>
+					<div class="flex-1">
+						<a class="icon-twitter" href="https://twitter.com/newgrounds"></a>
+					</div>
+										<div class="flex-1">
+						<a class="icon-instagram" href="https://www.instagram.com/newgroundsgram/"></a>
+					</div>
+					<div class="flex-1">
+						<a class="icon-steam" href="http://store.steampowered.com/curator/6856292/"></a>
+					</div>
+									</div>
+			</div>
+
+			<script type="text/javascript">
+				var ranges = [
+				  { divider: 1e18 , suffix: 'E' },
+				  { divider: 1e15 , suffix: 'P' },
+				  { divider: 1e12 , suffix: 'T' },
+				  { divider: 1e9 , suffix: 'G' },
+				  { divider: 1e6 , suffix: 'M' },
+				  { divider: 1e3 , suffix: 'K' }
+				];
+
+				function formatNumber(n) {
+				  for (var i = 0; i < ranges.length; i++)
+				    if (n >= ranges[i].divider)
+				      return (Math.round(n / ranges[i].divider * 10) / 10).toString() + ranges[i].suffix;
+				  return n.toString();
+				}
+				document.querySelectorAll('.formatted-number').forEach(el => {
+					el.innerText = formatNumber(el.innerText)
+				})
+			</script>

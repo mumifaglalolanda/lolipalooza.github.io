@@ -1,0 +1,253 @@
+<script src="//js.ngfiles.com/ngutils.min.js?1649258108"></script>
+
+<script>
+
+			/*
+	if (window.location.hash) {
+		setTimeout(function() {
+			window.scrollTo(0,0);
+		}, 1);
+	}
+	*/
+
+			function ngdebug(text) {}
+	
+	(function($) { $(function() {
+		var header = $('#notification-bar');
+		var body = $('body, html');
+		var hash;
+
+				function scrollTo(name, nohash) {
+
+			if (typeof(name) == 'undefined') return;
+
+			var element, ypos;
+			var shim = 0;//header.height();
+			if (name) {
+				element = $("a[name='"+name+"']").get(0); // named anchor
+				if (!element) {
+					element = $("#"+name); // element by id
+				}
+				if (element.length > 0) {
+					ypos = element.offset().top - shim - 8; // 8px pad
+					if (isNaN(ypos) || ypos < 0) ypos = 0;
+				} else {
+					return;
+				}
+			} else {
+				ypos = 0; // if no name/id, scroll to top
+			}
+
+			body.animate({
+				scrollTop: ypos
+			}, 325, function() {
+				if (nohash !== true) {
+					hash = "#"+name;
+					if (window.location.hash !== hash) window.location.hash = hash;
+				}
+			});
+		}
+
+		$("a[href^='#']").click(function() {
+			var name = $(this).attr('href').substring(1);
+			var nohash = $(this).attr('data-nohash') === 'true' ? true:false;
+			scrollTo(name, nohash);
+			return false;
+		});
+
+		/*
+		if (window.location.hash && window.location.hash.length > 1) {
+			scrollTo(window.location.hash.substring(1), true);
+		}
+		*/
+	})})(jQuery);
+</script>
+
+	
+
+	
+	<style id="customization-style-1">
+			div.topbar-menu a.logo {
+			background-image: url(//img.ngfiles.com/newgroundstitlemobile-mono.png?cached=1658401129);
+		}
+		div.notification-bar .logo a {
+			background-image: url(//img.ngfiles.com/newgroundstitle-mono.png?cached=1658401129);
+		}
+
+		a:not(:hover),
+		a.no-href:not(:hover),
+		a.faux:not(:hover),
+		a.button, a.button:visited,
+		button:not(:hover),
+		*.no-visited a:not(:hover),
+		a.no-visited:not(:hover),
+		*.no-visited a:not(:hover):visited,
+		a.no-visited:not(:hover):visited,
+		*.pod-head span a:not(:hover),
+		*.pod-head span a:not(:hover):visited,
+		*.pod-head button:not(:hover),
+		*.pod-head select,
+		*.pod-head h2 > a:not(:hover) > span,
+		ul.sidenav-menu a:not(:hover),
+		ul.sidenav-menu a:not(:hover):visited,
+		ul.sidenav-menu button.sidenav-toggle:not(:hover),
+		ul.ui-autocomplete li[class^='ui-autocomplete-content'] > a:not(.ui-state-active),
+		a.user-header-button.current > div > strong,
+		div.choose-auto-icon label:not(:hover),
+		blockquote.general::before,
+		blockquote.general::after,
+		#audio-listen-duration,
+		.searchform-options .searchform-sort a, 
+		.searchform-options .searchform-sort strong
+		{
+			color: #f6a3cf;
+		}
+
+		div.ui-datepicker tbody td.ui-datepicker-today a
+		{
+			border: 1px solid #f6a3cf !important;
+		}
+
+		a.faux:not(:hover):visited,
+		a:not(:hover):visited,
+		a:not(:hover):not(.no-href):not([href]),
+		ul.ui-autocomplete li[class^='ui-autocomplete-content'] > a:visited:not(.ui-state-active),
+		div.expand-condensed
+		{
+			color: #e66fb3;
+		}
+
+		*.pod-head span a:not([class^='ngicon']):hover,
+		*.pod-head span a:not([class^='ngicon']).active,
+		*.pod-head span a:not([class^='icon']):not([class^='ngicon']):not([href]),
+		*.pod-head button:hover,
+		*.custom-link-color:not(.no-replace),
+		ul.sidenav-breadcrumbs li.expands:hover,
+		ul.sidenav-menu li.expands:hover,
+		ul.sidenav-submenu li.expands:hover,
+		.media-player-progression .ui-slider-range,
+		.media-player-volume-control .ui-slider-range,
+		a.user-header-button.current div.button-highlight,
+		input[type='checkbox'].switch:checked + label::before,
+		.ql-toolbar button.ql-divider::before
+		{
+			background-color: #f6a3cf!important;
+		}
+
+		div.user-header-actions a
+		{
+			background-color: #f6a3cf;
+						background: -moz-linear-gradient(top, #f6a3cf 0%, #e66fb3 100%);
+			background: -webkit-linear-gradient(top, #f6a3cf 0%, #e66fb3 100%);
+			background: linear-gradient(to bottom, #f6a3cf 0%, #e66fb3 100%);
+		}
+
+		.pod-head .select-wrapper::after
+		{
+			border-color: #f6a3cf transparent transparent;
+		}
+		body:not(.editing) a.user-header-icon
+		{
+			border-color: #f6a3cf;
+		}
+
+		div.topbar-menu a.logo,
+		div.notification-bar .logo a,
+		*.pod-head h2:not([class^=rated])::before,
+		*.pod-head a[class^='icon']::before,
+		*.pod-head button[class^='icon']::before,
+		h6.wall-artist a,
+		*[class^='ngicon-']:not(.noshift)::before,
+		div.user-buttons div.user-button div > a,
+		span[class^="flag-"] label::before,
+		div[class^="flag-"] label::before,
+		li[class^="flag-"] label::before,
+		*.star-score, *.star-variable,
+		div.vote-input div.star-bar,
+		#waveform > div,
+		#waveform > wave,
+		div.ui-datepicker .ui-datepicker-header a.ui-datepicker-prev:not(.ui-state-hover),
+		div.ui-datepicker .ui-datepicker-header a.ui-datepicker-next:not(.ui-state-hover)
+		{
+			filter: hue-rotate(-65deg) saturate(58%) brightness(114%);
+		}
+
+
+		button .ql-stroke, .ql-picker-label .ql-stroke {
+			stroke: #f6a3cf !important;
+		}
+		button .ql-fill {
+			fill: #f6a3cf !important;
+		}
+
+		.ql-editor a {
+			color: #f6a3cf!important;
+		}
+	</style><style id="customization-style-4">
+	
+		div.pod-head,
+		header.pod-head,
+		div.pod-fakehead,
+		header.pod-fakehead,
+		div.podtop,
+		*.header-gradient:not(.no-replace)
+		{
+						background: #2b293a;
+			background: -moz-linear-gradient(top, #433f5a 0%, #2f2c3f 48%, #282635 53%, #1d1828 100%);
+			background: -webkit-linear-gradient(top, #433f5a 0%, #2f2c3f 48%, #282635 53%, #1d1828 100%);
+			background: linear-gradient(to bottom, #433f5a 0%, #2f2c3f 48%, #282635 53%, #1d1828 100%);
+		}
+
+		div.ui-datepicker .ui-datepicker-header {
+						background: #2b293a;
+			background: -moz-linear-gradient(top, #2f2c3f 0%, #1d1828 100%);
+			background: -webkit-linear-gradient(top, #2f2c3f 0%, #1d1828 100%);
+			background: linear-gradient(to bottom, #2f2c3f 0%, #1d1828 100%);
+		}
+
+		.ql-toolbar {
+			background-color: #282635!important;
+		}
+
+		
+		div.mobile-menu-background,
+		div.mobile-header-bar,
+		div.notification-bar,
+		div.header-dropdown,
+		#header-user-menu .menu-inner,
+		*.custom-header-color:not(.no-replace)
+		{
+			background-color: #2b293a;
+		}
+
+		div.notification-bar .search button
+		{
+			color: #1d1828;
+		}
+
+		#topsearch_text::-webkit-input-placeholder
+		{
+			color: #1d1828;
+		}
+
+		#topsearch_text::-moz-placeholder
+		{
+			color: #1d1828;
+		}
+
+		#topsearch_text:-moz-placeholder
+		{
+			color: #1d1828;
+		}
+
+		#topsearch_text:-ms-input-placeholder
+		{
+			color: #1d1828;
+		}
+
+	</style>
+
+		
+		
+		
+	<script src="https://js.ngfiles.com/users/customization.js?1658401100"></script>

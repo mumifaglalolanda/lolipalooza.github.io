@@ -1,0 +1,271 @@
+<div class="blackout-hover" id="blackout_hover" style="display:none; overflow:hidden">
+	<div class="blackout-inner">
+		<div class="blackout-bookend"></div>
+		<div class="blackout-bookshelf">
+			<div class="blackout-bookend shimmed"></div>
+			<div class="blackout-center" id="blackout_center"></div>
+			<div class="blackout-bookend shimmed"></div>
+		</div>
+		<div class="blackout-bookend"></div>
+	</div>
+</div>
+<div class="blackout" id="blackout">
+	<div class="blackout-bg" id="blackout-bg"></div>
+</div>
+<div id="_ngHiddenAudioPlayerWrapper" class="ng-audio-player-global">
+		<audio id="global-audio"></audio>
+
+	<div class="ng-apg-centered">
+		<div id="_ngHiddenAudioPlayer" class="ng-apg-bounds">
+
+			
+
+<div class="media-player-playback-controls">
+	<button
+		class="media-player-previous"
+		id="global-audio-player-previous"
+		title="Previous Track"
+		disabled>
+		<i class="fa fa-step-backward" role="presentation"></i>
+	</button>
+
+		
+	<button
+		class="media-player-play"
+		id="global-audio-player-play"
+		title="Play"
+		disabled>
+		<i class="fa fa-play" role="presentation"></i>
+	</button>
+
+		<button
+		class="media-player-pause"
+		id="global-audio-player-pause"
+		title="Pause"
+		disabled>
+		<i class="fa fa-pause" role="presentation"></i>
+	</button>
+
+			<button
+			class="media-player-stop"
+			id="global-audio-player-stop"
+			title="Stop"
+			disabled>
+			<i class="fa fa-stop" role="presentation"></i>
+		</button>
+
+					
+	<button
+		class="media-player-next"
+		id="global-audio-player-next"
+		title="Next Track"
+		disabled>
+		<i class="fa fa-step-forward" role="presentation"></i>
+	</button>
+
+
+	<span class="spacer"></span>
+
+	<button
+		class="media-player-repeat"
+		id="global-audio-player-repeat"
+		title="Repeat All Tracks"
+		disabled>
+		<i class="fa fa-retweet" role="presentation"></i>
+	</button>
+
+
+					
+
+</div>			<div class="media-player-progress">
+	<div
+		class="media-player-current-time"
+		id="global-audio-player-progress">
+		00:00
+	</div>
+
+	<div class="media-player-progression">
+		<div class="position" id="global-audio-player-container"></div>
+	</div>
+
+	<div
+		class="media-player-duration"
+		id="global-audio-player-duration">
+		00:00
+	</div>
+</div>
+							
+<div class="media-player-volume-control" >
+	<button
+		id="global-audio-player-volumeToggle">
+		<i class="fa fa-volume-up"></i>
+	</button>
+
+	<div class="bar off" id="global-audio-player-volume"></div>
+</div>			
+			<div id="_ngHiddenAudioPlayerDetails" class="media-player-display">
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	jQuery(function() {
+		NgAudioPlayer.registerGlobalPlayer('_ngHiddenAudioPlayerWrapper');
+		//ngutils.components.audio.registerGlobalPlayer('_ngHiddenAudioPlayerWrapper');
+	});
+</script>	<div id="notification-shim" class="notification-shim"></div>
+<div class="notification-bar" id="notification-bar">
+	<div class="wrapper">
+		<div class="logo padded-left">
+			<a href="{{page.template}}{{site.data.forums.base_url}}">{{site.data.forums.title2}}</a>
+		</div>
+		<div class="search" role="search">
+				<input type="hidden" name="suitabilities" value="etm">
+									<input type="hidden" name="c" value="3002">
+				
+				<input placeholder="Search Forums..." type="text" name="terms" id="topsearch_text" value="" maxlength="40" aria-label="Search Forums..."><button type="submit" class="topsearch-submit" title="Search"><em class="fa fa-search"></em></button>
+			<script type="text/template" id="search_suggestion_template">
+	<ul class="ui-autocomplete">
+
+				<li class="ui-autocomplete-terms">
+			<em class="suggestion fa fa-search" aria-role="presentation"></em><span class="suggestion" data-html="text">Suggestions...</span>
+		</li>
+
+				<li class="ui-autocomplete-content-6000">
+			<a data-href="url">
+				<div class="icon"><img class="user-icon" data-src="icon"  aria-role="presentation"></div>
+				<div class="title">
+					<span data-html="title">Username</span>
+				</div>
+				<div class="meta">
+					<span class="ngicon-small-user gray" aria-role="presentation"></span>
+				</div>
+			</a>
+		</li>
+
+							<li class="ui-autocomplete-content-1">
+				<a data-href="url">
+					<div class="icon"><img data-src="icon" aria-role="presentation"></div>
+					<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-movie gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-2">
+				<a data-href="url">
+					<div class="icon"><img data-src="icon" aria-role="presentation"></div>
+					<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-game gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-3">
+				<a data-href="url">
+					<div class="icon"><img data-src="icon" aria-role="presentation"></div>
+					<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-audio gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-4">
+				<a data-href="url">
+					<div class="icon"><img data-src="icon" aria-role="presentation"></div>
+					<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-art gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-4500">
+				<a data-href="url">
+					<div class="icon"><img data-src="icon" aria-role="presentation"></div>
+					<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-collection gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+		
+							<li class="ui-autocomplete-content-4001">
+				<a data-href="url">
+					<div class="icon"><img class="user-icon" data-src="icon"/></div>
+					<div class="title">
+						<span data-html="title">Username</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-lit gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-3001">
+				<a data-href="url">
+					<div class="icon"><img class="user-icon" data-src="icon"/></div>
+					<div class="title">
+						<span data-html="title">Username</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-lit gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-3002">
+				<a data-href="url">
+					<div class="icon"><img class="user-icon" data-src="icon"/></div>
+					<div class="title">
+						<span data-html="title">Username</span>
+					</div>
+					<div class="meta">
+						<span class="ngicon-small-lit gray" aria-role="presentation"></span>
+					</div>
+				</a>
+			</li>
+		
+					<li class="ui-autocomplete-content-11002">
+				<a data-href="url">
+										<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+										<input type="hidden" data-hidden="generic_id" name="generic_id" value="">
+					<input type="hidden" data-hidden="type_id" name="type_id" value="11002">
+				</a>
+			</li>
+					<li class="ui-autocomplete-content-11003">
+				<a data-href="url">
+										<div class="title">
+						<span data-html="title">Title</span>
+					</div>
+										<input type="hidden" data-hidden="generic_id" name="generic_id" value="">
+					<input type="hidden" data-hidden="type_id" name="type_id" value="11003">
+				</a>
+			</li>
+		
+				<li class="ui-autocomplete-links">
+			<a data-href="url">
+				<span class="fa fa-search" aria-role="none"></span> <span class="title" data-html="text">Links...</span>
+			</a>
+		</li>
+
+	</ul>
+
+</script>			<script>
+				SearchHelper.init('topsearch_text', '/search/suggest');
+			</script>
+		</div>
+	</div>
+</div>
+
+<script src="https://js.ngfiles.com/global/passport.js?ngcache=1578181381"></script>
