@@ -386,7 +386,7 @@ style=" ">
 		<ul class="block-body">
 						
 {% assign threads = site.threads | sort: "date" | reverse %}
-{% for thread in threads %}
+{% for thread in threads limit:5 %}
 	{% assign user = site.users | where: "nickname", thread.user | first %}
 	{% assign board = site.boards | where: "board", thread.board | first %}
 	{% if user.avatar %}
