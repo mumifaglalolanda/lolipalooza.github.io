@@ -1,6 +1,6 @@
                 <div id="banner-container" role="banner">
                     <h2 id="banner">
-                        <a id="logo" href="/">{{site.data.forums.title2}}</a>
+                        <a id="logo" href="{{page.template}}{{site.data.forums.base_url}}">{{site.data.forums.title2}}</a>
                     </h2>
                 </div>
                 <a id="navigation-skip" href="#content" accesskey="s" class="aria-hidden" title="Skip Navigation">Skip Navigation</a>
@@ -8,22 +8,22 @@
                 <div id="navigation-menu" class="ui-helper-clearfix">
                     <ul role="navigation">
                         <li>
-                            <a href="/" {% if page.layout == 'lolipalooza/forums' %}class="state-active"{% endif %}>
+                            <a href="{{page.template}}{{site.data.forums.base_url}}" {% if page.layout == 'lolipalooza/forums' %}class="state-active"{% endif %}>
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="/help">
+                            <a href="">
                                 Help
                             </a>
                         </li>
                         <li>
-                            <a href="/search">
+                            <a href="">
                                 Search
                             </a>
                         </li>
                         <li>
-                            <a href="/members" {% if page.layout == 'lolipalooza/users' %}class="state-active"{% endif %}>
+                            <a href="{{page.template}}/users" {% if page.layout == 'lolipalooza/users' %}class="state-active"{% endif %}>
                                 Members
                             </a>
                         </li>
