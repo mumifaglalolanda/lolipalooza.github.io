@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908054
+date: "2018-01-22 17:46:19"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 14pt;" class="bbc_size"><strong>Plantilla para el detalle de un artículo</strong></span></div><br />Para crear la plantilla para la página que mostrará un artículo completo, se requiere del archivo <strong>single.php</strong>, el cual puede perfectamente hacer el mismo uso de <em>header.php</em>, <em>footer.php</em> y <em>sidebar.php</em>.<br /><br />Podemos acceder a la información del post del mismo modo como hacíamos desde el index:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">if&nbsp;(&nbsp;</span><span style="color: #0000BB">have_posts</span><span style="color: #007700">()&nbsp;)&nbsp;:&nbsp;while(&nbsp;</span><span style="color: #0000BB">have_posts</span><span style="color: #007700">()&nbsp;)&nbsp;:&nbsp;</span><span style="color: #0000BB">the_post</span><span style="color: #007700">();&nbsp;</span><span style="color: #0000BB">?&gt;</span></span><br /><br />&nbsp; &nbsp; &lt;!-- estructura html del post, acompañada de la información del post --&gt;<br /><br /><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">endwhile;&nbsp;endif;&nbsp;</span><span style="color: #0000BB">?&gt;</span></span></code><br />Noten que en este caso no necesitamos un else para la condición &quot;if ( have_posts() )&quot;, ya que en caso de no haber post, el navegador redirigirá automáticamente al index.<br /><br />Para acceder a los datos de the_post(), puedes verlos en <a href="http://localhost/halabalooza/index.php/topic,3302.msg908052.html#msg908052" class="bbc_link new_win" target="_blank">Obtener las entradas de wordpress en el index</a>, pero además de esos, aquí necesitaremos acceder a un dato adicional:<br /><br /><ul class="bbc_list"><li><span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">the_content()</span></span> : acceder al contenido del post completo.</li></ul>

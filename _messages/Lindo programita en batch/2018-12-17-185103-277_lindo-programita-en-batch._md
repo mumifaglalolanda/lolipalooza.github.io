@@ -1,0 +1,17 @@
+---
+thread: "Lindo programita en batch"
+id_msg: 908256
+date: "2018-12-17 18:51:03"
+
+subject: "Lindo programita en batch"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+<div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">@echo off<br />color 0a<br />mode 1000<br />goto Matrix<br /><br />:Matrix<br />echo %random%%random%%random%%random%%random%%random%%random%%random%%random%%<br />goto Matrix</code>

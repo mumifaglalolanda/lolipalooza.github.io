@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel Pt. III"
+id_msg: 910302
+date: "2020-12-16 02:26:41"
+
+subject: "Notas sobre Laravel Pt. III"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Notas sobre Laravel Pt I y II:<br /><a href="http://smf.halabalooza.orgy/index.php/topic,1995.0.html" class="bbc_link new_win" target="_blank">http://smf.halabalooza.orgy/index.php/topic,1995.0.html</a><br /><a href="http://smf.halabalooza.orgy/index.php/topic,3378.0.html" class="bbc_link new_win" target="_blank">http://smf.halabalooza.orgy/index.php/topic,3378.0.html</a><br /><br />Tópicos varios:<br />DOMPDF y Laravel: <a href="https://styde.net/genera-pdfs-en-laravel-con-el-componente-dompdf/" class="bbc_link new_win" target="_blank">https://styde.net/genera-pdfs-en-laravel-con-el-componente-dompdf/</a><br /><br />Spatie, esa librería perfecta para gestionar attachments e imágenes de manera bastante ágil:<br /><a href="https://spatie.be/docs/laravel-medialibrary/v7/basic-usage/retrieving-media" class="bbc_link new_win" target="_blank">https://spatie.be/docs/laravel-medialibrary/v7/basic-usage/retrieving-media</a><br />Recomiendo encarecidamente profundizar sobre esta librería, buscar tutoriales detallados, etc. Porque lo que se de momento es que esta es la librería ideal para poder darle la funcionalidad a un sitio web de poder gestionar Avatares (puedes subirlo, y la página te muestra un preview de ésta, pero no se salva sino cuando le das save, de otro modo los cambios quedan descartados). Me interesaría saber si por ejemplo, la librería te permite subir la imagen en varios tamaños y asi.<br /><br />Un poco más sobre Spatie, quizás este era el tuto que andaba buscando (?):<br /><a href="https://5balloons.info/image-upload-resize-retrieve-laravel-medialibrary-spatie-package/" class="bbc_link new_win" target="_blank">https://5balloons.info/image-upload-resize-retrieve-laravel-medialibrary-spatie-package/</a>

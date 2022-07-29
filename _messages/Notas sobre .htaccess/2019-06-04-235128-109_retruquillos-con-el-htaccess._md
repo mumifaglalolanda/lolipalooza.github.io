@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre .htaccess"
+id_msg: 908435
+date: "2019-06-04 23:51:28"
+
+subject: "Re:Truquillos con el .htaccess"
+user: "yap320sorgesoureDug"
+
+modified_time: 2019-06-05 02:43:37
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos no'más y así :'v"
+---
+Empujonsito a este hilo porque es hora de aprender <strong>en serio</strong> a manejar el .htaccess<br /><br />Así que les traigo una serie de video-tutoriales del htaccess:<br /><br /><div align="center"><span style="font-size: 28pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong><span style="color: purple;" class="bbc_color"> <img src="/assets/smf/smileys/sunny.gif" alt="&#58;sunny&#58;" title="Sunny" class="smiley" /> Htaccess Tutorial</span></strong></span></span></div><br /><span style="font-size: 14pt;" class="bbc_size"><strong>1. Intro:</strong></span><br /><a href="https://www.youtube.com/watch?v=y9KEgh6yXME" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=y9KEgh6yXME</a><br /><br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>2. Restringiendo el acceso a archivos y carpetas:</strong></span><br /><a href="https://www.youtube.com/watch?v=PWOIu4RsehQ" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=PWOIu4RsehQ</a><br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">Options All -Indexes</code><br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>3. Personalizando paginas de errores:</strong></span><br /><a href="https://www.youtube.com/watch?v=cyfFdFqTWdo" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=cyfFdFqTWdo</a><br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">ErrorDocument 500 /internalerror.html<br />ErrorDocument 401 /authrequired.html<br />ErrorDocument 403 /forbidden.html<br />ErrorDocument 404 /notfound.html</code><br />Nota: me salté el video 4 porque no enseña nada nuevo, solo colocar el <em>.htaccess</em> en el root de localhost para aplicar la configuración globalmente.<br /><br /><br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>5. Protegiendo proyectos con usuario y clave en servidor local:</strong></span><br /><a href="https://www.youtube.com/watch?v=qsx9Le6Dvpk" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=qsx9Le6Dvpk</a><br /><br />Meh, eso no nos interesa mucho.<br /><br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>6. Protegiendo proyectos con usuario y clave en servidor remoto:</strong></span><br /><a href="https://www.youtube.com/watch?v=tnNOQFiebJs" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=tnNOQFiebJs</a><br /><br />Meh, lo mismo que el anterior, pero en remoto y no en local.<br /><br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>7. URL amigables en PHP con dos o mas variables:</strong></span><br /><a href="https://www.youtube.com/watch?v=aa3EdHE4PrA" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=aa3EdHE4PrA</a><br />Ver video porque la weá es más compleja que solo unas pocas lineas de código :&#039;v

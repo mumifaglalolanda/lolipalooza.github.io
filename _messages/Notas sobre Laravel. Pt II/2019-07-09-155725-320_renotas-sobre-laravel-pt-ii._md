@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel. Pt II"
+id_msg: 908466
+date: "2019-07-09 15:57:25"
+
+subject: "Re:Notas sobre Laravel. Pt II"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+(<a href="http://smf.halabalooza.orgy/index.php/topic,3378.msg908462.html#msg908462" class="bbc_link">Volver al índice</a>)<br /><div align="center"><span style="font-size: 18pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong>3. <em>Rutas</em></strong></span></span><br />(<a href="https://styde.net/rutas-con-laravel/" class="bbc_link new_win" target="_blank">https://styde.net/rutas-con-laravel/</a>)</div><br />El archivo para manejar las rutas es routes/web.php<br /><br />Ejemplos de rutas:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">// Default - usa un template de las vistas (resources/views)<br />Route::get(&#039;/&#039;, function () {<br />&nbsp;&nbsp;&nbsp;return view(&#039;welcome&#039;);<br />});<br /><br />// Devuelve un texto simple<br />Route::get(&#039;/&#039;, function () {<br />&nbsp;&nbsp;&nbsp;return &#039;Home&#039;;<br />});<br /><br />// Responde ante la url: your.page.url/usuarios<br />Route::get(&#039;/usuarios&#039;, function () {<br />&nbsp;&nbsp;&nbsp;return &#039;Usuarios&#039;;<br />});<br /><br />// Acepta datos en la url, url limpia y elegante: your.page.url/usuarios/1 en vez de your.page.url/usuarios?id=1<br />Route::get(&#039;/usuarios/{id}&#039;, function ($id) {<br />&nbsp;&nbsp;&nbsp;return &#039;Mostrando detalle del usuario: {$id}&#039;;<br />});<br /></code><br />Forzar a que solo sean aceptados ids numéricos:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">Route::get(&#039;/usuarios/{id}&#039;, function ($id) {<br />&nbsp;&nbsp;&nbsp;return &#039;Mostrando detalle del usuario: {$id}&#039;;<br />})-&gt;where(&#039;id&#039;, &#039;[0-9]+&#039;);<br /></code>Nota: el segundo parámetro del método &#039;where&#039; se corresponde a una expresión regular.<br /><br />Nota2: puede ser necesario crear distinción para valores numéricos despues de /usuarios/ para que puedan ser definidas nuevas rutas con la estructura &#039;/usuarios/otro&#039;, sin que sea confundido con la ruta /usuarios/id. Aunque también podemos evitar el solapamiento si definimos primero la ruta /usuarios/otro antes de /usuarios/id.<br /><br />Definiendo rutas con parámetros opcionales:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">Route::get(&#039;/saludo/{name}/{nickname?}&#039;, function ($name, $nickname = null) {<br />&nbsp;&nbsp;&nbsp;if ($nickname) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &#039;Bienvenido {$name}, tu apodo es {$nickname}&#039;;<br />&nbsp;&nbsp;&nbsp;} else {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &#039;Bienvenido {$name}, no tienes apodo&#039;;<br />&nbsp;&nbsp;&nbsp;}<br />});<br /></code>

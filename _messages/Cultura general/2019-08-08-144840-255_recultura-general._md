@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908596
+date: "2019-08-08 14:48:40"
+
+subject: "Re:Cultura general"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div style="text-align: right;"><span style="font-size: 18pt;" class="bbc_size"><strong>Parámetros de URL para páginas grandes</strong></span></div><br />El otro dia estaba yo navegando en facebook, leyendo sobre política y tal, y cuando quise guardar un enlace, noté una cosa curiosa sobre el mismo. Miren cómo se compone:<br /><br /><a href="https://www.laizquierdadiario.com/Veinte-puntos-cuales-son-las-propuestas-del-Frente-de-Izquierda-y-de-Trabajadores-Unidad?utm_content=buffer98a1b&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer&amp;fbclid=IwAR3qFXtsXMjmyqdysNqffnX7lxWfEp_8IOJfj8HRyCAv08RZquXAPYAFPc8" class="bbc_link new_win" target="_blank">https://www.laizquierdadiario.com/Veinte-puntos-cuales-son-las-propuestas-del-Frente-de-Izquierda-y-de-Trabajadores-Unidad?utm_content=buffer98a1b&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer&amp;fbclid=IwAR3qFXtsXMjmyqdysNqffnX7lxWfEp_8IOJfj8HRyCAv08RZquXAPYAFPc8</a><br /><br />Desmenuzándolo:<br /><br />url-base/extensión ? <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; utm_content=buffer98a1b&nbsp; &nbsp; &amp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; utm_medium=social&nbsp; &nbsp; &amp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; utm_source=facebook.com&nbsp; &nbsp; &amp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; utm_campaign=buffer&nbsp; &nbsp; &amp;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fbclid=IwAR3qFXtsXMjmyqdysNqffnX7lxWfEp_8IOJfj8HRyCAv08RZquXAPYAFPc8<br /><br />Así que la pregunta es: ¿Qué significan esos parámetros <em>utm_content</em>, <em>utm_medium</em>, <em>utm_source</em> y <em>utm_campaign</em>?<br /><br />¿Para qué se usan?<br /><br />Adicionalmente, ¿qué es el <em>fbclid</em>? De este último, sospecho que sirve a las páginas en general para saber cuánto del tráfico que te llega a tu página provino del facebook.<br /><br />¿Pero qué hay de los anteriores parámetros? ¿También sirven para llevar un registro del origen de los visitantes?<br /><br />Investigar un poco sobre eso!<br /><br />mime <img src="/assets/smf/smileys/271186.gif" alt="&#58;smoke&#58;" title="Smoke" class="smiley" />

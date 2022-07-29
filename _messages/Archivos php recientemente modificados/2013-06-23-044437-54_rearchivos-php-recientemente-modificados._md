@@ -1,0 +1,17 @@
+---
+thread: "Archivos php recientemente modificados"
+id_msg: 4874
+date: "2013-06-23 04:44:37"
+
+subject: "Re:Archivos php recientemente modificados"
+user: "t0dragonquesa"
+
+modified_time: 2013-06-23 04:45:25
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<span style="color: red;" class="bbc_color"><span style="font-size: 14pt;" class="bbc_size"><strong><span class="bbc_u">Notas - Observaciones - Cosas que recordar:</span></strong></span></span><br /><br />El mod &quot;User Notepad&quot; se instaló en el archivo <strong>Profile.template.php</strong>, el cual sospecho que es el que construía los perfiles viejos, sin libros de visitas. En cambio, el mod Ultimate Profile los ha reemplazado, y por eso es que no podemos ver el anterior mod instalado. Si se desea hacerlo, hay que copiar el extracto de código del notepad del <strong>profile.template</strong> en el <strong>ultimateprofile.template</strong>. Presiento que quizás haya que hacer otras cosas pero bueh, ya lo investigaré después. Igual no creo que sea la gran wea ese pinchi mod....<br /><br />Asdf.

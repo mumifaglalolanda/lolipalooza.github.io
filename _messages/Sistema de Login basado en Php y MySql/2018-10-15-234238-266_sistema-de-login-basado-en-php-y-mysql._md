@@ -1,0 +1,17 @@
+---
+thread: "Sistema de Login basado en Php y MySql"
+id_msg: 908240
+date: "2018-10-15 23:42:38"
+
+subject: "Sistema de Login basado en Php y MySql"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Sistema básico de registro/login/autenticación:<br /><a href="https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php" class="bbc_link new_win" target="_blank">https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php</a><br /><br />Trabaja las sesiones del modo básico que había visto antes (y que francamente me parece algo inseguro).<br /><br />Lo interesante de este método son algunas funciones relacionadas con el password hash y el chequeo de passwords que utilizan:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;$param_password&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">password_hash</span><span style="color: #007700">(</span><span style="color: #0000BB">$password</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">PASSWORD_DEFAULT</span><span style="color: #007700">);</span></span></code>También puedes usar PASSWORD_BCRYPT en lugar de PASSWORD_DEFAULT.<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">if(</span><span style="color: #0000BB">password_verify</span><span style="color: #007700">(</span><span style="color: #0000BB">$password</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$hashed_password</span><span style="color: #007700">)){</span></span></code>

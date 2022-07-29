@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908226
+date: "2018-08-29 19:21:30"
+
+subject: "Re:Cultura general"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Sobre seguridad informática:<br /><br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote">SQL injection strings.<br />Use them in the password field.<br /><br />&#039; or 1=1--<br />&quot; or 1=1--<br />or 1=1--<br />&#039; or &#039;a&#039;=&#039;a<br />&quot; or &quot;a&quot;=&quot;a<br />&#039;) or (&#039;a&#039;=&#039;a<br />&quot;) or (&quot;a&quot;=&quot;a<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />La idea de ésto no es intentar hackear otras páginas (que seguro que el 99% de las páginas ya están protegidas y vacunadas contra estos truquitos), sino usar ésto para probar la seguridad de mis propias páginas&nbsp; <img src="/assets/smf/smileys/tongue.gif" alt="&#58;tongue&#58;" title="tongue" class="smiley" />

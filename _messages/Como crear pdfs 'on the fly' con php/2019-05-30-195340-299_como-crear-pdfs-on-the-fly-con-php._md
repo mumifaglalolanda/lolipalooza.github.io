@@ -1,0 +1,17 @@
+---
+thread: "C&oacute;mo crear pdfs 'on the fly' con php"
+id_msg: 908427
+date: "2019-05-30 19:53:40"
+
+subject: "C&oacute;mo crear pdfs 'on the fly' con php"
+user: "Mumifag Lalolanda"
+
+modified_time: 2019-06-07 14:59:49
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+Primero que nada:<br /><br />5 librerías recomendadas para generar archivos pdf desde php:<br /><a href="https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php" class="bbc_link new_win" target="_blank">https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php</a><br /><br />El repositorio de Dompdf:<br /><a href="https://github.com/dompdf/dompdf" class="bbc_link new_win" target="_blank">https://github.com/dompdf/dompdf</a><br /><a href="https://github.com/dompdf/dompdf/wiki/Usage" class="bbc_link new_win" target="_blank">https://github.com/dompdf/dompdf/wiki/Usage</a><br /><br />Un minitutorial mostrando lo básico sobre cómo usar Dompdf:<br />(1/3) <a href="https://www.youtube.com/watch?v=bTa7cD8nOes" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=bTa7cD8nOes</a><br />(2/3) <a href="https://www.youtube.com/watch?v=2DbNDw5Rpo8" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=2DbNDw5Rpo8</a><br />(3/3) <a href="https://www.youtube.com/watch?v=bFRLpf3G_Yo" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=bFRLpf3G_Yo</a>

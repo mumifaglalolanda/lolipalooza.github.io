@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908049
+date: "2018-01-22 16:08:24"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 16pt;" class="bbc_size"><strong>Recursos dinámicos de wordpress</strong></span></div><br />En la cabecera, para cargar en la estructura html de tu plantilla los lenguajes que definas en el panel de admin, haces los siguientes cambios:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;html lang=&quot;es&quot;&gt; &lt;!-- lang=&quot;es&quot; será reemplazado con <span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;language_attributes</span><span style="color: #007700">();&nbsp;</span><span style="color: #0000BB">?&gt;</span></span> --&gt;</code><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;meta charset=&quot;utf-8&quot;&gt; &lt;!-- ésto será reemplazado por: &lt;meta charset=&quot;<span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;bloginfo</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;charset&#039;</span><span style="color: #007700">);&nbsp;</span><span style="color: #0000BB">?&gt;</span></span>&quot;&gt; --&gt;</code><br />Para reemplazar el título de la página por aquel que configures desde el admin de wp:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;title&gt;<span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;wp_title</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;&nbsp;|&nbsp;&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">&#039;right&#039;</span><span style="color: #007700">);&nbsp;</span><span style="color: #0000BB">?&gt;</span></span> <span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;bloginfo</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;name&#039;</span><span style="color: #007700">);&nbsp;</span><span style="color: #0000BB">?&gt;</span></span>&lt;/title&gt;</code><br />Datos a ser incluidos en tu página HTML:<br /><ul class="bbc_list"><li>Título de tu blog: <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">bloginfo(&#039;name&#039;)</span></span></li><li>Descripción de tu blog: <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">bloginfo(&#039;description&#039;)</span></span></li></ul><br />Utilidades:<br /><ul class="bbc_list"><li>Mostrar solo el año actual: &lt;?php echo date(&#039;Y&#039;); ?&gt;</li></ul><br />Datos avanzados<br /><ul class="bbc_list"><li>Menú del blog (todo en un solo botón): &lt;?php wp_list_pages(); ?&gt;</li><li>Menú del blog (separado en elementos &quot;li&quot;): &lt;?php wp_list_pages(&#039;title_li=&#039;); ?&gt;</li><li></li></ul>

@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel. Pt II"
+id_msg: 908465
+date: "2019-07-09 15:57:09"
+
+subject: "Re:Notas sobre Laravel. Pt II"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+(<a href="http://smf.halabalooza.orgy/index.php/topic,3378.msg908462.html#msg908462" class="bbc_link">Volver al índice</a>)<br /><div align="center"><span style="font-size: 18pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong>2. <em>Introducción a Laravel</em></strong></span></span><br />(<a href="https://styde.net/introduccion-a-laravel/" class="bbc_link new_win" target="_blank">https://styde.net/introduccion-a-laravel/</a>)</div><br />Como se vió en el anterior capítulo, para instalar Laravel, y una vez ya se encuentre instalado composer, se ejecuta éste comando desde cónsola, en la ruta del localhost (<em>c:/xampp/htdocs</em>).<br />Pero adicionalmente se puede especificiar la versión de Laravel así:<br /><em>&gt; composer create-project laravel/laravel nombre-proyecto &quot;5.5.*&quot;</em><br /><br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote">Entre los IDEs para PHP tenemos a: PHPStorm, Zend Studio, Eclipse, NetBeans, Aptana Studio, etc. Entre los editores de texto están: Sublime Text, Atom, Visual Studio Code, NotePad++, etc.&nbsp; ¡Elige uno con el cual te sientas cómodo y comienza a desarrollar!</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>

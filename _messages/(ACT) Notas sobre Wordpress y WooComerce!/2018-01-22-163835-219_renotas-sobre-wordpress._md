@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908051
+date: "2018-01-22 16:38:35"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 16pt;" class="bbc_size"><strong>Textos traducibles</strong></span></div><br />En wordpress, mientras creas tu plantilla, puedes insertar textos que tienen la particularidad de ser textos &quot;traducibles&quot;. ¿Cómo se traducen? npi, sin embargo aquí os expongo los principios básicos al respecto:<br /><br />las funciones __() u _e() permiten definir textos traducibles del siguiente modo:<br /><br />__(&#039;ésto es un texto traducible&#039;, &#039;asd&#039;);<br /><br />El primer dato de la función es nuestro texto en cuestión, y el segundo dato es un texto que debe estar definido en los datos de nuestra plantilla en el archivo style.css, en &quot;Text Domain:&quot;. Así &quot;Text Domain: asd&quot;.<br /><br /><strong>¿Diferencias entre __() y _e()?</strong><br /><br />Con la primera sólamente defines un texto traducible, y con la segunda además de definirlo, también lo muestras en el html. Es como decir que la &quot;e&quot; simboliza &quot;echo&quot;.<br /><br />Capitsch? Bola de zoquetes.

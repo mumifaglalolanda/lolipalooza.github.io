@@ -1,0 +1,17 @@
+---
+thread: "Proyectos varios relacionados al fant&aacute;stico mundo de la electr&oacute;nica"
+id_msg: 4909
+date: "2013-09-02 18:53:57"
+
+subject: "Re:JAJAJAJ CHINGUENSE ESA NOVATILLOS"
+user: "yab220sorgesoureDug"
+
+modified_time: 2013-10-14 15:54:54
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "Pos nomás"
+---
+Aprovecho el hilo para poner un ejercicio de microcontroladores y C18 a los visitantes desde las sombras.<br />Hacer en C-18 (aunque el que lo desee hacer en CCS también vale) un programa para un circuito que conste de:<br /><br />&nbsp;- Un microcontrolador obviamente, pero éste uC debe tener las siguientes características: capacidad para irse a dormir (bajo consumo), interrupción por cambio de puerto y RTC interno. Recomendado el PIC18F46J50. Se le colocará un teclado matricial de 4x4 al controlador y, opcionalmente, o un puerto terminal, o una pantallita <del>LSD</del> LCD, de tal forma que, cada vez que una tecla es oprimida, el micro mostrará por el periférico de salida seleccionado la tecla pulsada y la hora/fecha de la pulsación, y también dirá que mi pito es hermoso.<br /><br />Hay que implementar todo ésto en bajo consumo, es decir, el firmware del dispositivo a desarrollar tiene que poner al microcontrolador a dormir, y detectar la pulsación de la tecla por medio de interrupción por cambio de estado del puerto.<br /><br />Háganlo, tienen solo 2 semanas para entregar o serán todos baneados de forma permanente (y a los que no estén registrados se les prohibirá el acceso <span class="spoiler">y les secuestraremos a su puta madre</span>).

@@ -1,0 +1,17 @@
+---
+thread: "(Display.template) Perfil de usuarios personalizado"
+id_msg: 5649
+date: "2015-11-15 18:09:47"
+
+subject: "(Display.template) Perfil de usuarios personalizado"
+user: "yap320sorgesoureDug"
+
+modified_time: 2015-11-15 23:08:42
+modified_name: "yap320sorgesoureDug"
+icon: clip
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">(Display.template) Perfil de usuarios personalizado</span></strong><br /><br /><table class="bbc_table"><tr><td><div align="center"><span style="color: brown;" class="bbc_color"><strong>Display.templaye v1</strong></span></div></td><td><div align="center"><span style="color: brown;" class="bbc_color"><strong>Display.templaye v2</strong></span></div></td></tr><tr><td><img src="http://i66.tinypic.com/2i1zix4.png" alt="" class="bbc_img" /></td><td><img src="http://i68.tinypic.com/ddgrww.png" alt="" class="bbc_img" /></td></tr></table><br />En adjunto dejo los códigos necesarios para transformar los campos de perfil de usuarios en las versiones 1 y 2.<br />Simplemente tienen que copiar el código y reemplazarlo en el archivo <em>/Themes/[default ó tu tema]/<strong>Display.template.php</strong></em> en el lugar en donde vá:<br /><br />Simplemente tengan el cuenta que es todo lo que va después de:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Show information about the poster of this message.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo &#039;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;poster&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;&#039;;<br /></code><br />Y el código termina en:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Mod Hide Post<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($message&#91;&#039;post_hidden&#039;] == 1) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!allowedTo(&#039;modhide_post&#039;) &amp;&amp; (($message&#91;&#039;member&#039;]&#91;&#039;id&#039;] &lt;&gt; $context&#91;&#039;user&#039;]&#91;&#039;id&#039;]) || ($message&#91;&#039;member&#039;]&#91;&#039;is_guest&#039;])))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$message&#91;&#039;subject&#039;] = &#039;*****&#039;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />*/<br /></code>

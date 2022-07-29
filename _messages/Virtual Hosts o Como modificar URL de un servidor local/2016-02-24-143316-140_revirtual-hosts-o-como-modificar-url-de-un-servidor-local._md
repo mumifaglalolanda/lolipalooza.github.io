@@ -1,0 +1,17 @@
+---
+thread: "Virtual Hosts o C&oacute;mo modificar URL de un servidor local"
+id_msg: 5665
+date: "2016-02-24 14:33:16"
+
+subject: "Re:Virtual Hosts o C&oacute;mo modificar URL de un servidor local"
+user: "yap320sorgesoureDug"
+
+modified_time: 2016-02-25 15:12:32
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Compartir los archivos de XAMPP con la nube</span></strong><br /><br /><strong>Paso 1: compartir htdocs</strong><br />Transferir (o copiar) los archivos que hay en <em>C:/xampp/htdocs</em> al directorio deseado de la nube (OneDrive/Dropbox/Etc).<br />Luego ir al archivo: <em>C:\xampp\apache\conf\<strong>httpd.conf</strong></em><br />Y debes editar las siguientes líneas, insertando allí la dirección deseada para tu nueva carpeta <em>htdocs</em>:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">#<br /># DocumentRoot: The directory out of which you will serve your<br /># documents. By default, all requests are taken from this directory, but<br /># symbolic links and aliases may be used to point to other locations.<br />#<br />DocumentRoot &quot;C:/xampp/htdocs&quot;<br />&lt;Directory &quot;C:/xampp/htdocs&quot;&gt;<br /></code><br /><strong>Paso 2: compartir la base de datos</strong><br />Transferir (o copiar) los archivos que hay en <em>C:/xampp/mysql/data</em> al directorio deseado de la nube (OneDrive/Dropbox/Etc).<br />Luego ir a archivol <em>C:\xampp\mysql\bin\<strong>my.ini</strong></em><br />Editar las siguientes líneas, insertando allí la dirección deseada para tu nueva carpeta <em>data</em><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">datadir = &quot;C:/xampp/mysql/data&quot;</code><br />No debes olvidar que para que todos los cambios hagan efecto, es necesario desde XAMPP Control Panel apagar y re-encender Apache y MySQL.

@@ -1,0 +1,17 @@
+---
+thread: "Lista de cosas por hacer para el foro"
+id_msg: 4912
+date: "2013-10-13 06:47:42"
+
+subject: "Re:Lista de cosas por hacer para el foro"
+user: "yap320sorgesoureDug"
+
+modified_time: 2013-10-24 23:57:12
+modified_name: "yap320sorgesoureDug"
+icon: xx
+hidden_by: "1078"
+hidden_reason: "Ésto es de imageboards, no de nuestro forito caguai."
+post_hidden: 1
+edit_reason: "Pos nomás"
+---
+Pendiente arreglar para el estilo tweeter:<br /><ul class="bbc_list"><li>el campo de password para el borrado de posts se ve bien en la laptop pero mal en la PC, el problema ha de ser que usa valores absolutos de alineacion y no relativos.</li><li>el color de los nicknames cuando el usuario hace sage no se ve bien.</li><li>la imagen de cada campo del formulario se quita en focus, pero reaparece, aun cuando el usuario ya ingreso sus datos. Arreglar eso que se ve feio feio....</li><li>cuando alguien inicia un hilo con poco texto, la imagen se sale del area del posts...</li><li>añadir un efecto que haga que las thumbs aumenten la opacidad en la condición hover</li></ul>Cosas pendientes por arreglar en el dumpeador <span class="spoiler">mágico</span> de imagenes desde URLs externas:<br /><ul class="bbc_list"><li><del>Compatibilidad PNG/GIF</del></li><li><del>Corregir el mensaje de error cuando el php no puede obtener bien las dimensiones de la imagen (URL inválida)</del></li><li><del>Limitar tamaño permitido</del></li><li><del>Hacer chequeo de imagen repetida</del></li><li>Desarrollar compatibilidad con happy-chon</li><li>Desarrollar transparencias para thumbs</li><li>???</li></ul>

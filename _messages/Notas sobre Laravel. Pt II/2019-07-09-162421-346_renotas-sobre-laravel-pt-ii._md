@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel. Pt II"
+id_msg: 908492
+date: "2019-07-09 16:24:21"
+
+subject: "Re:Notas sobre Laravel. Pt II"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+(<a href="http://smf.halabalooza.orgy/index.php/topic,3378.msg908462.html#msg908462" class="bbc_link">Volver al índice</a>)<br /><div align="center"><span style="font-size: 18pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong>29. <em>Validar datos de peticiones HTTP</em></strong></span></span><br />(<a href="https://styde.net/validar-datos-de-peticiones-http-con-laravel-tdd/" class="bbc_link new_win" target="_blank">https://styde.net/validar-datos-de-peticiones-http-con-laravel-tdd/</a>)</div><br />Con esta función comprobamos que el registro no se encuentre en la base de datos:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$this-&gt;assertDatabaseMissing(&#039;users&#039;, [<br />&nbsp; &nbsp; &#039;email&#039; =&gt; &#039;mumifag@lalo.landa&#039;,<br />]);</code><br />Pero en su lugar, podemos comprobar que la base de datos se encuentra vacía del todo:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$this-&gt;assertEquals(0, User::count());</code>

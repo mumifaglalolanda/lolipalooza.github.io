@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908706
+date: "2019-11-04 22:51:09"
+
+subject: "Sobre juanqueo con CSS"
+user: "Dragon Maid~"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><strong><span style="font-family: times new roman;" class="bbc_font"><span style="font-size: 18pt;" class="bbc_size">Sobre juanqueo con CSS</span></span></strong></div><br />Es posible juanquear con CSS. <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" /><br /><a href="https://ed.team/blog/se-puede-hackear-con-css" class="bbc_link new_win" target="_blank">https://ed.team/blog/se-puede-hackear-con-css</a><br /><br />Para muestra un botón.<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">body {<br />&nbsp; &nbsp; display: none<br />}<br /><br />body::after{<br />&nbsp; &nbsp; content: &#039;HTTP 500 Server Error&#039;<br />}</code><br />Así que ya lo saben prros <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" />

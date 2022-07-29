@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel Pt. III"
+id_msg: 910303
+date: "2020-12-25 22:55:29"
+
+subject: "Re:Notas sobre Laravel Pt. III"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 14pt;" class="bbc_size"><strong>Cargado rápido de tablas con largas listas de datos</strong></span></div><br />Solución para cuando quieres mostrar una colección larga de registros en una tabla, sin que se demore demasiado en cargar<br />(es una solución hecha para Laravel, especialmente ideada para ser combinada con esa librería JS de datatables que permite cargar todos los datos de una para poderlos visualizar en la página sin necesidad de recargar!):<br /><br />El plugin:<br /><a href="https://datatables.yajrabox.com/" class="bbc_link new_win" target="_blank">https://datatables.yajrabox.com/</a><br /><br /><div align="center">Videos explicativos:</div><br /><div class="oharaEmbed youtube" id="oh_VzPKA9_yEiY" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=VzPKA9_yEiY">//www.youtube.com/watch?v=VzPKA9_yEiY</a></noscript></div><br /><div class="oharaEmbed youtube" id="oh_6YQHyy8LOpw" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=6YQHyy8LOpw">//www.youtube.com/watch?v=6YQHyy8LOpw</a></noscript></div><br />Aunque los videos estan muy bien y todo, éste método como que me gusta más:<br /><a href="https://yajrabox.com/docs/laravel-datatables/master/quick-starter#google_vignette" class="bbc_link new_win" target="_blank">https://yajrabox.com/docs/laravel-datatables/master/quick-starter#google_vignette</a><br />Construyes las reglas sobre cómo cargar las tablas y listo, en la vista solo haces el llamado a cargar la tabla, a cargar el script, y ya todo funciona de maravilla.<br /><br />Una auténtica maravisha&nbsp; <img src="/assets/smf/smileys/like.png" alt="&#58;like&#58;" title="Nice, Epic, I like it!" class="smiley" /> <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" /><br /><br />Ver más en:<br /><a href="https://github.com/yajra/laravel-datatables" class="bbc_link new_win" target="_blank">https://github.com/yajra/laravel-datatables</a>

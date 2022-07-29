@@ -1,0 +1,17 @@
+---
+thread: "[SMF 2.0 RC4] Mejorando la funcionalidad Jewtube..."
+id_msg: 908737
+date: "2019-11-07 01:06:38"
+
+subject: "Re:[SMF 2.0 RC4] Mejorando la funcionalidad Jewtube..."
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+He descubierto que es más fácil crear los <em>addHooks</em> manualmente, siguiendo al pie de la letra lo que indica el archivo de hooks, con la guía de esta página <a href="https://wiki.simplemachines.org/smf/Integration_hooks" class="bbc_link new_win" target="_blank">https://wiki.simplemachines.org/smf/Integration_hooks</a><br /><br />Crearé un hilo nuevo donde explico más a detalle eso. Incluso, pudiera ver un método aún más fácil para ejecutar la integración de los hooks.

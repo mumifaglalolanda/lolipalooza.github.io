@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908667
+date: "2019-09-23 19:01:54"
+
+subject: "EXTRA EXTRA: No necesitas usar m&aacute;s jQuery!"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-family: impact;" class="bbc_font"><span style="font-size: 22pt;" class="bbc_size"><span style="color: purple;" class="bbc_color"><strong><span class="bbc_u">EXTRA EXTRA: No necesitas usar más jQuery</span>!</strong></span></span></span></div><br />Lean joputas:<br /><a href="https://danestves.com/blog/no-necesitas-jquery" class="bbc_link new_win" target="_blank">https://danestves.com/blog/no-necesitas-jquery</a><br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">const $ = document.querySelector.bind(document)<br />$(&#039;body&#039;).style.background = &#039;red&#039;<br />$(&#039;body&#039;).style.color = &#039;#fff&#039;<br />$(&#039;h1&#039;).style.fontSize = &#039;200%&#039;<br />$(&#039;.class-p&#039;).style.fontSize = &#039;48px&#039;</code><br />Me quiero pegar un fuscaso &#128054;&#128299;

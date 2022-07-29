@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre C#"
+id_msg: 5750
+date: "2017-08-01 22:17:46"
+
+subject: "Re:Notas sobre C#"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+¿Recuerdan que había una instrucción bien chidolina en aplicaciones de cónsola para mostrar texto, más o menos parecida al <em>printf </em>de <strong>C</strong>, la cual es <strong>Console.WriteLine()</strong>? ¿Y recuerdan que una de las bondades de esta instrucción es meter texto así: <em>(&quot;Hola, soy {0}&quot;, nombre)</em>?<br /><br />Pues resulta que existe una instrucción que permite hacer lo mismo a la hora de asignar cadenas de texto a una variable (similar al <em>sprintf </em>de <strong>C</strong>):<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">string miVar = string.Format(&quot;Hola, soy {0} y huelo a {1}&quot;, &quot;dongato&quot;, &quot;caca&quot;);</code>

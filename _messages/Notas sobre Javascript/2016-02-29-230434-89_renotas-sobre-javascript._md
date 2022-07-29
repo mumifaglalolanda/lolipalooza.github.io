@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Javascript"
+id_msg: 5676
+date: "2016-02-29 23:04:34"
+
+subject: "Re:Notas sobre Javascript"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong>¿Cómo prevenir que la página recargue al hacer click a un enlace (jQuery)?</strong><br /><br />Así:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$(document).ready(function () {<br />&nbsp; &nbsp; $(&#039;.jeje-neta-link&#039;).click(function (e) {<br />&nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; // código purrón ese<br />&nbsp; &nbsp; });<br />});</code><br />Jeje es neta.

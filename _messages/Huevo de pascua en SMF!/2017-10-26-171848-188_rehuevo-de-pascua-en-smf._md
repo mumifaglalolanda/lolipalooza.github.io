@@ -1,0 +1,17 @@
+---
+thread: "Huevo de pascua en SMF!"
+id_msg: 629417
+date: "2017-10-26 17:18:48"
+
+subject: "Re:Huevo de pascua en SMF!"
+user: "Kyaku Lolnada"
+
+
+
+icon: xx
+
+
+
+
+---
+<div class="quoteheader"><div class="topslice_quote">Post completamente ridículo realizado por: yap320sorgesoureDug link=topic=3091.msg629410#msg629410 date=1509030327</div></div><blockquote class="bbc_standard_quote">Miren!<br /><br />He encontrado un Easter Egg en el pendejo SMF!!<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;You&nbsp;are&nbsp;not!<br /></span><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">&#039;message&#039;</span><span style="color: #007700">])&nbsp;&amp;&amp;&nbsp;</span><span style="color: #0000BB">strtolower</span><span style="color: #007700">(</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">&#039;message&#039;</span><span style="color: #007700">])&nbsp;==&nbsp;</span><span style="color: #DD0000">&#039;i&nbsp;am&nbsp;the&nbsp;administrator.&#039;&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;!</span><span style="color: #0000BB">$user_info</span><span style="color: #007700">[</span><span style="color: #DD0000">&#039;is_admin&#039;</span><span style="color: #007700">])<br /></span><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">fatal_error</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;Knave!&nbsp;Masquerader!&nbsp;Charlatan!&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">);</span></span></code><br />Para activarlo, basta con que cualquier usuario que no sea admin postee el mensaje &quot;i am the administrator.&quot; (sin diferenciación entre minúsculas y mayúsculas).<br /><br />Kek. Pendejetes.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Fascinante descubrimiento <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" />

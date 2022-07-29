@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Javascript"
+id_msg: 909170
+date: "2019-11-16 19:08:45"
+
+subject: "Re:Cultura general"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-family: Times New Roman;" class="bbc_font"><span style="font-size: 18pt;" class="bbc_size">8 must know Javascript array methods</span></span><br /><span style="font-family: Times New Roman;" class="bbc_font"><span style="font-size: 17pt;" class="bbc_size">8 métodos con arreglos de Javascript que DEBES conocer</span></span></div><br /><div class="oharaEmbed youtube" id="oh_R8rmfD9Y5-c" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=R8rmfD9Y5-c">//www.youtube.com/watch?v=R8rmfD9Y5-c</a></noscript></div><br />Sea un arreglo de objetos llamado items:<br /><br />// El método filter: permite filtrar y devolver todos los elementos del array que cumplan con la condición dada en &quot;return&quot;<br />const filteredItems = items.filter((item) =&gt; {return item.numericProperty &lt;= 100})<br /><br />// El método map: en este caso devuelve un array conformado únicamente con todos los elementos dados en el return<br />const mapItems = items.map((item) =&gt; {return item.stringProperty})<br /><br />// El método find: retorna el item que cumpla con la condición dada en el return<br />const foundItem = items.find((item) =&gt; {return item.property === value})<br /><br />// El método forEach: ¿querías algo como el foreach de php en javascript? Aquí lo tienes sin baselina<br />items.forEach((item) =&gt; {console.log(item)})<br /><br />// El método some: para revisar si al menos algun item cumple con la condición expuesta<br />const hasInexpensiveItem = items.some((item) =&gt; {return item.price &lt;= 100})<br /><br />// El método every: para revisar si todos los elementos cumplen con la condición<br />const hasInexpensiveItem = items.every((item) =&gt; {return item.price &lt;= 1000})<br /><br />// El método reduce: coño me perdí!! no le entendí a la explicación... investíguenlo ustedes mismos majos :&#039;x (o play al vídio)<br />const total = items.reduce((currentTotal, item) =&gt; {item.price + currentTotal}, 0)<br />// Se supone que esa weá saca la sumatoria de los precios, de los items<br /><br />// El método include: es el mismo que teníamos en php (in_array) revisar si el elemento pasado se encuentra en array<br />const items = [1, 2, 3, 4, 5]<br />const includesTwo = items.include(2) // retorna true or false<br /><br />Si les ha gustado este vídio dénle nike i zuzkribanse a mi kanal prros :&#039;v y no olviden darle follow a miz redez zoziales<br />les ha hablado cara de nalga y les deseo buenas tardes

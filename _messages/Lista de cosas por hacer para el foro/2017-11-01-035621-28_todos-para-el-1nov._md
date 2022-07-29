@@ -1,0 +1,17 @@
+---
+thread: "Lista de cosas por hacer para el foro"
+id_msg: 629542
+date: "2017-11-01 03:56:21"
+
+subject: "TODOs para el 1/nov"
+user: "yap320sorgesoureDug"
+
+modified_time: 2017-11-01 20:19:09
+modified_name: "yap320sorgesoureDug"
+icon: xx
+hidden_by: "1078"
+hidden_reason: "Listo, ya terminé todas estas tareas. JÁ. Mámenme."
+post_hidden: 1
+edit_reason: "pos no'más y así :'v"
+---
+- <del>Hide functionality para Core.</del><br />- <del>Arreglar Banners en general y también para core.</del> Lo siento, no puedo arreglarlo, me pasa lo mismo que con los diseños en general: nada me convence :/<br />- <del>Estilos para tablas y th</del>. th no hace falta.<br />- <del>Arreglar los botones del menu cabecera del index</del><br />- <del>Los checkboxes del Edit Sliently (post.template) no deberían aparecer si estamos creando un nuevo hilo.</del><br />- <del>Limitar el tamaño de las imagenes dentro de los quotes (tentativo max-height:120px)</del>

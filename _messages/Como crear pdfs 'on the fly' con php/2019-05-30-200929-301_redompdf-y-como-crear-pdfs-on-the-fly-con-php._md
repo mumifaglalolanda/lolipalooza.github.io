@@ -1,0 +1,17 @@
+---
+thread: "C&oacute;mo crear pdfs 'on the fly' con php"
+id_msg: 908429
+date: "2019-05-30 20:09:29"
+
+subject: "Re:Dompdf, y c&oacute;mo crear pdfs 'on the fly' con php"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+<span style="font-size: 14pt;" class="bbc_size"><strong>Otros ejemplos:</strong></span><br /><br />- En lugar de poner al pdf disponible para descarga, lo creamos dentro del server:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">require_once&nbsp;</span><span style="color: #DD0000">&#039;dompdf/autoload.inc.php&#039;</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">Dompdf</span><span style="color: #007700">\</span><span style="color: #0000BB">Dompdf</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$dompdf&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Dompdf</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">$dompdf</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">loadHtml</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;hello&nbsp;world&#039;</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$dompdf</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">setPaper</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;A4&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">&#039;landscape&#039;</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$dompdf</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">();<br /><br /></span><span style="color: #0000BB">$pdf_content&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$dompdf</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">output</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">file_put_contents</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;my_file.pdf&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$pdf_content</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">?&gt;</span></span></code>

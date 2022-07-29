@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre el respaldo de futura/chandecarton"
+id_msg: 908020
+date: "2017-11-03 13:56:18"
+
+subject: "Notas sobre el respaldo de futura/chandecarton"
+user: "t0dragonquesa"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-family: andale mono;" class="bbc_font"><span style="font-size: 18pt;" class="bbc_size"><strong><span style="color: orange;" class="bbc_color">&#9787;</span> Notas sobre el respaldo de <em><span style="color: brown;" class="bbc_color">futura/chandecarton</span></em></strong></span></span></div><br />Ya muchas veces me ha sucedido ésto y por alguna razón siempre lo termino olvidando.<br /><br />Para respaldar correctamente esa weá, más especificamente su base de datos, hay que salvarla como utf-8 (por defecto), y a la hora de restaurarla (al menos en el sitio donde la tengo alojada actualmente @hostinger.co), también se restaura mediante utf-8.<br /><br />Si se desea tenerla montada en el actual localhost, entonces es necesario salvar la base de datos como iso-8859-1 e importarla con ese mismo formato. No alcanzo a comprender aún qué tiene mi localhost que no puede reconocerla como lo hace el hostinger.co (¿diferentes versiones de mysql, quizá?), pero mi localhost muestra mal los caracteres especiales con el formato utf-8 (este feo y odioso símbolo &#65533;), mientras que hostinger sólo funciona con éste, y no con iso-8859-1.<br /><br />Otro detalle: cuando salvo la database como ISO-8859-1, hay unos caracteres erráticos que están mamando y están colocando una comilla simple (&#039;) en medio de los posts, haciendo que me dé errores a la hora de importarla al localhost. Corregir eso no es dificil, basta con abrirlo en notepad++ y examinar a simple vista todo el archivo. Las zonas afectadas por el error tendrán un color distinto a las zonas buenas. Basta con eliminar el apóstrofe. No obstante, veo parcialmente innecesario guardar la base de datos como ISO-8859-1. El cómo se vea en el localhost no es importante, lo importante es cómo se verá en hostinger.co, para ello, basta con guardarla como UTF-8 y tenerla así en el localhost (aún si los caracteres se ven mal).

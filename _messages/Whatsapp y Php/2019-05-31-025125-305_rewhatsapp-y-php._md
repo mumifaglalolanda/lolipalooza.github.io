@@ -1,0 +1,17 @@
+---
+thread: "Whatsapp y Php"
+id_msg: 908432
+date: "2019-05-31 02:51:25"
+
+subject: "Re:Whatsapp y Php"
+user: "Mumifag Lalolanda"
+
+modified_time: 2019-06-01 16:36:42
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos no'más y así :'v"
+---
+<span style="font-size: 18pt;" class="bbc_size"><span style="font-family: impact;" class="bbc_font">Twilio WhatsApp API</span></span><br /><br /><a href="https://www.twilio.com/blog/send-whatsapp-messages-php-twilio-whatsapp-api" class="bbc_link new_win" target="_blank">https://www.twilio.com/blog/send-whatsapp-messages-php-twilio-whatsapp-api</a><br /><a href="https://github.com/twilio/twilio-php" class="bbc_link new_win" target="_blank">https://github.com/twilio/twilio-php</a><br /><br /><a href="https://www.twilio.com/blog/send-whatsapp-messages-php-twilio-whatsapp-api" class="bbc_link new_win" target="_blank">https://www.twilio.com/blog/send-whatsapp-messages-php-twilio-whatsapp-api</a><br /><a href="https://www.twilio.com/blog/2018/08/twilio-whatsapp-api.html" class="bbc_link new_win" target="_blank">https://www.twilio.com/blog/2018/08/twilio-whatsapp-api.html</a><br /><a href="https://www.twilio.com/docs/libraries/php" class="bbc_link new_win" target="_blank">https://www.twilio.com/docs/libraries/php</a><br /><br /><a href="https://www.twilio.com/console" class="bbc_link new_win" target="_blank">https://www.twilio.com/console</a><br /><br /><a href="https://support.twilio.com/hc/en-us/articles/223183808-Why-aren-t-my-test-credentials-working-" class="bbc_link new_win" target="_blank">https://support.twilio.com/hc/en-us/articles/223183808-Why-aren-t-my-test-credentials-working-</a><br /><a href="https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html" class="bbc_link new_win" target="_blank">https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html</a><br /><br />¿El problema? Que es pago más que nada (aunque también que creo que requiere posiblemente de frameworks, pero aun no se).<br />Actualización: no requiere frameworks, y parece que aunque haya que pagar, el pago es viable. Está pensada para gente que igual tiene que pagar por un host de todas formas! Así que ¿cuál es el problema?<br /><br /><br />Más enlaces útiles:<br />(sobre cómo activar el sandbox de whatsapp): <a href="https://www.youtube.com/watch?v=O2PB6o2E8aA" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=O2PB6o2E8aA</a><br />(sobre cómo enviar y recibir media messages): <a href="https://www.youtube.com/watch?v=fKi4oXu6lsI" class="bbc_link new_win" target="_blank">https://www.youtube.com/watch?v=fKi4oXu6lsI</a><br /><br /><a href="https://support.twilio.com/hc/en-us/articles/360007721954-Getting-Started-with-Twilio-for-WhatsApp-Beta-" class="bbc_link new_win" target="_blank">https://support.twilio.com/hc/en-us/articles/360007721954-Getting-Started-with-Twilio-for-WhatsApp-Beta-</a>

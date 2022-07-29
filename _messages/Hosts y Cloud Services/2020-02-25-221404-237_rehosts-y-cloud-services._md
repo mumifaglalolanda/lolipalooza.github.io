@@ -1,0 +1,17 @@
+---
+thread: "Hosts y Cloud Services"
+id_msg: 910042
+date: "2020-02-25 22:14:04"
+
+subject: "Re:Hosts y Cloud Services"
+user: "Meduka Meguca"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 14pt;" class="bbc_size">Vídio: Hosting profesional gratis!</span></div><br /><div class="oharaEmbed youtube" id="oh_xobmwDvGC1M" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=xobmwDvGC1M">//www.youtube.com/watch?v=xobmwDvGC1M</a></noscript></div><br /><span style="font-size: 12pt;" class="bbc_size"><strong>1.</strong></span> Github Pages: solo admite HTML, nada de Php + MySQL.<br />Pero está bien y te ofrece un dominio gratis del tipo *.github.io que en principio tiene su elegancia.<br />Creo que es ideal para tener portafolio de diseños. Aunque creo que también, buscandole un modo, es posible tener páginas con cierto dinamismo.<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>2.</strong></span> ZEIT: Plan gratis con SSL, dominio personalizable, compatible con GitHub y GitLab. No hay que configurar, es muy amigable al usuario. El chiste es que si creces, tienes que pagar, pero de todos modos suena muy bien! Hay que probar.<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>3.</strong></span> Heroku: la curva de aprendizaje es más pronunciada porque es más complejo.<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>4. </strong></span>netlify: como ZEIT. No requiere mucha (o ninguna) configuración. Es compatible con Github, Gitlab y Bitbucket.<br />OJO: dominio personalizado que tienes que comprar tu (probablemente también sea así en ZEIT).<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>5.</strong></span> Firebase

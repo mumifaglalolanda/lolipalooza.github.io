@@ -1,0 +1,17 @@
+---
+thread: "Sobre tener tu servidor apache con 2 versiones de php"
+id_msg: 908552
+date: "2019-07-27 01:51:49"
+
+subject: "Sobre tener tu servidor apache con 2 versiones de php"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+<a href="https://www.rephp.com/hay-alguna-manera-de-usar-dos-versiones-de-php-en-xampp.html" class="bbc_link new_win" target="_blank">https://www.rephp.com/hay-alguna-manera-de-usar-dos-versiones-de-php-en-xampp.html</a><br /><br />Ésto básicamente te muestra 2 posibilidades:<br /><br />- La primera es que instales tu php 5 en una carpeta <em>c:/xampp/php5</em> y tu php 7 en <em>c:/xampp/php7</em>, y luego busques uno de los archivos de configuración de apache (en el enlace parece no estar bien explicado porque no estan trabajando exactamente con xampp ni con windows) especifiques con cual de las dos rutas trabajar para acceder al php. El problema de este método es que no puedes tener los 2 php funcionando a la vez (lo que sería lo ideal para mí). Si deseas cambiar de versión, tendrías que desactivar el apache, editar el documento, y poner en marcha el apache de nuevo.<br /><br />- La segunda posibilidad es trabajar con <em>Docker</em>, el problema es que no tengo idea de si Docker me posibilita el trabajar en 2 proyectos a la vez que usen diferentes versiones de php, y además, no logro dar de momento con un tutorial sobre cómo dar mis primeros pasos con éste. Parece que tarde o temprano tendré que aprender a trabajar con Docker, porque es una herramienta imprescindible para todo desarrollador web.

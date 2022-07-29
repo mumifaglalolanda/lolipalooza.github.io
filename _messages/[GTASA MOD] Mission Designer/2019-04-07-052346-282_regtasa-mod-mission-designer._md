@@ -1,0 +1,17 @@
+---
+thread: "[GTA:SA MOD] Mission Designer"
+id_msg: 908317
+date: "2019-04-07 05:23:46"
+
+subject: "Re:[GTA:SA MOD] Mission Designer"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+Puntos a tratar más adelante:<br /><br /><div align="center"><span style="font-family: Arial;" class="bbc_font"><span style="font-size: 12pt;" class="bbc_size"><strong>¿Cómo se guardará la misión? ¿Con qué formato?</strong></span></span></div><br />Desde ya digo que debería ser texto plano (para que el formato sea abierto y editable por el usuario).<br /><br />Formato: XML?<br /><br />&lt;state1&gt;<br />&nbsp; &nbsp; &lt;create pos=&quot;362.93 2823.9 -10.3 0.0&quot; type=5 model=290&gt;actor1&lt;/create&gt;<br />&lt;/state1&gt;<br /><br />El formato XML no es conveniente. No se cómo crear rutinas en SCM para extaer adecuadamente la información. Ésto no es C# ni Javascript (que cuenta con librerías para procesar un texto HTML, leer el DOM y hacer query selectors, no MAMES!).<br /><br /><br />Formato JSON?<br /><br />{<br />&nbsp; &nbsp; &quot;state1&quot;:{<br />&nbsp; &nbsp; &nbsp; &nbsp; &quot;actor1&quot;:{<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;pos&quot;:&quot;362.93 2823.9 -10.3 0.0&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;type&quot;:&quot;5&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;model&quot;:&quot;290&quot;,<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; }<br />}<br /><br />Un formato como este si podría ser más viable.<br />Pero pues, aún no se :/

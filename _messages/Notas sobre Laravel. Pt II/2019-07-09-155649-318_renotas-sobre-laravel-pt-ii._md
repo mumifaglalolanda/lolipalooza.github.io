@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel. Pt II"
+id_msg: 908464
+date: "2019-07-09 15:56:49"
+
+subject: "Re:Notas sobre Laravel. Pt II"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+(<a href="http://smf.halabalooza.orgy/index.php/topic,3378.msg908462.html#msg908462" class="bbc_link">Volver al índice</a>)<br /><div align="center"><span style="font-size: 18pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong>1. <em>Instalando Composer y Laravel</em>:</strong></span></span><br />(<a href="https://styde.net/instalacion-de-composer-y-laravel/" class="bbc_link new_win" target="_blank">https://styde.net/instalacion-de-composer-y-laravel/</a>)</div><br />Para esta nueva versión de Laravel (5.5) necesitamos Php &gt;= 7.0.0<br />La versión más reciente de Laravel (5.8, creo!) requiere 7.1.* (creo!). De todos modos lo puedes verificar en la documentación.<br />Si llamas desde cónsola el comando por defecto para instalar Laravel (sin especificar versión), se instalará la versión más reciente que admita tu servidor.<br /><br />Para instalar composer:<br />en cónsola:<br />&gt; php -r &quot;copy(&#039;<a href="https://getcomposer.org/installer" class="bbc_link new_win" target="_blank">https://getcomposer.org/installer</a>&#039;, &#039;composer-setup.php&#039;);&quot;<br />&gt; php composer.phar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;-- esto nos da la lista de comandos de composer<br />&gt; mv composer.phar /usr/local/bin/composer&nbsp;&nbsp;&nbsp;&lt;-- mover composer a una ruta global (ojo: esto no es para windows)<br /><br />En este enlace puedes saber más sobre la instalación de composer:<br /><a href="https://getcomposer.org/doc/00-intro.md" class="bbc_link new_win" target="_blank">https://getcomposer.org/doc/00-intro.md</a><br /><br />Para instalar Laravel:<br />En cónsola, te vas a la ruta que contendrá a la carpeta del proyecto, es decir <em>htdocs</em> (no la crees porque el siguiente comando lo hará por tí):<br />&gt; composer create-project --prefer-dist laravel/laravel nombre-carpeta-del-proyecto<br /><br />Una vez instalado, probar con los siguientes comandos:<br />&gt; ls<br />&gt; php artisan serve<br /><br />De la siguiente url (<a href="https://laravel.com/docs/5.5" class="bbc_link new_win" target="_blank">https://laravel.com/docs/5.5</a>) se extrae un método alternativo para instalar Laravel:<br />&gt; composer global require &quot;laravel/installer&quot;<br />(este método parece solo ser aceptado para macOS/linux...)

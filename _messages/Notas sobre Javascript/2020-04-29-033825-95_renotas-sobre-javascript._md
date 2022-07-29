@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Javascript"
+id_msg: 910146
+date: "2020-04-29 03:38:25"
+
+subject: "Re:Notas sobre Javascript"
+user: "Dragon Maid~"
+
+
+
+icon: xx
+
+
+
+
+---
+Les vengo a traer <del>amor</del> un algoritmo para ordenar números...<br /><br />No es práctico, pero es hermoso...<br /><br />Cosas como ésta me hacen amar Javascript.&nbsp; <img src="/assets/smf/smileys/866875.gif" alt="&#58;love&#58;" title="Love" class="smiley" /><br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">numbers = [8, 42, 38, 111, 2, 39, 1];<br />numbers.forEach(num =&gt; {<br />&nbsp;&nbsp;&nbsp;setTimeout(() =&gt; { console.log(num) }, num);<br />});</code><br />Díganme si no es un código sexy....<br /><br />salsa: <a href="https://www.facebook.com/ProgrammersCreateLife/posts/2904725726242953" class="bbc_link new_win" target="_blank">https://www.facebook.com/ProgrammersCreateLife/posts/2904725726242953</a>

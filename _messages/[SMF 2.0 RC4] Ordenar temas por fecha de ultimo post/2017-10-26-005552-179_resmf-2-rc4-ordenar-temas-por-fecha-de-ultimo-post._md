@@ -1,0 +1,17 @@
+---
+thread: "[SMF 2.0 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+id_msg: 629386
+date: "2017-10-26 00:55:52"
+
+subject: "Re:[SMF 2 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><strong><span style="font-size: 18pt;" class="bbc_size"><span class="bbc_u"><span style="color: rgb(206, 15, 106);" class="bbc_color">Parte 3 de la modificación</span></span></span></strong></div><br />También hay que buscar este array (en <strong>./Subs/MessageIndex.php</strong>):<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&nbsp;&nbsp;&nbsp;// Default sort methods.<br />&nbsp;&nbsp;&nbsp;$sort_methods = array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;subject&#039; =&gt; &#039;mf.subject&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;starter&#039; =&gt; &#039;IFNULL(memf.real_name, mf.poster_name)&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;last_poster&#039; =&gt; &#039;IFNULL(meml.real_name, ml.poster_name)&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;replies&#039; =&gt; &#039;t.num_replies&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;views&#039; =&gt; &#039;t.num_views&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;first_post&#039; =&gt; &#039;t.id_topic&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;last_post&#039; =&gt; &#039;t.id_last_msg&#039;<br />&nbsp;&nbsp;&nbsp;);</code><br />Y cambiar los dos últimos valores. Éstos son los que me van a ordenar los tópicos según el id del primer y último mensaje, que es lo que no queremos, y lo vamos a cambiar por:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;first_post&#039; =&gt; &#039;first_poster_time&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;last_post&#039; =&gt; &#039;last_poster_time&#039;</code><br />Y así si debería funkar kbrones <img src="/assets/smf/smileys/rolleyes.gif" alt="&#58;rolleyes2&#58;" title="rolleyes" class="smiley" />

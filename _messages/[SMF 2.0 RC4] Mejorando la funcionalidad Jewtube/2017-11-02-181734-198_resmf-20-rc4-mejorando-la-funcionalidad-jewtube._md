@@ -1,0 +1,17 @@
+---
+thread: "[SMF 2.0 RC4] Mejorando la funcionalidad Jewtube..."
+id_msg: 629548
+date: "2017-11-02 18:17:34"
+
+subject: "Re:[SMF 2.0 RC4] Mejorando la funcionalidad Jewtube..."
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 18pt;" class="bbc_size"><span style="font-family: times new roman;" class="bbc_font"><strong>Fe de erratas</strong></span></span></div><br />Encontramos un comportamiento raro, que consistía en que los botoncitos de youtube, vimeo y gifv (o como se llame esa uea) aparecían duplicados en la barra de BBC, pero sólo a la hora de editar un mensaje, y no a la hora de crear un post nuevo....<br /><br />¿Por qué? NPI, pero para arreglarlo, nomás comenten el contenido completo dentro de la función <span style="font-family: courier;" class="bbc_font"><span style="color: #383838;" class="bbc_color">function OYTE_bbc_add_button(&amp;$buttons)</span></span> en <em>./Sources/<strong>OharaYTEmbed.php</strong></em>, ¡me cago en de una puta!

@@ -1,0 +1,17 @@
+---
+thread: "&iquest;C&oacute;mo averiguo el host donde esta albergada una p&aacute;gina?"
+id_msg: 5688
+date: "2016-03-11 18:36:08"
+
+subject: "Re:&iquest;C&oacute;mo averiguo el host donde esta albergada una p&aacute;gina?"
+user: "Mekcm955sorgesoureDug"
+
+modified_time: 2016-03-11 18:37:51
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<div class="quoteheader"><div class="topslice_quote">Post completamente ridículo realizado por: sao559sorgesoureDug link=topic=2001.msg5687#msg5687 date=1457717715</div></div><blockquote class="bbc_standard_quote">por ejemplo quiero saber en donde esta alojado 4chan?<br />hay alguna pagina que me permita saber?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><span style="color: green;" class="bbc_color"><em>&gt;hay alguna pagina que me permita saber?</em></span><br />Hay muchas páginas, como dije son las que ofrecen servicio de who is.<br />Sin embargo están las que dan información básica y otras un poco más extendidas.<br />Yo la que uso es <a href="http://who.is/" class="bbc_link new_win" target="_blank">http://who.is/</a> y para lo esencial va de maravilla.<br />Lo malo (o bueno, depende cómo lo veas) es que hay páginas que tienen protección para este tipo de consultas, ya que son públicas y representan riesgo potencial para algunos.<br />Muy probablemente haya forma de saltarse esa protección, pero depende de la página y otros factores.<br /><br /><span style="color: green;" class="bbc_color"><em>&gt;quiero saber en donde esta alojado 4chan?</em></span><br />4chan es una de esas páginas que cuentan con protección.<br />De momento si buscas 4chan en la página que mencioné antes sale CloudFlare, pero esa wea es la que protege el sitio y no el verdadero hosting.<br />O sea que todo su tráfico pasa por los servidores de CloudFlare antes de llegar a los verdaderos servidores y viceversa.<br /><br />Funfact: a raíz de un comentario mío en /b/ el admin arregló esa madre de CloudFlare para lolnada.<br />Ya no se muestran los verdaderos servidores pero aún son visibles los del lolnada de idvich, que eran los de JetHost quienes le proveían el servicio.<br />Y usando el who is también puedes encontrar cosas curiosas en los datos del ente registrante, como correos, teléfonos e incluso info verdadera o falsa.<br />Por ejemplo, si buscas la baka te saldrá que el dueño es <span class="spoiler">EL PEDERASTA CON CÁNCER MÁS FAMOSO DE TODOS </span>jeje es neta.

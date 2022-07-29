@@ -1,0 +1,17 @@
+---
+thread: "Whatsapp y Php"
+id_msg: 908433
+date: "2019-05-31 22:06:41"
+
+subject: "Re:Whatsapp y Php"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+<span style="font-size: 18pt;" class="bbc_size"><span style="font-family: impact;" class="bbc_font">Facebook WhatsApp Business API</span></span><br /><br /><a href="https://developers.facebook.com/docs/whatsapp/overview" class="bbc_link new_win" target="_blank">https://developers.facebook.com/docs/whatsapp/overview</a><br /><br />¿El problema?<br /><br />Que trabaja con tecnologías y plataformas que no domino, como Docker y AWS, y no se si te permita al final poder integrar eso a tu código Php para poder incluir allí los comandos para enviar los datos por whatsapp desde allí. Igual supongo que hay que pagar por ésto, así que yo personalmente prefiero la API de Twilio.

@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre HTML"
+id_msg: 5648
+date: "2015-11-15 17:40:55"
+
+subject: "Re:Notas sobre HTML"
+user: "yap320sorgesoureDug"
+
+modified_time: 2015-11-15 17:42:27
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<strong><span style="font-size: 12pt;" class="bbc_size">Insertar saltos de línea en atributo &quot;title&quot;</span></strong><br /><br />Hay que utilizar el símbolo especial <em>Carriage Return</em> (<strong>&#38;#13;</strong>), del siguiente modo:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;a href=&quot;#&quot; title=&quot;Linea 1&#38;#13;Linea 2&quot;&gt;Enlace&lt;/a&gt;</code><br />Fuente: <a href="http://www.javiergutierrezchamorro.com/insertar-saltos-de-linea-en-alt-y-title/947" class="bbc_link new_win" target="_blank">http://www.javiergutierrezchamorro.com/insertar-saltos-de-linea-en-alt-y-title/947</a>

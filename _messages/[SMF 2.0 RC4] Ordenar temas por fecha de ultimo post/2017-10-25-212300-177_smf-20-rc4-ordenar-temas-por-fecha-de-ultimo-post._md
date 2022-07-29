@@ -1,0 +1,17 @@
+---
+thread: "[SMF 2.0 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+id_msg: 629358
+date: "2017-10-25 21:23:00"
+
+subject: "[SMF 2.0 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+user: "yap320sorgesoureDug"
+
+modified_time: 2017-10-26 01:01:44
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+Aqui les traigo un micro-mod, que consiste en lo que reza el título.<br /><br />La cuestión es que, bajo condiciones normales, los SMF en general ya te ordenan los temas (en Message Index, es decir, en el índice de un foro/subforo) según la id del último post, que en términos prácticos coincide con la fecha del último post. Sin embargo, ésto deja de ser así si un admin decide hacer la trampilla de cambiar la fecha del último post de un tema reciente a mano desde la base de datos. En este último caso, dicho tema no se reposicionará como un tema viejo, como debería ocurrir, a menos que hagaís un pequeño cambio como el que os voy a enseñar en heste hilo:<br /><br />Nos vamos a <strong>./Subs/MessageIndex.php</strong><br />Buscamos:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$_REQUEST&#91;&#039;sort&#039;] = &#039;id_last_msg&#039;;</code><br />Y lo reemplazamos con:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$_REQUEST&#91;&#039;sort&#039;] = &#039;last_poster_time&#039;; //&#039;id_last_msg&#039;;</code><br />Y voilá!<br />Ahora sí podrán introducir tópicos de manera artificial con fechas manipuladas a su antojo, y aparecerán en el índice de los foros como si fuese legítimamente un tema viejo.<br /><br />Jeje pero que haxxor zoi gggg&nbsp; <img src="/assets/smf/smileys/like.png" alt="&#58;like&#58;" title="Nice, Epic, I like it!" class="smiley" /> <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" /> lince +10 papu.

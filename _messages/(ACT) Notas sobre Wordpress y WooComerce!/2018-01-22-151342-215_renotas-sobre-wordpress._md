@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908047
+date: "2018-01-22 15:13:42"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong>Los archivos mínimos que necesita un theme de Wordpress:</strong><br /><br /><ul class="bbc_list"><li><strong>style.css</strong>: aquí va el nombre, descripción, autor, licencia, entre otra meta-información que es leída por el engine de Wordpress para poder reconocer a una plantilla como tal (aparte de los estilos básicos).</li><li><strong>screenshot.png</strong>: es una imagen (sus dimensiones pueden variar de 600x450 a 1200x900) que contiene la vista previa de la plantilla (lo que verás desde el panel de administración de wordpress a la hora de seleccionar una plantilla). Es opcional.</li><li><strong>index.php</strong>: es el archivo principal y a partir de aquí arranca el tema (o plantilla). Desconosco ahora mismo si hay un modo de cambiar el archivo desde el cual la plantilla arranca, pero pues, de momento, confórmense con saber que éste es ese archivo principal.</li></ul><br /><strong>Ramificando el index.php para separar contenido:</strong><br /><br />Cuando comiences a separar contenido, para poder manejar todo más fácil, aparecerán otros archivos de suma importancia, tales como:<br /><br /><ul class="bbc_list"><li>header.php</li><li>footer.php</li><li>sidebar.php</li></ul><br />Para poder incluirlos en el index, se utilizan las funciones <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">get_header()</span></span>, <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">get_footer()</span></span> y <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">get_sidebar()</span></span> en el lugar en donde se supone que debe ir incluido el contenido almacenado en estos archivos.

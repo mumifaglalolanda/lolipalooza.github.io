@@ -1,0 +1,17 @@
+---
+thread: "Proyecto: SimDate&#153; para Discord"
+id_msg: 908718
+date: "2019-11-05 18:53:44"
+
+subject: "Re:Proyecto: SimDate&#153; para Discord"
+user: "t0dragonquesa"
+
+
+
+icon: xx
+
+
+
+
+---
+Esto no es de SimDate pero es para otro bot asi que lo dejo aqui:<br /><br />ideas para implementarlas para un bot: esto lo extraigo del grupo de discord de /arepa/ y /ve/:<br /><br />Escribes !dolar btc y el bot te devuelve lo siguiente:<br /><br />```localbitcoins:<br />&nbsp;promedio una hora: 18437.00 bs/$<br />&nbsp;promedio seis horas: 18325.03 bs/$<br />&nbsp;promedio doce horas: 18374.56 bs/$<br />&nbsp;promedio veinticuatro horas: 18216.87 bs/$```<br />&nbsp;<br />Escribes !calc 50000cop-&gt;usd&nbsp;&nbsp;&nbsp;el bot devuelve:<br /><br />`14.517538638429084 USD`<br /><br />Si te equivocas, por ejemplo: !calc 50000co-&gt;usd&nbsp;&nbsp;&nbsp;el bot responde:<br /><br />`mongolic@`<br /><br />Puedes preguntar:&nbsp;&nbsp;&nbsp;&lt;bot-nombre&gt; cuanto cuesta&nbsp; refresco&nbsp;&nbsp;&nbsp;y el bot responde:<br /><br />`REFRESCO COCA COLA LIGHT SIN CALORÍAS PET 2 LT a 33035 bolivares (~1.79$)`<br />`REFRESCO PEPSI NORMAL BOTELLA 2 LT a 38355 bolivares (~2.08$)`<br />`REFRESCO HIT NARANJA SIN CALORÍAS 2 LT a 38355 bolivares (~2.08$)`<br />`REFRESCO FRESCOLITA SIN CALORÍAS PET 2 LT a 38355 bolivares (~2.08$)`<br />`REFRESCO FRESCOLITA SIN CALORÍAS PET 1,5 LT a 30685 bolivares (~1.66$)`<br /><br />¿Cómo hace el bot para averiguar todo ésto? ¿Existe una api? ¿o hace algun tipo de webscrapping?

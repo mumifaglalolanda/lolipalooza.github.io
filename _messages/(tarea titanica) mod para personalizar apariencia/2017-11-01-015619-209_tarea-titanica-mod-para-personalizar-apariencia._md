@@ -1,0 +1,17 @@
+---
+thread: "(tarea tit&aacute;nica) mod para personalizar apariencia"
+id_msg: 629540
+date: "2017-11-01 01:56:19"
+
+subject: "(tarea tit&aacute;nica) mod para personalizar apariencia"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+No encuentro un mod parecido por más que le busco. Lo más parecido que pude encontrar fue esto: <a href="https://custom.simplemachines.org/mods/index.php?mod=111" class="bbc_link new_win" target="_blank">https://custom.simplemachines.org/mods/index.php?mod=111</a><br /><br />Pero no hace lo que queremos, lo que hace es colocar un color de nickname para distintos grupos de usuarios. No obstante, podemos usar dicho script de referencia.<br /><br />Así que, en <strong>h</strong>este <strong>h</strong>ilo nos proponemos el titánico desafío (porque sospecho que nos va a dar chingo de broncas) de crear un mod que permita a los usuarios personalizar su propia apariencia.<br /><br />Entendiéndose por apariencia:<br /><ul class="bbc_list"><li>Color de nickname.</li><li>Tipo de fuente de nickname.</li><li>Color de fondo para nickname.</li><li>Estilos para nickname: cursiva, subrayada, tachada, borde rayado, borde liso, color de borde.</li><li>Color de subnick.</li><li>Tipo de fuente de subnick.</li><li>Tipo de letra para mensajes.</li><li>Color de letra para mensajes.</li><li>Tamaño de letra para mensajes.</li></ul><br /><strong>Nota:</strong> aún no estamos seguros si realmente deseamos tener un mod para permitir al usuario personalizar presentación de sus mensajes, pues estamos en un foro que permite elegir entre estilos oscuros y estilos claros. Sólo hay un foro en el que queremos distintos estilos de mensajes, y es en <a href="http://localhost/halabalooza/index.php/board,86.0.html" class="bbc_link new_win" target="_blank">Discusiones Frikis</a>, que prevemos tendrá un estilo por defecto oscuro no cambiable.

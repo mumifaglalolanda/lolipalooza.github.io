@@ -1,0 +1,17 @@
+---
+thread: "Sobre los Hooks, o c&oacute;mo adaptar algunos scripts de SMF 2.0.15 al 2.0 RC4"
+id_msg: 908739
+date: "2019-11-07 01:48:08"
+
+subject: "Sobre los Hooks, o c&oacute;mo adaptar algunos scripts de SMF 2.0.15 al 2.0 RC4"
+user: "Dragon Maid~"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 18pt;" class="bbc_size"><strong>Los Hooks para la instalación de Scripts</strong></span></div><br />Para este tema usaremos 2 scripts de ejemplo:<br /><br />El OharaYoutubeEmbed:<br /><a href="http://custom.simplemachines.org/mods/index.php?mod=3268" class="bbc_link new_win" target="_blank">http://custom.simplemachines.org/mods/index.php?mod=3268</a><br /><br />Y este Facebook embed BBC:<br /><a href="https://custom.simplemachines.org/mods/index.php?mod=4062" class="bbc_link new_win" target="_blank">https://custom.simplemachines.org/mods/index.php?mod=4062</a><br /><br />Si deseáramos instalar estos scripts de manera automática en SMF 2.0 RC4, no iba a ser posible porque están creados para versiones posteriores. Sin embargo, como nosotros somos unos wizards nivel 99 perrones juanquers en esteroides, podemos instalarnos estos sabrosos mods en RC4 por vias manuales. Sin embargo, hay un obstáculo en nuestro camino que confundirá y frustrará a los más novatos (como nos confundió y nos frustró a nosotros en algun momento): los <em>hooks</em> que se autoejecutan con la instalación automática, pero en la manual tiene miles de broncas. Asi que en este hilo les daremos la clave para solucionar ese problema.<br /><br /><em>Acompáñennos a ver esta <del>triste</del> alegre historia.exe</em><br /><br />&#9888; <em>POST EN CONSTRUCCIÓN</em><br /><span class="spoiler">¿Saben cómo son esos avisos de &quot;en construcción&quot; de los que nunca salen los posts? Nosotros tampoco...</span>

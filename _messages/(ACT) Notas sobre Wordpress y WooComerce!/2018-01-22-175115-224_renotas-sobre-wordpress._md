@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908056
+date: "2018-01-22 17:51:15"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 14pt;" class="bbc_size"><strong>Creando la plantilla de página</strong></span></div><br />Para crear la plantilla donde será mostrada una página, deberemos crear el archivo <strong>page.php</strong>. Este archivo también puede hacer uso de <em>header</em>.php, <em>footer</em>.php y <em>sidebar</em>.php.<br /><br />Para mostrar el contenido de la página, utilizamos exactamente la misma información que habíamos necesitado para mostrar un artículo:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">if&nbsp;(&nbsp;</span><span style="color: #0000BB">have_posts</span><span style="color: #007700">()&nbsp;)&nbsp;:&nbsp;while(&nbsp;</span><span style="color: #0000BB">have_posts</span><span style="color: #007700">()&nbsp;)&nbsp;:&nbsp;</span><span style="color: #0000BB">the_post</span><span style="color: #007700">();&nbsp;</span><span style="color: #0000BB">?&gt;</span></span><br /><br />&nbsp; &nbsp; &lt;!-- estructura html del post, acompañada de la información del post --&gt;<br /><br /><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">endwhile;&nbsp;endif;&nbsp;</span><span style="color: #0000BB">?&gt;</span></span></code><br />Con sus respectivos: <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">the_title()</span></span> y <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">the_content()</span></span><br /><br />Es opcional incluir la seccion de comentarios en esta plantilla.<br /><br /><br /><br />Si se desea hacer uso de una plantilla alternativa para mostrar una página al 100% de su anchura, sin incluir la barra lateral con los widgets, se puede incluir un archivo llamado <strong>fullwidth.php</strong>, que tendrá la misma estructura de una página sin necesidad de agregar el contenido de <strong>sidebar.php</strong>.<br /><br />Al parecer, alternativamente el arhivo puede ser renombrado a <strong>template-fullwidth.php</strong>.<br /><br />Para que dicha plantilla pueda ser reconocida desde el panel de admin como plantilla alternativa seleccionable para las páginas, es necesario incluir un comentario al inicio del archivo, incluyendo el siguiente dato:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #FF8000">/*<br />template&nbsp;name:&nbsp;nombre&nbsp;para&nbsp;tu&nbsp;plantilla<br />*/<br /></span><span style="color: #0000BB">?&gt;</span></span></code>

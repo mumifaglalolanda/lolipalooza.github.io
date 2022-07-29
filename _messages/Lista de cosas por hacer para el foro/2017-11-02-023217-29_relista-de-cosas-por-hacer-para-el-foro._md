@@ -1,0 +1,17 @@
+---
+thread: "Lista de cosas por hacer para el foro"
+id_msg: 629544
+date: "2017-11-02 02:32:17"
+
+subject: "Re:Lista de cosas por hacer para el foro"
+user: "yap320sorgesoureDug"
+
+modified_time: 2017-11-03 23:50:27
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "tate kieto o t sako el fierro cuñao :'v"
+---
+Nuevas tareas:<br /><br />- <del><span style="color: brown;" class="bbc_color">revisar cómo funcionan las casillas de activación en ultimate profile... Esos datos se guardan en la base de datos o en caché? ¿Es posible crear variables de manera &quot;fácil&quot; para permitir a los usuarios activar/desactivar?</span></del><br /><br />Nota: ¡¡Acabo de encontrar la opción de activar/desactivar íconos de boards!! Resulta que no estaba en el panel de admin como lo había creído, sino en opciones de apariencia y diseño en los perfiles de los usuarios!! Solo resta ver si esos datos se guardan en caché o en base de datos!<br /><br />- <del><span style="color: brown;" class="bbc_color">Serciorarse que la wea de desactivar images on boards funka bien en los temas basados en curve (ya lo verifiqué correctamente en core)</span></del>.<br /><br />- <del><span style="color: brown;" class="bbc_color">Colocar images on boards en core/<strong>MessageIndex.template</strong>!!</span></del><br /><br />- <del><span style="color: brown;" class="bbc_color">Arreglar los íconos de boards de core</span></del>.<br /><br />- <del><span style="color: brown;" class="bbc_color">Colocar en los titles de imagenes de boards &quot;Hay nuevas respuestas&quot;/&quot;no hay nuevas respuestas&quot;</span></del>.<br /><br />- Agregar diversas opciones de visualización y presentación de posts en Config de Apariencia y Diseño!<br /><br />- Buscar un modo de insertar el html tag de agregar favicon por fuera de editar el index.template. De ese modo no habría que insertarlo en tooodos los index.template uno por uno, y de paso quizá funcionaría incluso cuando entramos en los temas...<br /><br />- ¿No habrá algún modo de hacer que los últimos posts mostrados en el índice de foros ignoren aquellos posts que se encuentran ocultos?<br /><br /><br /><br /><br />- <del><span style="color: brown;" class="bbc_color">Nótese que la sección &quot;<em>mostrar nuevos mensajes desde última visita</em>&quot; o &quot;<em>ver respuestas a mis mensajes</em>&quot; se parece mucho a <strong>MessageIndex.template</strong>, lo que significa que las modificaciones que le hemos hecho al último se las podríamos integrar también a los primeros (avatar del último posteador, etc)</span></del>.<br /><br />- <del><span style="color: brown;" class="bbc_color">Hacer que cuando se marque la casilla &quot;no mostrar avatares de otros usuarios&quot;, éstos no se vean en ninguna parte, no solo en los hilos, sino también en los índices de foros y toda la uea fierro pariente!</span></del><br /><br />- Acerca de la config de apariencia y diseño, de la opción &quot;<em>Utilizar menues al costado, en vez de desplegables, cuando esto sea posible.</em>&quot;. Serciorarse que tras marcar esta opción, dichos menúes se mostrarán elegantemente en todas partes. Corregir las broncas que nos traerá ésto con el ultimate profile (especialmente!).

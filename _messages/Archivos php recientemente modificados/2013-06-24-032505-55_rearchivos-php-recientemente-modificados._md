@@ -1,0 +1,17 @@
+---
+thread: "Archivos php recientemente modificados"
+id_msg: 4878
+date: "2013-06-24 03:25:05"
+
+subject: "Re:Archivos php recientemente modificados"
+user: "t0dragonquesa"
+
+modified_time: 2013-06-24 04:52:28
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<span style="font-size: 14pt;" class="bbc_size"><strong><span style="color: red;" class="bbc_color"><span class="bbc_u">Bugs a la hora de cambiar cosas desde el Panel de Administración</span></span></strong></span><br /><em><span style="font-size: 12pt;" class="bbc_size">(¡Lista de Cosas que NO se deben hacer!)</span></em><br /><br />Estos bugs son solucionables (vamos, todos los bugs lo son), pero lo cierto es que en estos momentos no dispongo de tiempo para aprender PHP o Javascript, así que aquí iré tomando nota de detalles incompletos que quedarán pendientes a raíz de la remodelación del foro. Futuros Admins, tened SIEMPRE presente ésta lista a la hora de ponerse a jugar con el panel de administración!<br /><br /><ul class="bbc_list"><li><em><strong>Centro de Administración</strong> &gt; Configuración del foro &gt; Modificaciones &gt; Ultimate Profile &gt; Número de Imagenes permitidas por usuarios</em>.<br />&nbsp;- Por favor, NO aumenten en más de 1 ese valor, o comportamientos inesperados y feos ocurrirán en los perfiles para aquellos a los que se les antoje subir más de una foto.<br />&nbsp;- Also, por favor, NO deshabilitar la vista de fotos!! O se verán incompletos los perfiles!!<br /></li><li>En construcción</li></ul><br />Salutes y que dios los bendiga y se apiade de vuestras almas.

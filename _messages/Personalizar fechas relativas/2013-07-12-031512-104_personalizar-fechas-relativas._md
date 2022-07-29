@@ -1,0 +1,17 @@
+---
+thread: "Personalizar fechas relativas"
+id_msg: 4895
+date: "2013-07-12 03:15:12"
+
+subject: "Personalizar fechas relativas"
+user: "yap320sorgesoureDug"
+
+modified_time: 2013-07-13 01:40:56
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomás"
+---
+<span style="color: teal;" class="bbc_color"><span style="font-size: 18pt;" class="bbc_size"><strong><span class="bbc_u">Personalizar fechas relativas</span></strong></span></span><br />(Modificar lo de &quot;Hoy a las&quot;, &quot;Ayer a las&quot;, para que se vea así &quot;Hace 1 minuto&quot;, &quot;Hace 2 minutos&quot;, &quot;Hace 12 horas&quot;, &quot;Hace 1 día&quot;, &quot;Hace 3 días&quot;).<br /><br />Hay que trabajar sobre el archivo Subs.php, la rutina timeformat es la clave de todo.<br />Hay que estudiarla y todas las variables que maneja.<br /><br />Este post continuará, estén pendientes...-<br /><br />EDIT: asdf, me dá wea y pereza explicar todo, solo confórmense con saber que las variables que trata la función <strong>timeformat</strong> son arrays cuyos elementos pueden encontrarlos <a href="http://php.net/manual/es/function.getdate.php" class="bbc_link new_win" target="_blank">aquí</a>.

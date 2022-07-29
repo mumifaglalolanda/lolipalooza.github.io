@@ -1,0 +1,17 @@
+---
+thread: "[XenForo] Agregar &quot;Tab&quot; de trofeos en el perfil de los usuarios"
+id_msg: 5778
+date: "2017-10-15 23:00:04"
+
+subject: "Re:[XenForo] Agregar &quot;Tab&quot; de trofeos en el perfil de los usuarios"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+&nbsp;Hago un copypasteo de la solución (por si acaso la página original se borra o algo):<br /><br />&nbsp;<br /><br />------------<br /><br /><br />For those whom want to show the Trophies on their profile page (i&#039;m using Flexile)<br /><br />Edit the members_view template:<br /><br />Search for mainTabs and add the following code below the other li&#039;s:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;li&gt;&lt;a href=&quot;{$requestPaths.requestUri}#trophies&quot;&gt;{xen:phrase trophies}&lt;/a&gt;&lt;/li&gt;</code><br />Go to the bottom of the template and add right above<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;xen:hook name=&quot;member_view_tabs_content&quot; params=&quot;{xen:array &#039;user={$user}&#039;}&quot; /&gt;</code><br />The following code:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;li id=&quot;trophies&quot; class=&quot;profileContent&quot; data-loadUrl=&quot;{xen:link members/trophies, $user}&quot;&gt;<br /><br />{xen:phrase loading}...<br />&lt;noscript&gt;&lt;a href=&quot;{xen:link &#039;members/trophies&#039;, $user}&quot;&gt;{xen:phrase view}&lt;/a&gt;&lt;/noscript&gt;<br />&lt;/li&gt;</code><br />And tadaa! you have the trophies on your user profile as a tab!<br />Luckely all trophies have their own style such as:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;div class=&quot;trophy&quot; id=&quot;trophy-2&quot;&gt;</code><br />So adding background images for your trophies wont be a problem!

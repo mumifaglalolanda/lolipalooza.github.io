@@ -1,0 +1,17 @@
+---
+thread: "[Scripts] Mierda Interesante de SMF"
+id_msg: 4866
+date: "2013-06-22 03:35:56"
+
+subject: "Re:[Scripts] Mierda Interesante de SMF"
+user: "yab220sorgesoureDug"
+
+modified_time: 2013-06-22 03:44:23
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<span style="color: red;" class="bbc_color"><span class="bbc_u"><strong><span style="font-size: 18pt;" class="bbc_size">Cómo agregar el &quot;Importante: &quot; en el título de los hilos fijos</span></strong></span></span><br /><br />En /themes/default/<strong>MessageIndex.template.php</strong>:<br /><div class="codeheader">Código: (buscar) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&#039;, $topic&#91;&#039;is_sticky&#039;] ? &#039;&lt;strong&gt;&#039; : &#039;&#039;, &#039;&lt;span id=&quot;msg_&#039; . $topic&#91;&#039;first_post&#039;]&#91;&#039;id&#039;] . &#039;&quot;&gt;&#039;, $topic&#91;&#039;first_post&#039;]&#91;&#039;link&#039;], (!$context&#91;&#039;can_approve_posts&#039;] &amp;&amp; !$topic&#91;&#039;approved&#039;] ? &#039;&amp;nbsp;&lt;em&gt;(&#039; . $txt&#91;&#039;awaiting_approval&#039;] . &#039;)&lt;/em&gt;&#039; : &#039;&#039;), &#039;&lt;/span&gt;&#039;, $topic&#91;&#039;is_sticky&#039;] ? &#039;&lt;/strong&gt;&#039; : &#039;&#039;;</code><br /><div class="codeheader">Código: (reemplazar por) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&#039;, $topic&#91;&#039;is_sticky&#039;] ? &#039;&lt;strong&gt;&#039;.$txt&#91;&#039;sticky&#039;].&#039;: &#039; : &#039;&#039;, &#039;&lt;span id=&quot;msg_&#039; . $topic&#91;&#039;first_post&#039;]&#91;&#039;id&#039;] . &#039;&quot;&gt;&#039;, $topic&#91;&#039;first_post&#039;]&#91;&#039;link&#039;], (!$context&#91;&#039;can_approve_posts&#039;] &amp;&amp; !$topic&#91;&#039;approved&#039;] ? &#039;&amp;nbsp;&lt;em&gt;(&#039; . $txt&#91;&#039;awaiting_approval&#039;] . &#039;)&lt;/em&gt;&#039; : &#039;&#039;), &#039;&lt;/span&gt;&#039;, $topic&#91;&#039;is_sticky&#039;] ? &#039;&lt;/strong&gt;&#039; : &#039;&#039;;</code><br />En /themes/default/languages/<strong>index.english.php</strong>:<br /><div class="codeheader">Código: (buscar) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$txt&#91;&#039;new&#039;] = &#039;New&#039;;</code><div class="codeheader">Código: (agregar después) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">$txt&#91;&#039;sticky&#039;] = &#039;Sticky&#039;;</code>Desde luego, pueden colocar lo que deseen en el valor de $txt&#91;&#039;sticky&#039;].<br />Hacer lo mismo en el <strong>index.tu-idioma.php</strong>.<br /><br />Disfruten!

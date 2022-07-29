@@ -1,0 +1,17 @@
+---
+thread: "Crear certificado SSL en localhost"
+id_msg: 908437
+date: "2019-06-05 16:16:44"
+
+subject: "Crear certificado SSL en localhost"
+user: "syn437sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Aqui les dejo un tutorial que igual no me funcionó, pero que quizás a alguno de ustedes si les funque :&#039;v<br />Quizás no me funka porque el tuto está en windows 10 y yo tengo windows 7...<br /><br />En fin, sírvanse:<br /><br />El setup:<br /><br /><div class="oharaEmbed youtube" id="oh_Zdl68h_N2lc" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=Zdl68h_N2lc">//www.youtube.com/watch?v=Zdl68h_N2lc</a></noscript></div><br />Éste me generó el mismo resultado que en el vídio (hay que eliminar la excepción para poder ingresar a tu página con <em>https://</em>, pero ¿pa&#039;qué? si igual el browser te dice que la conexión no es segura y eres tremendo gil<span class="spoiler">ipollas</span> por pretender tener un certificado SSL que firmaste tú mismo...<br /><br />La instalación (y desinstalación):<br /><br /><div class="oharaEmbed youtube" id="oh_Hhown6DgC00" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=Hhown6DgC00">//www.youtube.com/watch?v=Hhown6DgC00</a></noscript></div><br />Se supone que ejecutando estos pasos ya haces que salga el fulano candadito verde (conexión segura) sobre tu <em>https://</em>, pero a mi no me salió una shit....<br /><br />¿Ayuda?

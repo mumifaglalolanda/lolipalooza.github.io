@@ -1,0 +1,17 @@
+---
+thread: "Acerca de los Cron Jobs y php"
+id_msg: 908229
+date: "2018-09-06 02:20:31"
+
+subject: "Acerca de los Cron Jobs y php"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+Cómo crear cron jobs:<br /><a href="https://stackoverflow.com/questions/18737407/how-to-create-cron-job-using-php" class="bbc_link new_win" target="_blank">https://stackoverflow.com/questions/18737407/how-to-create-cron-job-using-php</a><br /><br />Acerca del comando wget y su creación de archivos de registro del cron en la raíz del directorio del host,<br />soluciones y alternativas al comando:<br /><a href="https://askubuntu.com/questions/322278/cron-creating-empty-files-in-the-root-directory" class="bbc_link new_win" target="_blank">https://askubuntu.com/questions/322278/cron-creating-empty-files-in-the-root-directory</a>

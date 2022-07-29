@@ -1,0 +1,17 @@
+---
+thread: "Proyectos - Checklists"
+id_msg: 5719
+date: "2016-05-15 01:39:25"
+
+subject: "Re:Proyectos - Checklists"
+user: "yab220sorgesoureDug"
+
+modified_time: 2016-06-04 02:33:12
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Liberty City Stories mapa: Conversión desde PS2</span></strong><br /><br />Cosas que faltan:<br /><br /><strong>Alta prioridad:</strong><br /><ul class="bbc_list"><li>Realizar una comparación exahustiva entre PC y PS2 para asegurar que se encuentran todos los objetos (postes de luz, cubos de basura, señalizaciones, etc.).</li><li><del>Corregir los archivos water.dat</del></li><li>Crear los garajes correspondientes al juego GTAIII (las guaridas de claude/fido o como sea que se llame ese pendejete).</li><li><del>Buscar en la red o crear un timecyc apropiado (que medio se paresca al timecyc de GTAIII/LCS)</del>.</li><li><del>Trazar ruta para tren subterráneo</del>.</li><li>Emisoras de radio!!</li><li><del>Reemplazar los sonidos, buscar los de VCS PC</del>.</li><li></li></ul><br /><strong>Baja prioridad:</strong><br /><ul class="bbc_list"><li>Corregir los paths. Buscar un editor de paths que funcione y trabaje con 3ds Max o lo que sea pero que funcione!!!</li><li>Optimizar modelos/LODs/colisiones. Prescindir del pendejo colmap...</li><li>Acomodar las colisiones y los modelos de los edificios (sus techos).</li><li>Llenar los feos huecos de los LODs (hay partes del mapa que no tiene LOD y a la distancia se ve como si estuviese vacío.)</li><li><del>Hacer que el tren funcione como lo deseamos: que tenga una colision tal que el jugador pueda meterse dentro del tren y caminar a través de éste mientras se mueve</del>.</li><li><del>Funcionalidades del tren parte 2: que puedas abordar como pasajero, sentarte al presionar &quot;F&quot;, observar todo desde la vista del tren, pararte al presionar &quot;F&quot;, y si presionas &quot;F&quot; cerca de la zona de conductor puedas manejar el tren como se manejan los trenes en SA... Ok, esto suena bastante ambicioso, lo se, pero tendrá baja prioridad</del>. Lo interesante es que funcionóooo jajaja carajo mamenme... bueno, no totalmente, pero algunas cosas se pueden hacer con cleo/asi y no es tan complicado, simplemente verificamos si el jugador está dentro del tren, y si presiona &quot;F lo forzamos a meterse dentro del tren como pasajero, si presiona &quot;F&quot; de nuevo lo sentamos en uno de los asientos y colocamos una vista que se paresca a la 1era persona (y/o 3era persona), y si presiona &quot;F&quot; de nuevo, recupera su movilidad dentro del tren</li><li>Crear unos &quot;seabed&quot; o como sea que se les llame. Creo que es mejor si son &quot;lowpoly&quot;, y que ellos mismos sean sus propios &quot;LOD&quot;.</li></ul>

@@ -1,0 +1,17 @@
+---
+thread: "Jekyll, la tecnolog&iacute;a para crear p&aacute;ginas en Github Pages!"
+id_msg: 908337
+date: "2019-04-20 04:22:38"
+
+subject: "Jekyll, la tecnolog&iacute;a para crear p&aacute;ginas en Github Pages!"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+<span style="font-family: times new roman;" class="bbc_font"><span style="font-size: 14pt;" class="bbc_size"><strong>Jekyll</strong></span></span><br /><br />De la mano de <em>Jekyll</em>, nos llega esta maravilla con la que podremos crear páginas con cierto dinamismo para ser puestas en Github Pages, un servicio de hosting totalmente gratuito y seguro!<br /><br />Visita la página oficial de <em>Jekyll</em>, donde podrás encontrar la documentación sobre cómo usarla.<br /><a href="https://jekyllrb.com/" class="bbc_link new_win" target="_blank">https://jekyllrb.com/</a><br /><br /><strong>¿Por qué usar <em>Jekyll</em>?</strong><br /><br />Simple, porque con ésta podremos crearnos páginas interactivas sin necesidad de preocuparnos del hosting, ni de las limitaciones que nos ofrece un servicio de hosting gratuito. Ideal para tener una página con la cual podamos mostrarle al mundo nuestros proyectos, o tener un pequeño blog (que es de lo que se trata <em>GitHub</em>).<br /><br />Y además <em>Jekyll</em> es de código abierto y totalmente gratuito! (cómo me gusta lo gratis, denme claps ay por qué vivo en un pais en ruina?? buu buuu <img src="/assets/smf/smileys/31192.gif" alt="&#58;lloron&#58;" title="" class="smiley" />)<br /><br /><strong>¿Qué tipo de contenido NO podemos tener en Github Pages?</strong><br /><br />Básicamente cualquier cosa que requiera de Php u otros lenguajes del lado del servidor (Asp, Python, etc.) ni bases de datos.<br />Pero montar una página con esas tecnologías en Github Pages sería hacer trampita, y aprovecharse de las bondades que ofrece ésta &#128523;. Igual no vas a poder porque está deshabilitado.<br /><br /><strong>Otros enlaces útiles:</strong><br /><br />Página de ejemplo: <a href="https://cookieplmonster.github.io/" class="bbc_link new_win" target="_blank">https://cookieplmonster.github.io/</a><br />Type-on-Strap (al parecer es la tecnología en la que se apoya <em>Jekyll</em>: <a href="https://github.com/sylhare/Type-on-Strap" class="bbc_link new_win" target="_blank">https://github.com/sylhare/Type-on-Strap</a><br />Disqus (un addon para agregar caja de comentarios a una página web, funciona para Github Pages!!!): <a href="https://disqus.com/" class="bbc_link new_win" target="_blank">https://disqus.com/</a>

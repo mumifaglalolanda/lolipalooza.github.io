@@ -1,0 +1,17 @@
+---
+thread: "Algunas notas acerca de la versi&oacute;n corta de los tags php &lt;? ?&gt;"
+id_msg: 908321
+date: "2019-04-08 17:05:39"
+
+subject: "Algunas notas acerca de la versi&oacute;n corta de los tags php &lt;? ?&gt;"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Para activarla en tu server (localhost), vas al archivo php.ini y buscas donde dice<br />&quot;short_open_tag=Off&quot;<br /><br />Y pus lo cambias a &quot;On&quot; y shá.<br /><br /><br />Pero en <a href="https://konstantin.blog/2012/reminder-dont-use-the-short-php-open-tag/" class="bbc_link new_win" target="_blank">esta página</a> dice que no es buena práctica usar los short tag, because reasons....<br />Allá ustedes si deciden desobedecer.<br /><br />Yo si lo haré porque soy malote y me gusta vivir la vida al límite jeje es patineta.

@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908255
+date: "2018-12-17 16:34:55"
+
+subject: "Re:Cultura general"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong>Trucos chidoris de Javascript:</strong><br /><br />salsa: <a href="https://www.reddit.com/r/webdev/comments/6rl2mv/reverse_engineering_obfuscated_javascript/" class="bbc_link new_win" target="_blank">https://www.reddit.com/r/webdev/comments/6rl2mv/reverse_engineering_obfuscated_javascript/</a><br /><div class="oharaEmbed youtube" id="oh_8UqHCrGdxOM" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=8UqHCrGdxOM">//www.youtube.com/watch?v=8UqHCrGdxOM</a></noscript></div><br />En este vídio enseñan un truco bien chidolino para hacerle una especie de ingenería inversa a los códigos que están &quot;obfuscated&quot; (esos códigos que se esfuerzan en ser ilegibles).<br /><br />El truco es sobreescribir funciones nativas para añadir dentro de ellas instrucciones de debugging, tales como <em>console.log</em> y así.<br /><br />Para lograrlo hay dos formas, la primera es con la clase <em><strong>Proxy</strong></em>, así:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">handler = {<br />&nbsp;&nbsp;&nbsp;apply: function(target, thisArg, argumentsList) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&quot;[L0] &quot;+target+&quot;: &quot;+argumentsList);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(argumentsList[0]);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return target.apply(thisArg, argumentsList); // call original function<br />&nbsp;&nbsp;&nbsp;}<br />}<br /><br />window.open = new Proxy(window.open, handler);<br />document.createElement = new Proxy(document.createElement, handler);<br />Element.prototype.appendChild = new Proxy(Element.prototype.appendChild, handler);<br />Element.prototype.removeChild = new Proxy(Element.prototype.removeChild, handler);</code><br />Ésto es asumiendo que queremos agregar monitoreo en las funciones <em>window.open</em>, <em>appendChild</em> o <em>removeChild</em>.<br /><br />Esta es la segunda forma de lograrlo (se me hace más fácil de entender y manejar, pero el autor del video dice que usar la clase y el objeto <strong>Proxy</strong> es más limpio):<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">Element.prototype.removeChild = function(arg1) {<br />&nbsp;&nbsp;&nbsp;console.log(&quot;removeChild: &quot;+arg1);<br />&nbsp;&nbsp;&nbsp;console.log(arg1);<br />}</code><br />Ver video para entender mejor el contexto de este código y así entenderlo mejor.<br />Puedes personalizarlo a tu gusto y así.

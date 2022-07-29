@@ -1,0 +1,17 @@
+---
+thread: "[Scripts] Mierda Interesante de SMF"
+id_msg: 4564
+date: "2012-10-20 17:36:52"
+
+subject: "[Tutorial] C&oacute;mo colocar los perfiles en celdas en cada Theme "
+user: "yab220sorgesoureDug"
+
+modified_time: 2013-06-22 01:54:55
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+<span style="color: teal;" class="bbc_color"><strong><span style="font-size: 18pt;" class="bbc_size"><span class="bbc_u">[Tutorial] Cómo colocar los perfiles en celdas en cada Theme nuevo instalado en el foro</span></span></strong></span><br /><br />Tienes que irte al <em>index.css</em> de la carpeta del ftp de tu theme deseado<em> /Themes/themeparticular/css/index.css</em><br />Una vez abierto el index.css, buscas el siguiente código:<br /><br /><div class="codeheader">Código: (Buscar) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">.poster ul ul li<br />{<br />&nbsp; &nbsp;display: inline;<br />}</code><br /><div class="codeheader">Código: (Reemplazar por) <a href="#" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">.poster ul ul li<br />{<br />&nbsp; &nbsp;display: inline;<br />&nbsp; &nbsp;background: none;<br />&nbsp; &nbsp;border: none;<br />}<br /><br />.poster ul li, .poster h4<br />{<br />//&nbsp; &nbsp;background: #dcdfe4;&nbsp; &nbsp; &nbsp;// color de fondo para el nickname<br />&nbsp; &nbsp;border: dashed 0px #dcdfe4;&nbsp; &nbsp; // color de los márgenes<br />&nbsp; &nbsp;text-align: center;<br />&nbsp; &nbsp;padding: 3px;<br />&nbsp; &nbsp;margin-top:5px;<br />&nbsp; &nbsp;border-width:1px;<br />&nbsp; &nbsp;color: #3f3f3f;&nbsp; &nbsp; // color de las letras<br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width: 80%;<br />border-radius: 5px;<br />}<br />.poster ul li {<br />&nbsp; &nbsp;width: 94%;<br />}<br />.poster ul ul{margin:0.3em 1em 0 0;padding:0;}<br />.poster ul ul li{display:inline;}<br />.poster ul li{-moz-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;-ms-border-radius:5px 5px 5px 5px;-o-border-radius:5px 5px 5px 5px;background-color:#dcdfe4;border-width:1px;margin-top:5px;padding:3px;text-align:center;}<br />.poster li.stars, .poster li.avatar, .poster li.blurb, li.postcount, li.im_icons ul<br />{<br />&nbsp; &nbsp;margin-top: 0.5em;<br />}</code><br />Nótese como el color de fondo del Nickname es omitido.<br />En éste último code hay que ubicar la parte que dice:<br /><br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote">.poster ul li<br />{<br />&nbsp;&nbsp;&nbsp;-moz-border-radius:5px 5px 5px 5px;<br />&nbsp;&nbsp;&nbsp;border-radius:5px 5px 5px 5px;<br />&nbsp;&nbsp;&nbsp;-webkit-border-radius:5px 5px 5px 5px;<br />&nbsp;&nbsp;&nbsp;-ms-border-radius:5px 5px 5px 5px;<br />&nbsp;&nbsp;&nbsp;-o-border-radius:5px 5px 5px 5px;<br />&nbsp;&nbsp;&nbsp;<span style="font-size: 14pt;" class="bbc_size"><strong>background-color:#dcdfe4</strong></span>;<br />&nbsp;&nbsp;&nbsp;border-width:1px;<br />&nbsp;&nbsp;&nbsp;margin-top:5px;<br />&nbsp;&nbsp;&nbsp;padding:3px;<br />&nbsp;&nbsp;&nbsp;text-align:center;<br />}<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />ésta parte controla el color de fondo de la celda.

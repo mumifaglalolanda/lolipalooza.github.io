@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre MySQL"
+id_msg: 5240
+date: "2015-05-03 18:01:41"
+
+subject: "Notas sobre MySQL"
+user: "t0dragonquesa"
+
+
+
+icon: xx
+
+
+
+
+---
+<span style="color: green;" class="bbc_color"><strong><span style="font-size: 18pt;" class="bbc_size">Notas sobre MySQL</span></strong></span><br /><br /><strong>Tipos de datos:</strong><br />CHAR/CHAR(): caracter ó cadena de caracteres (0-255).<br />VARCHAR: cadena de caracteres - 0 a 255.<br />TINYINT(): entero de 0 a 255 ó de -128 a 127.<br />BIT/BOOL/BOOLEAN: sinónimos de TINYINT(1).<br />SMALLINT: entero de -32768 y 32767 ó de 0 a 65535.<br />MEDIUMINT: entero de -83888608 a 8388607 ó de 0 a 16777215.<br />INT/INTEGER: entero de -2147483648 a 2147483647 ó de 0 a 4294967295.<br />BIGINT: entero de -9223372036854775808 a 922337203685477807 ó de 0 a 18446744073709551615.<br />FLOAT/FLOAT(): de -3402823466E+38 a -1.175494351E-38 ó&nbsp; 1.175494351E+38 y 3.402823466E+38.<br />DOUBLE: de -1.7976931348623157E+308 a -2.2250738585072014E-308 ó de 2.2250738585072014E-308 a 1.7976931348623157E+308.<br /><br />DOUBLE PRECISION<br />REAL: sinónimo de DOUBLE.<br />DECIMAL (DEC/NUMERIC/FIXED): coma flotante guardada como char.<br />DATE: desde ?1000-01-01? y ?9999-12-31?. Formato ?AAAA-MM-DD?.<br />DATETIME: desde ?1000-01-01 00:00:00? hasta ?9999-12-31 23:59:59?. Formato ?AAAA-MM-DD HH:MM:SS?.<br />TIMESTAMP: desde -1970-01-01 00:00:00? hasta un momento en el año 2037.<br />TIME: de ?-838:59:59? a ?838:59:59?. Formato HH:MM:SS<br />YEAR: desde 1901 a 2155 y 0000 (formato 4 dígitos), y desde 1970 a 2069 (formato de 2 dígitos (70-69)).<br /><br />Los siguientes tipos son para datos sin tipo o grandes cantidades de datos.<br /><br />TINYBLOB<br />TINYTEXT: columna BLOB o TEXT (longitud 255 caracteres (28-1)).<br /><br />BLOX<br />TEXT: columna BLOB o TEXT (longitud 65535 caracteres (216-1)).<br /><br />MEDIUMBLOB<br />MEDIUMTEXT: columna BLOB o TEXT (longitud 16777215 caracteres (224-1)).<br /><br />LONGBLOB<br />LONGTEXT: columna BLOB o TEXT (longitud de hasta 4294967298 caracteres (232-1)).<br /><br />Los siguientes son los tipos enumerados y los conjuntos:<br /><br />ENUM: enumerado (objeto tipo cadena), puede contener valor de entre una lista, el valor NULL o el valor de error ?? (máximo de 65535 valores diferentes).<br />SET: conjunto, cadena que contiene 0 o más valores de entre una lista de valores (máximo de miembros de un conjunto: 64). <br /><br />Para más información sobre tipos de datos: <a href="http://www.aulafacil.com/mysql/curso/Lecc-8.htm" class="bbc_link new_win" target="_blank">http://www.aulafacil.com/mysql/curso/Lecc-8.htm</a><br /><br /><strong>Comandos útiles</strong><br />show columns from <strong>table_name</strong>;<br /><br /><strong>MySQL Expresiones regulares</strong><br />Todas estas expresiones devuelven 1 (true):<br />SELECT ?rumpelspinskin? REGEXP ?k?;<br />SELECT ?rumpelspinskin? REGEXP ?k|z?;<br />SELECT ?rumpelspinskin? REGEXP ?rumpelspinskin|rapunzel?;<br />SELECT ?El perfume? REGEXP ?^E?; (<em>buscar &quot;E&quot; al inicio de la cadena</em>)<br />SELECT ?Karamazov? REGEXP ?v$?; (<em>buscar &quot;v&quot; al final de la cadena</em>)<br />SELECT ?Karamazov? REGEXP ?^K.+v$?; (<em>buscar &quot;K&quot; al inicio y &quot;v&quot; final de la cadena</em>)<br />SELECT ?Rápido corren los carros por el ferrocarril? REGEXP ?[rren]?;<br />SELECT ?alskjdhasjkdhasljkdhas? REGEXP ?[a-z]?; (<em>todos los caracteres de la cadena deben estar entre a y z</em>)<br />SELECT ?lksjfsdfsdlfsdjlsfd45646465lkashdakshdkas? REGEXP ?[a-z0-9]?;

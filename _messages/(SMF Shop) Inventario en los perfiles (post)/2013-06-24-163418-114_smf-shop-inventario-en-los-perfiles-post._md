@@ -1,0 +1,17 @@
+---
+thread: "(SMF Shop) Inventario en los perfiles (post)"
+id_msg: 4880
+date: "2013-06-24 16:34:18"
+
+subject: "(SMF Shop) Inventario en los perfiles (post)"
+user: "yab220sorgesoureDug"
+
+modified_time: 2013-06-24 16:39:32
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomás"
+---
+<span style="font-size: 18pt;" class="bbc_size"><span style="color: purple;" class="bbc_color"><strong><span class="bbc_u">Inventarios en Perfiles (posts)</span></strong></span></span><br /><br />Agregar en <strong>display.template</strong> el siguiente post entre la lista de elementos del perfil (avatar, status, edad, mensajes, etc.):<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&nbsp;&nbsp;&nbsp;// Inventario en post.<br />&nbsp;&nbsp;&nbsp;global $db_prefix, $smcFunc, $boardurl;<br />&nbsp;&nbsp;&nbsp;$request = $smcFunc&#91;&#039;db_query&#039;](&#039;&#039;,&#039;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT it.desc, it.image<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM {db_prefix}shop_items AS it,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;{db_prefix}shop_inventory AS iv<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WHERE iv.ownerid = {int:member}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND iv.itemid = it.id<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIMIT 0, 9&#039;,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#039;member&#039; =&gt; $message&#91;&#039;member&#039;]&#91;&#039;id&#039;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br />&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;if ($smcFunc&#91;&#039;db_num_rows&#039;]($request))<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; echo &#039;&lt;li class=&quot;items&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &lt;fieldset&gt;&lt;legend&gt;Mis items&lt;/legend&gt;&#039;;<br />&nbsp;&nbsp;&nbsp; while ($row = $smcFunc&#91;&#039;db_fetch_assoc&#039;]($request))<br />&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo &#039;&lt;img src=&quot;&#039;,$boardurl,&#039;/Sources/shop/item_images/&#039;.$row&#91;&#039;image&#039;].&#039;&quot; title=&quot;&#039;.$row&#91;&#039;desc&#039;].&#039;&quot; alt=&quot;&#039;.$row&#91;&#039;image&#039;].&#039;&quot; /&gt;&#039;;<br />&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp; &nbsp; &nbsp;$smcFunc&#91;&#039;db_free_result&#039;]($request);<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; echo &#039; &lt;/fieldset&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &lt;/li&gt;&#039;;<br />&nbsp;&nbsp;&nbsp;}<br /></code>

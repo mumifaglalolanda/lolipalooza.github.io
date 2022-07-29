@@ -1,0 +1,17 @@
+---
+thread: "(ACT): Notas sobre Wordpress y WooComerce!"
+id_msg: 908053
+date: "2018-01-22 17:38:56"
+
+subject: "Re:Notas sobre Wordpress"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 14pt;" class="bbc_size"><strong>Enlaces dinámicos a entradas antiguas y recientes</strong></span></div><br />Si por ejemplo tienes ésto en tu diseño estático:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;div class=&quot;posts-nav cf&quot;&gt;<br />&nbsp; &nbsp; &lt;a href=&quot;&quot;&gt; &lt;&lt; Previos&lt;/a&gt;<br />&nbsp; &nbsp; &lt;a href=&quot;&quot;&gt;Recientes &gt;&gt;&lt;/a&gt;<br />&lt;/div&gt;</code><br />Para volverlo dinámico nomás le agregas lo siguiente:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code"><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">if(&nbsp;</span><span style="color: #0000BB">get_next_posts_link</span><span style="color: #007700">()&nbsp;||&nbsp;</span><span style="color: #0000BB">get_previous_posts_link</span><span style="color: #007700">()&nbsp;)&nbsp;{&nbsp;</span><span style="color: #0000BB">?&gt;</span></span><br />&lt;div class=&quot;posts-nav cf&quot;&gt;<br />&nbsp; &nbsp; <span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;next_posts_link</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">__</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;&lt;&lt;&nbsp;Previos&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">&#039;apk&#039;</span><span style="color: #007700">)&nbsp;);&nbsp;</span><span style="color: #0000BB">?&gt;</span></span><br />&nbsp; &nbsp; <span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;previous_posts_link</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">__</span><span style="color: #007700">(</span><span style="color: #DD0000">&#039;Recientes&nbsp;&gt;&gt;&#039;</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">&#039;apk&#039;</span><span style="color: #007700">)&nbsp;);&nbsp;</span><span style="color: #0000BB">?&gt;</span></span><br />&lt;/div&gt;<br /><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">}&nbsp;</span><span style="color: #0000BB">?&gt;</span></span></code>

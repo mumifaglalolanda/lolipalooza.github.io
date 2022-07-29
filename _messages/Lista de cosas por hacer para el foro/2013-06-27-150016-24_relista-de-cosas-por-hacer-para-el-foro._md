@@ -1,0 +1,17 @@
+---
+thread: "Lista de cosas por hacer para el foro"
+id_msg: 4886
+date: "2013-06-27 15:00:16"
+
+subject: "Re:Lista de cosas por hacer para el foro"
+user: "RafronoalelrY"
+
+modified_time: 2015-11-15 19:05:20
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+
+---
+íconos del display.template, info del posteador ubicada debajo de su avatar:<br /><ul class="bbc_list"><li>información (simbolito i): fecha de registro, cantidad de posts, edad (si la tiene).</li><li>icono del sexo</li><li>icono del pais</li><li>icono de enviar mensajes privados</li><li>Y debajo de todo eso aparece el texto del subnick (ó título personalizado -título 1-)</li></ul><br />En nuestro caso tenemos lo siguente: además de 4 simbolitos, tenemos un monton de información desplegada en formato texto.<br />A continuación describimos todo, y luego trataremos de ofrecer ideas para organizarlo:<br /><br /><ul class="bbc_list"><li>Nickname. Rango (formato imagen).</li><li>Título personalizado (title2).</li><li>N° mensajes.</li><li>Dinero/créditos.</li><li>Edad.</li><li>Campos de perfil personalizados: ubicación, humor, alineación.</li><li>Título personal (Subnick, title1).</li><li>4 íconos:<br /><ul class="bbc_list" style="list-style-type: decimal;"><li>ver perfil</li><li>ver pagina web</li><li>e-mail</li><li>[mandar mensaje privado/li]<br /></li></ul></li></ul><br />Esto se pudiese organizar de la siguiente forma:<br /><br /><ul class="bbc_list"><li>Nickname.</li><li>Grupo (formato imagen)</li><li>Avatar</li><li>iconos para simplificar info:<br /><ul class="bbc_list" style="list-style-type: decimal;"><li>información del usuario: fecha registro, edad, mensajes, dinero (con enlace a su perfil).</li><li>ver página web</li><li>sexo</li><li>nacionalidad (bandera)</li><li>mostrar resto de campos personalizados (con el actual ícono de los mps)</li><li>un icono que represente el campo personalizado de la alineación (vida,caos,etc.)</li></ul></li><li>título personal (subnick, title1). Nota: el title2 solo se mostrará en el perfil.</li><li>Inventario de Items (para e futuro).</li><li>Award (si lo tiene).</li></ul><br />Respecto al inventario dentro del perfil!!!<br /><br />Actualmente el inventario se muestra en formato fieldset, con los siguientes datos:<br />- La leyenda da enlace al inventario desde el shop.<br />- adentro del fieldset están ubicados los siguientes elementos:<br />&nbsp; &nbsp; - items (si posicionas el cursor del raton en ellos, se muestra su descripción)<br />&nbsp; &nbsp; - &quot;enviar dinero al usuario&quot; formato texto<br /><br />Pero se puede mejorar de la siguiente forma:<br />- items<br />- iconos en zona inferior (pueden verse centrados, o movidos a la derecha):<br />&nbsp; &nbsp; - enviar dinero al usuario<br />&nbsp; &nbsp; - regalar item al usuario<br />&nbsp; &nbsp; - cuanto dinero tiene el usuario (formato texto!)<br />&nbsp; &nbsp; - <br /><br /><br />Ejemplos de posts borrados del viejo dizi: buscar entre los debates memorables el tema &quot;qué le falta al war games forum - pag 2&quot;

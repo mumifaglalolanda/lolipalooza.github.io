@@ -1,0 +1,17 @@
+---
+thread: "Proyectos varios relacionados al fant&aacute;stico mundo de la electr&oacute;nica"
+id_msg: 909499
+date: "2019-12-13 16:22:09"
+
+subject: "Re:Proyectos varios relacionados al fant&aacute;stico mundo de la electr&oacute;nica"
+user: "yab220sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Aqui les dejo un proyecto fascinante de un detector de proximidad:<br /><br />		<div id="695599264265233" class="fb_bbc_thumb">			<a href="https://www.facebook.com/elprofe.garcia/videos/695599264265233/">				<img class="" src="https://graph.facebook.com/695599264265233/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/elprofe.garcia/videos/695599264265233/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("695599264265233").addEventListener("click", get_fb_embed);		</script><br /><br />Que pena que me retiré de la electrónica porque odio tener que trabajar en un laboratorio lleno de basura por todas partes... (? amén de que hace falta guita para hacerla bien de la electrónica...

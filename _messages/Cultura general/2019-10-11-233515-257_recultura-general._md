@@ -1,0 +1,17 @@
+---
+thread: "Cultura general"
+id_msg: 908672
+date: "2019-10-11 23:35:15"
+
+subject: "Re:Cultura general"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><strong><span style="font-size: 14pt;" class="bbc_size">Sobre Bots, Dominios, Ips y DNS</span></strong></div><br />Sobre cómo realizar consultas DNS para obtener todas las IPs de google.com (que vendrían siendo las mismas IPs utilizadas por google, por su servicio de correo electrónico, por sus bots y demases weás):<br /><a href="https://support.google.com/a/answer/60764?hl=en" class="bbc_link new_win" target="_blank">https://support.google.com/a/answer/60764?hl=en</a><br /><a href="https://evert.meulie.net/faqwd/googlebot-ip-ranges/" class="bbc_link new_win" target="_blank">https://evert.meulie.net/faqwd/googlebot-ip-ranges/</a><br /><a href="https://snurps.blogspot.com/2013/10/how-many-ip-addresses-does-google-have.html" class="bbc_link new_win" target="_blank">https://snurps.blogspot.com/2013/10/how-many-ip-addresses-does-google-have.html</a> &lt;-- Link destacado! Sintetiza mejor la info.<br /><a href="https://md5calc.com/google/ip" class="bbc_link new_win" target="_blank">https://md5calc.com/google/ip</a><br /><br />Sobre los crawlers (qué son y cómo identificarlos a través de $_SERVER[USER_AGENT] &lt;- mal escrito ):<br /><a href="https://support.google.com/webmasters/answer/1061943?hl=en" class="bbc_link new_win" target="_blank">https://support.google.com/webmasters/answer/1061943?hl=en</a><br /><a href="https://stackoverflow.com/questions/677419/how-to-detect-search-engine-bots-with-php" class="bbc_link new_win" target="_blank">https://stackoverflow.com/questions/677419/how-to-detect-search-engine-bots-with-php</a><br /><br />Nslookup (es una especie de cónsola de DNS):<br /><a href="https://www.cloudns.net/blog/10-most-used-nslookup-commands/" class="bbc_link new_win" target="_blank">https://www.cloudns.net/blog/10-most-used-nslookup-commands/</a><br /><br />Funciones Php relevantes:<br /><a href="https://www.php.net/manual/es/function.dns-get-record.php" class="bbc_link new_win" target="_blank">https://www.php.net/manual/es/function.dns-get-record.php</a><br /><a href="https://www.php.net/manual/es/function.gethostbyname.php" class="bbc_link new_win" target="_blank">https://www.php.net/manual/es/function.gethostbyname.php</a><br /><a href="https://www.php.net/manual/es/function.gethostbyaddr.php" class="bbc_link new_win" target="_blank">https://www.php.net/manual/es/function.gethostbyaddr.php</a><br /><br />Este vídio te enseña a instalar y a usar Dig (para ejecutar comandos de DNS en consola):<br /><div class="oharaEmbed youtube" id="oh_BdEBW8HyTg0" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=BdEBW8HyTg0">//www.youtube.com/watch?v=BdEBW8HyTg0</a></noscript></div>Pero el enlace en donde conseguir el programa está roto, aquí te lo facilito:<br /><a href="https://www.question-defense.com/2010/12/25/install-dig-on-windows-7-get-dig-working-on-windows-7-64-bit-os" class="bbc_link new_win" target="_blank">https://www.question-defense.com/2010/12/25/install-dig-on-windows-7-get-dig-working-on-windows-7-64-bit-os</a><br />No&#039;más busca el archivo <em>dig-files3.zip</em>.

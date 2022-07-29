@@ -1,0 +1,17 @@
+---
+thread: "[Tutorial] Custom Maid 3D 2 to MMD + otras cosillas"
+id_msg: 908333
+date: "2019-04-18 03:12:00"
+
+subject: "Re:[Tutorial] Custom Maid 3D 2 to MMD + otras cosillas"
+user: "Water-Softener-top"
+
+
+
+icon: clip
+
+
+
+
+---
+<div align="center"><span style="font-family: Times New Roman;" class="bbc_font"><span style="font-size: 18pt;" class="bbc_size"><strong><span style="color: limegreen;" class="bbc_color">Custom Maid 3D 2</span> <span style="color: green;" class="bbc_color">to</span> <span style="color: teal;" class="bbc_color">MMD</span> <span style="color: navy;" class="bbc_color">Tutorial</span></strong></span></span></div><br /><br /><span style="font-family: arial;" class="bbc_font"><br />&#9829; En este tutorial cubriremos el asunto de extraer los modelos del juego Custom Maid 3D 2 con todo y bones, físicas y expresiones, justo como en el juego original. Genial ¿no? &#9685; &#8255;&#8255; &#9685;<br />El pendejo tutorial en cuestión proviene de DevianArt , traducido por mi (Water-Softener-top).<br /><img src="https://a.deviantart.net/avatars/d/e/dego4ever2getter.jpg?15" alt="" class="bbc_img" /><br /><br />&#9829; Paso 1 &#9829; descargar este dll:<br />Enlace roto, me lleva la.... &amp;%$&amp;$&amp;&nbsp; <img src="/assets/smf/smileys/a5ae31c4185bc60cd006650dc10f8147.gif" alt="&#58;angry2&#58;" title="Angry" class="smiley" /> <img src="/assets/smf/smileys/337337.gif" alt="&#58;biting&#58;" title="Biting" class="smiley" /><br />Aquí hay un espejo: <a href="https://sta.sh/0m369hw6rv8" class="bbc_link new_win" target="_blank">https://sta.sh/0m369hw6rv8</a> (cuesta para que lo agarre pero al final si lo agarra).<br />Igual jódanse, yo voy a crear otro mirror aqui mismo, no me quiero arriesgar a que esta wea luego no funque.<br />(Revisen Adjuntos de este post)<br /><br />&#9829; Paso 2 &#9829; ve a la carpeta KISS (la carpeta del juego) y pon el archivo .dll en UnityInjector.<br /><img src="https://i.imgur.com/sBWSNjn.png" alt="" class="bbc_img" /><br /><br />&#9829; Paso 3 &#9829; inicia el juego<br /><br />&#9829; Paso 4 &#9829; ve a la pantalla de editar maid<br /><img src="https://i.imgur.com/7VTRwrr.jpg" alt="" class="bbc_img" /><br /><br />&#9829; Paso 5 &#9829; presiona f8<br /><img src="https://i.imgur.com/Z5VT3AZ.jpg" alt="" class="bbc_img" /><br /><br />&#9829; Paso 6 &#9829; Click en T-Pose<br /><img src="https://i.imgur.com/DiaeSct.jpg" alt="" class="bbc_img" /><br /><br />&#9829; Step 7 &#9829; Click en Output.pmx( coloca en filepass la ruta en donde quieres que se guarde el modelo)<br /><img src="https://i.imgur.com/4SScjOD.jpg" alt="" class="bbc_img" /><br /><br />&#10047;LISTO&#10047; (Algunos modelos pueden tener pequeños bugs que puedes arreglar en PMD / PMX)<br /><img src="https://i.imgur.com/ulpyTm1.jpg" alt="" class="bbc_img" /><br /><br />Si no sabes como arreglar esos bugs, &#9825; aquí les dejo el tutorial respectivo:<br /><a href="https://www.deviantart.com/dego4ever2getter/art/CM3D2-To-MMD-Bugs-Fix-Tutorial-719465844" class="bbc_link new_win" target="_blank">https://www.deviantart.com/dego4ever2getter/art/CM3D2-To-MMD-Bugs-Fix-Tutorial-719465844</a><br />No se si debería transcribir ese tutorial de arreglar bugs en el MMD. Supongo que si debería :x<br /></span>

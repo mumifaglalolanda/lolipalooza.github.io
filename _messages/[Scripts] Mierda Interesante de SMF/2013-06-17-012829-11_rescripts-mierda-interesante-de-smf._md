@@ -1,0 +1,17 @@
+---
+thread: "[Scripts] Mierda Interesante de SMF"
+id_msg: 4841
+date: "2013-06-17 01:28:29"
+
+subject: "Re:[Scripts] Mierda Interesante de SMF"
+user: "yap320sorgesoureDug"
+
+modified_time: 2017-11-01 13:19:30
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "Pos nomás"
+---
+Empujonsito.<br /><br /><span style="color: navy;" class="bbc_color"><strong><span style="font-size: 18pt;" class="bbc_size">Pendiente:</span></strong></span><br /><br />Averiguar qué changos es ésto, cómo se usa y cómo poder mejorarlo.<br />Fuente: /themes/default/<strong>Display.template.php</strong><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Can we issue a warning because of this post?&nbsp; Remember, we can&#039;t give guests warnings.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($context&#91;&#039;can_issue_warning&#039;] &amp;&amp; !$message&#91;&#039;is_message_author&#039;] &amp;&amp; !$message&#91;&#039;member&#039;]&#91;&#039;is_guest&#039;])<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo &#039;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=&quot;smalltext reportlinks&quot; style=&quot;list-style:none;&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;&#039;, $scripturl, &#039;?action=profile;area=issuewarning;u=&#039;, $message&#91;&#039;member&#039;]&#91;&#039;id&#039;], &#039;;msg=&#039;, $message&#91;&#039;id&#039;], &#039;&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&quot;&#039;, $settings&#91;&#039;images_url&#039;], &#039;/warn.gif&quot; alt=&quot;&#039;, $txt&#91;&#039;issue_warning_post&#039;], &#039;&quot; title=&quot;&#039;, $txt&#91;&#039;issue_warning_post&#039;], &#039;&quot; /&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;&#039;;<br /></code><br />also,<br />acabo de encontrar una línea rara y sospechosa en el <strong>display.template</strong> que estaba comentada y creo que deberíamos saber qué hace y si sería mejor descomentarla para que haga lo que tiene que hacer:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arcade_champs_sig($message);<br />*/<br /></code>Sospecho por su nombre, que se trata de indicar si el usuario es un campeon de algun jueguito de arcade y así.

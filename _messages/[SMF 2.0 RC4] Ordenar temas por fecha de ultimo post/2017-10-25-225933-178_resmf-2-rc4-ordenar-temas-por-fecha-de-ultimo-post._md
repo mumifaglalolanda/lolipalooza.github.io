@@ -1,0 +1,17 @@
+---
+thread: "[SMF 2.0 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+id_msg: 629375
+date: "2017-10-25 22:59:33"
+
+subject: "Re:[SMF 2 RC4] Ordenar temas por fecha de &uacute;ltimo post"
+user: "yap320sorgesoureDug"
+
+modified_time: 2017-10-26 00:51:01
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<div class="quoteheader"><div class="topslice_quote">Post completamente ridículo realizado por: yap320sorgesoureDug link=topic=3075.msg629358#msg629358 date=1508959380</div></div><blockquote class="bbc_standard_quote">Jeje pero que haxxor zoi gggg&nbsp; <img src="/assets/smf/smileys/like.png" alt="&#58;like&#58;" title="Nice, Epic, I like it!" class="smiley" /> <img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" /> lince +10 papu.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Como todo niño rata he sido owneado duro por mi propia pendejez.<br /><br /><img src="/assets/smf/smileys/germanyfacepalmplz.gif" alt="&#58;facepalm&#58;" title="Facepalm" class="smiley" /><br /><br />Porque no todo podía ser tan bonito... Resulta que la wea esta inutil me da problemas cuando trato de ingresar a las páginas 2 en adelante.<br /><br /><em>&lt;&lt;Búsqueda y reparación de errores en progreso&gt;&gt;</em><br /><br /><hr /><br /><strong>EDIT:</strong> Me cago en la puta, creo que lo resolví, o al menos hasta nuevo aviso <img src="/assets/smf/smileys/rolleyes.gif" alt="&#58;rolleyes2&#58;" title="rolleyes" class="smiley" /><br /><br />Buscar en <strong>./Subs/MessageIndex.php</strong>:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">FROM {db_prefix}topics AS t&#039; . ($context&#91;&#039;sort_by&#039;] === &#039;last_poster&#039; ? &#039;</code><br />Y reemplazar por:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">FROM {db_prefix}topics AS t&#039; . ($context&#91;&#039;sort_by&#039;] === &#039;last_poster&#039; || $context&#91;&#039;sort_by&#039;] === &#039;last_post&#039; ? &#039;</code>
