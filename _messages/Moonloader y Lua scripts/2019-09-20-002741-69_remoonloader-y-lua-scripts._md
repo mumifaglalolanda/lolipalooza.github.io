@@ -1,0 +1,17 @@
+---
+thread: "Moonloader y Lua scripts"
+id_msg: 908664
+date: "2019-09-20 00:27:41"
+
+subject: "Re:Moonloader y Lua scripts"
+user: "syn437sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Ejemplo de uso de &quot;ffi&quot; para llamar métodos del gta_sa.exe<br />(en sustitución de <em>callMethod</em> (opcode <em>0AA8</em>):<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">local ffi = require &quot;ffi&quot;<br />local getBonePosition = ffi.cast(&quot;int (__thiscall*)(void*, float*, int, bool)&quot;, 0x5E4280)<br />function getCharBoneCoordinates(ped, bone)<br />&nbsp; local coords = ffi.new(&quot;float[3]&quot;, {})<br />&nbsp; local pped = ffi.cast(&quot;void*&quot;, getCharPointer(ped))<br />&nbsp; getBonePosition(pped, coords, bone, true)<br />&nbsp; return vec[0], vec[1], vec[2]<br />end</code><br />Más sobre ffi: <a href="https://luajit.org/ext_ffi_api.html" class="bbc_link new_win" target="_blank">https://luajit.org/ext_ffi_api.html</a>

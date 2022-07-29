@@ -1,0 +1,17 @@
+---
+thread: "ASI coding: anotaciones"
+id_msg: 908085
+date: "2018-05-31 16:05:06"
+
+subject: "Re:ASI coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Utilizando SCM en ASI:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">int handle;<br />Command&lt;Commands::NATIVE_CREATE_CHAR_INSIDE_CAR&gt;(PED_TYPE_COP, pedmodel, popveh, &amp;handle);<br />CPed* ped = CPools::GetPed(handle);</code>

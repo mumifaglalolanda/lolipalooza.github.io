@@ -1,0 +1,17 @@
+---
+thread: "GTA SA Unused files"
+id_msg: 908083
+date: "2018-05-25 00:28:52"
+
+subject: "GTA SA Unused files"
+user: "yab220sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span class="bbc_u"><strong><span style="font-size: 14pt;" class="bbc_size">Lista de archivos no usados por el engine de GTA San Andreas.</span></strong></span></div><br /><span class="bbc_u"><strong>Nota:</strong></span> hay que corroborar esta lista, y compararla con la info de <a href="http://gtaforums.com/topic/718026-sa-unuseduseless-files/" class="bbc_link new_win" target="_blank">aquí</a>.<br /><br />The entire folder &quot;data \ icons&quot;<br />The entire folder &quot;ReadMe&quot;<br />The entire folder &quot;data \ decision&quot; except the folder &quot;allowed&quot; and the file pedevent.txt<br />entire folder &quot;models \ generic&quot; except vehicle.txd<br />All files named &quot;NODES&quot; folder &quot;data \ paths&quot;<br />Files &quot;intro * .txd&quot; folder &quot;models \ txd&quot;<br />Files &quot;loadsc * .txd&quot; folder &quot;models \ txd&quot;<br />models \ txd \ ld_race.txd<br />models \ txd \ load0uk.txd<br />models \ txd \ outro.txd<br />models \ txd \ splash1-3.txd<br />models \ fronted3.txd<br />models \ misc.txd<br />models \ coll \ vehicles.col<br />anim \ anim.img<br />data \ animviewer.dat<br />data \ AudioEvents.txt<br />data \ gta_quick.dat<br />data \ main.sc<br />data \ numplate.dat<br />data \ polydensity.dat<br />data \ timecycp.dat<br />data \ water1.dat<br />data \ maps \ occlu.ipl<br />data \ maps \ leveldes \ leveldes.ide<br />data \ maps \ leveldes \ leveldes.ipl<br />data \ Paths \ spath0.dat<br />data \ Paths \ train.dat<br />data \ Paths \ train2.dat<br />Audio \ config \ AudioEventHistory.txt

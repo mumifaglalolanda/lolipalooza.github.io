@@ -1,0 +1,17 @@
+---
+thread: "Extraer texturas desde archivos txd en lotes"
+id_msg: 5720
+date: "2016-05-20 22:57:36"
+
+subject: "Extraer texturas desde archivos txd en lotes"
+user: "yap320sorgesoureDug"
+
+modified_time: 2016-05-27 19:19:03
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+Con batch:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">FOR %%i IN (C:\txd\*.*) DO txdworkshop.exe /extract %%i</code><br />Y paren de sufrir&nbsp; <img src="/assets/smf/smileys/smiley.gif" alt="&#58;smiley&#58;" title="smiley" class="smiley" /><br /><br />Nota: txdworkshop.exe debe encontrarse en la misma carpeta desde donde están llamando al archivo .bat (que contiene el besho código que les dejé.)<br /><br />También hay otros comandos, como por ejemplo:<br />/settosa<br /><br />¿cómo lo encontré? Con ProcessExplorer.<br />Me cago en la hostia joder puñetas! Cuando uno sabe usar una computadora uno puede hacer maravillas <img src="/assets/smf/smileys/MsgPlus_Img0812.png" alt="&#58;kona&#58;" title="Kona" class="smiley" />

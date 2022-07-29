@@ -1,0 +1,17 @@
+---
+thread: "ASI coding: anotaciones"
+id_msg: 908067
+date: "2018-04-14 00:17:41"
+
+subject: "Re:ASI coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Dejo de momento este código por aquí porque no sé dónde más ponerlo:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">#include &quot;CHudColours.h&quot;<br /><br />// ...<br /><br />static CHudColour savedColor;<br />ThiscallEvent&lt;AddressList&lt;0x4E9F9C, H_CALL, 0x4E9FB2, H_CALL&gt;, PRIORITY_BEFORE,<br />&nbsp; &nbsp; ArgPickN&lt;uchar, 2&gt;, CRGBA *(CRGBA*, uchar, uchar)&gt; myOnSetColor(<br />&nbsp; &nbsp; &nbsp; &nbsp; &#91;](uchar color) {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; savedColor = HudColour.m_aColours[color];<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (color == 6)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HudColour.m_aColours[color] = { 0, 255, 0, 255 };<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HudColour.m_aColours[color] = { 255, 0, 255, 255 };<br />&nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &#91;](uchar color) {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; HudColour.m_aColours[color] = savedColor;<br />&nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; );</code><br />Es un código que me pasaron para cambiar el HudColour en una dirección de memoria, pero parece demasiado avanzado para mi nivel actual. No lo entiendo, lo dejo por si algún día logro entenderlo.

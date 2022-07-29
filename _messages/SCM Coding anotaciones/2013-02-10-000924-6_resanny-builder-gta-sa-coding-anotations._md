@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 4706
+date: "2013-02-10 00:09:24"
+
+subject: "Re:Sanny Builder GTA: SA Coding Anotations..."
+user: "yab220sorgesoureDug"
+
+modified_time: 2013-02-25 03:12:01
+modified_name: "Sloth Sinner"
+icon: xx
+
+
+
+
+---
+Bitácora del aprendiz de GTA coding en Sanny Builder:<br /><br />Oh la putísima madre que me parió, estoy jodidamente enredado.<br />Son tantas las cosas que hay que tomar en cuenta a la hora de escribir código que nisiquiera sé por dónde carajo hay que comenzar....<br />Ok, como dijo Jack el destripador: vayamos por partes... (Puta madre chiste viejo es viejo y ya no tiene gracia):<br /><br />Ok, nota 1: a la hora de moverse de un lugar a otro.<br />Hay que tener en cuenta los siguientes puntos:<br /><br />Lo primero que hay que tener en cuenta a la hora de transportar al jugador de un lugar a otro es el rendering:<br />EDIT: la reconcha de la lora!! Qué puto rendering ni que nada, lo primerísimo antes que nada es desvanecer la pantasha a negro para que no se vea todas las weas que van a ocurrir, en un ciclo que vá así:<br /><br /><ul class="bbc_list" style="list-style-type: decimal;"><li>Desvanecer pantalla (fade 0 time 500)</li><li>¿Aún se está en proceso de desvanecimiento? Si es si, entonces no hacer nada y quedarnos formulando otra vez la pregunta, si es no, entonces quiere decir que ya terminamos, la pantasha está toda negra y sha podemos avanzar al siguiente punto.</li></ul><br />Siguientes pasos:<br /><br /><ul class="bbc_list" style="list-style-type: decimal;"><li>Ok, a lo que iba... el rendering, hay que ubicar el origen del rendering en el punto en el que lo vamos a teletransportar</li><li>Si al personaje lo vamos a mover a un interior, hay que elegir dicho interior y usar el comando set_interior_to, o algo así</li><li>Hay que quitarle movilidad al jugador!!</li><li>Si es un interior, al parecer hay que &quot;linkear&quot; al jugador al interior...</li><li>Hay que ubicar la cámara detrás del jugador</li><li>&quot;restore_camera_with_jumpcut&quot;</li></ul><br />Luego, a la hora de &quot;spawnearlo&quot;, hacer lo siguiente (y prestad particular atención porque esto puede ser clave a la hora de spawnear al jugador por primera vez):<br /><br /><ul class="bbc_list" style="list-style-type: decimal;"><li>Esperar 1 segundo (1000 ms)</li><li>Quitar fade (restorar visibilidad, poner fade en 1 pueh..., con 500 ms de duración!)</li><li>Luego devolverle la movilidad al jugador</li></ul><br />¿¿Eso era todo?? Ok, a ensayar.<br /><br />Actualización: funcionó carajo!!!!1!!!11 MAMENME.

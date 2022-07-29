@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 5724
+date: "2016-06-09 15:08:40"
+
+subject: "Re:SCM Coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Concatenar string en CLEO</span></strong><br /><br />Si queremos algo como esto:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0@ = 10<br />1@ = &#039;TEXT&#039; &amp; 0@ //returns TEXT10</code><br />Lo logramos a traves de esto:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0AD3: string_format 1@v format &quot;TEXT%d&quot; 10</code><br />fuente: <a href="http://gtaforums.com/topic/211077-rel-sanny-builder/?p=1068738437" class="bbc_link new_win" target="_blank">http://gtaforums.com/topic/211077-rel-sanny-builder/?p=1068738437</a>

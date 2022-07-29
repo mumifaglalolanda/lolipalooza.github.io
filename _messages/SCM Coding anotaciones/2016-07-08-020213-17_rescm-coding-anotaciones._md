@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 5726
+date: "2016-07-08 02:02:13"
+
+subject: "Re:SCM Coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<span style="font-size: 14pt;" class="bbc_size"><strong>Cómo realizar modificaciones sobre un main.scm para mantener compatibilidad con sus respectivos saves</strong></span><br /><br /><em><strong><span class="bbc_u">Advertencia</span>:</strong> estos consejos requieren ser puestos bajo prueba para poder ser comfirmados.</em><br /><br />Para mantener compatibilidad entre un main.scm y sus saves, resulta necesario <del>no añadir nuevas global variables</del>. Quizás no haya problema si se eliminan variables globales, en ese caso, los datos que quedaron registrados en un save sobre éstas no causará conflicto con el nuevo main.scm.<br /><br />Todavía no sabemos qué pasaría si le agregamos nuevas misiones a un main.scm que ya cuenta con un save, si dichas misiones no requieren ninguna variable global.

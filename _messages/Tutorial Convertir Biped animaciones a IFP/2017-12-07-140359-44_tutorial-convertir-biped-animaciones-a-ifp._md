@@ -1,0 +1,17 @@
+---
+thread: "Tutorial: Convertir Biped animaciones a IFP"
+id_msg: 908028
+date: "2017-12-07 14:03:59"
+
+subject: "Tutorial: Convertir Biped animaciones a IFP"
+user: "yab220sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong>¿Qué es Ifp?</strong><br /><br />Es el formato que utilizan los juegos de la era III de GTA (III/VC/SA) para las animaciones (movimientos) de los personajes.<br />Este tutorial te enseñará a crear archivos de animaciones ifp para el GTA SA, a partir de animaciones de Bipeds. Sin embargo, muy probablemente el método funcione también para III/VC.<br /><br /><strong>¿Qué es Biped?</strong><br /><br />Es una funcionalidad propia de 3DS Max, que te permite crear con un par de clicks todo un sofisticado cuerpo humano para que lo puedas animar con una gran variedad de opciones y posibilidades para simplificar el proceso de animación.<br /><br />Te recomendamos buscar tutoriales acerca de cómo crear y animar bipeds en google/youtube, porque es un tema que escapa al alcance de este tutorial.<br /><br /><br /><strong>Una vez que tenemos el biped animado, ¿Cómo lo convertimos a Ifp?</strong><br /><br />- Asegurar que el bone principal se llama ó contiene en su nombre la palabra &quot;Root&quot; (o &quot;Normal&quot;), dependiendo del dff que uses como base<br />- seleccionar todo e ir a animation &gt; save animation (.xaf)<br />- cargar tu dff<br />- seleccionar esqueleto e ir a animation &gt; load animation<br />- se abrirá un cuadro de diálogo para crear mapping, aceptar<br />- seleccionar todas las partes de ambos esqueletos, y click en el boton &quot;closest names&quot;<br />- salvar mapping<br />- darle click en &quot;load motion&quot;<br />- la animación se te cargará en tu dff, probablemente se verá raro, no te preocupes por ello ahora<br />- salvar como ifp<br />- ir a &quot;gta anim manager&quot; y cargar tu animación en vista previa con un modelo<br />- &quot;remove trans key&quot;<br />- y voilá, tu animación debería haber agarrado forma y debería verse mejor<br />- ¿qué hacer para corregir los errores (seguramente asociados con el root)?<br />- ir a 3ds max de nuevo, cargar tu animación en tu dff, reposicionar (cuadro por cuadro)<br />- ????<br />- porfirio!<br /><br />Método ilustrado con algunas diferencias:<br /><a href="https://www.madguru.com/learn/saving-and-loading-animation-in-3ds-max" class="bbc_link new_win" target="_blank">https://www.madguru.com/learn/saving-and-loading-animation-in-3ds-max</a><br />(probé las diferencias y no obtuve ningun resultado que mejorara la conversión)<br /><br /><span class="bbc_u"><strong>Nota:</strong></span> este tutorial no solo funciona con bipeds, en teoría debería funcionar con cualquier clase de animación, pero ojo: es importante que las partes del cuerpo cuya animación desees convertir contengan en sus nombres parte del nombre que tendrá tu dff (para que pueda funcionar correctamente el mapeado a la hora de ejecutar el &quot;load animation&quot;. Ej: L Arm, L Forearm, Spine, Spine1, Head, L Thigh, R Calf, R Foot, etc. Convenientemente, las partes del cuerpo de un biped ya contienen todos estos nombres (salvo el root!).

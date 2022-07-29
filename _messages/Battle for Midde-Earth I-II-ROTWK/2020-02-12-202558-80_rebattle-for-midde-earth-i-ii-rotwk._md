@@ -1,0 +1,17 @@
+---
+thread: "Battle for Midde-Earth I-II-ROTWK"
+id_msg: 909986
+date: "2020-02-12 20:25:58"
+
+subject: "Re:Battle for Midde-Earth I-II-ROTWK"
+user: "liv482sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong>Archivos relevantes para descomprimir en BFME:</strong><br /><br />- <em>Maps.big</em>: es el archivo que contiene los mapas que vienen por defecto en el juego, incluidos los mapas de las campañas.<br /><br />- <em>INI.big</em>: en este archivo están definidos los comportamientos de los objetos/spellbooks entre todos los elementos que forman parte de un mapa/escenario. En este paquete están todos los archivos que hay que estudiar para poder saber crear archivos del tipo map.ini<br /><br />- <em>Audio.big / Music.big</em>: los nombres son muy autoexplicativos. Si deseas hacerte con la música del juego, ya sabes dónde ubicarla...<br /><br />Necesitas el programa FinalBIG para extraer el contenido de estos archivos:<br /><a href="https://www.the3rdage.net/item-52?addview" class="bbc_link new_win" target="_blank">https://www.the3rdage.net/item-52?addview</a><br /><br />Estos archivos están presentes tanto en BFME como en BFME II y ROTWK.

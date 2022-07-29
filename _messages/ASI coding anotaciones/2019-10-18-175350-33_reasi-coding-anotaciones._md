@@ -1,0 +1,17 @@
+---
+thread: "ASI coding: anotaciones"
+id_msg: 908679
+date: "2019-10-18 17:53:50"
+
+subject: "Re:ASI coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<div class="quoteheader"><div class="topslice_quote">Post completamente ridículo realizado por: yap320sorgesoureDug link=topic=2011.msg908085#msg908085 date=1527775506</div></div><blockquote class="bbc_standard_quote">Utilizando SCM en ASI:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">int handle;<br />Command&lt;Commands::NATIVE_CREATE_CHAR_INSIDE_CAR&gt;(PED_TYPE_COP, pedmodel, popveh, &amp;handle);<br />CPed* ped = CPools::GetPed(handle);</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Mierda pero khe invesil yo.<br />Comiendome el coco tratando de buscar en todas partes por putas pinches google cómo carajo llamar un opcode desde el plugin SDK, y aquí mismo lo tenía. &#128023;&#128299;<br /><br />Bueno y eso que importa, pasemos a asuntos más importantes:<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>Cargar IFPs dinámicamente desde ASI?</strong></span><br /><br />Navegando por el discord del plugin SDK me topé con esta perla de la sabiduría:<br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote">You can also write your own IFP reader and play animations from there<br /><a href="https://github.com/multitheftauto/mtasa-blue/blob/master/Client/mods/deathmatch/logic/CClientIFP.cpp" class="bbc_link new_win" target="_blank">https://github.com/multitheftauto/mtasa-blue/blob/master/Client/mods/deathmatch/logic/CClientIFP.cpp</a><br />You can also check my test project which loads custom IFP files and replaces animations: <a href="https://github.com/saml1er/gtasa_custom_animations/" class="bbc_link new_win" target="_blank">https://github.com/saml1er/gtasa_custom_animations/</a></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Si de verdad se puede cargar IFPs dinámicamente mediante C++, eso me facilitaría muchísimo el SexMachine/DateMachine!<br /><br /><span style="font-size: 12pt;" class="bbc_size"><strong>Sobre ejecutar Opcodes desde ASI</strong></span><br /><br />Also, aqui dejo el GitHub de un aprendiz como yo que está construyendo su propia chuchería wonitah con el plugin SDK. Podría serme de utilidad para aprender &#128519;:<br /><a href="https://github.com/gta-chaos-mod/ASI-script/blob/master/src/gtasa/util/Teleportation.cpp" class="bbc_link new_win" target="_blank">https://github.com/gta-chaos-mod/ASI-script/blob/master/src/gtasa/util/Teleportation.cpp</a><br />Aparte, creo que él sabe manejar el asunto de las opcodes desde C++, y hasta puede que la info que puse antes ya ande desactualizada y él lo haga mejor.<br /><br />Aquí dejo un ejemplo de cómo llamar a un opcode, utilizado en Teleportation.cpp:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">if (player &amp;&amp; Command&lt;eScriptCommands::COMMAND_IS_CHAR_IN_AREA_3D&gt;(player, 2356.0f, -1191.0f, 1025.0f, 2316.0f, -1169.0f, 1039.0f, 0)) {<br />&nbsp;&nbsp;&nbsp;// Do stuff<br />}</code><br />Seguiremos informando(?)

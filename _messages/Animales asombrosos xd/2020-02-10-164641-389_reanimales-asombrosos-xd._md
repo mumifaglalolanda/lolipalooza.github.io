@@ -1,0 +1,17 @@
+---
+thread: "Animales asombrosos xd"
+id_msg: 909704
+date: "2020-02-10 16:46:41"
+
+subject: "Re:Animales asombrosos xd"
+user: "imv115sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+		<div id="2519179781439659" class="fb_bbc_thumb">			<a href="https://www.facebook.com/Bikersbrotherfg/videos/2519179781439659/">				<img class="" src="https://graph.facebook.com/2519179781439659/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/Bikersbrotherfg/videos/2519179781439659/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2519179781439659").addEventListener("click", get_fb_embed);		</script><br /><br />		<div id="2293328224066202" class="fb_bbc_thumb">			<a href="https://www.facebook.com/palhano87/videos/2293328224066202/">				<img class="" src="https://graph.facebook.com/2293328224066202/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/palhano87/videos/2293328224066202/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("2293328224066202").addEventListener("click", get_fb_embed);		</script>

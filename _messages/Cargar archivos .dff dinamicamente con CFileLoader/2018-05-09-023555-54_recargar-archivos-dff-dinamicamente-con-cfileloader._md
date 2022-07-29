@@ -1,0 +1,17 @@
+---
+thread: "Cargar archivos .dff din&aacute;micamente con CFileLoader"
+id_msg: 908075
+date: "2018-05-09 02:35:55"
+
+subject: "Re:Cargar archivos .dff din&aacute;micamente con CFileLoader"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+Encontré esta respuesta nueva en el Discord.<br />Puede darme una pista acerca de en qué dirección moverme, pero igual no pinta nada bien la cosa (no entiendo nada):<br /><br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote"><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0x537450 ; bool __cdecl CFileLoader::FinishLoadClumpFile(struct RwStream *, unsigned int)</code><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0x5372D0 ; bool __cdecl CFileLoader::LoadClumpFile(struct RwStream *, unsigned int)</code><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0x5373F0 ; bool __cdecl CFileLoader::StartLoadClumpFile(struct RwStream *, unsigned int)</code><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0x5B3A30 ; void __cdecl CFileLoader::LoadClumpFile(char const *)</code><br />I assume that the second <span style="font-family: courier;" class="bbc_font">unsigned int</span> parameter is the modelID(editado)<br />it&#039;s the index for <span style="font-family: courier;" class="bbc_font">CModelInfo::ms_modelInfoPtrs</span><br /><br />And for some reason there is a side-effect for model 508 <span style="font-family: courier;" class="bbc_font">Journey</span>, which sets the byte offset +76 in <span style="font-family: courier;" class="bbc_font">ms_modelInfoPtrs</span> to 2<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Puede que antes de aventarme en estos laberintos primero tenga que nutrirme un poco con documentación del RenderWare Engine.

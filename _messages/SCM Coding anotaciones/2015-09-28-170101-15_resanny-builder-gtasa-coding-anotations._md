@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 5264
+date: "2015-09-28 17:01:01"
+
+subject: "Re:Sanny Builder GTASA Coding Anotations..."
+user: "yab220sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+He aprendido un nuevo truco y lo expongo aquí como anotación.<br />No es muy elegante que digamos, pero funciona!!<br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>¿Cómo crear varias instancias del player (CJ), cada una vestida de forma diferente?</strong></span><br /><br />Lo primero que hay que hacer es crear al jugador (aunque este paso por lo general SIEMPRE está hecho, si no, cómo podrías jugar sin el jugador...?):<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">0053: $PLAYER_CHAR = create_player #NULL at 2488.56 -1666.84 13.38 <br />01F5: $PLAYER_ACTOR = create_player_actor $PLAYER_CHAR <br />07AF: $PLAYER_GROUP = player $PLAYER_CHAR group <br /></code><br />Cuando deseas crear a un actor con el modelo del jugador (CJ) y una vestimenta que tu deseas, realizas ésto,:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">087B: set_player $PLAYER_CHAR clothes_texture &quot;PLAYER_FACE&quot; model &quot;HEAD&quot; body_part 1 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;JEANSDENIM&quot; model &quot;JEANS&quot; body_part 2 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;SNEAKERBINCBLK&quot; model &quot;SNEAKER&quot; body_part 3 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;tshirt2horiz&quot; model &quot;tshirt2&quot; body_part 0 <br />070D: rebuild_player $PLAYER_CHAR <br />009A: $MY_ACTOR = create_actor_pedtype 4(PEDTYPE) model #NULL at POS_X POS_Y POS_Z<br /></code><br /><strong><span class="bbc_u">Cuidado</span>:</strong> ésto no nadamás creará al actor con la vestimenta que tu configuraste, sino que te cambiará a tu propio jugador a dicha vestimenta, por lo que si deseas a tu jugador con su propia vestimenta, debes recrearla a continuación:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">087B: set_player $PLAYER_CHAR clothes_texture &quot;PLAYER_FACE&quot; model &quot;HEAD&quot; body_part 1 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;JEANSDENIM&quot; model &quot;JEANS&quot; body_part 2 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;SNEAKERBINCBLK&quot; model &quot;SNEAKER&quot; body_part 3 <br />087B: set_player $PLAYER_CHAR clothes_texture &quot;VEST&quot; model &quot;VEST&quot; body_part 0<br />070D: rebuild_player $PLAYER_CHAR <br /></code><br /><strong>ALERTA:</strong><br />Si al momento de crear al actor con el model #NULL (que es CJ), tu jugador no tiene el modelo #NULL, sino otro modelo, entonces hay una altísima probabilidad de crasheo!!!! (creo que incluso del 100%), ¡así que pilas pues!

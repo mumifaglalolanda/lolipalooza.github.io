@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 4924
+date: "2014-02-25 00:01:32"
+
+subject: "Re:Sanny Builder GTASA Coding Anotations..."
+user: "t0dragonquesa"
+
+
+
+icon: xx
+hidden_by: "1078"
+
+post_hidden: 1
+
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Pick ups</span></strong><br /><br />Listado de Pick ups:<br /><div class="quoteheader"><div class="topslice_quote">Citar</div></div><blockquote class="bbc_standard_quote">Health: #HEALTH<br />Armor: #BODYARMOUR<br />Bribe: #BRIBE<br />Info: #INFO<br />Keycard: #KEYCARD<br />Save pickup: #PICKUPSAVE<br />Rhymesbook: #RMB_RHYMESBOOK<br />Briefcase: #BRIEFCASE<br />Clothes: #CLOTHESP<br />Jetpack: #JETPACK<br />Parachute Pack: #PARA_PACK<br />Parachute: #PARACHUTE</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Fuente: <a href="http://gtasa.gamebanana.com/tuts/10794" class="bbc_link new_win" target="_blank">http://gtasa.gamebanana.com/tuts/10794</a><br /><br />Saber más sobre el opcode para generar pickups (0213), en especial el tipo de pick ups (que es el que define si el pickup se espawnea 1 vez, muchas veces, si se puede agarrar, etc):<br /><a href="http://www.gtamodding.com/index.php?title=0213" class="bbc_link new_win" target="_blank">http://www.gtamodding.com/index.php?title=0213</a>

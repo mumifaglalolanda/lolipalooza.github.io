@@ -1,0 +1,17 @@
+---
+thread: "SCM Coding: anotaciones"
+id_msg: 4730
+date: "2013-02-26 15:31:27"
+
+subject: "Re:Sanny Builder GTASA Coding Anotations..."
+user: "yab220sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Cómo generar/colocar objetos en ubicaciones precisas (sin jalarse los pelos en el intento)<br /><br />Herramientas que necesitas:<br />- Map Editor (MEd).<br />- Mod: &quot;Design your own Mission&quot; (DYOM).<br />- Paciencia.<br /><br />Fase 1 - MEd<br />Abres el MEd, y lo primero que debes hacer es crear un archivo *.ipl para editar a tu gusto, agregándo todo lo que te dé la gana ahí. Ojo: este paso no es imprescindible, pero facilitará el trabajo, especialmente cuando la cantidad de objetos que quieres agregar es alta, y/o los objetos son estructuras de gran tamaño. Seguid los siguientes pasos hostia majos:<br /><br />- Te vas a la pestaña IPL, y click en &quot;new file&quot;. Creas tu archivo nombrándolo como quieras y guardándolo dentro de cualquier ubicación dentro de /maps/.<br />- Cierras tu MEd porque dicho archivo ipl aún no es usable (si tratas de editarlo ahora, tu MEd crasheará...). Te vas al archivo gta.dat, ubicado en <em><strong>C:/Program Files/Rockstar Games/GTASA folder/data/</strong></em> (abrirlo con notepad), y lo editas del siguiente modo:<br />- Luego puedes reabrir tu MEd para editarlo como gustes, abres la pestaña Scene, seleccionas y le das a Render para el archivo donde está la ubicación de San Andreas donde quieres agregar objetos (debes conocer estos archivos, para ello debes tomarte tu tiempo de explorarlos).<br /><br />Fase 2 - Sanny Builder, coding y DYOM...<br />

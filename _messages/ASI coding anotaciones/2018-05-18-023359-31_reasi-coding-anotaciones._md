@@ -1,0 +1,17 @@
+---
+thread: "ASI coding: anotaciones"
+id_msg: 908080
+date: "2018-05-18 02:33:59"
+
+subject: "Re:ASI coding: anotaciones"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Una manera bien kewl de verificar si el player está definido:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">static void PlayerSpawned() {<br />&nbsp; &nbsp; CPed *playa = FindPlayerPed();<br />&nbsp; &nbsp; if (playa) {<br />&nbsp; &nbsp; &nbsp; &nbsp; Message(&quot;Player spawned&quot;);<br />&nbsp; &nbsp; &nbsp; &nbsp; Events::gameProcessEvent -= PlayerSpawned;<br />&nbsp; &nbsp; }<br />}<br /><br />...<br /><br />Events::gameProcessEvent += PlayerSpawned;</code><br />En realidad encuentro este código bastante inutil en la práctica porque es muy fácil verificar si el player está definido mediante SCM, pero igual, es una curiosidad saber cómo se hace en Asi, y además, nos enseña un poco más sobre la filosofía ASI.<br /><br /><img src="/assets/smf/smileys/xmas.gif" alt="&#58;xmas&#58;" title="Christmas" class="smiley" />

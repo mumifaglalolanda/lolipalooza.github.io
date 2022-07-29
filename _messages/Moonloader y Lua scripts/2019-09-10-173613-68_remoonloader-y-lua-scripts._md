@@ -1,0 +1,17 @@
+---
+thread: "Moonloader y Lua scripts"
+id_msg: 908657
+date: "2019-09-10 17:36:13"
+
+subject: "Re:Moonloader y Lua scripts"
+user: "syn437sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+Lua no tiene regular expressions.<br />Dicen que es porque una librería de regex sería más grande que el propio Lua (como si eso fuese excusa :/)<br /><br />Pero si tiene <a href="http://www.lua.org/manual/5.1/manual.html#5.4.1" class="bbc_link new_win" target="_blank">ésto</a>, que es <em>Lua Patterns</em>, para hacer búsquedas en strings. Si bien es menos potente que <em>Regex</em>, sirve para la mayoría de las cosas que quieran hacer prros!<br /><br />Más de <em>Lua Patterns</em> aquí:<br /><a href="http://lua-users.org/wiki/PatternsTutorial" class="bbc_link new_win" target="_blank">http://lua-users.org/wiki/PatternsTutorial</a>

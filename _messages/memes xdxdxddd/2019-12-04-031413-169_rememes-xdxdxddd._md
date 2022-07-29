@@ -1,0 +1,17 @@
+---
+thread: "memes xdxdxddd"
+id_msg: 909459
+date: "2019-12-04 03:14:13"
+
+subject: "Re:memes xdxdxddd"
+user: "awd491sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<img src="/assets/smf/smileys/pacman.png" alt="*&#58;v*" title="Pacman" class="smiley" /><br /><br />		<div id="739955613103823" class="fb_bbc_thumb">			<a href="https://www.facebook.com/Cabimasshitposting/videos/739955613103823/">				<img class="" src="https://graph.facebook.com/739955613103823/picture"/>			</a>			<div class="fb-play-button"></div>		</div>		<style type="text/css">.fb-post iframe{background:#fff}.fb_bbc_thumb{position:relative;width:512px}.fb_bbc_thumb img{width:512px}.fb-play-button{			height:72px;			width:72px;			left:50%;			top:50%;			margin-left:-36px;			margin-top:-36px;			position:absolute;			background:url("http://i.imgur.com/24tuqBK.png") no-repeat;		}</style>		<script type="text/javascript">		function get_fb_embed(e) {			e.preventDefault();			var embed = document.createElement("template");			embed.innerHTML = `<div class="fb-post" data-href="https://www.facebook.com/Cabimasshitposting/videos/739955613103823/" data-width="640" data-allowfullscreen="true"></div>`;			embed = embed.content.firstChild;			this.innerHTML = "";			this.appendChild(embed);			FB.XFBML.parse(this);			this.removeEventListener("click", get_fb_embed);		}		document.getElementById("739955613103823").addEventListener("click", get_fb_embed);		</script>

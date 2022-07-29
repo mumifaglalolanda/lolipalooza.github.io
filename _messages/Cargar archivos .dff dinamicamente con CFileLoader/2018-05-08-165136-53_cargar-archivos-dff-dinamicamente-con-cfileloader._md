@@ -1,0 +1,17 @@
+---
+thread: "Cargar archivos .dff din&aacute;micamente con CFileLoader"
+id_msg: 908073
+date: "2018-05-08 16:51:36"
+
+subject: "Cargar archivos .dff din&aacute;micamente con CFileLoader"
+user: "Mumifag Lalolanda"
+
+
+
+icon: xx
+
+
+
+
+---
+Me dijeron en el Discord que se puede cargar dffs externos (más o menos en el mismo modo en que se hace con los txd) utilizando la clase CFileLoader.<br /><br />Es necesario leer el gta_sa.idb e investigar cómo.<br /><br />Sintonicen este canal para futuros episodios de estas locas aventuras.<br /><br />Continuará....<br /><br />Pista: puedes manejar archivos dff mediante la estructura <span style="font-family: courier;" class="bbc_font"><span style="color: teal;" class="bbc_color">RpClump</span></span>.
