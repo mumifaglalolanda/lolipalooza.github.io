@@ -180,7 +180,7 @@ style=" ">
 
 					{% if last_user.avatar %}
 						{% if last_user.avatar contains "http" %}
-						{% assign last_user_avatar = last_user.avatar %}
+						{% assign last_user_avatar = last_user.avatar | replace: "http:", "https:" %}
 						{% else %}
 						{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
 						{% endif %}
@@ -412,7 +412,7 @@ style=" ">
 	{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
 	{% if starter_user.avatar %}
 		{% if starter_user.avatar contains "http" %}
-		{% assign starter_user_avatar = starter_user.avatar %}
+		{% assign starter_user_avatar = starter_user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture starter_user_avatar %}/assets/smf/attachments/{{starter_user.avatar}}{% endcapture %}
 		{% endif %}
@@ -421,7 +421,7 @@ style=" ">
 	{% endif %}
 	{% if last_user.avatar %}
 		{% if last_user.avatar contains "http" %}
-		{% assign last_user_avatar = last_user.avatar %}
+		{% assign last_user_avatar = last_user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
 		{% endif %}
@@ -521,7 +521,7 @@ style=" ">
 	{% assign last_user = site.users | where: "nickname", messages.last.user | first %}
 	{% if starter_user.avatar %}
 		{% if starter_user.avatar contains "http" %}
-		{% assign starter_user_avatar = starter_user.avatar %}
+		{% assign starter_user_avatar = starter_user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture starter_user_avatar %}/assets/smf/attachments/{{starter_user.avatar}}{% endcapture %}
 		{% endif %}
@@ -530,7 +530,7 @@ style=" ">
 	{% endif %}
 	{% if last_user.avatar %}
 		{% if last_user.avatar contains "http" %}
-		{% assign last_user_avatar = last_user.avatar %}
+		{% assign last_user_avatar = last_user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
 		{% endif %}

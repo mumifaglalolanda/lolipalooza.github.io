@@ -222,7 +222,7 @@ style=" ">
 
 										{% if last_user.avatar %}
 											{% if last_user.avatar contains "http" %}
-											{% assign last_user_avatar = last_user.avatar %}
+											{% assign last_user_avatar = last_user.avatar | replace: "http:", "https:" %}
 											{% else %}
 											{% capture last_user_avatar %}/assets/smf/attachments/{{last_user.avatar}}{% endcapture %}
 											{% endif %}
@@ -343,7 +343,7 @@ style=" ">
 	{% assign board = site.boards | where: "board", thread.board | first %}
 	{% if user.avatar %}
 		{% if user.avatar contains "http" %}
-		{% assign user_avatar = user.avatar %}
+		{% assign user_avatar = user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
 		{% endif %}
@@ -391,7 +391,7 @@ style=" ">
 	{% assign board = site.boards | where: "board", thread.board | first %}
 	{% if user.avatar %}
 		{% if user.avatar contains "http" %}
-		{% assign user_avatar = user.avatar %}
+		{% assign user_avatar = user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
 		{% endif %}
@@ -445,7 +445,7 @@ style=" ">
 	{% assign board = site.boards | where: "board", thread.board | first %}
 	{% if user.avatar %}
 		{% if user.avatar contains "http" %}
-		{% assign user_avatar = user.avatar %}
+		{% assign user_avatar = user.avatar | replace: "http:", "https:" %}
 		{% else %}
 		{% capture user_avatar %}/assets/smf/attachments/{{user.avatar}}{% endcapture %}
 		{% endif %}
