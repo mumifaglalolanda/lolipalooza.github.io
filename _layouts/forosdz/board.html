@@ -731,39 +731,29 @@ style=" ">
 		
 		
 	
-		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
-			itemscope itemtype="https://schema.org/BreadcrumbList">
-		
-			
-
-			
-			
-
-			
-				
-				
+<ul class="p-breadcrumbs " itemscope itemtype="https://schema.org/BreadcrumbList">
 	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-		<a href="/" itemprop="item">
+		<a href="{{page.template}}{{site.data.forums.base_url}}" itemprop="item">
 			<span itemprop="name">Foros</span>
 		</a>
 		<meta itemprop="position" content="1" />
 	</li>
-
-			
-			
-				
-				
 	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-		<a href="/#bienvenido.227" itemprop="item">
-			<span itemprop="name">¡Bienvenido!</span>
+		<a href="{{page.template}}{{site.data.forums.base_url}}/#category-{{category.id}}" itemprop="item">
+			<span itemprop="name">{{category.name}}</span>
 		</a>
 		<meta itemprop="position" content="2" />
 	</li>
-
-			
-
-		
-		</ul>
+	{% if page.child_level %}
+	{% assign parent_board = site.boards | where: "board", page.parent_board | first %}
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="{{page.template}}{{parent_board.url}}" itemprop="item">
+			<span itemprop="name">{{parent_board.board}}</span>
+		</a>
+		<meta itemprop="position" content="3">
+	</li>
+	{% endif %}
+</ul>
 	
 
 		
