@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel"
+id_msg: 5668
+date: "2016-02-24 16:51:18"
+
+subject: "Re:Notas sobre Laravel"
+user: "yap320sorgesoureDug"
+
+modified_time: 2016-02-24 17:05:05
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">El método de redireccionamiento y sus diversas formas de implementarlo</span></strong><br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">public function store(Request $request)<br />{<br />&nbsp; &nbsp; $user = new User($request-&gt;all());<br />&nbsp; &nbsp; $user-&gt;save();<br /><br />&nbsp; &nbsp; return \Redirect::route(&#039;admin.users.index&#039;);<br />}<br /></code><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">public function store(Request $request)<br />{<br />&nbsp; &nbsp; $user = new User($request-&gt;all());<br />&nbsp; &nbsp; $user-&gt;save();<br /><br />&nbsp; &nbsp; return redirect()-&gt;route(&#039;admin.users.index&#039;);<br />}<br /></code><br />Mediante inyección de dependencias:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">use Illuminate\Routing\Redirector;<br /><br />...<br /><br />public function store(Request $request, Redirector $redirect)<br />{<br />&nbsp; &nbsp; $user = new User($request-&gt;all());<br />&nbsp; &nbsp; $user-&gt;save();<br /><br />&nbsp; &nbsp; return $redirect-&gt;route(&#039;admin.users.index&#039;);<br />}<br /></code>

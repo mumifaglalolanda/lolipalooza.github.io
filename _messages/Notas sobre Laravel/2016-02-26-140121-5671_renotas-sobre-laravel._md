@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel"
+id_msg: 5671
+date: "2016-02-26 14:01:21"
+
+subject: "Re:Notas sobre Laravel"
+user: "yap320sorgesoureDug"
+
+modified_time: 2016-02-26 15:46:56
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Idiomas</span></strong><br /><br />La carpeta de idiomas en Laravel 5 se encuentra en <em>/resources/lang/</em>. Por defecto viene un solo idioma que es el inglés (<em>/resources/lang/en/</em>, así que si deseamos instalar otro idioma (que en nuestro caso es el español, los archivos que descargamos (<em>pagination.php</em>, <em>passwords.php</em> y <em>validation.php</em>) los colocamos en la carpeta <em>/es/</em> que ubicamos en <em>/lang/</em>.<br /><br />Luego nos vamos a <em>/config/<strong>app.php</strong></em> y buscamos las líneas de código:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&#039;locale&#039; =&gt; &#039;en&#039;</code>Este es el idioma que queremos que tenga nuestra página, por lo que hay que cambiarla a &#039;es&#039;.<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&#039;fallback_locale&#039; =&gt; &#039;en&#039;</code>Y este es el idioma al que acudirá la página para un texto en caso de que no sea encontrado en &#039;es&#039;<br /><br />Si un texto que colocamos en nuestra página no tiene valor ni en &#039;es&#039; ni en &#039;en&#039;, entonces no cargará nada.<br /><br />Para acceder a los textos que se encuentran en las carpetas de idiomas, usamos la función <em>trans()</em>.<br />Ejemplo: queremos acceder al texto de nombre &quot;reset&quot; dentro del archivo &quot;passwords.php&quot;, usamos <em>trans(&#039;passwords.reset&#039;)</em>.<br /><br />También pueden ser creados textos nuevos, e incluso puedes crear arrays dentro de arrays y acceder a ellos así: <em>trans(&#039;passords.categoría.texto&#039;)</em>

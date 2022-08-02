@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel"
+id_msg: 5662
+date: "2016-02-23 19:50:30"
+
+subject: "Re:Notas sobre Laravel"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Sintaxis básica de Blade - Parte 2: La Venganza</span></strong><br /><br />{{ $variable }} es equivalente en blade a &lt;?php echo $variable ?&gt;.<br />Sin embargo, el uso de &quot;{{}}&quot; te protejerá de inyección de html ya que lo convertirá en texto puro (suponiendo que $variable = &#039;&lt;script src=&quot;<a href="http://mydomain.co.cc.tk/codigo-malicioso.js" class="bbc_link new_win" target="_blank">http://mydomain.co.cc.tk/codigo-malicioso.js</a>&quot;&gt;&#039; o algo por el estilo).<br /><br />Pero habrán ocasiones en que queremos imprimir un mensaje en formato HTML y no texto plano, en esos casos usamos {!! $var !!}.

@@ -1,0 +1,17 @@
+---
+thread: "Notas sobre Laravel"
+id_msg: 5673
+date: "2016-02-26 20:45:33"
+
+subject: "Re:Notas sobre Laravel"
+user: "yap320sorgesoureDug"
+
+modified_time: 2016-02-26 20:51:22
+modified_name: "yap320sorgesoureDug"
+icon: xx
+
+
+
+edit_reason: "pos nomas"
+---
+<strong><span style="font-size: 14pt;" class="bbc_size">Mensajes de reporte que solo son mostrados una vez</span></strong><br /><br />Me refiero a ese tipo de mensajes de confirmación que aparecen en una página web notificándote que una acción que querías ejecutar fue realizada exitosamente. ¿Cómo lo hacemos con Laravel? Mediante el Facade (fasap lol) <em>Session</em> (<em>/Illuminate/Support/Facades/Session</em>).<br /><br />Desde el método que realiza la acción en sí y devuelve la vista llamo al proceso Session:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">public funcion someMethod()<br />{<br />&nbsp; &nbsp; doAction();<br />&nbsp; &nbsp; \Session::flash(&#039;message&#039;, &#039;La acción ha sido ejecutada exitosamente&#039;);<br />&nbsp; &nbsp; return view(&#039;route.some_view&#039;);<br />}</code><br />Y en la vista:<br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&nbsp; &nbsp; ....<br />&lt;/head&gt;<br />&lt;body&gt;<br />&nbsp; &nbsp; ...<br />&nbsp; &nbsp; @if(Session::has(&#039;message&#039;))<br />&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;qtStyle&quot;&gt;{{ Session::get(&#039;message&#039;) }}&lt;/div&gt;<br />&nbsp; &nbsp; @endif<br />&nbsp; &nbsp; ...<br />&lt;/body&gt;<br />&lt;/html&gt;</code><br />Fácil, ¿no?&nbsp; <img src="/assets/smf/smileys/271186.gif" alt="&#58;smoke&#58;" title="Smoke" class="smiley" /><br /><br />Ahora, nótese que estamos usando <em>Session::flash()</em> porque queremos que el mensaje aparesca una sola vez, y al darle &quot;refresh&quot; o &quot;recargar&quot; a la página, el mensaje ya no es vuelto a mostrar. Si deseamos que el mensaje persista, entonces usamos <em>Session::set(&#039;message&#039;, &#039;contenido del mensaje&#039;)</em>.
