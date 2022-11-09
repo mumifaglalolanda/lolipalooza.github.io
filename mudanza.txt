@@ -1,0 +1,31 @@
+Borrar siguientes carpetas:
+	_boards_dz,
+	_boards_gtaf,
+	_boards_lp,
+	_boards_ng
+
+	_threads_dz,
+	_threads_gtaf,
+	_threads_lp,
+	_threads_ng
+
+	_users_dz,
+	_users_gtaf,
+	_users_lp,
+	_users_ng
+
+Desde cónsola, ejecutar:
+mklink /j _boards_dz _boards
+mklink /j _boards_gtaf _boards
+mklink /j _boards_lp _boards
+mklink /j _boards_ng _boards
+
+mklink /j _threads_dz _threads
+mklink /j _threads_gtaf _threads
+mklink /j _threads_lp _threads
+mklink /j _threads_ng _threads
+
+mklink /j _users_dz _users
+mklink /j _users_gtaf _users
+mklink /j _users_lp _users
+mklink /j _users_ng _users
