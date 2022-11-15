@@ -1,0 +1,17 @@
+---
+thread: "Hosts y Cloud Services"
+id_msg: 910360
+date: "2022-11-11 23:24:20"
+
+subject: "Re:Hosts y Cloud Services"
+user: "Meduka Meguca"
+
+
+
+icon: xx
+
+
+
+
+---
+<div align="center"><span style="font-size: 18pt;" class="bbc_size">7 alternativas a Heroku</span></div><br /><div class="oharaEmbed youtube" id="oh_q--_5p15HnU" style="width: 640px; height: 360px;"><noscript><a href="//www.youtube.com/watch?v=q--_5p15HnU">//www.youtube.com/watch?v=q--_5p15HnU</a></noscript></div><br />Heroku retiró sus servicios gratiñongos, así que desde ahora será de paga, pero no desesperéis amigos fans de lo gratiñongo. Aquí les dejo 7 alternativas cortesía del vídio de yutub:<br /><br /><span style="font-size: 14pt;" class="bbc_size"><strong>1.</strong></span> fly.io<br /><span style="font-size: 14pt;" class="bbc_size"><strong>2.</strong></span> Cloudflare Workers<br /><span style="font-size: 14pt;" class="bbc_size"><strong>3.</strong></span> Github Pages<br /><span style="font-size: 14pt;" class="bbc_size"><strong>4.</strong></span> Vercel<br /><span style="font-size: 14pt;" class="bbc_size"><strong>5.</strong></span> Netfly<br /><span style="font-size: 14pt;" class="bbc_size"><strong>6.</strong></span> Render<br /><span style="font-size: 14pt;" class="bbc_size"><strong>7.</strong></span> Railway<br /><br />No está de más decir que, todas ofrecen servicios gratiñongos, pero no todas te ofrecen lo que quieres de manera gratis: montar una página con su propio backend y base de datos. Cuanto más compleja la aplicación, más chance habrá de que te cobren. Algunas te permiten utilizar Php e incluso Laravel. Si quieres páginas gratis, tu mejor opción es páginas estáticas, y para ello Github Pages es la más recomendada, pero para aprovecharla debes dominar el ilimitado(?) poder de Jekyll.<br /><br />De hecho lolipalooza.github.io está powereada con Github Pages y Jekyll prros! Somos perrones.
