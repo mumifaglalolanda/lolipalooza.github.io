@@ -1,0 +1,17 @@
+---
+thread: "Levantar servidor php via comando"
+id_msg: 910371
+date: "2023-03-22 01:20:44"
+
+subject: "Levantar servidor php via comando"
+user: "yap320sorgesoureDug"
+
+
+
+icon: xx
+
+
+
+
+---
+He aprendido un nuevo trucazo.<br />Se puede levantar un server de php mediante cónsola de la siguiente manera:<br /><br /><div class="codeheader">Código: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Seleccionar]</a></div><code class="bbc_code">php -S localhost:8000</code><a href="https://www.php.net/manual/en/features.commandline.webserver.php" class="bbc_link new_win" target="_blank">https://www.php.net/manual/en/features.commandline.webserver.php</a><br /><br />Puedes usar el puerto 8000 o cualquier otro.<br /><br />Supongo que para que el truquillo funcione, es necesario tener php instalado, osea, obvio...<br /><br />Pero el problema es que se montará el server con la versión de php que tengas instalada en la ruta por default, que si instalaste Xampp, esta ruta será: c:/xampp/php (o algo asi). Y si necesitas una versión de php para tu trabajo (como es mi caso) de 7.4 o superior, y necesitas una versión de php de 5.5 para tu ocio, no puedes tenerlas montadas de manera simultánea...<br /><br />F :&#039;V<br /><br />Chingo mi madre :&#039;V<br /><br />#awitadómetro<br /><br />Bueno, lo importante es que cada día se aprende algo nuevo.
